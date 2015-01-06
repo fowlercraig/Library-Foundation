@@ -4790,9 +4790,6 @@ html:hover [class^="ss-"] {
 #header .menu a {
   margin-right: 10px;
 }
-#content {
-  padding-top: 50px;
-}
 #foot a {
   margin-right: 10px;
 }
@@ -4813,4 +4810,49 @@ a.added_to_cart.wc-forward {
 .woocommerce .woocommerce-message {
   padding-top: 0;
   padding-bottom: 0;
+}
+.page-header {
+  background-color: #f8f8f8;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+  padding-top: 200px;
+}
+.page-header h1 {
+  color: #ffffff;
+}
+.page-header ul.parent-links {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.page-header ul.parent-links li {
+  display: inline-block;
+}
+.page-header ul.parent-links li:before {
+  display: none;
+}
+.page-header ul.parent-links li a {
+  color: #ffffff;
+}
+.membership-level {
+  background-color: #666666;
+  padding-top: 3.125%;
+  padding-bottom: 3.125%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  background-color: #f8f8f8;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: none;
+}
+.membership-level:hover {
+  background-color: #4d4d4d;
+}
+.membership-level .title {
+  color: #ffffff;
+}
+.membership-level p {
+  color: #ffffff;
+}
+.membership-level .button {
+  color: #ffffff;
 }
