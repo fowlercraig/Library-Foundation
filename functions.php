@@ -58,7 +58,14 @@ $settings = array(
 ),
 
 'deregister_scripts' => array('jquery','l10n')
-
 );
+
+if(function_exists("acf_add_options_page")) {
+  acf_add_options_page();
+  }
+
+if(function_exists("register_options_page")) {
+  register_options_page('Site Options');
+}
 
 Themewrangler::set_defaults( $settings );
