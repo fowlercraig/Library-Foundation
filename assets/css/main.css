@@ -4849,6 +4849,7 @@ a.added_to_cart.wc-forward {
 }
 .membership-level .title {
   color: #ffffff;
+  margin-top: 0;
 }
 .membership-level p {
   color: #ffffff;
