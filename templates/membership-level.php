@@ -22,13 +22,7 @@
       <p>This page has children</p>
     </div>
 
-    <?php } else { ?>
-
-    <div class="desktop-6">
-      <p>This page has no children :(</p>
-    </div>
-
-    <?php }?>
+    <?php } ?>
 
   </div>
 </div>
