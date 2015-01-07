@@ -24,7 +24,7 @@ function my_acf_settings_dir( $dir ) {
 }
 
 include_once locate_template('/lib/advanced-custom-fields-pro/acf.php' );
-include_once locate_template('/lib/acf-field-date-time-picker/acf-date_time_picker.php' );
+//include_once locate_template('/lib/acf-field-date-time-picker/acf-date_time_picker.php' );
 
 include_once locate_template('/lib/soil-master/soil.php' );
 include_once locate_template('/lib/roots-rewrites-master/roots-rewrites.php' );
