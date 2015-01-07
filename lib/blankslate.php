@@ -97,3 +97,11 @@ add_action('init', 'page_support');
 function page_support() {
     add_post_type_support( 'page', 'excerpt' );
 }
+
+if(function_exists("acf_add_options_page")) {
+  acf_add_options_page();
+  }
+
+if(function_exists("register_options_page")) {
+  register_options_page('Options');
+}

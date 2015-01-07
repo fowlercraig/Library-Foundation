@@ -4,11 +4,11 @@
   $member_url = $member_url_array[0];
 ?>
 
-<div class="membership-level" style="background-image:url(<?php echo $member_url; ?>);">
+<div class="membership-level <?php echo $post->post_name;?>" style="background-image:url(<?php echo $member_url; ?>);">
   <div class="row">
 
     <header class="desktop-12">
-      <h2 class="title"><?php the_title(); ?></h2>
+      <h2 class="member-level-title"><?php the_title(); ?></h2>
     </header>
 
     <div class="desktop-6">

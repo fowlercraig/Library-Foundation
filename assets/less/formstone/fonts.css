@@ -2,6 +2,45 @@
   Fonts
 -------------------------------------------*/
 
+	/* Sentinel Book */
+	@font-face {
+    font-family: 'Sentinel';
+    src: url('/assets/fonts/SentinelBook.eot');
+    src: url('/assets/fonts/SentinelBook.eot') format('embedded-opentype'),
+         url('/assets/fonts/SentinelBook.woff2') format('woff2'),
+         url('/assets/fonts/SentinelBook.woff') format('woff'),
+         url('/assets/fonts/SentinelBook.ttf') format('truetype'),
+         url('/assets/fonts/SentinelBook.svg#SentinelBook') format('svg');
+    font-weight: 200;
+		font-style: normal;
+	}
+
+	/* Gotham Bold */
+	@font-face {
+    font-family: 'Gotham';
+    src: url('/assets/fonts/GothamBold.eot');
+    src: url('/assets/fonts/GothamBold.eot') format('embedded-opentype'),
+         url('/assets/fonts/GothamBold.woff2') format('woff2'),
+         url('/assets/fonts/GothamBold.woff') format('woff'),
+         url('/assets/fonts/GothamBold.ttf') format('truetype'),
+         url('/assets/fonts/GothamBold.svg#GothamBold') format('svg');
+    font-weight: 700;
+		font-style: normal;
+	}
+
+	/* Gotham Black */
+	@font-face {
+    font-family: 'Gotham';
+    src: url('/assets/fonts/GothamBlack.eot');
+    src: url('/assets/fonts/GothamBlack.eot') format('embedded-opentype'),
+         url('/assets/fonts/GothamBlack.woff2') format('woff2'),
+         url('/assets/fonts/GothamBlack.woff') format('woff'),
+         url('/assets/fonts/GothamBlack.ttf') format('truetype'),
+         url('/assets/fonts/GothamBlack.svg#GothamBlack') format('svg');
+    font-weight: 900;
+		font-style: normal;
+	}
+
 	/* PT Mono */
 	@font-face {
 	    font-family: 'PTMono';
