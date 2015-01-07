@@ -4,6 +4,10 @@
 /*-------------------------------------------
   Variables
 -------------------------------------------*/
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
 .bg-green {
   background: #51a74e;
 }

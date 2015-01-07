@@ -87,6 +87,7 @@ add_action( 'widgets_init', 'removeRecentComments' );
 
 add_image_size( 'homepage-thumb', 400, 400, true );
 add_image_size( 'header-bg', 1280, 600, true );
+add_image_size( 'footer-module-image', 600, 335, true );
 
 
 // Remove Admin Bar

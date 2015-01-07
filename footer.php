@@ -1,14 +1,14 @@
 </div>
 </div></section><!--Content-->
 
+<?php get_template_part('templates/footer', 'modules' ); ?>
+
 <footer id="foot">
   <div class="row">
-    <?php // echo do_shortcode('[mc4wp_form]'); ?>
-    <div class="desktop-8 text-right">
-      <a href="/about">About Us</a>
-      <a href="/about">Contact</a>
-      <a class="green" id="logo" href="/"><?php bloginfo('name'); ?> &copy; <?php the_time('Y'); ?></a></p>
-    </div>
+    <div class="desktop-3"><a class="logo" href="/"><?php bloginfo('name'); ?></a></div>
+    <div class="desktop-3"><?php the_field('address', 'option'); ?></div>
+    <div class="desktop-3"><?php the_field('phone_&_email', 'option'); ?></div>
+    <div class="desktop-3"><?php the_field('social_links', 'option'); ?></div>
   </div>
 </footer><!--Footer-->
 

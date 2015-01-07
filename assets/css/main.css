@@ -1272,6 +1272,10 @@
 /*-------------------------------------------
   Variables
 -------------------------------------------*/
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
 .bg-green {
   background: #51a74e;
 }
@@ -4911,4 +4915,12 @@ a.added_to_cart.wc-forward {
 }
 .membership-level ul li a {
   color: #ffffff;
+}
+#foot {
+  border-top: 1px solid #cccccc;
+  margin-top: 2.08333333%;
+  padding: 2.08333333%;
+}
+#foot p {
+  margin-top: 0;
 }
