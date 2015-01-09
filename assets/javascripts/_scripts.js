@@ -32,6 +32,8 @@ $( document ).ready(function() {
 
     $('#whatwefund-filters').on( 'click', 'button', function() {
       var filterValue = $(this).attr('data-filter');
+      $('#whatwefund-filters').find('.active').removeClass('active');
+      $(this).addClass('active');
       // use filter function if value matches
       filterValue = filterFns[ filterValue ] || filterValue;
       $container.isotope({ filter: filterValue });

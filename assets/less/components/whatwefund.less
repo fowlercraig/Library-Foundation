@@ -12,9 +12,26 @@
 
     }
 
+    &:before {
+      content: '';
+      .overlay();
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      background: rgba(255,0,0,1);
+      opacity: 0;
+      transition: 300ms ease;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+
     .meta {
      
-      z-index: 2;
+      z-index: 3;
       color: @white;
 
       a {
@@ -45,14 +62,23 @@
 
 #whatwefund-filters {
   
-  padding: @gutter*2 0;
-  margin-bottom: @gutter*2 0;
+  padding: @gutter*2 0 @gutter;
   border-top: 1px solid @lightestGray;
   text-align: center;
 
   button {
+    
     display: inline-block;
     border-color: transparent;
+    .parent-links();
+    font-weight: 400;
+    font-size: 13px; 
+    color: @lightGray;
+
+    &.all, &.active, &:hover {
+      color: @gray;
+    }
+
   }
 
 }

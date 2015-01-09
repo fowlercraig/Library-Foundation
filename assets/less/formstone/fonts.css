@@ -15,6 +15,19 @@
 		font-style: normal;
 	}
 
+  /* Gotham Medium */
+  @font-face {
+    font-family: 'Gotham';
+    src: url('/assets/fonts/GothamMedium.eot');
+    src: url('/assets/fonts/GothamMedium.eot') format('embedded-opentype'),
+         url('/assets/fonts/GothamMedium.woff2') format('woff2'),
+         url('/assets/fonts/GothamMedium.woff') format('woff'),
+         url('/assets/fonts/GothamMedium.ttf') format('truetype'),
+         url('/assets/fonts/GothamMedium.svg#GothamMedium') format('svg');
+    font-weight: 400;
+    font-style: normal;
+  }
+
 	/* Gotham Bold */
 	@font-face {
     font-family: 'Gotham';

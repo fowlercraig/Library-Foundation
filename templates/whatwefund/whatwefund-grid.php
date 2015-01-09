@@ -1,6 +1,7 @@
 <div class="row">
   <div id="whatwefund-filters" class="button-group desktop-12 text-center">
-    <button class="button" data-filter="*">show all</button>
+    <button class="button" data-filter="*">View All</button>
+    <button class="button active" data-filter=".featured">Featured</button>
     <button class="button" data-filter=".helping">Helping</button>
     <button class="button" data-filter=".engaging">Engaging</button>
     <button class="button" data-filter=".investing">Investing</button>
