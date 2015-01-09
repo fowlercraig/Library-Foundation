@@ -1320,7 +1320,7 @@ body {
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
   background: #ffffff;
-  color: #666666;
+  color: #858585;
   line-height: 1.5;
   overflow-x: hidden;
 }
@@ -1339,7 +1339,7 @@ h4,
 h5,
 h6 {
   font-family: 'Lato', sans-serif;
-  color: #1c1f1d;
+  color: #333333;
   font-weight: 400;
   line-height: 1.2;
   margin: 25px 0 15px;
@@ -1354,28 +1354,26 @@ h2 {
   font-size: 1.625rem;
 }
 h3 {
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 h4 {
   font-size: 12px;
   font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 a {
   color: #c65032;
   text-decoration: none;
 }
 p {
-  color: #666666;
+  color: #858585;
   margin: 15px 0 25px;
   line-height: 1.7;
 }
 p.emphasized {
   font-size: 18px;
   font-size: 1.125rem;
-  color: #666666;
+  color: #858585;
   margin: 15px 0;
 }
 p.orange {
@@ -1383,7 +1381,7 @@ p.orange {
 }
 p a {
   border-bottom: 1px solid #bbb;
-  color: #666666;
+  color: #858585;
 }
 .no-touch p a:hover {
   border-color: #c65032;
@@ -1398,17 +1396,6 @@ li {
   position: relative;
   line-height: 1.5;
   margin: 5px 0 0;
-}
-li:before {
-  width: 5px;
-  height: 5px;
-  position: absolute;
-  top: 10px;
-  left: -15px;
-  background: #ccc;
-  border-radius: 100%;
-  content: '';
-  display: block;
 }
 hr {
   width: 100%;
@@ -1570,7 +1557,7 @@ table .default {
   font-size: 0.875rem;
   font-family: 'Lato', sans-serif;
   height: 40px;
-  background: #494c51;
+  background: #59595b;
   border-radius: 20px;
   color: #ffffff;
   cursor: pointer;
@@ -1589,7 +1576,7 @@ table .default {
   }
 }
 .no-touch .button:not(.woocommerce .button):hover {
-  background: #1c1f1d;
+  background: #333333;
 }
 .button:not(.woocommerce .button).outlined {
   background: none;
@@ -1638,7 +1625,7 @@ table .default {
 .branding {
   font-size: 12px;
   font-size: 0.75rem;
-  color: #494c51;
+  color: #59595b;
   display: block;
   float: left;
   letter-spacing: 0.2em;
@@ -4786,6 +4773,15 @@ html:hover [class^="ss-"] {
 .ss-retweet.right:after {
   content: '';
 }
+.button {
+  padding: 0 18px;
+  height: 32px;
+  line-height: 30px;
+  display: inline-block;
+  border-radius: 16px;
+  font-size: 14px;
+  border: 1px solid;
+}
 .parent-links {
   font-family: 'Gotham';
   font-weight: 700;
@@ -4800,6 +4796,12 @@ html:hover [class^="ss-"] {
   font-size: 4em;
   font-weight: 200;
 }
+.page-content p {
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+  font-size: 1.85em;
+  line-height: 1.35;
+}
 .member-level-title {
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
@@ -4811,6 +4813,15 @@ html:hover [class^="ss-"] {
   text-rendering: optimizeLegibility;
   font-size: 1.5em;
   font-weight: 200;
+}
+#footer-modules p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.footer-module-title {
+  margin-bottom: 5px;
 }
 #head,
 #header {
@@ -4843,7 +4854,7 @@ a.added_to_cart.wc-forward {
 }
 .page-header {
   background-color: #f8f8f8;
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
   background-repeat: none;
   padding-top: 300px;
@@ -4864,10 +4875,22 @@ a.added_to_cart.wc-forward {
 .page-header ul.parent-links li a {
   color: #ffffff;
 }
+.page-content {
+  color: #59595b;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.page-content p {
+  color: inherit;
+}
+.page-content p:first-child {
+  margin-top: 0;
+}
+.page-content p:last-child {
+  margin-bottom: 0;
+}
 .membership-level {
-  background-color: #666666;
-  padding-top: 5.20833333%;
-  padding-bottom: 5.20833333%;
+  background-color: #858585;
   background-color: #f8f8f8;
   background-position: center center;
   background-size: cover;
@@ -4875,33 +4898,72 @@ a.added_to_cart.wc-forward {
   position: relative;
   border-bottom: 1px solid #ffffff;
 }
+.membership-level.has-bg {
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+.membership-level.no-bg {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
 .membership-level:hover {
-  background-color: #4d4d4d;
+  background-color: #6c6c6c;
+}
+.membership-level.no-bg:hover {
+  background-color: transparent;
 }
 .membership-level .member-level-title {
   color: #ffffff;
   margin: 0;
 }
+.membership-level.no-bg .member-level-title {
+  color: #333333;
+}
 .membership-level p {
+  font-size: 17px;
   color: rgba(255, 255, 255, 0.75);
+}
+.membership-level p:last-child {
+  margin-bottom: 0;
+}
+.membership-level.no-bg p {
+  color: #858585;
 }
 .membership-level .button {
   color: #ffffff;
 }
+.membership-level.no-bg .button {
+  color: #333333;
+}
+.membership-level ul {
+  margin-bottom: 0;
+}
 .membership-level ul li {
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 6px 0;
+  padding: 4px 0;
   display: block;
 }
 .membership-level ul li:before {
-  display: none;
+  content: '▻';
+  font-size: 15px;
+  margin-right: 8px;
+  font-family: 'SSGizmo';
+  transition: 300ms ease;
 }
 .membership-level ul li:last-child {
   border-bottom: none;
 }
 .membership-level ul li a {
   color: #ffffff;
+}
+.membership-level.no-bg ul li {
+  color: #858585;
+  border-bottom: 1px solid #dddddd;
+}
+.membership-level.membership .button {
+  background: #0f75bd;
+  border-color: #0f75bd;
 }
 #foot {
   border-top: 1px solid #cccccc;
@@ -4917,4 +4979,8 @@ a.added_to_cart.wc-forward {
 #footer-modules .module {
   background: #f8f8f8;
   margin-bottom: 2.08333333%;
+}
+#footer-modules .button {
+  background: none;
+  box-sizing: border-box;
 }

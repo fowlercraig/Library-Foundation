@@ -10,9 +10,9 @@
       setup_postdata( $post ); 
     ?>
 
-    <div class="desktop-6 module">
+    <div class="desktop-6 module <?php echo $post->post_name;?>">
       <div class="row">
-        <div class="desktop-6"><?php the_post_thumbnail( 'medium-image', array( 'class' => 'img-responsive alignleft' ) ); ?></div>
+        <div class="desktop-6"><?php the_post_thumbnail( 'footer-module-image', array( 'class' => 'img-responsive alignleft' ) ); ?></div>
         <div class="desktop-6 padded">
           <h3 class="footer-module-title"><?php the_title(); ?></h3>
           <p><?php the_sub_field('description'); ?></p>

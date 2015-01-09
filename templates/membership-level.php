@@ -2,9 +2,10 @@
   $member_id = get_post_thumbnail_id();
   $member_url_array = wp_get_attachment_image_src($member_id, 'header-bg', true);
   $member_url = $member_url_array[0];
+  $mClass = ' has-bg';
 ?>
 
-<div class="membership-level <?php echo $post->post_name;?>" style="background-image:url(<?php echo $member_url; ?>);">
+<div class="membership-level<?php echo $mClass;  ?> <?php echo $post->post_name;?>" style="background-image:url(<?php echo $member_url; ?>);">
   <div class="row">
 
     <header class="desktop-12">

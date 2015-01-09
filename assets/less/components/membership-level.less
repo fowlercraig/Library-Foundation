@@ -1,8 +1,6 @@
 .membership-level {
 
   background-color: @textGray;
-  padding-top: @gutter*5;
-  padding-bottom: @gutter*5;
   background-color: @bgGray;
   background-position: center center;
   background-size: cover;
@@ -10,8 +8,24 @@
   position: relative;
   border-bottom: 1px solid @white;
 
+  &.has-bg {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+
+  &.no-bg {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
   &:hover {
     background-color: darken(@textGray, 10%);
+  }
+
+  &.no-bg {
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   .member-level-title {
@@ -19,12 +33,36 @@
     margin: 0;
   }
 
+  &.no-bg {
+    .member-level-title {
+      color: @black;
+    }
+  }
+
   p {
+    font-size: 17px;
     color: @white75;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &.no-bg {
+    p {
+      color: @textGray
+    }
   }
 
   .button {
     color: @white;
+  }
+
+  &.no-bg {
+    .button {
+      color: @black
+    }
   }
 
   // &:after {
@@ -44,15 +82,21 @@
 
   ul {
 
+    margin-bottom: 0;
+
     li {
       
       color: @white;
       border-bottom: 1px solid @white25;
-      padding: 6px 0;
+      padding: 4px 0;
       display: block;
 
       &:before {
-        display: none;
+        content: '▻';
+        font-size: 15px;
+        margin-right: 8px;
+        font-family: 'SSGizmo';
+        transition: 300ms ease;
       }
 
       &:last-child {
@@ -63,8 +107,38 @@
         color: @white;
       }
 
+      &:hover {
+
+        // &:before {
+        //   margin-right: 13px;
+        // }
+
+      }
+
     }
 
+  }
+
+  &.no-bg {
+
+    ul {
+
+      li {
+
+        color: @textGray;
+        border-bottom: 1px solid @lightestGray;
+
+      }
+
+    }
+
+  }
+
+  &.membership {
+    .button {
+      background: @membership;
+      border-color: @membership;
+    }
   }
 
 }

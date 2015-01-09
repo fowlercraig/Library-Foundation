@@ -16,6 +16,10 @@ if( have_rows('page_modules') ):
 
         elseif( get_row_layout() == 'custom_page_references' ):
 
+          include('flex/post-objects-desc.php');
+
+        elseif( get_row_layout() == 'page_references_description' ):
+
           include('flex/post-objects-custom.php');
 
         elseif( get_row_layout() == 'download' ): 
