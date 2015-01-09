@@ -9,11 +9,27 @@
 <div class="page-header" style="background-image:url(<?php echo $thumb_url; ?>);">
   <div class="row">
     <div class="desktop-12">
-      <ul class="parent-links">
-        <li><a href="#">Parent Link</a></li>
-        <li><a href="#">Parent Link</a></li>
-      </ul>
+      <?php 
+
+      if ( $post->post_parent ) { 
+
+        $anc_reverse = get_post_ancestors( $post->ID );
+        $anc = array_reverse($anc_reverse);
+
+        echo '<ul class="parent-links">';
+
+        foreach ( $anc as $ancestor ) {
+          $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li>';
+          echo $output;
+        }
+
+        echo '</ul>';
+
+      } 
+
+      ?>
       <h1 class="page-header-title"><?php the_title(); ?></h1>
     </div>
   </div>
 </div>
+
