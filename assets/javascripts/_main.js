@@ -6,6 +6,8 @@
 // @codekit-prepend "../bower_components/Wallpaper/jquery.fs.wallpaper.js"; 
 // @codekit-prepend "../bower_components/Shifter/jquery.fs.shifter.js"; 
 // @codekit-prepend "../bower_components/Sizer/jquery.fs.sizer.js"; 
+// @codekit-prepend "../bower_components/isotope/dist/isotope.pkgd.min.js"; 
+// @codekit-prepend "../bower_components/imagesloaded/imagesloaded.pkgd.min.js"; 
 
 // Other Plugins
 

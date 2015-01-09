@@ -1,0 +1,58 @@
+#whatwefund-grid {
+
+  .item {
+    
+    position: relative;
+    margin-bottom: @gutter*2;
+
+    .thumbnail {
+      
+      position: relative;
+      z-index: 1;
+
+    }
+
+    .meta {
+     
+      z-index: 2;
+      color: @white;
+
+      a {
+
+        color: inherit;
+
+      }
+
+      .title {
+
+        margin: 0;
+        .member-level-title();
+        font-size: 32px;
+        margin-bottom: 20px;
+
+        a {
+
+          color: @white;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+#whatwefund-filters {
+  
+  padding: @gutter*2 0;
+  margin-bottom: @gutter*2 0;
+  border-top: 1px solid @lightestGray;
+  text-align: center;
+
+  button {
+    display: inline-block;
+    border-color: transparent;
+  }
+
+}
