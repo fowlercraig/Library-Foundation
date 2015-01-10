@@ -10,6 +10,7 @@
   &.has-bg {
     padding-top: 125px;
     padding-bottom: 125px;
+    .header-overlay();
   }
 
   &.no-bg {
@@ -31,6 +32,23 @@
     &:hover {
       background-color: transparent;
     }
+  }
+
+  > div {
+    position: relative;
+    z-index: 9;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: @black25;
+    z-index: 8;
   }
 
   .member-level-title {

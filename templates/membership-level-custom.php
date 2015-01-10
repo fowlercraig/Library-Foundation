@@ -11,7 +11,7 @@
   }
 ?>
 
-<div class="simple membership-level<?php echo $mClass;  ?>" style="background-image:url(<?php echo $bg;  ?>);">
+<div data-speed="1.25" class="simple membership-level<?php echo $mClass;  ?>" style="background-image:url(<?php echo $bg;  ?>);">
   <div class="row">
 
     <header class="desktop-4 tablet-6 mobile-3">

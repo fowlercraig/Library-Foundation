@@ -5,7 +5,7 @@
   $mClass = ' has-bg';
 ?>
 
-<div class="membership-level<?php echo $mClass;  ?> <?php echo $post->post_name;?>" style="background-image:url(<?php echo $member_url; ?>);">
+<div data-speed="1.25" class="membership-level<?php echo $mClass;  ?> <?php echo $post->post_name;?>" style="background-image:url(<?php echo $member_url; ?>);">
   <div class="row">
 
     <header class="desktop-12">
