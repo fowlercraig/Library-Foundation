@@ -11,10 +11,17 @@
   }
 ?>
 
-<div class="membership-level<?php echo $mClass;  ?>" style="background-image:url(<?php echo $bg;  ?>);">
+<div class="simple membership-level<?php echo $mClass;  ?>" style="background-image:url(<?php echo $bg;  ?>);">
   <div class="row">
-    <header class="desktop-12"><h2 class="member-level-title"><?php the_sub_field('title'); ?></h2></header>
-    <div class="desktop-6"><?php the_sub_field('left_content'); ?></div>
-    <div class="desktop-6"><?php the_sub_field('right_content'); ?></div>
+
+    <header class="desktop-4 tablet-6 mobile-3">
+      <h2 class="member-level-title"><?php the_sub_field('title'); ?></h2>
+      <span class="sub-title"><?php the_sub_field('sub_title'); ?></span>
+      <br><br>
+      <a href="<?php the_permalink(); ?>" class="button">Join/Renew Now</a>
+    </header>
+
+    <div class="desktop-8"><?php the_sub_field('description'); ?></div>
+
   </div>
 </div>

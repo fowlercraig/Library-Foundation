@@ -22,11 +22,21 @@
 <div id="wrapper">
 
 <header id="head">
-  <nav class="row">
-    <?php wp_nav_menu( array( 'theme_location'=>'main-menu','items_wrap'=> '%3$s','container_class'=>'menu desktop-8 tablet-6 mobile-3','walker' => new MV_Cleaner_Walker_Nav_Menu() ) ); ?>
-    <?php wp_nav_menu( array( 'theme_location'=>'socl-menu','items_wrap'=> '%3$s','container_class'=>'menu mobile-hide tablet-hide text-right desktop-4','walker' => new MV_Cleaner_Walker_Nav_Menu() ) ); ?>
+  <div class="row">
+    <?php 
+      $menuParameters = array(
+        'container'       => false,
+        'echo'            => false,
+        'items_wrap'      => '%3$s',
+        'theme_location'  =>'main-menu',
+        'depth'           => 0,
+      );
+    ?>
 
-  </nav>
+    <nav id="main-nav"><?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?></nav>
+    <?php // wp_nav_menu( array( 'theme_location'=>'socl-menu','items_wrap'=> '%3$s','container_class'=>'menu mobile-hide tablet-hide text-right desktop-4','walker' => new MV_Cleaner_Walker_Nav_Menu() ) ); ?>
+
+  </div>
 </header>
 
 <section id="content"><div>

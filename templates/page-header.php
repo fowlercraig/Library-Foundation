@@ -6,7 +6,7 @@
 
 ?>
 
-<div class="page-header" style="background-image:url(<?php echo $thumb_url; ?>);">
+<div class="page-header" data-speed="1.25" style="background-image:url(<?php echo $thumb_url; ?>);">
   <div class="row">
     <div class="desktop-12">
       <?php 

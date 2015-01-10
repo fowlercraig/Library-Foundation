@@ -1,5 +1,13 @@
 $( document ).ready(function() {
 
+  // Sizer
+
+  $(".page-content").sizer();
+
+  $(window).on("snap", function() {
+    $(".page-content").sizer("resize");
+  });
+
   // What We Fund
 
   $(function(){
@@ -9,10 +17,8 @@ $( document ).ready(function() {
       $container.isotope({
 
         itemSelector:   '.item',
-        layoutMode:     'fitRows',
+        layoutMode:     'packery',
         filter:         '.featured',
-        animationEngine:'css',
-        transitionDuration: 0,
       });
 
     });
@@ -37,8 +43,25 @@ $( document ).ready(function() {
       // use filter function if value matches
       filterValue = filterFns[ filterValue ] || filterValue;
       $container.isotope({ filter: filterValue });
+      $('html,body').animate({
+        scrollTop: $('#whatwefund-filters').offset().top
+      });
     });
 
   }); // End What We Fund
+
+  // Parallax BG
+
+  $window = $(window);
+
+  $('.page-header').each(function(){
+    var $bgobj = $(this);
+    $(window).scroll(function() {
+      var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+      var coords = '50% '+ yPos + 'px';
+      $bgobj.css({ backgroundPosition: coords });
+    });
+
+  });  
 
 });

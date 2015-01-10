@@ -1712,6 +1712,19 @@ h5 {
 .output p:first-child {
   font-weight: 600;
 }
+.divider.vertical {
+  position: relative;
+}
+.divider.vertical:before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  background: #59595b;
+  border: none;
+  left: 50%;
+}
 .circled {
   border: 2px solid #ffffff;
   line-height: 2.5;
@@ -1719,6 +1732,22 @@ h5 {
   color: #ffffff;
   display: inline-block;
   border-radius: 50px;
+}
+.header-overlay {
+  position: relative;
+}
+.header-overlay:after {
+  transition: 300ms ease;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/img/header-bg.png) no-repeat top center;
+  background-size: cover;
+  opacity: .75;
 }
 /*
 * Symbolset
@@ -4807,11 +4836,11 @@ html:hover [class^="ss-"] {
 .page-header-title {
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
-  font-size: 4em;
+  font-size: 6em;
   font-weight: 200;
 }
 .page-content p {
-  font-family: 'Sentinel', serif;
+  font-family: 'Caslon', serif;
   text-rendering: optimizeLegibility;
   font-size: 1.85em;
   line-height: 1.35;
@@ -4822,7 +4851,7 @@ html:hover [class^="ss-"] {
   font-size: 3em;
   font-weight: 200;
 }
-.membership-level ul {
+.membership-level.complex ul {
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
   font-size: 1.5em;
@@ -4866,12 +4895,74 @@ a.added_to_cart.wc-forward {
   padding-top: 0;
   padding-bottom: 0;
 }
+#head {
+  position: absolute;
+  padding: 30px;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 300ms ease;
+}
+#head:hover {
+  border-color: transparent;
+}
+#main-nav {
+  font-family: 'Gotham';
+  font-weight: 700;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+#main-nav a {
+  color: #ffffff;
+  display: block;
+  float: left;
+  height: 30px;
+  line-height: 32px;
+  padding: 0 5px;
+}
+#main-nav a:hover {
+  color: #ffffff;
+}
+#main-nav:hover a {
+  color: rgba(255, 255, 255, 0.25);
+}
+#main-nav:hover a:hover {
+  color: #ffffff;
+}
 .page-header {
   background-color: #f8f8f8;
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
-  background-repeat: none;
-  padding-top: 300px;
+  background-repeat: no-repeat;
+  padding-top: 400px;
+  position: relative;
+  background-attachment: fixed;
+}
+.page-header:after {
+  transition: 300ms ease;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/img/header-bg.png) no-repeat top center;
+  background-size: cover;
+  opacity: .75;
+}
+.page-header:hover:after {
+  opacity: 1;
+}
+.page-header > div {
+  z-index: 9;
+  position: relative;
 }
 .page-header h1 {
   color: #ffffff;
@@ -4903,9 +4994,17 @@ a.added_to_cart.wc-forward {
 .page-content p:last-child {
   margin-bottom: 0;
 }
+.page-content aside {
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+  font-size: .55em;
+}
+.page-content aside p {
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+  line-height: 1.75;
+}
 .membership-level {
-  background-color: #858585;
-  background-color: #f8f8f8;
   background-position: center center;
   background-size: cover;
   background-repeat: none;
@@ -4919,6 +5018,11 @@ a.added_to_cart.wc-forward {
 .membership-level.no-bg {
   padding-top: 85px;
   padding-bottom: 85px;
+  border-bottom: 1px solid #ffffff;
+}
+.membership-level.simple.no-bg {
+  padding-top: 55px;
+  padding-bottom: 55px;
 }
 .membership-level:hover {
   background-color: #6c6c6c;
@@ -4950,23 +5054,26 @@ a.added_to_cart.wc-forward {
   color: #333333;
 }
 .membership-level ul {
+  padding-left: 0;
   margin-bottom: 0;
 }
 .membership-level ul li {
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 4px 0;
+  padding: 7px 0;
+  margin: 0;
+  padding-left: 30px;
   display: block;
+  position: relative;
 }
 .membership-level ul li:before {
   content: '▻';
   font-size: 15px;
-  margin-right: 8px;
   font-family: 'SSGizmo';
   transition: 300ms ease;
-}
-.membership-level ul li:last-child {
-  border-bottom: none;
+  position: absolute;
+  margin-top: 3px;
+  left: 0;
 }
 .membership-level ul li a {
   color: #ffffff;
@@ -4975,9 +5082,27 @@ a.added_to_cart.wc-forward {
   color: #858585;
   border-bottom: 1px solid #dddddd;
 }
+.membership-level.no-bg ul li:last-child {
+  border-bottom: 0;
+}
 .membership-level.membership .button {
   background: #0f75bd;
   border-color: #0f75bd;
+}
+.member-header {
+  padding: 4.16666667% 0 2.08333333%;
+  border-bottom: 1px solid #cccccc;
+}
+.member-header .member-level-title {
+  margin: 0;
+  color: rgba(15, 117, 189, 0.85);
+}
+.member-header header {
+  font-size: 1em;
+}
+.member-header p {
+  margin: 0;
+  font-size: 20px;
 }
 #whatwefund-grid .item {
   position: relative;
@@ -4987,6 +5112,9 @@ a.added_to_cart.wc-forward {
   position: relative;
   z-index: 1;
 }
+#whatwefund-grid .item .thumbnail img {
+  transition: 300ms ease;
+}
 #whatwefund-grid .item:before {
   content: '';
   position: absolute;
@@ -4995,12 +5123,23 @@ a.added_to_cart.wc-forward {
   z-index: 2;
   height: 100%;
   width: 100%;
-  background: #ff0000;
-  opacity: 0;
+  background: rgba(0, 0, 0, 0.55);
   transition: 300ms ease;
+  background-blend-mode: multiply;
 }
-#whatwefund-grid .item:hover:before {
-  opacity: 1;
+#whatwefund-grid .item:hover img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+#whatwefund-grid .item.helping:hover:before {
+  background: rgba(226, 98, 49, 0.85);
+}
+#whatwefund-grid .item.engaging:hover:before {
+  background: rgba(15, 117, 189, 0.85);
+}
+#whatwefund-grid .item.investing:hover:before {
+  background: rgba(83, 179, 105, 0.85);
 }
 #whatwefund-grid .item .meta {
   z-index: 3;
@@ -5022,9 +5161,8 @@ a.added_to_cart.wc-forward {
   color: #ffffff;
 }
 #whatwefund-filters {
-  padding: 2.08333333% 0 1.04166667%;
+  padding: 2.08333333% 0;
   border-top: 1px solid #dddddd;
-  text-align: center;
 }
 #whatwefund-filters button {
   display: inline-block;

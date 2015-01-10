@@ -1,7 +1,6 @@
 .membership-level {
 
-  background-color: @textGray;
-  background-color: @bgGray;
+  //background-color: @bgGray;
   background-position: center center;
   background-size: cover;
   background-repeat: none;
@@ -16,6 +15,12 @@
   &.no-bg {
     padding-top: 85px;
     padding-bottom: 85px;
+    border-bottom: 1px solid @white;
+  }
+
+  &.simple.no-bg {
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
   &:hover {
@@ -82,25 +87,27 @@
 
   ul {
 
+    padding-left: 0;
     margin-bottom: 0;
 
     li {
       
       color: @white;
       border-bottom: 1px solid @white25;
-      padding: 4px 0;
+      padding: 7px 0;
+      margin: 0;
+      padding-left: 30px;
       display: block;
+      position: relative;
 
       &:before {
         content: '▻';
         font-size: 15px;
-        margin-right: 8px;
         font-family: 'SSGizmo';
         transition: 300ms ease;
-      }
-
-      &:last-child {
-        border-bottom: none;
+        position: absolute;
+        margin-top: 3px;
+        left: 0;
       }
 
       a {
@@ -128,6 +135,10 @@
         color: @textGray;
         border-bottom: 1px solid @lightestGray;
 
+        &:last-child {
+          border-bottom: 0;
+        }
+
       }
 
     }
@@ -140,5 +151,32 @@
       border-color: @membership;
     }
   }
+
+}
+
+.member-header {
+
+  padding: @gutter*4 0 @gutter*2;
+  border-bottom: 1px solid @lighterGray;
+
+  .member-level-title {
+    margin: 0;
+    color: RGBA(15, 117, 189, .85);
+  }
+
+  header {
+    font-size: 1em;
+  }
+
+  p {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  // &.color {
+  //   .member-level-title {
+  //     color: @white;
+  //   }
+  // }
 
 }

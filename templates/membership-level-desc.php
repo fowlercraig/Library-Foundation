@@ -11,7 +11,7 @@
   }
 ?>
 
-<div class="membership-level<?php echo $mClass;  ?>" style="background-image:url(<?php echo $bg;  ?>);">
+<div class="complex membership-level<?php echo $mClass;  ?>" style="background-image:url(<?php echo $bg;  ?>);">
   <div class="row">
     <div class="desktop-6">
       <h2 class="member-level-title"><?php the_sub_field('title'); ?></h2>

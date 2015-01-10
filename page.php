@@ -6,10 +6,6 @@
   get_template_part('templates/page', 'content');
   get_template_part('templates/flex', 'content');
 
-  if ( is_page('what-we-fund' ) ) {
-    get_template_part('templates/whatwefund/whatwefund', 'grid');
-  }
-
 ?>
 
 <?php get_footer(); ?>

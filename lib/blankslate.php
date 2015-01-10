@@ -89,10 +89,11 @@ add_image_size( 'homepage-thumb', 400, 400, true );
 add_image_size( 'header-bg', 1280, 600, true );
 add_image_size( 'footer-module-image', 600, 335, true );
 add_image_size( 'whatwefund', 700, 550, true );
+add_image_size( 'whatwefund-twothirds', 1200, 455, true );
 
 
 // Remove Admin Bar
-add_filter('show_admin_bar', '__return_false');
+//add_filter('show_admin_bar', '__return_false');
 
 // Adding some Page Support
 add_action('init', 'page_support');

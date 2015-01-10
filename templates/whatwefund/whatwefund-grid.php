@@ -12,8 +12,8 @@
 
 <?php 
   
-  if( have_rows('wwf_grid') ):
-  while ( have_rows('wwf_grid') ) : the_row();
+  if( have_rows('wwf_grid', 250) ):
+  while ( have_rows('wwf_grid', 250) ) : the_row();
 
   $post_object = get_sub_field('child_page');
   $post = $post_object;
@@ -28,9 +28,25 @@
 
   // Images
 
-  if(get_sub_field('child_width') == "desktop-4")  { $img = 'http://placehold.it/700x550/666666/666666'; }
-  if(get_sub_field('child_width') == "desktop-12") { $img = 'http://placehold.it/1400x550/666666/666666'; }
-  if(get_sub_field('child_width') == "desktop-8")  { $img = 'http://placehold.it/1450x550/666666/666666'; }
+  if ( has_post_thumbnail() ) {
+
+    if(get_sub_field('child_width') == "desktop-4")  { $imgSize = 'whatwefund'; }
+    if(get_sub_field('child_width') == "desktop-12") { $imgSize = 'whatwefund-twothirds'; }
+    if(get_sub_field('child_width') == "desktop-8")  { $imgSize = 'whatwefund-twothirds'; }
+
+    $thumb_id        = get_post_thumbnail_id();
+    $thumb_url_array = wp_get_attachment_image_src( $thumb_id, $imgSize, true);
+    $thumb_url       = $thumb_url_array[0];
+
+    $img = $thumb_url;
+
+  } else {
+
+    if(get_sub_field('child_width') == "desktop-4")  { $img = 'http://placehold.it/700x550/666666/666666'; }
+    if(get_sub_field('child_width') == "desktop-12") { $img = 'http://placehold.it/1400x550/666666/666666'; }
+    if(get_sub_field('child_width') == "desktop-8")  { $img = 'http://placehold.it/1450x550/666666/666666'; }
+
+  }
 
   // Featured
 

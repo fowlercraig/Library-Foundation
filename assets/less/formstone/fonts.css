@@ -2,6 +2,31 @@
   Fonts
 -------------------------------------------*/
 
+  /* Adobe Caslon */
+  @font-face {
+    font-family: 'Caslon';
+    src: url('/assets/fonts/ACaslonProRegular.eot');
+    src: url('/assets/fonts/ACaslonProRegular.eot') format('embedded-opentype'),
+         url('/assets/fonts/ACaslonProRegular.woff2') format('woff2'),
+         url('/assets/fonts/ACaslonProRegular.woff') format('woff'),
+         url('/assets/fonts/ACaslonProRegular.ttf') format('truetype'),
+         url('/assets/fonts/ACaslonProRegular.svg#ACaslonProRegular') format('svg');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Caslon';
+    src: url('/assets/fonts/ACaslonProItalic.eot');
+    src: url('/assets/fonts/ACaslonProItalic.eot') format('embedded-opentype'),
+         url('/assets/fonts/ACaslonProItalic.woff2') format('woff2'),
+         url('/assets/fonts/ACaslonProItalic.woff') format('woff'),
+         url('/assets/fonts/ACaslonProItalic.ttf') format('truetype'),
+         url('/assets/fonts/ACaslonProItalic.svg#ACaslonProItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+  }
+
 	/* Sentinel Book */
 	@font-face {
     font-family: 'Sentinel';
