@@ -1944,6 +1944,11 @@ img.rsImg {
   padding: 30px;
   top: 0;
 }
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 /*---------------------------
   Transitions
 ---------------------------*/
@@ -5566,6 +5571,11 @@ a.added_to_cart.wc-forward {
   letter-spacing: 1px;
   font-size: 14px;
 }
+#main-nav:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 #main-nav a {
   color: #ffffff;
   display: block;
@@ -5573,6 +5583,16 @@ a.added_to_cart.wc-forward {
   height: 30px;
   line-height: 32px;
   padding: 0 5px;
+}
+#main-nav a#become-member-btn {
+  padding: 0 15px;
+  float: right;
+  border-color: #1a9ad0;
+  background: #1ca4de;
+}
+#main-nav a#become-member-btn:hover {
+  background: #1993c7;
+  border-color: #1993c7;
 }
 #main-nav a:hover {
   color: #ffffff;
