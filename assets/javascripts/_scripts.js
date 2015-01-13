@@ -2,11 +2,25 @@ $( document ).ready(function() {
 
   // Sizer
 
-  $(".page-content").sizer();
+  //$(".page-content").sizer();
 
   $(window).on("snap", function() {
-    $(".page-content").sizer("resize");
+    //$(".page-content").sizer("resize");
   });
+
+  // Image Slider
+
+  $(".royalslider").royalSlider({
+    keyboardNavEnabled: true,
+    autoScaleSlider : true,
+    autoScaleSliderWidth: 1200,
+    autoScaleSliderHeight: 700,
+    imageScaleMode: 'fill',
+    slidesSpacing: 0,
+    loop: true,
+    transitionSpeed: 1200,
+    transitionType: 'fade'
+  }); 
 
   // What We Fund
 

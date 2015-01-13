@@ -34,9 +34,17 @@ if( have_rows('page_modules') ):
 
           include('flex/post-objects-custom.php');
 
+        elseif( get_row_layout() == 'image_gallery' ):
+
+          get_template_part('templates/image', 'gallery');
+
         elseif( get_row_layout() == 'what_we_fund_grid' ):
 
           get_template_part('templates/whatwefund/whatwefund', 'grid');
+
+        elseif( get_row_layout() == 'page_list' ):
+
+          get_template_part('templates/page', 'list');
 
         elseif( get_row_layout() == 'download' ): 
 
