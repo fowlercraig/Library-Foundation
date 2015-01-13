@@ -5033,6 +5033,13 @@ a.added_to_cart.wc-forward {
   padding-top: 85px;
   padding-bottom: 85px;
   border-bottom: 1px solid #ffffff;
+  background: none;
+}
+.membership-level.no-bg:before {
+  display: none;
+}
+.membership-level.overlayless:after {
+  display: none;
 }
 .membership-level.simple.no-bg {
   padding-top: 55px;

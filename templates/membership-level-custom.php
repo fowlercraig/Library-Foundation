@@ -9,9 +9,10 @@
     $bg     = '';
     $mClass = ' no-bg';
   }
+  if( get_sub_field('remove_overlay') ) { $nOverlay = ' overlayless'; }
 ?>
 
-<div data-speed="1.25" class="simple membership-level<?php echo $mClass;  ?>" style="background-image:url(<?php echo $bg;  ?>);">
+<div class="simple membership-level<?php echo $mClass; echo $nOverlay; ?>" style="background-image:url(<?php echo $bg;  ?>);">
   <div class="row">
 
     <header class="desktop-4 tablet-6 mobile-3">

@@ -17,6 +17,16 @@
     padding-top: 85px;
     padding-bottom: 85px;
     border-bottom: 1px solid @white;
+    background: none;
+    &:before {
+      display: none;
+    }
+  }
+
+  &.overlayless {
+    &:after {
+      display: none;
+    }
   }
 
   &.simple.no-bg {
