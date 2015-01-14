@@ -48,6 +48,16 @@ register_sidebar( array (
 'before_title' => '<h3 class="widget-title">',
 'after_title' => '</h3>',
 ) );
+
+register_sidebar( array (
+'name' => __( 'Event Widget Area', 'gridded' ),
+'id' => 'event-widget-area',
+'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+'after_widget' => "</li>",
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+
 }
 function gridded_custom_pings( $comment )
 {
@@ -85,6 +95,7 @@ add_action( 'widgets_init', 'removeRecentComments' );
 
 // Image Sizes
 
+add_image_size( 'large-cropped', 993, 780, true );
 add_image_size( 'homepage-thumb', 400, 400, true );
 add_image_size( 'header-bg', 1280, 600, true );
 add_image_size( 'footer-module-image', 600, 335, true );

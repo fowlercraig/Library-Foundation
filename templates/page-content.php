@@ -22,7 +22,7 @@
     <div class="<?php echo $pageWidth; ?>"><?php the_content(); ?></div>
 
     <?php if ( get_field('include_aside')) { ?>
-    <aside class="desktop-4 tablet-2 mobile-3 right"><?php the_field('aside'); ?></aside>
+    <aside class="aside desktop-4 tablet-2 mobile-3 right"><?php the_field('aside'); ?></aside>
     <?php } ?>
 
   </div>

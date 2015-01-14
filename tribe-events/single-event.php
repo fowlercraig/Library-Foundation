@@ -18,6 +18,16 @@ $event_id = get_the_ID();
 
 ?>
 
+<?php 
+
+  include locate_template('templates/event-header.php');
+  include locate_template('templates/event-bar.php');
+  include locate_template('templates/event-content.php');
+  include locate_template('templates/flex-content.php');
+
+?>
+
+<!--
 <div class="row tribe-events-single vevent hentry " id="tribe-events-content">
 
 	<header class="desktop-8">

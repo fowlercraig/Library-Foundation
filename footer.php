@@ -15,6 +15,7 @@
 </div><!-- Wrapper -->
 
 <?php wp_footer(); ?>
+<?php include locate_template('/lib/photoswipe.php' );?>
 
 </body>
 </html>

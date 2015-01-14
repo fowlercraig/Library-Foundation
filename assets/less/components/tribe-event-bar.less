@@ -1,0 +1,45 @@
+#event-bar {
+
+  background: @bgGray;
+
+  nav {
+
+    .button {
+
+      height: 50px;
+      line-height: 50px;
+      border-color: transparent;
+      border-radius: 0;
+      margin: 0 -2px;
+      color: @textGray;
+      .cat();
+
+      &:hover {
+        background: darken(@bgGray, 10%)
+      }
+
+      &#event-status-button {
+
+        color: @white;
+
+        &.enabled {
+          background: @aloudpink;
+          &:hover {
+            background: darken(@aloudpink, 10%)
+          }
+        }
+
+        &.disabled {
+          background: @gray;
+          &:hover {
+            background: darken(@gray, 10%)
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}
