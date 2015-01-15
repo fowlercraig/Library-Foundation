@@ -1,0 +1,51 @@
+// Normalize Page
+
+.page-template-page-cart-php {
+
+  #head {
+    border-color: @lightestGray;
+  }
+
+  #main-nav {
+
+    a {
+      color: @textGray;
+
+      &:hover {
+        color: darken(@textGray, 10%)
+      }
+
+      &#become-member-btn {
+        color: @white;
+      }
+
+    }
+
+  }
+
+  #content {
+
+    padding-top: 130px;
+
+  }
+
+  .cart-header {
+
+    .page-header-title {
+      font-size: 3em;
+    }
+    
+  }
+
+  input[type=number] {
+    text-align: center;
+    -moz-appearance: textfield;
+  }
+
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+}

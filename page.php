@@ -1,11 +1,17 @@
-<?php Themewrangler::setup_page();get_header(); ?>
-
 <?php 
 
-  get_template_part('templates/page', 'header');
-  get_template_part('templates/page', 'content');
-  get_template_part('templates/flex', 'content');
+  if ( is_page( 'cart' ) || is_page( 'checkout' ) ) {    
+
+    include locate_template('page-cart.php' );
+
+  } elseif ( is_page( 10 ) ) { 
+
+    $bannerimg = 'admissions.jpg';
+
+  } else { 
+
+    include locate_template('page-default.php' );
+
+  }
 
 ?>
-
-<?php get_footer(); ?>

@@ -15,6 +15,7 @@
 // @codekit-prepend "../bower_components/imagesloaded/imagesloaded.pkgd.min.js"; 
 // @codekit-prepend "../bower_components/photoswipe/dist/photoswipe.min.js"; 
 // @codekit-prepend "../bower_components/photoswipe/dist/photoswipe-ui-default.min.js"; 
+// @codekit-prepend "../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"; 
 
 // My Shit
 

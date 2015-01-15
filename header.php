@@ -17,7 +17,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body class="gridlock">
+<body <?php body_class('gridlock'); ?>>
 
 <div id="wrapper">
 

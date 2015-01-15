@@ -22,6 +22,10 @@ $( document ).ready(function() {
     transitionType: 'fade'
   }); 
 
+  $(".amount").text(function () {
+    return $(this).text().replace("$0.00", "Free"); 
+  });​​​​​
+
   // What We Fund
 
   $(function(){
@@ -76,6 +80,15 @@ $( document ).ready(function() {
       $bgobj.css({ backgroundPosition: coords });
     });
 
-  });  
+  }); 
+
+  // Cart Modal Window
+
+  $('#event-bar .enabled').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    closeBtnInside: false,
+    mainClass: 'mfp-fade',
+  }); 
 
 });
