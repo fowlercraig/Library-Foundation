@@ -1,7 +1,8 @@
 <div id="event-bar">
   <div class="row">
     <nav class="desktop-8 tablet-6 mobile-3">
-      <a id="event-status-button"  href="#tickets-form" class="button enabled">Full/Standby</a>
+      <a id="event-status-button"  href="#tickets-form" class="button enabled">RSVP for this Event</a>
+      <a id="event-status-button"  href="#tickets-form" class="button closed">Full/Standby</a>
       <a id="event-status-button"  href="#" class="button disabled">This Event Has Passed</a>
       <a id="event-calenar-button" href="#" class="button">Add to Calendar</a>
     </nav>

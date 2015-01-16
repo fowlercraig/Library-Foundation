@@ -102,6 +102,13 @@ add_image_size( 'footer-module-image', 600, 335, true );
 add_image_size( 'whatwefund', 700, 550, true );
 add_image_size( 'whatwefund-twothirds', 1200, 455, true );
 
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+if (!is_admin()) {
+  show_admin_bar(false);
+}
+}
 
 // Remove Admin Bar
 //add_filter('show_admin_bar', '__return_false');
