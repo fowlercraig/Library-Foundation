@@ -84,11 +84,21 @@ $( document ).ready(function() {
 
   // Cart Modal Window
 
-  $('#event-bar .enabled').magnificPopup({
+  $('#event-bar .enabled, .popup').magnificPopup({
     type: 'inline',
     preloader: false,
     closeBtnInside: false,
     mainClass: 'mfp-fade',
   }); 
+
+  $('.button.closed').magnificPopup({
+    type: 'image',
+    closeBtnInside: true,
+    closeOnContentClick: true,
+    mainClass: 'mfp-fade',
+    image: {
+      verticalFit: true
+    }
+  });
 
 });

@@ -101,6 +101,7 @@ add_image_size( 'header-bg', 1280, 600, true );
 add_image_size( 'footer-module-image', 600, 335, true );
 add_image_size( 'whatwefund', 700, 550, true );
 add_image_size( 'whatwefund-twothirds', 1200, 455, true );
+add_image_size( 'event-gallery-full', 1200, 1200, false );
 
 add_action('after_setup_theme', 'remove_admin_bar');
 
