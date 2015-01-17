@@ -1,10 +1,48 @@
+<?php 
+
+  if( tribe_get_end_date( null, false, 'Y-m-d H:i:s' ) < date( 'Y-m-d H:i:s' )) {
+
+    $ticketStatus = '<a id="event-status-button"  href="#" class="button disabled">This Event Has Passed</a>';
+
+  } else {
+
+    if(tribe_events_has_tickets()){
+
+      $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">RSVP for this Event</a>';
+
+    }
+
+    if(tribe_events_has_soldout()){
+
+      $soldoutimage = 'http://i.imgur.com/znE1JTm.png';
+      $ticketStatus = '<a id="event-status-button"  href="'.$soldoutimage.'" class="button closed">Full/Standby</a>'; ?>
+
+      <script>
+        $(window).load(function(){
+          setTimeout(function(){
+            $.magnificPopup.open({
+              items: {
+                src: '<?php echo $soldoutimage; ?>'
+              },
+              mainClass: 'mfp-fade',
+              type: 'image'
+            });
+          }, 0);
+        });
+      </script>
+
+    <?php }
+
+  }
+
+?>
+
+
 <div id="event-bar">
   <div class="row">
     <nav class="desktop-8 tablet-6 mobile-3">
-      <a id="event-status-button"  href="#tickets-form" class="button enabled">RSVP for this Event</a>
-      <a id="event-status-button"  href="http://i.imgur.com/znE1JTm.png" class="button closed">Full/Standby</a>
-      <a id="event-status-button"  href="#" class="button disabled">This Event Has Passed</a>
-      <a id="event-calenar-button" href="#" class="button">Add to Calendar</a>
+      <?php echo $ticketStatus; ?>
+      <a id="event-calenar-button" href="<?php echo sp_get_ical_link(); ?>" class="button">Add to Calendar</a>
     </nav>
     <nav class="desktop-4 tablet-6 mobile-3 text-right">
       <a href="#faq" class="button">FAQ</a>
@@ -13,6 +51,6 @@
   </div>
 </div>
 
-<div id="tickets-form" class="mfp-hide white-popup-block">
+<div id="tickets-form" class="mfp-hide white-popup-block modal-window">
   <?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 </div>

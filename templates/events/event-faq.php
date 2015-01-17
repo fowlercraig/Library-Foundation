@@ -1,5 +1,7 @@
 <?php if( have_rows('frequently_asked_questions') ):
 
+  // Display custom FAQ questions normally.
+
   echo '<ul id="faq" class="faq-list row">';
   echo '<li class="item desktop-12 tablet-6 mobile-3 section-title header">Frequently Asked Questions</li>';
 
@@ -9,9 +11,24 @@
 
   endwhile;
 
+  // Here we'll decide whether we want to show Global FAQs
+  // They're toggled on by default. 
+
+  if( !get_field('faq_options') ) {
+
+    while ( have_rows('aloud_faq','options') ) : the_row();
+
+      include locate_template('templates/events/event-faq-item.php' );
+
+    endwhile;
+
+  }
+
   echo '</ul>';
 
 else :
+
+  // If we're not showing any custom FAQ questions, we'll just go with Global FAQs.
 
   echo '<ul id="faq" class="faq-list row">';
   echo '<li class="item desktop-12 tablet-6 mobile-3 section-title header">Frequently Asked Questions</li>';

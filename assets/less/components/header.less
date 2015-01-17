@@ -1,15 +1,30 @@
 #head {
 
   .overlay();
+  width: 100%;
   z-index: 9;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+  padding-top: 5px 0 10px;
   border-bottom: 1px solid @white25;
-  transition: 300ms ease;
+  transition: 150ms ease;
 
   &:hover {
     border-color: transparent;
   }
 
+  &.stuck {
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    background: @black75;
+    border-bottom: 0;
+    z-index: 99;
+  }
+
+}
+
+.header-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 5px;
 }

@@ -101,4 +101,17 @@ $( document ).ready(function() {
     }
   });
 
+  // Sticky Menu
+
+  var sticky = new Waypoint.Sticky({
+    element: $('#head')[0],
+    wrapper: '<div class="header-wrapper"/>',
+  });
+
+  var eventSticky = new Waypoint.Sticky({
+    element: $('#event-bar')[0],
+    wrapper: '<div class="event-bar-wrapper"/>',
+    offset: 50,
+  })
+
 });

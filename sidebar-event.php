@@ -4,9 +4,7 @@
     <?php if ( is_active_sidebar( 'event-widget-area' ) ) : ?>
     <ul class="xoxo">
 
-      <li>Related Video</li>
-      <li>Related Podcast</li>
-      <li>View Slideshow <?php include locate_template('/templates/events/event-sidebar-gallery.php'); ?></li>
+      <?php include locate_template('/templates/events/event-sidebar-gallery.php'); ?>
       <?php dynamic_sidebar( 'event-widget-area' ); ?>
 
     </ul>
