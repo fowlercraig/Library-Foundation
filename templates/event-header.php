@@ -31,7 +31,7 @@
 
   }
 
-  $event_date = tribe_get_start_date($pageID, false, "l, F j, Y | g:ia");
+  $event_date = tribe_get_start_date($pageID, false, "l, M j, Y | g:ia");
   $venue_details = array();
 
   if ( $venue_name = tribe_get_meta( 'tribe_event_venue_name' ) ) {
@@ -64,9 +64,11 @@
         <span class="date upper"><?php the_field('event_subtitle'); ?></span><br>
         <span class="location lower"><?php the_field('event_subtitle_addition'); ?></span>
       </div>
-      <div class="desktop-4">
+      <div class="desktop-4 text-right">
         <span class="date upper"><?php echo $event_date  ?></span><br>
+        <?php if(tribe_the_map_link()){ ?>
         <span class="location lower"><a href="<?php echo tribe_the_map_link(); ?>"><?php echo $venue_details[0]; ?></a></span>
+        <?php } ?>
       </div>
     </div>
   </div><!-- Event Meta-->
