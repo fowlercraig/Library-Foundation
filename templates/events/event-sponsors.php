@@ -5,9 +5,13 @@
   echo '<div id="sponsors" class="sponsor-list row">';
   echo '<header class="item desktop-12 tablet-6 mobile-3 section-title header">Sponsors</header>';
 
-  foreach( $sponsors as $sponsor ): ?>
+  foreach( $sponsors as $sponsor ): $link = get_field('attachement_link', $sponsor['id']); ?>
 
-    <div class="item sizer-item"><img src="<?php echo $sponsor['sizes']['large']; ?>" alt="<?php echo $sponsor['alt']; ?>" /></div>
+    <div class="item sizer-item">
+      <a href="<?php echo $link; ?>">
+        <img src="<?php echo $sponsor['sizes']['large']; ?>" alt="<?php echo $sponsor['alt']; ?>" />
+      </a>
+    </div>
 
   <?php endforeach; 
 
@@ -15,9 +19,13 @@
 
     $globalSponsors = get_field('aloud_sponsors', 'options'); if( $globalSponsors ):
 
-    foreach( $globalSponsors as $globalSponsor ): ?>
+    foreach( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
 
-      <div class="item sizer-item"><img src="<?php echo $globalSponsor['sizes']['large']; ?>" alt="<?php echo $globalSponsor['alt']; ?>" /></div>
+      <div class="item sizer-item">
+        <a href="<?php echo $link; ?>">
+          <img src="<?php echo $globalSponsor['sizes']['large']; ?>" alt="<?php echo $globalSponsor['alt']; ?>" />
+        </a>
+      </div>
 
     <?php endforeach; endif;
 
@@ -30,9 +38,13 @@ else :
   echo '<div id="sponsors" class="sponsor-list row">';
   echo '<header class="item desktop-12 tablet-6 mobile-3 section-title header">Sponsors</header>';
 
-  foreach( $sponsors as $sponsor ): ?>
+  foreach( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
 
-  <div class="item sizer-item"><img src="<?php echo $sponsor['sizes']['large']; ?>" alt="<?php echo $sponsor['alt']; ?>" /></div>
+  <div class="item sizer-item">
+    <a href="<?php echo $link; ?>">
+      <img src="<?php echo $globalSponsor['sizes']['large']; ?>" alt="<?php echo $globalSponsor['alt']; ?>" />
+    </a>
+  </div>
 
   <?php endforeach; 
 

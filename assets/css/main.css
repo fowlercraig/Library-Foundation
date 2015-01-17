@@ -5671,6 +5671,9 @@ a.added_to_cart.wc-forward {
   padding: 4.16666667% 0;
   border-top: 1px solid #dddddd;
 }
+#sponsors:hover .item img {
+  opacity: 1;
+}
 #sponsors .item {
   float: left;
   margin: 1.04166667%;
@@ -5682,6 +5685,10 @@ a.added_to_cart.wc-forward {
   display: block;
   opacity: .97;
   max-height: 120px;
+  transition: 300ms ease;
+}
+#sponsors .item img:hover {
+  opacity: 0.97;
 }
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 .pswp {
