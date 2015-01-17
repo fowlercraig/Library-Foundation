@@ -66,9 +66,7 @@
       </div>
       <div class="desktop-4 text-right">
         <span class="date upper"><?php echo $event_date  ?></span><br>
-        <?php if(tribe_the_map_link()){ ?>
         <span class="location lower"><a href="<?php echo tribe_the_map_link(); ?>"><?php echo $venue_details[0]; ?></a></span>
-        <?php } ?>
       </div>
     </div>
   </div><!-- Event Meta-->

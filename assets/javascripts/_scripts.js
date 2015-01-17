@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
   // Sizer
 
-  //$(".page-content").sizer();
+  $("#sponsors").sizer();
 
   $(window).on("snap", function() {
     //$(".page-content").sizer("resize");
