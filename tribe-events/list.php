@@ -14,14 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 } ?>
 
-<?php do_action( 'tribe_events_before_template' ); ?>
+<?php 
 
-	<!-- Tribe Bar -->
-<?php  tribe_get_template_part( 'modules/bar' ); ?>
+  include locate_template('templates/calendar-header.php');
+  do_action( 'tribe_events_before_template' );
+  tribe_get_template_part( 'modules/bar' ); 
+  tribe_get_template_part( 'list/content' ); 
+  do_action( 'tribe_events_after_template' );
+  include locate_template('templates/calendar-pastevents.php');
 
-	<!-- Main Events Content -->
-<?php tribe_get_template_part( 'list/content' ); ?>
-
-	<div class="tribe-clear"></div>
-
-<?php do_action( 'tribe_events_after_template' ) ?>
+?>

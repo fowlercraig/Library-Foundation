@@ -1,0 +1,55 @@
+#calendar-header {
+  
+  .meta {
+    
+    padding: 0;
+    background: @black25;
+
+    &:hover {
+      .desc {
+        height: 60px;
+        line-height: 60px;
+      }
+      .button {
+        height: 60px;
+        line-height: 65px;
+      }
+    }
+
+    .desc {
+      height: 50px;
+      line-height: 50px;
+      transition: 300ms ease;
+    }
+
+    .button {
+
+      border-radius: 0;
+      border: none;
+      color: @white50;
+      font-size: 18px;
+      height: 50px;
+      line-height: 55px;  
+      width: 100%;
+      text-align: center;
+      line-height: 50px;
+      transition: 300ms ease;
+
+      &.prev {
+        border-right: 1px solid @white25;
+      }
+
+      &.next {
+        border-left: 1px solid @white25;
+      }
+
+      i {
+        height: 20px;
+        line-height: 20px;
+      }
+
+    }
+
+  }
+
+}

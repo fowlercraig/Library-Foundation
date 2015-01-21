@@ -22,6 +22,15 @@ $( document ).ready(function() {
     transitionType: 'fade'
   }); 
 
+  $("#calendar-header .slider").royalSlider({
+    keyboardNavEnabled: true,
+    imageScaleMode: 'fill',
+    slidesSpacing: 0,
+    loop: true,
+    transitionSpeed: 1200,
+    transitionType: 'fade'
+  }); 
+
   $(".amount").text(function () {
     return $(this).text().replace("$0.00", "Free"); 
   });​​​​​

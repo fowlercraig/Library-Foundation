@@ -27,6 +27,13 @@
   position: absolute;
   padding: 30px;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.overlay.bottom {
+  top: auto;
+  bottom: 0;
 }
 .clearfix:after {
   content: '';
@@ -39,8 +46,8 @@
 .text-right {
   text-align: right;
 }
-.text-right {
-  text-align: left;
+.text-center {
+  text-align: center;
 }
 /*-------------------------------------------
   Bookmarklet
