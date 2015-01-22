@@ -27,8 +27,18 @@
 
       } 
 
+      if ( get_field('page_subtitle') ){ $hasSub = 'has-sub'; }
+      
+      if (is_category()){
+        $pageTitle = get_the_title(442);
+      } else {
+        $pageTitle = get_the_title();
+      }
+
       ?>
-      <h1 class="page-header-title"><?php the_title(); ?></h1>
+
+      <h1 class="page-header-title <?php echo $hasSub; ?>"><?php echo $pageTitle; ?></h1>
+      <h3 class="page-header-subtitle"><?php the_field('page_subtitle'); ?></h3>
     </div>
   </div>
 </div>

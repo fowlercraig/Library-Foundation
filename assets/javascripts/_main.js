@@ -1,7 +1,7 @@
 // Formstone Components
 
 // @codekit-prepend "../bower_components/Naver/jquery.fs.naver.js"; 
-// @codekit-prepend "../bower_components/Selecter/jquery.fs.selecter.js"; 
+// @codekit-prepend "../bower_components/Selecter/jquery.fs.selecter.min.js"; 
 // @codekit-prepend "../bower_components/Tabber/jquery.fs.tabber.js"; 
 // @codekit-prepend "../bower_components/Wallpaper/jquery.fs.wallpaper.js"; 
 // @codekit-prepend "../bower_components/Shifter/jquery.fs.shifter.js"; 

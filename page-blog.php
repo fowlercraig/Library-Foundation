@@ -2,6 +2,18 @@
 
 <?php get_template_part('templates/page', 'header'); ?>
 
+<div class="toolbar">
+  <div class="row">
+    <div class="desktop-12">
+      <ul class="nav">
+        <li class="title"><a href="/blog">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Watch/Listen</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="row">
   <div class="desktop-7">
 
@@ -40,7 +52,7 @@
       'after_page_number'  => ''
     ); ?>
 
-    <nav>
+    <nav class="pagination">
       <?php echo paginate_links( $links ); ?>
     </nav>
 

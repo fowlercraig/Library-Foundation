@@ -9,6 +9,60 @@
       padding: 25px;
       display: block;
 
+      &.widget_categories, &.widget_archive {
+
+        .widget-title {
+          display: none;
+        }
+
+        .blog-select.selecter {
+
+          margin: 0;
+          .parent-links();
+          font-size: 13px;
+          font-weight: 500;
+          color: @textGray;
+
+          .selecter-selected {
+
+            border-width: 2px;
+            border-color: transparent;
+            border-bottom-color:  @lightestGray;
+            border-radius: 0;
+            background: none;
+
+          }
+
+          &.open {
+
+            * {
+              box-shadow: none;
+            }
+
+            .selecter-options {
+
+              box-sizing: border-box;
+              border-width: 2px;
+              border-color: @lightestGray;
+              //box-shadow: none;
+
+            }
+
+          }
+
+        }
+
+      }
+
+      &.widget_categories {
+        padding-bottom: 0;
+      }
+
+      &.widget_archive {
+        padding-top: 0;
+        margin-top: 0;
+      }
+
     }
 
   }

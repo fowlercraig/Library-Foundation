@@ -18,6 +18,20 @@ $( document ).ready(function() {
 
   $("#sponsors").sizer();
 
+  // Selecter
+
+  $(".widget_categories select").selecter({
+    label: "All Categories",
+    cover: true,
+    customClass: "blog-select"
+  });
+
+  $(".widget_archive select").selecter({
+    label: "Archive",
+    cover: true,
+    customClass: "blog-select"
+  });
+
   // Image Slider
 
   $(".royalslider").royalSlider({
