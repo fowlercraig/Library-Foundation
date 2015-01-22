@@ -156,19 +156,19 @@ function opengraph_default_image( $image ) {
     }
 
     // then list any image attachments
-    $attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit',
-      'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC',
-      'orderby' => 'menu_order ID') );
-    foreach($attachments as $attachment) {
-      if ( !in_array($attachment->ID, $image_ids) ) {
-        $image_ids[] = $attachment->ID;
-      }
-    }
+    // $attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit',
+    //   'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC',
+    //   'orderby' => 'menu_order ID') );
+    // foreach($attachments as $attachment) {
+    //   if ( !in_array($attachment->ID, $image_ids) ) {
+    //     $image_ids[] = $attachment->ID;
+    //   }
+    // }
 
     // get URLs for each image
     $image = array();
     foreach($image_ids as $id) {
-      $thumbnail = wp_get_attachment_image_src( $id, 'medium');
+      $thumbnail = wp_get_attachment_image_src( $id, 'large');
       if ($thumbnail) {
         $image[] = $thumbnail[0];
       }

@@ -7,6 +7,16 @@
     border-bottom: 2px solid @bgGray;
     transition: 100ms ease;
 
+    .button {
+
+      border-radius: 0;
+      border-color: @black;
+      border-width: 2px;
+      .cat();
+      color: @black;
+
+    }
+
     .meta {
 
       .parent-links();
@@ -48,6 +58,21 @@
         a {
           color: @white;
         }
+      }
+
+      .button {
+
+        border-radius: 0;
+        border-color: @white;
+        border-width: 2px;
+        .cat();
+        color: @white;
+
+        &:hover {
+          background: @white;
+          color: @black;
+        }
+
       }
 
     }

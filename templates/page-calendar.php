@@ -40,16 +40,14 @@
 
 ?>
 
-<div id="calanedar-module">
+<div id="calendar-module">
   <div class="tabbed">
     <menu class="tabber-menu">
       <div class="row">
         <div class="desktop-12">
           <a href="#tab-1" class="button tabber-handle">Current Calendar</a>
           <a href="#tab-2" class="button tabber-handle">Past Events</a>
-          <a href="#tab-3" class="button tabber-handle">Featured Media & Podcasts</a>
-          <a href="#tab-4" class="button tabber-handle">About</a>
-          <a href="#tab-5" class="button tabber-handle">FAQ</a>
+          <a href="#" class="button ext">View Full Event Calendar</a>
         </div>
       </div>
     </menu>

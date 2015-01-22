@@ -8,6 +8,10 @@
 
     include locate_template('page-aloud.php' );
 
+  } elseif ( is_page( 'blog' ) ) { 
+
+    include locate_template('page-blog.php' );
+
   } else { 
 
     include locate_template('page-default.php' );

@@ -5801,6 +5801,19 @@ a.added_to_cart.wc-forward {
   border-bottom: 2px solid #f8f8f8;
   transition: 100ms ease;
 }
+.tribe-events-list .type-tribe_events .button {
+  border-radius: 0;
+  border-color: #333333;
+  border-width: 2px;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  color: #333333;
+}
 .tribe-events-list .type-tribe_events .meta {
   font-family: 'Gotham';
   font-weight: 700;
@@ -5836,6 +5849,23 @@ a.added_to_cart.wc-forward {
 }
 .tribe-events-list .type-tribe_events:hover .title a {
   color: #ffffff;
+}
+.tribe-events-list .type-tribe_events:hover .button {
+  border-radius: 0;
+  border-color: #ffffff;
+  border-width: 2px;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  color: #ffffff;
+}
+.tribe-events-list .type-tribe_events:hover .button:hover {
+  background: #ffffff;
+  color: #333333;
 }
 .tribe-events-list .type-tribe_events.tribe-events-first {
   padding: 3.125% 0 !important;
@@ -5915,6 +5945,52 @@ a.added_to_cart.wc-forward {
 #calendar-header .meta .button i {
   height: 20px;
   line-height: 20px;
+}
+#calendar-module menu {
+  position: relative;
+  margin-bottom: -2px;
+}
+#calendar-module menu .button {
+  border: 2px solid #f8f8f8;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 12px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 40px;
+  background: #f8f8f8;
+  transition: 300ms ease;
+}
+#calendar-module menu .button.active {
+  background: #ffffff;
+}
+#calendar-module menu .button:hover {
+  background: #ffffff;
+}
+#calendar-module menu .button:nth-last-child(2) {
+  border-right: 2px solid #f8f8f8;
+}
+#calendar-module menu .button:nth-last-child(2):hover {
+  border-right: 2px solid #f8f8f8;
+}
+#calendar-module menu .button.ext {
+  background: none;
+  color: #dddddd;
+  border-color: transparent;
+  padding-right: 0;
+}
+#calendar-module menu .button.ext:hover {
+  color: #999999;
+}
+#calendar-module .tabber-tab {
+  border-top: 2px solid #f8f8f8;
 }
 #past-events-slider .meta .title {
   color: #ffffff;
