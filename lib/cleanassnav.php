@@ -20,7 +20,7 @@ class MV_Cleaner_Walker_Nav_Menu extends Walker {
         $class_names = strlen( trim( $class_names ) ) > 0 ? ' class="' . esc_attr( $class_names ) . '"' : '';
         $id = apply_filters( 'nav_menu_item_id', '', $item, $args );
         $id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
-        //$output .= $indent . '<li' . $id . $value . $class_names .'>';
+        $output .= $indent . '<li' . $id . $value . $class_names .'>';
         $attributes  = ! empty( $item->attr_title ) ? ' class="'  . esc_attr( $item->attr_title ) .'"' : '';
         $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
         $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
@@ -33,7 +33,7 @@ class MV_Cleaner_Walker_Nav_Menu extends Walker {
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
     function end_el(&$output, $item, $depth) {
-        //$output .= "</li>\n";
+        $output .= "</li>\n";
     }
 }
 ?>

@@ -18,6 +18,7 @@
 // @codekit-prepend "../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"; 
 // @codekit-prepend "../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"; 
 // @codekit-prepend "../bower_components/jquery-waypoints/lib/shortcuts/sticky.min.js"; 
+// @codekit-prepend "../bower_components/superfish/dist/js/superfish.min.js"; 
 
 // My Shit
 

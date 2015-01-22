@@ -4,9 +4,9 @@
 
     include locate_template('page-cart.php' );
 
-  } elseif ( is_page( 10 ) ) { 
+  } elseif ( is_page( 'aloud' ) ) { 
 
-    $bannerimg = 'admissions.jpg';
+    include locate_template('page-aloud.php' );
 
   } else { 
 

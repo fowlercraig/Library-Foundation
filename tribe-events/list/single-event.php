@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<div class="desktop-12 tablet-6 mobile-3">
+<div class="desktop-12 tablet-6 mobile-3 meta">
 	<?php 
 		$terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
 		$count = count($terms);

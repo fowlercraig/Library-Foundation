@@ -6,7 +6,7 @@
       </div>
     </div>
   </header>
-  <div id="past-events-slider" class="royalslider rsMinW slider">
+  <div id="past-events-slider" class="slider rsMinW slider">
     <div class="slide">
       <div class="meta overlay bottom">
         <div class="row">

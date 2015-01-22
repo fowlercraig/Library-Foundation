@@ -1,12 +1,22 @@
 $( document ).ready(function() {
 
+  // Superfish
+
+  $('#menu-calendar').superfish({
+    delay: 0,
+    autoArrows: false,
+    speed: 'fast',
+    animation : { height:'show' },
+    disableHI: true
+  });
+
+  // Tabber
+
+  $(".tabbed").tabber();
+
   // Sizer
 
   $("#sponsors").sizer();
-
-  $(window).on("snap", function() {
-    //$(".page-content").sizer("resize");
-  });
 
   // Image Slider
 
@@ -28,7 +38,23 @@ $( document ).ready(function() {
     slidesSpacing: 0,
     loop: true,
     transitionSpeed: 1200,
-    transitionType: 'fade'
+    transitionType: 'fade',
+    arrowsNav: false,
+    controlNavigation: 'none',
+  }); 
+
+  $("#past-events-slider.slider").royalSlider({
+    keyboardNavEnabled: true,
+    imageScaleMode: 'fill',
+    slidesSpacing: 0,
+    autoScaleSlider : true,
+    autoScaleSliderWidth: 1200,
+    autoScaleSliderHeight: 500,
+    loop: true,
+    transitionSpeed: 1200,
+    transitionType: 'fade',
+    arrowsNav: false,
+    controlNavigation: 'none',
   }); 
 
   $(".amount").text(function () {

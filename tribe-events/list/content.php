@@ -18,16 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<!-- List Title -->
 	<?php do_action( 'tribe_events_before_the_title' ); ?>
-	<div class="header">
+	<!--<div class="header">
 		<div class="row">
 			<div class="desktop-8">
 				<span class="tribe-events-page-title"><?php echo tribe_get_events_title() ?></span>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<?php do_action( 'tribe_events_after_the_title' ); ?>
-
-	<?php echo 'Term Description: ' . term_description('15','tribe_events_cat'); ?>
 
 	<!-- Notices -->
 	<?php tribe_events_the_notices() ?>

@@ -67,6 +67,7 @@ if(function_exists("acf_add_options_page")) {
 
 if(function_exists("register_options_page")) {
   register_options_page('Site Options');
+  register_options_page('Calendar Options');
   register_options_page('Aloud Options');
 }
 

@@ -1,4 +1,11 @@
-<?php $images = get_sub_field('gallery'); if( $images ): ?>
+<?php 
+  if ( is_tax() ) {
+    $images = get_sub_field('gallery', $taxTerm );
+  } else {
+    $images = get_sub_field('gallery' ); 
+  }
+  if( $images ):
+?>
 
 <div id="image-gallery">
   <div class="row">

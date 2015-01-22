@@ -4,11 +4,37 @@
 
     padding: @gutter*3 0;
     position: relative;
-    border-bottom: 1px solid @lightestGray;
+    border-bottom: 2px solid @bgGray;
     transition: 100ms ease;
 
+    .meta {
+
+      .parent-links();
+      font-weight: 500;
+      font-size: 13px;
+
+      span {
+        transition: 100ms ease!important;
+        transition-delay: 2s;
+      }
+
+      a {
+        margin-right: 10px;
+        color: @aloudpink;
+      }
+
+    }
+
     .title {
+
       margin: @gutter 0;
+      .sentinel();
+      font-size: 28px;
+
+      a {
+        color: @black;
+      }
+
     }
 
     &:hover {
@@ -29,6 +55,18 @@
     &.tribe-events-first {
 
       padding: @gutter*3 0!important;
+
+      &:hover {
+
+        padding: @gutter*4 0!important;
+
+      }
+
+    }
+
+    &.tribe-events-last {
+
+      border-bottom: 2px solid @bgGray!important;
 
     }
 
