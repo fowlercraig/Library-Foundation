@@ -28,7 +28,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'tribe_events_after_the_title' ); ?>
 
 	<!-- Notices -->
-	<?php tribe_events_the_notices() ?>
+	
+	<div class="row">
+		<div class="desktop-12">
+			<?php echo tribe_events_the_notices(); ?>
+		</div>
+	</div>
+
+		
 
 
 	<!-- Events Loop -->

@@ -19,6 +19,7 @@
 // @codekit-prepend "../bower_components/jquery-waypoints/lib/jquery.waypoints.min.js"; 
 // @codekit-prepend "../bower_components/jquery-waypoints/lib/shortcuts/sticky.min.js"; 
 // @codekit-prepend "../bower_components/superfish/dist/js/superfish.min.js"; 
+// @codekit-prepend "modules/accordion.js"; 
 
 // My Shit
 

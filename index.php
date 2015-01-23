@@ -1,18 +1,7 @@
 <?php Themewrangler::setup_page();get_header(); ?>
 
 <?php get_template_part('templates/page', 'header'); ?>
-
-<div class="toolbar">
-  <div class="row">
-    <div class="desktop-12">
-      <ul class="nav">
-        <li class="title">What's On</li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Watch/Listen</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+<?php get_template_part('templates/global/page', 'toolbar'); ?>
 
 <div class="row">
   <div class="desktop-7">

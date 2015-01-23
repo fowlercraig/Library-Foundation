@@ -26,7 +26,7 @@
       <aside class="aside desktop-4 tablet-2 mobile-3 right"><?php the_field('aside',$taxonomy . '_' . $term_id); ?></aside>
       <?php } ?>
     <?php } else { ?>
-      <div class="<?php echo $pageWidth ;?>"></div>
+      <div class="<?php echo $pageWidth ;?>"><?php the_field('description','option'); ?></div>
       <?php if ( get_field('include_aside',$taxonomy . '_' . $term_id)) { ?>
       <aside class="aside desktop-4 tablet-2 mobile-3 right"><?php the_field('aside',$taxonomy . '_' . $term_id); ?></aside>
       <?php } ?>

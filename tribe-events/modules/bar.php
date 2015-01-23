@@ -21,24 +21,7 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 
 ?>
 
-<?php if ( is_tax() ){ ?>
-
-<div id="event-nav-bar">
-	<div class="row">
-		<?php wp_nav_menu( array( 'menu_class'=>'sf-menu','walker' => new MV_Cleaner_Walker_Nav_Menu() ) ); ?>
-	</div>
-</div>
-
-<?php } else { ?>
-
-<div id="event-nav-bar">
-	<div class="row">
-		<?php wp_nav_menu( array( 'menu_class'=>'sf-menu','walker' => new MV_Cleaner_Walker_Nav_Menu() ) ); ?>
-	</div>
-</div>
-
-<?php } ?>
-
+<?php get_template_part('templates/global/page', 'toolbar' );?>
 
 <?php do_action( 'tribe_events_bar_before_template' ) ?>
 

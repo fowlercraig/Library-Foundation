@@ -35,6 +35,7 @@
 
     <div id="logo-wrap" class="desktop-1"></div>
     <nav id="main-nav" class="desktop-12">
+      <a href="/" id="logo"><img src="/assets/img/lflalogo.png" /></a>
       <?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?>
       <a href="<?php echo get_the_permalink(289); ?>" class="button right" id="become-member-btn">Become a Member</a>
     </nav>

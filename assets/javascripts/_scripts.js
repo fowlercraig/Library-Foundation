@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
   // Superfish
 
-  $('#menu-calendar').superfish({
+  $('.toolbar .sf-menu').superfish({
     delay: 0,
     autoArrows: false,
     speed: 'fast',
@@ -17,6 +17,10 @@ $( document ).ready(function() {
   // Sizer
 
   $("#sponsors").sizer();
+
+  // Accordion
+
+  $('#faq-accordion').accordion();
 
   // Selecter
 
@@ -111,7 +115,7 @@ $( document ).ready(function() {
       filterValue = filterFns[ filterValue ] || filterValue;
       $container.isotope({ filter: filterValue });
       $('html,body').animate({
-        scrollTop: $('#whatwefund-filters').offset().top
+        scrollTop: $('#whatwefund-filters').offset().top - 49
       });
     });
 
@@ -152,15 +156,54 @@ $( document ).ready(function() {
 
   // Sticky Menu
 
-  var sticky = new Waypoint.Sticky({
-    element: $('#head')[0],
-    wrapper: '<div class="header-wrapper"/>',
-  });
+  if ( $('#head').length ) {
+    var sticky = new Waypoint.Sticky({
+      element: $('#head')[0],
+      wrapper: '<div class="header-wrapper"/>',
+    });
+  }
 
-  var eventSticky = new Waypoint.Sticky({
-    element: $('#event-bar')[0],
-    wrapper: '<div class="event-bar-wrapper"/>',
-    offset: 50,
-  })
+  if ( $('#event-bar').length ) {
+    var eventSticky = new Waypoint.Sticky({
+      element: $('#event-bar')[0],
+      wrapper: '<div class="event-bar-wrapper"/>',
+      offset: 50,
+    });
+  }
+
+  if ( $('#member-widget').length ) {
+
+    var memberSticky = new Waypoint.Sticky({
+      element: $('#member-widget')[0],
+      wrapper: '<div class="member-wrapper"/>',
+      offset: 75,
+    });
+
+    var mw = $('.member-wrapper').width();
+    var mh = $('.member-wrapper').height();
+
+    $('#member-widget').css({
+      width: mw
+    });
+
+    var $things = $('#footer-modules');
+
+    $things.waypoint(function(direction) {
+    if (direction === 'down') {
+      $('#member-widget').addClass('boom');
+    }
+    }, {
+    offset: mh+75
+    });
+
+    $things.waypoint(function(direction) {
+    if (direction === 'up') {
+      $('#member-widget').removeClass('boom');
+    }
+    }, {
+    offset: mh+75
+    });
+
+  }
 
 });

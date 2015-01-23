@@ -38,7 +38,7 @@
 ?>
 
 
-<div id="event-bar">
+<div id="event-bar" class="toolbar">
   <div class="row">
     <nav class="desktop-8 tablet-6 mobile-3">
       <?php echo $ticketStatus; ?>

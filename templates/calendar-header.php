@@ -65,7 +65,7 @@
             <div class="desc">
               <span class="event-header-cats"><?php echo $cats; ?></span>
               <span class="event-header-date"><?php echo $event_date; ?></span>
-              <span class="event-header-title"><?php the_title(); ?></span>
+              <a class="event-header-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </div>
           </div>
           <div class="desktop-1"><a href="#" onClick="$('#calendar-header .slider').data('royalSlider').goTo(<?php echo $counter; ?>);" class="button next"><i class="ss-icon ss-gizmo">navigateright</i></a></div>
