@@ -1,12 +1,17 @@
-<?php get_header(); ?>
-<section id="content" role="main">
+<?php Themewrangler::setup_page();get_header(); ?>
+
+
 <?php if ( have_posts() ) : ?>
 <header class="header">
 <h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?></h1>
 </header>
+<div id="results">
 <?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
+
+<div class="search-item"><?php the_title(); ?></div>
+
 <?php endwhile; ?>
+</div>
 <?php get_template_part( 'nav', 'below' ); ?>
 <?php else : ?>
 <article id="post-0" class="post no-results not-found">
@@ -19,6 +24,6 @@
 </section>
 </article>
 <?php endif; ?>
-</section>
-<?php get_sidebar(); ?>
+
+
 <?php get_footer(); ?>

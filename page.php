@@ -12,6 +12,10 @@
 
     include locate_template('page-blog.php' );
 
+  } elseif ( is_page( 'media' ) ) { 
+
+    include locate_template('page-media.php' );
+
   } else { 
 
     include locate_template('page-default.php' );
