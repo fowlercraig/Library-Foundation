@@ -4,7 +4,7 @@
   <div class="row">
     <div class="desktop-7">
       <?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
-      <?php the_content(); ?>
+      <div class="content"><?php the_content(); ?></div>
       <?php include locate_template('templates/event-bios.php'); ?>
       <?php include locate_template('templates/events/event-bios-simple.php'); ?>
     </div>

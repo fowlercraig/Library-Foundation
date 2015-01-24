@@ -12,7 +12,7 @@
 
     include locate_template('page-blog.php' );
 
-  } elseif ( is_page( 'media' ) ) { 
+  } elseif ( is_page( 'archive' ) ) { 
 
     include locate_template('page-media.php' );
 

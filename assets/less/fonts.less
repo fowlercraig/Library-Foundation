@@ -38,11 +38,20 @@
 .page-content {
   .caslon();
   font-size: 1.85em;
-  line-height: 1.35
+  line-height: 1.35;
+
+  &.text-box {
+
+    font-size: 1.35em;
+    line-height: 1.65;
+
+  }
+
 }
 
+
+
 .page-content p {
-  .caslon();
   font-size: 30px;
   line-height: 1.35
 }
@@ -51,6 +60,21 @@
   .sentinel();
   font-size: 3em;
   font-weight: 200;
+}
+
+.event-content {
+
+  .content {
+    .caslon();
+    font-size: 1.35em;
+    line-height: 1.5;
+
+    p {
+      line-height: inherit;      
+    }
+
+  }
+
 }
 
 .membership-level.complex ul {

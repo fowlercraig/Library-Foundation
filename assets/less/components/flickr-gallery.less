@@ -1,0 +1,59 @@
+#flickr-gallery {
+
+  .item {
+
+    position: relative;
+
+    .meta {
+      z-index: 9;
+      pointer-events: none;
+    }
+
+    .title {
+      
+      margin: 0;
+      .sentinel();
+
+      a {
+
+        color: @white;
+
+      }
+
+    }
+
+    .posted {
+
+      margin: 0;
+      .cat();
+      font-weight: 500;
+      color: @white75;
+
+    }
+
+    .thumb {
+
+      &:before {
+
+        content: '';
+        display: block;
+        .cover();
+        z-index: 1;
+        background: @black50;
+        transition: 300ms ease;
+
+      }
+
+    }
+
+    &:hover {
+      .thumb {
+        &:before {
+          background: @black25;
+        }
+      }
+    }
+
+  }
+
+}

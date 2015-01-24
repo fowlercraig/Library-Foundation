@@ -51,6 +51,10 @@ if( have_rows('page_modules' , $taxTerm) ):
 
           include locate_template('templates/image-gallery.php');
 
+        elseif( get_row_layout() == 'flickr_gallery' ):
+
+          include locate_template('templates/page-flickrgallery.php');
+
         elseif( get_row_layout() == 'what_we_fund_grid' ):
 
           get_template_part('templates/whatwefund/whatwefund', 'grid');

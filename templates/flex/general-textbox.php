@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="desktop-12 text-box entry-content">
+  <div class="desktop-12 text-box page-content">
     <?php the_sub_field('general_text_box', $taxTerm); ?>
   </div>
 </div>

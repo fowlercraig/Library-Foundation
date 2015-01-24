@@ -3,7 +3,7 @@
   border-bottom: 3px solid @bgGray;
   margin-bottom: @gutter*2;
 
-  &#toolbar {
+  &#toolbar, &#event-nav-bar {
     margin-bottom: 0;
     margin-top: -25px;
   }
@@ -22,6 +22,8 @@
       margin: 0;
       height: 55px;
       line-height: 60px;
+
+
 
       &.title {
 
@@ -74,6 +76,14 @@
 
         }
 
+        &.sf-with-ul {
+          padding-right: 25px;
+          &:after {
+            border-top-color: @lighterGray;
+            right: 5px;
+          }
+        }
+
         &.title {
 
           font-weight: 900;
@@ -81,6 +91,35 @@
           letter-spacing: 0;
           position: relative;
           
+        }
+
+        &.icon {
+
+          color: @aloudpink;
+          font-size: 22px;
+          display: block;
+          height: 68px;
+          line-height: 66px;
+
+        }
+
+      }
+
+      .sub-menu {
+        border: 3px solid @bgGray;
+        border-top-color: @white;
+        background: @white;
+        z-index: 9;
+
+        li {
+
+          a {
+
+            padding: 5px 10px;
+            display: block;
+
+          }
+
         }
 
       }

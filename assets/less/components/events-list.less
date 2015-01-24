@@ -47,7 +47,7 @@
 
     }
 
-    &:hover {
+    &:hover, &:first-child {
 
       background: #000;
       color: @white;
@@ -79,11 +79,14 @@
 
     &.tribe-events-first {
 
-      padding: @gutter*3 0!important;
+      padding: @gutter*5 0!important;
+      .title {
+        font-size: 42px;
+      }
 
       &:hover {
 
-        padding: @gutter*4 0!important;
+        padding: @gutter*5 0!important;
 
       }
 
@@ -114,7 +117,7 @@
       background-attachment: fixed;
     }
 
-    &:hover{
+    &:hover, &:first-child{
       .bg {
         opacity: .5;
       }

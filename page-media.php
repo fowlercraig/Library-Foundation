@@ -9,12 +9,12 @@
 <div class="row">
   <div class="desktop-12">
     <?php get_search_form(  ); ?>
-    <div id="posts"></div>
+    <div id="posts" class="row"></div>
 
     <script id="posts-list" type="text/template">
-    {{count}} posts found.
+    {{#count}}<div class="desktop-12">{{count}} posts found.<br><br></div>{{/count}} 
     {{#posts}}
-        <div class="item">
+        <div class="item desktop-4">
             {{#thumbnail}}
             <img src="{{thumbnail}}" alt="{{title}}">
             {{/thumbnail}}
@@ -26,47 +26,152 @@
             <span><a href="{{url}}">read more</a></span>
         </div>
     {{/posts}}
+    {{^posts}}
+    <div class="desktop-12">Sorry, no posts match that search.<br><br></div>
+    {{/posts}}
 </script>
 
-    <?php 
-      // $cats = get_categories();
-      // $output = array('categories' => array());
+    <script>
 
-      //   foreach ($cats as $cat) {
+    $(function(){
 
-      //     $cat_output = array(
-      //       'cat_id' => $cat->term_id,
-      //       'cat_name' => $cat->name,
-      //       'posts' => array(),
-      //     );
+      loadUrl = '/?json=1';
 
-      //   // should be able to use -1 to get all posts, rather than 9999
-      //     $args = array('numberposts=' => -1, 'category' => $cat->cat_ID);
-      //     $myposts = get_posts($args);
+      $.ajax({
 
-      //     foreach( $myposts as $post ) {
+          url: loadUrl,
+          dataType : "json",
+          type: 'GET',
+          beforeSend: function() {
+          $('#posts').html('<div class="desktop-12">loading</div>');
+          },
+          complete: function(data) {
+          
+          },
+          success: function(data) {
+          
+            var template = $('#posts-list').html();
+            var html = Mustache.to_html(template, data);
+            $('#posts').html(html);
 
-      //       if ($youtube_id = get_post_meta($post->ID, 'apls_video_youtube', TRUE)) {
-      //       $url = "http://www.youtube.com/watch?v={$youtube_id}";
+            
 
-      //     } else {
+          }
 
-      //       $url = get_post_meta($post->ID, 'apls_video_hosted', TRUE);
+        });
 
-      //     }
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
 
-      //     $cat_output['posts'][] = array(
-      //       'name' => get_the_title($post->ID),
-      //       'url' => $url,
-      //     );
-      //   }
+    var searchUrl = getParameterByName('search');
 
-      // $output['categories'][] = $cat_output;
-      // }
+    console.log(searchUrl);
 
-      // //header("Content-type: application/json");
-      // die(json_encode($output));
-      ?>
+    if(window.location.href.indexOf(searchUrl) > -1) {
+
+      loadUrl = '/search/'+searchUrl+'?json=1';
+       
+       $.ajax({
+
+          url: loadUrl,
+          dataType : "json",
+          type: 'GET',
+          beforeSend: function() {
+          $('#posts').html('<div class="desktop-12">loading</div>');
+          },
+          complete: function(data) {
+          
+          },
+          success: function(data) {
+          
+            var template = $('#posts-list').html();
+            var html = Mustache.to_html(template, data);
+            $('#posts').html(html);
+
+            
+
+          }
+
+        });
+
+    }
+
+
+    });
+
+    $('#searchform').submit(function( e ){ 
+
+    // Stop the form from submitting
+    e.preventDefault();
+
+    // Get the search term
+    var search = $('#s').val();
+    var cleansearch = search.replace(/ /g, '+');
+    var term = '/search/'+cleansearch+'?json=1';
+    var mediasearch = '/archive?search='+cleansearch;
+//    var term = '/search/'+search;
+
+
+    // Make sure the user searched for something
+    if ( term ){
+
+      // $.getJSON(term, function(data){
+      //       var template = $('#results-list').html();
+      //       var html = Mustache.to_html(template, data);
+      //       $('#results').html(html);
+      //       });
+
+        // $.getJSON(term, function(data){
+
+        //   var template = $('#posts-list').html();
+        //   var html = Mustache.to_html(template, data);
+        //   $('#posts').html(html);
+
+        // });
+
+
+        $.ajax({
+
+          url: term,
+          dataType : "json",
+          type: 'GET',
+          beforeSend: function() {
+          // TODO: show your spinner
+          $('#posts').html('<div class="desktop-12">loading</div>');
+          },
+          complete: function(data) {
+          // TODO: hide your spinner
+          //$('#posts').html('loaded');
+          //console.log(data);
+          // var template = $('#posts-list').html();
+          // var html = Mustache.to_html(template, data);
+          // $('#posts').html(html);
+          },
+          success: function(data) {
+          // This only works if we're getting results from the search page... not JSON. 
+          //$('#results').html( $(data).find('#results') );
+          //$('#results').html(data);
+
+            // This is it.
+            var template = $('#posts-list').html();
+            var html = Mustache.to_html(template, data);
+            $('#posts').html(html);
+            History.pushState(null,null,mediasearch)
+            // Need to add some animation, etc.
+
+          }
+
+        });
+
+    }
+
+});
+
+</script>
   </div>
 </div>
 
