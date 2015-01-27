@@ -21,6 +21,7 @@
 <?php endif; ?>
 
 
+
 <?php if( tribe_is_past() || tribe_is_upcoming() && !is_tax() ): ?>
 
 <div id="sponsors" class="page-section">
