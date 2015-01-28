@@ -1,11 +1,24 @@
 <?php Themewrangler::setup_page();get_header(); ?>
 
+
 <?php 
+
+  $featured = get_field('featured_header');
+
+  if ( $featured ) {    
+
+    $min = '';
+
+  } else { 
+
+    $min = 'minimal';
+
+  }
   
-  get_template_part('templates/single', 'header');
-  get_template_part('templates/global/page', 'toolbar');
-  get_template_part('templates/single', 'content');
-  get_template_part('templates/flex', 'content');
+  include locate_template('templates/single-header.php');
+  include locate_template('templates/global/page-toolbar.php');
+  include locate_template('templates/single-content.php');
+  include locate_template('templates/flex-content.php');
 
 ?>
 

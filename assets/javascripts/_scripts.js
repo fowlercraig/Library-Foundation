@@ -186,6 +186,8 @@ $( document ).ready(function() {
       width: mw
     });
 
+    // Accounting for Footer Modules
+
     var $things = $('#footer-modules');
 
     $things.waypoint(function(direction) {
@@ -202,6 +204,26 @@ $( document ).ready(function() {
     }
     }, {
     offset: mh+75
+    });
+
+    // Accounting for What We Fund
+
+    var $wwf_filter = $('#whatwefund-filters');
+
+    $wwf_filter.waypoint(function(direction) {
+      if (direction === 'down') {
+        $('#member-widget').addClass('boom');
+      }
+    }, {
+    offset: mh+125
+    });
+
+    $wwf_filter.waypoint(function(direction) {
+    if (direction === 'up') {
+      $('#member-widget').removeClass('boom');
+    }
+    }, {
+    offset: mh+125
     });
 
   }

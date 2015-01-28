@@ -21,7 +21,7 @@
 <div class="page-content">
   <div class="row">
     <?php if ( is_tax() ) { ?>
-      <div class="<?php echo $pageWidth ;?>"><?php echo term_description(); ?></div>
+      <div class="<?php echo $pageWidth ;?>"><?php the_field('description',$taxonomy . '_' . $term_id); ?></div>
       <?php if ( get_field('include_aside',$taxonomy . '_' . $term_id)) { ?>
       <aside class="aside desktop-4 tablet-2 mobile-3 right"><?php the_field('aside',$taxonomy . '_' . $term_id); ?></aside>
       <?php } ?>

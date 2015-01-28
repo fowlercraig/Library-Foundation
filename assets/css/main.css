@@ -4864,8 +4864,8 @@ html:hover [class^="ss-"] {
 }
 .page-content {
   font-family: 'franklin-gothic-urw', sans-serif;
-  font-size: 23px;
-  line-height: 23px;
+  font-size: 16px;
+  line-height: 1.8;
 }
 .page-content h1,
 .page-content h2,
@@ -4876,7 +4876,9 @@ html:hover [class^="ss-"] {
   line-height: 1.45;
 }
 .page-content p,
-.page-content ul {
+.textbox p,
+.page-content ul,
+.textbox ul {
   font-size: 16px;
   line-height: 1.8;
 }
@@ -5157,11 +5159,25 @@ a.added_to_cart.wc-forward {
 .page-header.event .parent-links li a {
   color: #e2438c;
 }
+.page-header.minimal {
+  padding-top: 175px;
+  background: #008bbe;
+}
+.page-header.minimal:after {
+  opacity: .125;
+}
+.page-header.minimal .page-header-title {
+  font-size: 3em;
+}
 .page-content,
 .event-content {
   color: #59595b;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.page-content > .row,
+.event-content > .row {
+  position: relative;
 }
 .page-content p,
 .event-content p {
@@ -5942,7 +5958,7 @@ a.added_to_cart.wc-forward {
   color: #ffffff;
 }
 .page-template-page-cart-php #content {
-  padding-top: 130px;
+  padding-top: 175px;
 }
 .page-template-page-cart-php .cart-header .page-header-title {
   font-size: 3em;
@@ -6005,8 +6021,8 @@ a.added_to_cart.wc-forward {
 }
 .page-header.event .sub-title {
   font-family: 'franklin-gothic-urw', sans-serif;
-  font-size: 23px;
-  line-height: 23px;
+  font-size: 16px;
+  line-height: 1.8;
   color: #59595b;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -6027,6 +6043,9 @@ a.added_to_cart.wc-forward {
 .page-header.event .sub-title ul {
   font-size: 16px;
   line-height: 1.8;
+}
+.page-header.event .sub-title > .row {
+  position: relative;
 }
 .page-header.event .sub-title p {
   color: inherit;
