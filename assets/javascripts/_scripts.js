@@ -16,7 +16,7 @@ $( document ).ready(function() {
 
   // Sizer
 
-  $("#sponsors").sizer();
+  $("#sponsors, #page-list.quadrant").sizer();
 
   // Accordion
 
