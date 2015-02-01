@@ -12,22 +12,30 @@
     <div id="posts" class="row"></div>
 
     <script id="posts-list" type="text/template">
+<<<<<<< Updated upstream
     {{#count}}<div class="desktop-12">{{count}} posts found.<br><br></div>{{/count}} 
+=======
+    {{#count}}<div class="desktop-12">{{count}} posts found. </div>{{/count}}
+>>>>>>> Stashed changes
     {{#posts}}
         <div class="item desktop-4">
             {{#thumbnail}}
-            <img src="{{thumbnail}}" alt="{{title}}">
+            <img src="{{medium}}" alt="{{title}}" class="img-responsive">
             {{/thumbnail}}
             {{^thumbnail}}
             {{/thumbnail}}
             
-            <h3>{{title}}</h3>
+            <h3><a href="{{url}}">{{title}}</a></h3>
             {{{excerpt}}}
             <span><a href="{{url}}">read more</a></span>
         </div>
     {{/posts}}
     {{^posts}}
+<<<<<<< Updated upstream
     <div class="desktop-12">Sorry, no posts match that search.<br><br></div>
+=======
+    <div class="desktop-12">Sorry, no posts.</div>
+>>>>>>> Stashed changes
     {{/posts}}
 </script>
 
