@@ -75,6 +75,23 @@ $( document ).ready(function() {
     controlNavigation: 'none',
   }); 
 
+  $("#home-carousel").royalSlider({
+    keyboardNavEnabled: true,
+    autoScaleSlider : true,
+    autoScaleSliderWidth: 1200,
+    autoScaleSliderHeight: 600,
+    imageScaleMode: 'fill',
+    slidesSpacing: 0,
+    loop: true,
+  }); 
+
+  $('#upcoming-events-carousel').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    initialSlide: 2
+  });
+
   $(".amount").text(function () {
     return $(this).text().replace("$0.00", "Free"); 
   });​​​​​
@@ -90,6 +107,17 @@ $( document ).ready(function() {
         itemSelector:   '.item',
         layoutMode:     'packery',
         filter:         '.featured',
+      });
+
+    });
+
+    var $grid_container = $('.sortable-grid').imagesLoaded( function() {
+
+      $grid_container.isotope({
+
+        itemSelector:   '.item',
+        layoutMode:     'packery',
+        
       });
 
     });
@@ -116,6 +144,18 @@ $( document ).ready(function() {
       $container.isotope({ filter: filterValue });
       $('html,body').animate({
         scrollTop: $('#whatwefund-filters').offset().top - 49
+      });
+    });
+
+    $('.grid-filters').on( 'click', 'button', function() {
+      var filterValue = $(this).attr('data-filter');
+      $('.grid-filters').find('.active').removeClass('active');
+      $(this).addClass('active');
+      // use filter function if value matches
+      filterValue = filterFns[ filterValue ] || filterValue;
+      $grid_container.isotope({ filter: filterValue });
+      $('html,body').animate({
+        scrollTop: $('.grid-filters').offset().top - 49
       });
     });
 
@@ -227,5 +267,16 @@ $( document ).ready(function() {
     });
 
   }
+
+  // Archive Page
+
+  $('.popup-video').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false
+  });
 
 });

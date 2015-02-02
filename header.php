@@ -17,11 +17,11 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('gridlock'); ?>>
+<body <?php body_class(); ?>>
 
 <div id="wrapper">
 
-<header id="head">
+<header id="head" class="gridlock gridlock-fluid">
   <div class="row">
     <?php 
       $menuParameters = array(
@@ -44,6 +44,6 @@
   </div>
 </header>
 
-<section id="content"><div>
+<section id="content" class="gridlock"><div>
 <div <?php body_class(); ?>>
 

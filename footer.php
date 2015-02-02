@@ -3,7 +3,7 @@
 
 <?php get_template_part('templates/footer', 'modules' ); ?>
 
-<footer id="foot">
+<footer id="foot" class="gridlock gridlock-fluid">
   <div class="row">
     <div class="desktop-3"><a class="logo" href="/"><?php bloginfo('name'); ?></a></div>
     <div class="desktop-3"><?php the_field('address', 'option'); ?></div>
@@ -19,9 +19,8 @@
 <script src="//use.typekit.net/kfw6qzi.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js" type="application/javascript"></script>
-<<<<<<< Updated upstream
 <script src="//cdnjs.cloudflare.com/ajax/libs/history.js/1.8/native.history.min.js" type="application/javascript"></script>
-=======
+
 
 <script>
     $('#searchform').submit(function( e ){ 
@@ -93,7 +92,6 @@
 });
 
 </script>
->>>>>>> Stashed changes
 
 </body>
 </html>

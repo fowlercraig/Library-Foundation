@@ -1,6 +1,6 @@
 <?php if( have_rows('footer_modules', 'option') ): ?>
 
-<div id="footer-modules">
+<div id="footer-modules" class="gridlock">
   <div class="row">
     <?php while ( have_rows('footer_modules', 'option') ) : the_row(); ?>
 
