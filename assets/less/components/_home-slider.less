@@ -4,8 +4,73 @@
 
   #home-carousel {
 
+    position: relative;
+    background: @white;
+    height: 600px;
+    width: 100%;
+
     .rsOverflow {
       overflow: visible;
+      background: @white;
+    }
+
+    .slide {
+
+      .header-overlay();
+      opacity: .3;
+      position: static;
+      transition: 300ms ease;
+
+    }
+
+    .rsActiveSlide {
+
+      .slide {
+        opacity: 1
+      }
+
+    }
+
+    .meta {
+
+      position: absolute;
+      bottom: 0;
+      z-index: 99;
+      width: 100%;
+
+      .title {
+        
+        .caslon();
+        color: @white;
+        font-size: 4.5em;
+
+      }
+
+    }
+
+    .slide_meta {
+
+      border-top: 1px solid @white25;
+      height: 50px;
+      line-height: 50px;
+
+      .post-title {
+        font-family: 'Gotham';
+        text-transform: uppercase;
+        font-weight: 900;
+        color: @white;
+        font-size: 13px;
+      }
+
+      .text-right {
+
+        a {
+          color: @white;
+          font-size: 14px;
+        }
+
+      }
+
     }
 
   }
@@ -15,8 +80,33 @@
 #home-upcoming {
 
   background: @bgGray;
-  padding: @gutter*4 0;
+  padding: @gutter*3 0;
   overflow: hidden;
+  //margin-bottom: @gutter*2;
+
+  .selecter {
+
+    text-align: left;
+    .selecter-selected {
+      
+    }
+  }
+
+  header {
+
+    margin-bottom: @gutter*2;
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+  }
 
 }
 
@@ -35,26 +125,74 @@
         padding: 15px;
 
       }
-      
-      .title {
 
-        margin: 0;
-
-      }
-
-      .posted {
-
-        margin: 0;
-
-      }
-      
     }
 
+  }
+
+  button {
+    display: none!important;
   }
 
   .slick-list {
 
     overflow: visible;
+
+  }
+
+}
+
+#home-featured {
+
+  .slider {
+    height: 600px;
+    width: 100%;
+  }
+
+  .slide {
+    .header-overlay();
+    position: static;
+  }
+
+  .rsSlide {
+    //position: relative;
+  }
+
+  .slide_meta {
+
+    border-top: 1px solid @white25;
+    height: 50px;
+    line-height: 50px;
+
+    a {
+      color: @white;
+    }
+
+  }
+
+  .meta {
+ 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 29;
+
+    .title {
+        
+      .caslon();
+      color: @white;
+      font-size: 3em;
+      line-height: 1.2;
+      margin-bottom: 0px;
+
+    }
+
+    .button {
+      color: @white;
+      border-color: @white;
+      margin-bottom: 30px;
+    }
 
   }
 

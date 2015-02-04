@@ -36,6 +36,13 @@ $( document ).ready(function() {
     customClass: "blog-select"
   });
 
+  $("#home-upcoming select").selecter({
+    label: "Jump to Month",
+    cover: true,
+    links: true,
+    customClass: "blog-select"
+  });
+
   // Image Slider
 
   $(".royalslider").royalSlider({
@@ -77,19 +84,39 @@ $( document ).ready(function() {
 
   $("#home-carousel").royalSlider({
     keyboardNavEnabled: true,
-    autoScaleSlider : true,
-    autoScaleSliderWidth: 1200,
-    autoScaleSliderHeight: 600,
+    // autoScaleSlider : true,
+    // autoScaleSliderWidth: 1200,
+    // autoScaleSliderHeight: 600,
     imageScaleMode: 'fill',
     slidesSpacing: 0,
+    fadeinLoadedSlide: false,
+    addActiveClass: true,
+    loop: true,
+    slidesSpacing: 1,
+    visibleNearby: {
+      enabled: true,
+      centerArea: 0.96,
+      center: true,
+      breakpoint: 650,
+      breakpointCenterArea: 0.64,
+      navigateByCenterClick: true
+    }
+  }); 
+
+  $("#home-featured .slider").royalSlider({
+    keyboardNavEnabled: true,
+    imageScaleMode: 'fill',
+    slidesSpacing: 0,
+    fadeinLoadedSlide: false,
+    addActiveClass: true,
     loop: true,
   }); 
 
   $('#upcoming-events-carousel').slick({
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 3,
-    initialSlide: 2
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    accessibility: false,
   });
 
   $(".amount").text(function () {
@@ -214,7 +241,7 @@ $( document ).ready(function() {
   if ( $('#member-widget').length ) {
 
     var memberSticky = new Waypoint.Sticky({
-      element: $('#member-widget')[0],
+      element: $('#member-widget:not(.page-home #member-widget)')[0],
       wrapper: '<div class="member-wrapper"/>',
       offset: 75,
     });

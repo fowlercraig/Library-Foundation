@@ -82,7 +82,7 @@ function excerpt($num) {
 $limit = $num+1;
 $excerpt = explode(' ', get_the_excerpt(), $limit);
 array_pop($excerpt);
-$excerpt = implode(" ",$excerpt)."... <p class='readmore'><a href='" .get_permalink($post->ID) ." '>Read more</a></p>";
+$excerpt = implode(" ",$excerpt)."<p><a class='button' href='" .get_permalink($post->ID) ." '>Read more</a></p>";
 echo $excerpt;
 }
 

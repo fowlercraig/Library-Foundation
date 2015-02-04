@@ -12,6 +12,10 @@
 
   }
 
+  if (is_front_page()) {
+    $homepage = 'class="homepage"';
+  }
+
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -24,9 +28,9 @@
     <?php if ( get_field('include_aside')) { ?>
     <aside class="aside desktop-4 tablet-2 mobile-3 right"><?php the_field('aside'); ?></aside>
 
-    <?php if (is_ancestor(250)) { // If What We Fund Ancestor ?>
+    <?php if ( is_ancestor(250) OR is_front_page() ) { // If What We Fund Ancestor ?>
     <aside class="aside desktop-4 tablet-2 mobile-3 right">
-      <div id="member-widget">
+      <div id="member-widget" <?php echo $homepage; ?>>
         <div class="wrapper">
           <h3>Become a Library Associate</h3>
           <p>

@@ -1309,12 +1309,7 @@
 /*---------------------------
   Transitions
 ---------------------------*/
-*,
-*:link,
-*:visited,
-*:hover,
-*:active,
-*:focus {
+a {
   transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
 }
 *:focus,
@@ -4922,17 +4917,25 @@ html:hover [class^="ss-"] {
 #member-widget {
   background: #5f5f5f;
 }
-#member-widget.stuck {
+#member-widget.stuck,
+#member-widget.homepage {
   position: fixed;
   top: 75px;
   width: inherit;
   background: #008bbe;
 }
-#member-widget.stuck > a {
+#member-widget.stuck > a,
+#member-widget.homepage > a {
   background: #0078a5;
 }
-#member-widget.stuck > a:hover {
+#member-widget.stuck > a:hover,
+#member-widget.homepage > a:hover {
   background: #00668b;
+}
+#member-widget.homepage {
+  position: relative;
+  top: auto;
+  width: auto;
 }
 #member-widget.boom {
   top: auto;
@@ -5949,13 +5952,84 @@ a.added_to_cart.wc-forward {
 #home-slider {
   overflow: hidden;
 }
+#home-slider #home-carousel {
+  position: relative;
+  background: #ffffff;
+  height: 600px;
+  width: 100%;
+}
 #home-slider #home-carousel .rsOverflow {
   overflow: visible;
+  background: #ffffff;
+}
+#home-slider #home-carousel .slide {
+  position: relative;
+  opacity: .3;
+  position: static;
+  transition: 300ms ease;
+}
+#home-slider #home-carousel .slide:after {
+  transition: 300ms ease;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/img/header-bg.png) no-repeat top center;
+  background-size: cover;
+  opacity: .75;
+}
+#home-slider #home-carousel .rsActiveSlide .slide {
+  opacity: 1;
+}
+#home-slider #home-carousel .meta {
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+  width: 100%;
+}
+#home-slider #home-carousel .meta .title {
+  font-family: 'Caslon', serif;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-size: 4.5em;
+}
+#home-slider #home-carousel .slide_meta {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  height: 50px;
+  line-height: 50px;
+}
+#home-slider #home-carousel .slide_meta .post-title {
+  font-family: 'Gotham';
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 13px;
+}
+#home-slider #home-carousel .slide_meta .text-right a {
+  color: #ffffff;
+  font-size: 14px;
 }
 #home-upcoming {
   background: #f8f8f8;
-  padding: 4.16666667% 0;
+  padding: 3.125% 0;
   overflow: hidden;
+}
+#home-upcoming .selecter {
+  text-align: left;
+}
+#home-upcoming header {
+  margin-bottom: 2.08333333%;
+}
+#home-upcoming header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+#home-upcoming header p {
+  margin: 0;
+  font-size: 15px;
 }
 #upcoming-events-carousel .slide {
   margin: 0;
@@ -5966,14 +6040,80 @@ a.added_to_cart.wc-forward {
 #upcoming-events-carousel .slide .meta .wrapper {
   padding: 15px;
 }
-#upcoming-events-carousel .slide .meta .title {
-  margin: 0;
-}
-#upcoming-events-carousel .slide .meta .posted {
-  margin: 0;
+#upcoming-events-carousel button {
+  display: none!important;
 }
 #upcoming-events-carousel .slick-list {
   overflow: visible;
+}
+#home-featured .slider {
+  height: 600px;
+  width: 100%;
+}
+#home-featured .slide {
+  position: relative;
+  position: static;
+}
+#home-featured .slide:after {
+  transition: 300ms ease;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/img/header-bg.png) no-repeat top center;
+  background-size: cover;
+  opacity: .75;
+}
+#home-featured .slide_meta {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  height: 50px;
+  line-height: 50px;
+}
+#home-featured .slide_meta a {
+  color: #ffffff;
+}
+#home-featured .meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 29;
+}
+#home-featured .meta .title {
+  font-family: 'Caslon', serif;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-size: 3em;
+  line-height: 1.2;
+  margin-bottom: 0px;
+}
+#home-featured .meta .button {
+  color: #ffffff;
+  border-color: #ffffff;
+  margin-bottom: 30px;
+}
+#upcoming-events-carousel .slide {
+  padding: 0 10px;
+}
+#upcoming-events-carousel .slide .posted {
+  font-size: 14px;
+  margin: 0;
+}
+#upcoming-events-carousel .slide .desc {
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+}
+#upcoming-events-carousel .slide .title {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: 15px;
+}
+#upcoming-events-carousel .slide .title a {
+  color: #333333;
 }
 .page-template-page-cart-php #head {
   border-color: #dddddd;

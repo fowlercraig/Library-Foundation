@@ -19,7 +19,7 @@
 
   background: darken(@textGray, 15%);
 
-  &.stuck {
+  &.stuck, &.homepage {
 
     position: fixed;
     top: 75px;
@@ -33,6 +33,12 @@
       }
     }
 
+  }
+
+  &.homepage {
+    position: relative;
+    top: auto;
+    width: auto;
   }
 
   &.boom {
