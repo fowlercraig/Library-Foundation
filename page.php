@@ -16,6 +16,10 @@
 
     include locate_template('page-media.php' );
 
+  } elseif ( is_page( 'membership' ) ) { 
+
+    include locate_template('page-membership.php' );
+
   } else { 
 
     include locate_template('page-default.php' );

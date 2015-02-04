@@ -6717,6 +6717,55 @@ a.added_to_cart.wc-forward {
   font-weight: 500;
   color: #999999;
 }
+#member-tabs menu .tabber-handle {
+  background: #008bbe;
+  padding: 2.08333333%;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+#member-tabs menu .tabber-handle a {
+  color: rgba(255, 255, 255, 0.5);
+}
+#member-tabs menu .tabber-handle h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 28px;
+}
+#member-tabs menu .tabber-handle:nth-child(2) {
+  background: #009ed8;
+}
+#member-tabs .tabber-tab {
+  padding: 0 2.08333333%;
+}
+#member-tabs .tabber-tab .member-level-title {
+  color: #ffffff;
+}
+#member-tabs .tabber-tab .sub-title {
+  color: rgba(255, 255, 255, 0.75);
+}
+#member-tabs .tabber-tab .button {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+#member-tabs .tabber-tab p {
+  color: #ffffff;
+}
+#member-tabs .tabber-tab p strong {
+  color: #ffffff;
+}
+#member-tabs .tabber-tab ul li {
+  border-bottom: none;
+  color: #ffffff;
+}
+#member-tabs .tabber-tab .membership-level {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+#member-tabs #library {
+  background: #008bbe;
+}
+#member-tabs #leader {
+  background: #009ed8;
+}
 #archive-grid .item {
   position: relative;
 }

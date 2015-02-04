@@ -37,7 +37,15 @@ if( have_rows('page_modules' , $taxTerm) ):
 
         elseif( get_row_layout() == 'member_title' ):
 
-          include('flex/member-title.php');
+          if (is_page('membership')) {
+
+            include('flex/member-title-alt.php');
+
+          } else {
+
+            include('flex/member-title.php');
+
+          }
 
         elseif( get_row_layout() == 'custom_page_references' ):
 
