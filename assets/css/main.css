@@ -5009,6 +5009,10 @@ html:hover [class^="ss-"] {
   right: 0;
   -webkit-font-smoothing: antialiased;
 }
+#donation-module .selecter .selecter-selected {
+  font-size: 18px;
+  color: #858585;
+}
 #donation-module .cart {
   position: relative;
 }
