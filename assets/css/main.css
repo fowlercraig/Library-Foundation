@@ -5660,6 +5660,49 @@ a.added_to_cart.wc-forward {
   box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
 }
+.modal-window.member .images,
+.modal-window.member .woocommerce-tabs,
+.modal-window.member .sku_wrapper {
+  display: none;
+}
+.modal-window.member h1 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+  color: #008bbe;
+  font-size: 2.5em;
+}
+.modal-window.member .value select {
+  float: right;
+}
+.modal-window.member .value .selecter {
+  margin: 0;
+}
+.modal-window.member .variations {
+  margin-bottom: 20px;
+}
+.modal-window.member .variations_button {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  float: right;
+}
+.modal-window.member .single_variation {
+  display: inline-block;
+}
+.modal-window.member .summary {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.modal-window.member .summary > div {
+  display: none;
+}
+.modal-window.member .price {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .accordion {
   list-style-type: none;
   padding: 0;
@@ -6723,6 +6766,12 @@ a.added_to_cart.wc-forward {
   border: none;
   color: rgba(255, 255, 255, 0.5);
 }
+#member-tabs menu .tabber-handle:first-child {
+  border-top-left-radius: 3px;
+}
+#member-tabs menu .tabber-handle:last-child {
+  border-top-right-radius: 3px;
+}
 #member-tabs menu .tabber-handle a {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -6735,7 +6784,10 @@ a.added_to_cart.wc-forward {
   background: #009ed8;
 }
 #member-tabs .tabber-tab {
-  padding: 0 2.08333333%;
+  padding: 0;
+  padding: 0 20px;
+  border-radius: 3px;
+  border-top-left-radius: 0;
 }
 #member-tabs .tabber-tab .member-level-title {
   color: #ffffff;
@@ -6756,15 +6808,30 @@ a.added_to_cart.wc-forward {
 #member-tabs .tabber-tab ul li {
   border-bottom: none;
   color: #ffffff;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 #member-tabs .tabber-tab .membership-level {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  background: none;
+  padding: 20px;
 }
-#member-tabs #library {
+#member-tabs .tabber-tab .membership-level:before {
+  display: none;
+}
+#member-tabs #library,
+#member-tabs #tab_2 {
   background: #008bbe;
 }
-#member-tabs #leader {
+#member-tabs #leader,
+#member-tabs #tab_4 {
   background: #009ed8;
+}
+.mfp-content .summary {
+  background: #ffffff;
+  max-width: 600px;
+  border-radius: 3px;
+  margin: auto;
 }
 #archive-grid .item {
   position: relative;

@@ -2,14 +2,20 @@
 
   menu {
 
-
-
     .tabber-handle {
 
       background: @blue;
       padding: @gutter*2;
       border: none;
       color: @white50;
+
+      &:first-child {
+        border-top-left-radius: 3px;  
+      }
+      
+      &:last-child {
+        border-top-right-radius: 3px;  
+      }
 
       a {
         color: @white50;
@@ -33,7 +39,10 @@
 
   .tabber-tab {
 
-    padding: 0 @gutter*2;
+    padding: 0;
+    padding: 0 20px;
+    border-radius: 3px;
+    border-top-left-radius: 0;
 
     .member-level-title {
       color: @white;
@@ -59,20 +68,27 @@
       li {
         border-bottom: none;
         color: @white;
+        padding-top: 2px;
+        padding-bottom: 2px;
       }
     }
 
     .membership-level {
-      border-bottom: 2px solid @black25;
+      border-bottom: 2px solid rgba(0,0,0,.1);
+      background: none;
+      padding: 20px;
+      &:before {
+        display: none;
+      }
     }
 
 
   }
 
-  #library {
+  #library, #tab_2 {
     background: @blue;
   }
-  #leader {
+  #leader, #tab_4 {
     background: lighten(@blue, 5%) 
   }
 

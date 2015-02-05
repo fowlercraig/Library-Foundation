@@ -30,11 +30,17 @@ $( document ).ready(function() {
     customClass: "blog-select"
   });
 
-  $(".widget_archive select").selecter({
-    label: "Archive",
+  $(".widget_categories select").selecter({
+    label: "All Categories",
     cover: true,
     customClass: "blog-select"
   });
+
+  // $(".value select").selecter({
+  //   //label: "Archive",
+  //   cover: true,
+  //   customClass: "blog-select"
+  // });
 
   $("#home-upcoming select").selecter({
     label: "Jump to Month",
@@ -210,6 +216,17 @@ $( document ).ready(function() {
     closeBtnInside: false,
     mainClass: 'mfp-fade',
   }); 
+
+  $('.member-popup').magnificPopup({
+    type: 'ajax',
+    callbacks : {
+      parseAjax: function(mfpResponse) {
+        mfpResponse.data = $(mfpResponse.data).find('#content .summary');
+      },
+    },
+    //alignTop: center,
+    overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+  });
 
   $('.button.closed').magnificPopup({
     type: 'image',

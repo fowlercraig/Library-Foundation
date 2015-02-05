@@ -1,11 +1,78 @@
 .modal-window {
 
   max-width: 700px;
-  max-width: 700px;
   background: @white;
   padding: @gutter*2;
   margin: auto;
   box-shadow: 0 0 50px 10px @black25;
   border-radius: 4px;
+
+  &.member {
+
+    .images, .woocommerce-tabs, .sku_wrapper {
+
+      display: none;
+
+    }
+
+    h1 {
+      margin: 0;
+      margin-bottom: 25px;
+      .sentinel();
+      color: @blue;
+      font-size: 2.5em;
+    }
+
+    .value {
+      //text-align: right;
+      select {
+        float: right;
+      }
+
+      .selecter {
+        margin: 0;
+      }
+
+    }
+
+    .variations {
+
+      margin-bottom: 20px;
+
+    }
+
+    .variations_button {
+
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      float: right;
+
+    }
+
+    .single_variation {
+
+      display: inline-block;
+
+    }
+
+    .summary {
+
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+
+      > div {
+        display: none;
+      }
+
+    }
+
+    .price {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+  }
 
 }
