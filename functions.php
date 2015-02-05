@@ -73,3 +73,18 @@ if(function_exists("register_options_page")) {
 }
 
 Themewrangler::set_defaults( $settings );
+
+
+function wcs_redirect_product_based ( $order_id ){
+  $order = wc_get_order( $order_id );
+
+  foreach( $order->get_items() as $item ) {
+    $_product = wc_get_product( $item['product_id'] );
+    // Add whatever product id you want below here
+    if ( $item['product_id'] == 52 ) {
+      // change below to the URL that you want to send your customer to
+      wp_redirect('/thanks');
+    }
+  }
+}
+add_action( 'woocommerce_thankyou', 'wcs_redirect_product_based' ); 

@@ -4989,6 +4989,85 @@ html:hover [class^="ss-"] {
   padding: 4.16666667% 0;
   border-top: 2px solid #f8f8f8;
 }
+#donation-module {
+  background: #ffffff;
+  padding: 1px 25px 20px;
+}
+#donation-module .button.alt {
+  background: #008bbe;
+  color: #ffffff;
+  border-radius: 3px;
+  font-family: 'Gotham';
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 40px;
+  line-height: 43px;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-font-smoothing: antialiased;
+}
+#donation-module .cart {
+  position: relative;
+}
+#donation-module .cart:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#donation-module .images,
+#donation-module .entry-title,
+#donation-module .gfield_description,
+#donation-module .woocommerce-tabs,
+#donation-module .quantity {
+  display: none;
+}
+#donation-module input {
+  display: none;
+}
+#donation-module .gform_wrapper {
+  margin: 0;
+  width: 75%;
+  max-width: 75%;
+}
+#donation-module .gform_footer {
+  display: none;
+}
+#donation-module .gfield_label {
+  font-family: 'Gotham';
+  color: #008bbe;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  height: 15px;
+  line-height: 15px;
+  display: block;
+}
+#donation-module li {
+  border: none;
+}
+#donation-module .gfield {
+  padding: 0;
+}
+#donation-module .gfield input {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  color: #858585;
+  font-size: 18px;
+  font-family: 'franklin-gothic-urw', sans-serif;
+  display: block;
+  padding: 15px;
+}
+#donation-module .gfield:before,
+#donation-module .gfield:after {
+  display: none;
+}
 .single-tribe_events .tribe-events-event-image {
   text-align: left;
 }

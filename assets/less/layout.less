@@ -101,3 +101,102 @@
   }
 
 }
+
+
+#donation-module {
+
+  background: @white;
+  padding: 1px 25px 20px;
+
+  .button.alt {
+    //width: 23%;
+    //float: right;
+    //clear: none;
+    background: @blue;
+    color: @white;
+    border-radius: 3px;
+    font-family: 'Gotham';
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 40px;
+    line-height: 43px;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .cart {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .images, .entry-title, .gfield_description,
+  .woocommerce-tabs, .quantity {
+
+    display: none;
+
+  }
+
+  input {
+    display: none;
+  }
+
+  .gform_wrapper {
+    margin: 0;
+    width: 75%;
+    max-width: 75%;
+  }
+
+  .gform_footer {
+    display: none;
+  }
+
+  .gfield_label {
+    font-family: 'Gotham';
+    color: @blue;
+    text-transform: uppercase;;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    height: 15px;
+    line-height: 15px;
+    display: block;
+  }
+
+  li {
+    border: none;
+  }
+
+  .gfield {
+
+    padding: 0;
+
+    input {
+
+      margin: 0;
+      width: 100%;
+      max-width: 100%;
+      color: @textGray;
+      font-size: 18px;
+      .lato();
+      display: block;
+      padding: 15px;
+
+    }
+
+    &:before, &:after {
+      display: none;
+    }
+
+  }
+
+}

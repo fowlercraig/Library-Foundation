@@ -36,11 +36,11 @@ $( document ).ready(function() {
     customClass: "blog-select"
   });
 
-  // $(".value select").selecter({
-  //   //label: "Archive",
-  //   cover: true,
-  //   customClass: "blog-select"
-  // });
+  $("#donation-module select").selecter({
+    //label: "Archive",
+    cover: true,
+    customClass: "blog-select"
+  });
 
   $("#home-upcoming select").selecter({
     label: "Jump to Month",
