@@ -83,7 +83,7 @@ function wcs_redirect_product_based ( $order_id ){
     // Add whatever product id you want below here
     if ( $item['product_id'] == 52 ) {
       // change below to the URL that you want to send your customer to
-      wp_redirect('/thanks');
+      include locate_template('templates/thanks.php' );
     }
   }
 }

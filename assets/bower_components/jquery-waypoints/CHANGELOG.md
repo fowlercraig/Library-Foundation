@@ -1,22 +1,5 @@
 # Changelog
 
-## v3.0.1
-
-- Add semicolons to the end of built files to aid in clean concatenation. (Issue #353)
-
-## v3.0.0
-
-- Remove hard jQuery dependency. Create builds for jQuery, Zepto, and no DOM framework. (Issue #282)
-- Expose `Waypoint` and `Context` classes. (Issue #281)
-- Add `Group` class and `group` option for grouping waypoints. Make `continuous` option work within these groups. (Issue #264)
-- Add Inview shortcut. (Issue #131)
-- Extend `continuous` option to cover refreshes. (Issue #166)
-- Throttle resize and scroll handlers using `requestAnimationFrame` instead of a set millisecond timeout. Fallback to the old 60 FPS `setTimeout` throttle for unsupported browsers. (Issue #242)
-- Add debugging script for diagnosing common problems.
-- Remove `triggerOnce` option.
-- Add `viewportWidth` utility method.
-- Remove all traces of CoffeeScript.
-
 ## v2.0.5
 
 - Allow sticky users to define which direction the stuck class shold be applied. (Issue #192)
