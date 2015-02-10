@@ -4923,6 +4923,7 @@ html:hover [class^="ss-"] {
   top: 75px;
   width: inherit;
   background: #008bbe;
+  z-index: 99;
 }
 #member-widget.stuck > a,
 #member-widget.homepage > a {
@@ -5071,6 +5072,33 @@ html:hover [class^="ss-"] {
 #donation-module .gfield:before,
 #donation-module .gfield:after {
   display: none;
+}
+.file-downloads {
+  margin-bottom: 0;
+  position: relative;
+}
+.file-downloads li {
+  display: block;
+  position: static;
+  margin: 0;
+}
+.file-downloads li a {
+  color: #858585;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
+.file-downloads li a:hover {
+  color: #008bbe;
+}
+.file-downloads li:before {
+  content: '📄';
+  font-family: "SSGlyphish";
+  position: absolute;
+  left: 0;
+  height: 35px;
+  line-height: 30px;
+  margin-top: 1px;
 }
 .single-tribe_events .tribe-events-event-image {
   text-align: left;
@@ -5254,6 +5282,64 @@ a.added_to_cart.wc-forward {
   opacity: .125;
 }
 .page-header.minimal .page-header-title {
+  font-size: 3em;
+}
+.simple-header {
+  background-color: #008bbe;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 200px;
+}
+.simple-header:hover:after {
+  opacity: 1;
+}
+.simple-header > div {
+  z-index: 9;
+  position: relative;
+}
+.simple-header h1 {
+  color: #ffffff;
+  font-size: 4em;
+}
+.simple-header h1.has-sub {
+  margin-bottom: 0;
+  line-height: 1;
+}
+.simple-header .page-header-subtitle {
+  font-family: 'Caslon', serif;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+.simple-header ul.parent-links {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.simple-header ul.parent-links li {
+  display: inline-block;
+}
+.simple-header ul.parent-links li:before {
+  display: none;
+}
+.simple-header ul.parent-links li a {
+  color: #ffffff;
+  display: block;
+  padding-right: 20px;
+}
+.simple-header.event .parent-links li a {
+  color: #e2438c;
+}
+.simple-header.minimal {
+  padding-top: 175px;
+  background: #008bbe;
+}
+.simple-header.minimal:after {
+  opacity: .125;
+}
+.simple-header.minimal .page-header-title {
   font-size: 3em;
 }
 .page-content,

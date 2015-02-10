@@ -2,6 +2,8 @@
 
   // Dynamically Grab the page width depending on template.
 
+  $includeSidebar = get_field('include_sidebar');
+
   if ( get_field('include_aside')) {
   
     $pageWidth = 'sizer-item desktop-7 tablet-4 mobile-3';
@@ -23,12 +25,25 @@
 <div class="page-content">
   <div class="row">
 
-    <div class="<?php echo $pageWidth; ?>"><?php the_content(); ?></div>
+    <div class="<?php echo $pageWidth; ?>">
+      <?php the_content(); ?>
+
+      <?php if ( get_field('include_sidebar')) {
+
+       get_template_part('templates/flex', 'content');
+
+      } else {
+
+      // get_template_part('templates/flex', 'content');
+
+      } ?>
+
+    </div>
 
     <?php if ( get_field('include_aside')) { ?>
     <aside class="aside desktop-4 tablet-2 mobile-3 right"><?php the_field('aside'); ?></aside>
 
-    <?php if ( is_ancestor(250) OR is_front_page() ) { // If What We Fund Ancestor ?>
+    <?php if ( is_ancestor(250) OR is_front_page() OR $includeSidebar ) { // If What We Fund Ancestor ?>
     <aside class="aside desktop-4 tablet-2 mobile-3 right">
       <div id="member-widget" <?php echo $homepage; ?>>
         <div class="wrapper">
@@ -41,6 +56,7 @@
         </div>
         <a href="#">Join Now</a>
       </div>
+      <?php if ( $includeSidebar ) { get_sidebar('simple'); } ?>
     </aside>
     <?php } ?>
 

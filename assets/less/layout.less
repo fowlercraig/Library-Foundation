@@ -25,6 +25,7 @@
     top: 75px;
     width: inherit;
     background: @blue;
+    z-index: 99;
 
     > a {
       background: darken(@blue, 5%);
@@ -206,6 +207,48 @@
       display: none;
     }
 
+  }
+
+}
+
+
+.file-downloads {
+
+  margin-bottom: 0;
+  position: relative;
+
+  li {
+
+    display: block;
+    position: static;
+    margin: 0;
+    
+    a {
+
+      color: @textGray;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+
+      &:hover {
+
+        color: @blue;
+
+      }
+
+    }
+
+    &:before {
+
+      content: '📄';
+      font-family: "SSGlyphish";
+      position: absolute;
+      left: 0;
+      height: 35px;
+      line-height: 30px;
+      margin-top: 1px;
+
+    }
   }
 
 }
