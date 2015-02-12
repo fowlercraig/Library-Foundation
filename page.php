@@ -14,7 +14,6 @@
 
   } elseif ( is_page( 'archive' ) ) { 
 
-    include locate_template('page-media.php' );
     include locate_template('page-archive.php' );
 
   } elseif ( is_page( 'membership' ) ) { 
