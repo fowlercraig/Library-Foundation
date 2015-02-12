@@ -33,6 +33,7 @@
 
       'post_type' => array('people'),
       'paged'     => $paged,
+      'posts_per_page' => 21,
 
     );
 
@@ -44,7 +45,7 @@
     while ($wp_query->have_posts()) : $wp_query->the_post(); 
     ?>
 
-    <?php the_title(); ?><br>
+    <?php include locate_template('templates/archive/item.php' );?>
 
     <?php endwhile; ?>
 

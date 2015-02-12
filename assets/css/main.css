@@ -7128,6 +7128,38 @@ a.added_to_cart.wc-forward {
   top: auto;
   bottom: 0;
 }
+#archive-grid .item {
+  position: relative;
+}
+#archive-grid .item .thumbnail {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: .5;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  transition: 300ms ease;
+}
+#archive-grid .item .meta {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+  z-index: 9;
+}
+#archive-grid .item .meta .title {
+  margin: 0;
+  color: #ffffff;
+}
+#archive-grid .item:hover .thumbnail {
+  opacity: 1;
+}
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 .pswp {
   display: none;

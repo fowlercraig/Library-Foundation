@@ -1,0 +1,45 @@
+#archive-grid {
+
+  .item {
+
+    position: relative;
+
+    .thumbnail {
+      .cover();
+      opacity: .5;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center center;
+      transition:300ms ease;
+    }
+
+    .meta {
+
+      position: absolute;
+      .cover();
+      bottom: 0;
+      padding: 20px;
+      z-index: 9;
+
+      .title {
+
+        margin: 0;
+        color: @white;
+
+      }
+
+    }
+
+    &:hover {
+
+      .thumbnail {
+
+        opacity: 1;
+
+      }
+
+    }
+
+  }
+
+}
