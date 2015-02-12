@@ -27,16 +27,36 @@
 
 <div id="archive-grid" class="sortable-grid gridlock-fluid">
   <div class="row">
-    <?php include locate_template('templates/archive/item-video.php' ); ?>
-    <?php include locate_template('templates/archive/item-video.php' ); ?>
-    <div class="item podcast <?php echo $archiveWidth; ?>"><img class="img-responsive" src="http://lorempixel.com/output/abstract-q-c-640-640-3.jpg"></div>
-    <div class="item podcast <?php echo $archiveWidth; ?>"><img class="img-responsive" src="http://lorempixel.com/output/abstract-q-c-640-640-3.jpg"></div>
-    <div class="item video <?php echo $videoWidth;   ?>"><img class="img-responsive" src="http://lorempixel.com/output/abstract-q-c-640-320-4.jpg"></div>
-    <div class="item speaker <?php echo $archiveWidth; ?>"><img class="img-responsive" src="http://lorempixel.com/output/abstract-q-c-640-640-3.jpg"></div>
-    <div class="item speaker <?php echo $archiveWidth; ?>"><img class="img-responsive" src="http://lorempixel.com/output/abstract-q-c-640-640-3.jpg"></div>
-    <div class="item video <?php echo $videoWidth;   ?>"><img class="img-responsive" src="http://lorempixel.com/output/abstract-q-c-640-320-4.jpg"></div>
-    <div class="item gallery <?php echo $archiveWidth; ?>"><img class="img-responsive" src="http://lorempixel.com/output/abstract-q-c-640-640-3.jpg"></div>
-    <div class="item gallery <?php echo $archiveWidth; ?>"><img class="img-responsive" src="http://lorempixel.com/output/abstract-q-c-640-640-3.jpg"></div>
+    <?php 
+
+    $args = array(
+
+      'post_type' => array('people'),
+      'paged'     => $paged,
+
+    );
+
+    $temp = $wp_query; 
+    $wp_query = null; 
+    $wp_query = new WP_Query(); 
+    $wp_query->query($args); 
+
+    while ($wp_query->have_posts()) : $wp_query->the_post(); 
+    ?>
+
+    <?php the_title(); ?><br>
+
+    <?php endwhile; ?>
+
+    <nav>
+    <?php previous_posts_link('&laquo; Newer') ?>
+    <?php next_posts_link('Older &raquo;') ?>
+    </nav>
+
+    <?php 
+    $wp_query = null; 
+    $wp_query = $temp;  // Reset
+    ?>
   </div>
 </div>
 
