@@ -20,6 +20,10 @@
 
     include locate_template('page-membership.php' );
 
+  } elseif ( is_page( 'young-literati' ) ) { 
+
+    include locate_template('page-membership.php' );
+
   } elseif ( is_page( 'thanks' ) ) { 
 
     include locate_template('page-confirmation.php' );

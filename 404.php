@@ -1,15 +1,19 @@
 <?php Themewrangler::setup_page();get_header(); ?>
 
-<section id="content" role="main">
-<article id="post-0" class="post not-found">
-<header class="header">
-<h1 class="entry-title"><?php _e( 'Not Found', 'blankslate' ); ?></h1>
-</header>
-<section class="entry-content">
-<p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</section>
-</article>
-</section>
+<div class="simple-header">
+  <div class="row">
+    <div class="desktop-12">
+      <h1 class="page-header-title">Error, 404.</h1>
+    </div>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="row">
+    <div class="desktop-12 tablet-6 mobile-3">
+      <p>Sorry folks, nothing here.</p>
+    </div>
+  </div>
+</div>
 
 <?php get_footer(); ?>

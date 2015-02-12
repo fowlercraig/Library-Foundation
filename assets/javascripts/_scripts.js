@@ -24,17 +24,17 @@ $( document ).ready(function() {
 
   // Selecter
 
-  $(".widget_categories select").selecter({
-    label: "All Categories",
+  $(".sidebar select").selecter({
+    //label: "All Categories",
     cover: true,
     customClass: "blog-select"
   });
 
-  $(".widget_categories select").selecter({
-    label: "All Categories",
-    cover: true,
-    customClass: "blog-select"
-  });
+  // $(".widget_categories select").selecter({
+  //   label: "All Categories",
+  //   cover: true,
+  //   customClass: "blog-select"
+  // });
 
   $("#donation-module select").selecter({
     //label: "Archive",
