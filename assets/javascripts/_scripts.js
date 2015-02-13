@@ -144,16 +144,118 @@ $( document ).ready(function() {
 
     });
 
-    var $grid_container = $('.sortable-grid').imagesLoaded( function() {
+    // var $grid_container = $('.sortable-grid').imagesLoaded( function() {
 
-      $grid_container.isotope({
+    //   $grid_container.isotope({
 
-        itemSelector:   '.item',
-        layoutMode:     'packery',
+    //     itemSelector:   '.item',
+    //     layoutMode:     'packery',
         
+    //   });
+
+    // });
+
+  function archiveStuffs(){
+
+  $('.popup-video').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    fixedContentPos: false
+  });
+
+
+
+  }
+
+  archiveStuffs()
+
+  //   filterTags();
+  // function filterTags(){
+  //   isotopeInit();
+
+  //   var $checkboxes = $('#whatwefund-filters button')
+
+  //   $checkboxes.on( 'click', 'button', function() {
+  //     var arr = [];
+  //     $checkboxes.filter(':checked').each(function(){
+  //       var $dataToFilter = $(this).attr('data-filter');
+  //       arr.push( $dataToFilter );
+  //     });
+  //     arr = arr.join(', ');
+  //     $container.isotope({ filter: arr });
+
+
+  //   });
+  // };
+
+
+
+    isotopeInit();
+
+    function isotopeInit(){
+      var $grid_container = $('.sortable-grid').imagesLoaded( function() {
+        $grid_container.isotope({
+          itemSelector: '.item',
+          layoutMode: 'packery',
+          animationEngine: "best-available",
+        });
+      });
+    };
+
+    $('.sortable-grid').infinitescroll({
+    loading: {
+      finished: undefined,
+      finishedMsg: "<em>No more posts to load.</em>",
+      img: "http://www.infinite-scroll.com/loading.gif",
+      msg: null,
+      msgText: "<em>Loading the next set of posts...</em>",
+      //selector: '.infinite-loader',
+      speed: 'fast',
+      start: undefined
+      },
+    binder: $(window),
+    //pixelsFromNavToBottom: Math.round($(window).height() * 0.9),
+    //bufferPx: Math.round($(window).height() * 0.9),
+    nextSelector: ".archive-nav a",
+    navSelector: ".archive-nav",
+    contentSelector: ".sortable-grid",
+    itemSelector: ".item",
+    //maxPage: {{pagination.pages}},
+    appendCallback: true,
+    //animate: true,
+    bufferPx: 500,
+      },
+    // Callbacks for initializing scripts to added post excerpts
+    function(newElements){
+      var $newElems = $( newElements );
+      archiveStuffs()
+      // checkForFeatured();
+      // makeFontResponsive();
+      // addReadMoreLinks();
+      // fitVidInit();
+      $newElems.imagesLoaded(function(){
+        $('.sortable-grid').isotope( 'appended', $newElems );
       });
 
+    }
+  );
+
+$('.grid-filters').on( 'click', 'button', function() {
+      var filterValue = $(this).attr('data-filter');
+      $('.grid-filters').find('.active').removeClass('active');
+      $(this).addClass('active');
+      // use filter function if value matches
+      filterValue = filterFns[ filterValue ] || filterValue;
+      $('.sortable-grid').isotope({ filter: filterValue });
+      $('html,body').animate({
+        scrollTop: $('#archive-grid').offset().top - 49
+      });
     });
+
+
 
     var filterFns = {
       // show if number is greater than 50
@@ -180,17 +282,7 @@ $( document ).ready(function() {
       });
     });
 
-    $('.grid-filters').on( 'click', 'button', function() {
-      var filterValue = $(this).attr('data-filter');
-      $('.grid-filters').find('.active').removeClass('active');
-      $(this).addClass('active');
-      // use filter function if value matches
-      filterValue = filterFns[ filterValue ] || filterValue;
-      $grid_container.isotope({ filter: filterValue });
-      $('html,body').animate({
-        scrollTop: $('.grid-filters').offset().top - 49
-      });
-    });
+    
 
   }); // End What We Fund
 
@@ -247,9 +339,9 @@ $( document ).ready(function() {
     });
   }
 
-  if ( $('#event-bar').length ) {
+  if ( $('#event-bar, #archive-bar').length ) {
     var eventSticky = new Waypoint.Sticky({
-      element: $('#event-bar')[0],
+      element: $('#event-bar, #archive-bar')[0],
       wrapper: '<div class="event-bar-wrapper"/>',
       offset: 50,
     });
@@ -322,5 +414,6 @@ $( document ).ready(function() {
     preloader: false,
     fixedContentPos: false
   });
+
 
 });

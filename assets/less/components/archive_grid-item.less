@@ -1,22 +1,231 @@
+#archive-bar {
+
+  .button {
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 50px;
+    font-size: 13px;
+    line-height: 50px;
+
+    &.active {
+      color: @aloudpink;
+    }
+
+  }
+
+  li {
+    height: auto;
+    line-height: auto;
+  }
+
+  &.stuck {
+    position: fixed;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    z-index: 29;
+    background: @white;
+  }
+
+}
+
+#infscr-loading {
+  display: none!important;
+}
+
 #archive-grid {
 
   .item {
 
     position: relative;
+    background: @black;
+    .bottom-overlay();
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 20px;
+      color: @white;
+      font-size: 32px;
+      z-index: 10;
+    }
+
+    .title {
+      .sentinel();
+      margin: 8px 0!important;
+      display: block;
+    }
+
+    .cat {
+      line-height: 1.4;
+      display: block;
+    }
+
+    .skeleton {
+      visibility: hidden;
+    }
 
     .thumbnail {
       .cover();
-      opacity: .5;
       overflow: hidden;
       background-size: cover;
       background-position: center center;
       transition:300ms ease;
     }
 
+    &.user {
+      .cat {
+        display: none;
+      }
+    }
+
+    &.audio {
+
+      .thumbnail {
+        display: none;
+      }
+
+      &.pink {
+        background: @aloudpink;
+      }
+
+      &.blue {
+        background: @blue;
+      }
+
+      &.green {
+        background: @green;
+      }
+
+      &.yellow {
+        background: @yellow;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      .cat {
+        color: @black25;
+      }
+
+      .play {
+        position: absolute;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        line-height: 55px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        border: 2px solid @white;
+        z-index: 9;
+        font-size: 28px;
+        background: @white;
+        color: @black;
+        &:hover {
+          background: @white;
+          color: @black;
+        }
+      }
+
+    }
+
+    &.video {
+
+      .thumbnail {
+        opacity: 1;
+      }
+
+      .play {
+        position: absolute;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        line-height: 55px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        border: 2px solid @white;
+        z-index: 9;
+        font-size: 28px;
+        background: @white;
+        color: @black;
+        &:hover {
+          background: @white;
+          color: @black;
+        }
+      }
+
+    }
+
+    &.ellipsischat {
+
+      &.pink {
+        background: @aloudpink;
+      }
+
+      &.blue {
+        background: @blue;
+      }
+
+      &.green {
+        background: @green;
+      }
+
+      &.yellow {
+        background: @yellow;
+      }
+
+      .thumbnail {
+        display: none;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      .cat {
+        color: @black25;
+      }
+
+      .meta {
+        position: relative;
+      }
+
+      .quote-text {
+
+        .sentinel();
+        font-size: 3em;
+        color: @white;
+        padding: 25px 0 0;
+
+        p {
+          
+          color: inherit;
+          line-height: 1.3;
+          margin-bottom: 0;
+
+          &:before {
+            content: '“';
+          }
+          &:before {
+            content: '”';
+          }
+        }
+      }
+
+    }
+
     .meta {
 
       position: absolute;
-      .cover();
       bottom: 0;
       padding: 20px;
       z-index: 9;
@@ -26,6 +235,10 @@
         margin: 0;
         color: @white;
 
+      }
+
+      i {
+        position: t
       }
 
     }

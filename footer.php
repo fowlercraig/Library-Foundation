@@ -3,7 +3,7 @@
 
 <?php get_template_part('templates/footer', 'modules' ); ?>
 
-<footer id="foot" class="gridlock gridlock-fluid">
+<footer id="foot" class="gridlock">
   <div class="row">
     <div class="desktop-3"><a class="logo" href="/"><?php bloginfo('name'); ?></a></div>
     <div class="desktop-3"><?php the_field('address', 'option'); ?></div>

@@ -10,6 +10,7 @@ include_once locate_template('/lib/custom-post-types.php' );
 include_once locate_template('/lib/enque-js.php' );
 //include_once locate_template('/lib/woo-disablebilling.php' );
 include_once locate_template('/lib/json-api/json-api.php' );
+include_once locate_template('/lib/videoembed.php' );
 
 // ACF Includes Nonsense
 
