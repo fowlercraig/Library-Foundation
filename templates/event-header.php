@@ -40,6 +40,8 @@
 
 ?>
 
+<? if (get_field('simple_header')) { ?>
+
 <div class="page-header event" data-speed="2" style="background-image:url(<?php echo $event_bg; ?>);">
   <div class="row">
     <div class="desktop-12">
@@ -61,8 +63,8 @@
   <div class="event-meta">
     <div class="row">
       <div class="desktop-8">
-        <span class="date upper"><?php the_field('event_subtitle'); ?></span><br>
-        <span class="location lower"><?php the_field('event_subtitle_addition'); ?></span>
+        <span class="date upper"><?php the_field('event_title'); ?></span><br>
+        <span class="location lower"><?php the_field('event_subtitle'); ?></span>
       </div>
       <div class="desktop-4 text-right">
         <span class="date upper"><?php echo $event_date  ?></span><br>
@@ -70,6 +72,29 @@
       </div>
     </div>
   </div><!-- Event Meta-->
-
 </div>
 
+<?php } else { ?>
+
+<div class="simple-header">
+  <div class="row">
+    <div class="desktop-12">
+      <h1 class="page-header-title"><?php the_title(); ?></h1>
+    </div>
+  </div>
+  <div class="event-meta">
+    <div class="row">
+      <div class="desktop-8">
+        <span class="date upper"><?php the_field('event_title'); ?></span><br>
+        <span class="location lower"><?php the_field('event_subtitle'); ?></span>
+      </div>
+      <div class="desktop-4 text-right">
+        <span class="date upper"><?php echo $event_date  ?></span><br>
+        <span class="location lower"><a href="<?php echo tribe_the_map_link(); ?>"><?php echo $venue_details[0]; ?></a></span>
+      </div>
+    </div>
+  </div><!-- Event Meta-->
+  <div class="simple-header simple-header--bg" data-speed="2" style="background-image:url(<?php echo $event_bg; ?>);"></div>
+</div>
+
+<? } ?>

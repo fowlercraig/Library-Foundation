@@ -1,4 +1,6 @@
-<?php $sponsors = get_field('sponsor_gallery'); if( $sponsors ):
+<?php $sponsors = get_field('sponsor_gallery'); 
+
+if( $sponsors ):
 
   // Display custom Sponsors normally.
 
@@ -33,12 +35,15 @@
 
   echo '</div>';
 
-else : 
+else : // This is where we show Global Sponsors
+
+  if( get_field('sponsors_options') ) {} else {
 
   echo '<div id="sponsors" class="sponsor-list row">';
   echo '<header class="item desktop-12 tablet-6 mobile-3 section-title header">Sponsors</header>';
 
-  foreach( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
+  $globalSponsors = get_field('aloud_sponsors', 'options'); 
+  foreach ( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
 
   <div class="item sizer-item">
     <a href="<?php echo $link; ?>">
@@ -46,6 +51,8 @@ else :
     </a>
   </div>
 
-  <?php endforeach; 
+  <?php endforeach; }
 
-endif; ?>
+endif; 
+
+?>

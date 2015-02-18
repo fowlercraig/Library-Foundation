@@ -47,7 +47,7 @@ ob_start();
 
 				if ( $product->is_in_stock() ) {
 					woocommerce_quantity_input( array( 'input_name'  => 'quantity_' . $ticket->ID,
-					                                   'input_value' => 0,
+					                                   'input_value' => 1,
 					                                   'min_value'   => 0,
 					                                   'max_value'   => $product->backorders_allowed() ? '' : $product->get_stock_quantity(), ) );
 

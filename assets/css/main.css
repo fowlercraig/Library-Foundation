@@ -5368,6 +5368,10 @@ a.added_to_cart.wc-forward {
 .event-content > .row {
   position: relative;
 }
+.page-content a,
+.event-content a {
+  color: #404041;
+}
 .page-content p,
 .event-content p {
   color: inherit;
@@ -6540,6 +6544,9 @@ a.added_to_cart.wc-forward {
 }
 .page-header.event .sub-title > .row {
   position: relative;
+}
+.page-header.event .sub-title a {
+  color: #404041;
 }
 .page-header.event .sub-title p {
   color: inherit;
