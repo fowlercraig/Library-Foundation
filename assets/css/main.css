@@ -5026,6 +5026,9 @@ html:hover [class^="ss-"] {
   right: 0;
   -webkit-font-smoothing: antialiased;
 }
+#donation-module .product_meta {
+  display: none;
+}
 #donation-module .selecter .selecter-selected {
   font-size: 18px;
   color: #858585;
@@ -7139,6 +7142,10 @@ a.added_to_cart.wc-forward {
 #member-tabs .tabber-tab .button {
   color: #ffffff;
   border-color: #ffffff;
+}
+#member-tabs .tabber-tab .gift {
+  margin-left: 1.04166667%;
+  color: rgba(0, 0, 0, 0.5);
 }
 #member-tabs .tabber-tab p {
   color: #ffffff;

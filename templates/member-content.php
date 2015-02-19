@@ -26,8 +26,16 @@
   <?php
 
     if ( get_sub_field ('remove_overlay') ) { $nOverlay = ' overlayless'; }
+
     $post_object = get_sub_field('page');
     if( $post_object ): $post = $post_object; setup_postdata( $post );
+    $thing = $post->post_name;
+    wp_reset_postdata(); endif; 
+
+    $page_object = get_sub_field('gift_membership');
+    if( $page_object ): $page = $page_object; setup_postdata( $page );
+    $blargh = $page->post_name;
+    wp_reset_postdata(); endif; 
 
   ?>
 
@@ -37,17 +45,32 @@
         <h2 class="member-level-title"><?php the_sub_field('title'); ?></h2>
         <span class="sub-title"><?php the_sub_field('sub_title'); ?></span>
         <br><br>
-        <a href="#<?php echo $post->post_name;?>" class="popup button">Join/Renew Now</a>
+        <a href="#<?php echo $thing;?>" class="popup button">Join/Renew Now</a><br><br>
+        <a href="#<?php echo $blargh;?>" class="popup gift">Gift a Membership</a>
       </header>
       <div class="desktop-8"><?php the_sub_field('description'); ?></div>
     </div>
   </div>
 
-  <div id="<?php echo $post->post_name;?>" class="mfp-hide white-popup-block modal-window member">
+  <?php
+    $post_object = get_sub_field('page');
+    if( $post_object ): $post = $post_object; setup_postdata( $post );
+  ?>
+  <div id="<?php echo $thing;?>" class="mfp-hide white-popup-block modal-window member">
     <?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
   </div>
-
   <?php wp_reset_postdata(); endif; ?>
+
+  <?php
+    $page_object = get_sub_field('gift_membership');
+    if( $page_object ): $post = $page_object; setup_postdata( $post );
+  ?>
+  <div id="<?php echo $blargh;?>" class="mfp-hide white-popup-block modal-window member">
+    <?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
+  </div>
+  <?php wp_reset_postdata(); endif; ?>
+
+  
 
   <?php endwhile; ?>
   </div>

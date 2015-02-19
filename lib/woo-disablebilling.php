@@ -11,6 +11,14 @@ return get_stylesheet_directory_uri() . "/assets/img/cards.png" ;
 
 }
 
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
+ 
+function woo_custom_cart_button_text() {
+ 
+  return __( 'Add to Bag', 'woocommerce' );
+ 
+}
+
 function so_28348735_category_based_thank_you_message ( $order_id ){
 
   $order = wc_get_order( $order_id );

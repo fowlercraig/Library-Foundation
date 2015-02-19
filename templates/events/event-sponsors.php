@@ -5,9 +5,15 @@ if( $sponsors ):
   // Display custom Sponsors normally.
 
   echo '<div id="sponsors" class="sponsor-list row">';
-  echo '<header class="item desktop-12 tablet-6 mobile-3 section-title header">Sponsors</header>';
+  echo '<div class="item desktop-12 tablet-6 mobile-3 section-title header"><h3 class="event-section-title">Sponsors</h3></div>'; ?>
 
-  foreach( $sponsors as $sponsor ): $link = get_field('attachement_link', $sponsor['id']); ?>
+  <?php if ( get_field('add_sponsor_description')) : ?>
+  <div class="desktop-12">
+  <?php the_field('sponsor_description'); ?>
+  </div>
+  <?php endif; ?>
+
+  <?php foreach( $sponsors as $sponsor ): $link = get_field('attachement_link', $sponsor['id']); ?>
 
     <div class="item sizer-item">
       <a href="<?php echo $link; ?>">
@@ -16,6 +22,12 @@ if( $sponsors ):
     </div>
 
   <?php endforeach; 
+
+  if ( get_field('add_sponsor_description')) : ?>
+  <div class="desktop-12">
+  <hr>
+  </div>
+  <?php endif;
 
   if( !get_field('sponsors_options') ) {
 
@@ -40,7 +52,7 @@ else : // This is where we show Global Sponsors
   if( get_field('sponsors_options') ) {} else {
 
   echo '<div id="sponsors" class="sponsor-list row">';
-  echo '<header class="item desktop-12 tablet-6 mobile-3 section-title header">Sponsors</header>';
+  echo '<div class="item desktop-12 tablet-6 mobile-3 section-title header"><h3 class="event-section-title">Sponsors</h3></div>';
 
   $globalSponsors = get_field('aloud_sponsors', 'options'); 
   foreach ( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
@@ -51,7 +63,7 @@ else : // This is where we show Global Sponsors
     </a>
   </div>
 
-  <?php endforeach; }
+  <?php endforeach; } echo '</div>';
 
 endif; 
 
