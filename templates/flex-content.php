@@ -79,6 +79,10 @@ if( have_rows('page_modules' , $taxTerm) ):
 
           include locate_template('templates/staff/staff-flex.php');
 
+        elseif( get_row_layout() == 'donation_form' ):
+
+          include locate_template('templates/memorial-gift.php');
+
         elseif( get_row_layout() == 'download' ): 
 
         	$file = get_sub_field('file');
