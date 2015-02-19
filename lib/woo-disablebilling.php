@@ -12,21 +12,87 @@ return get_stylesheet_directory_uri() . "/assets/img/cards.png" ;
 }
 
 function so_28348735_category_based_thank_you_message ( $order_id ){
-    $order = wc_get_order( $order_id );
-    $show = false;
 
-    foreach( $order->get_items() as $item ) {
-        // check if a product is in specific category
-        if ( has_term( 'ticket', 'product_cat', $item['product_id'] ) ) {
-            $show = true;
-            continue;
-        }
+  $order = wc_get_order( $order_id );
+
+  foreach( $order->get_items() as $item ) {
+
+    $hasContent = false;
+
+    if ( has_term( 'free-lfla-event', 'product_cat', $item['product_id'] ) ) {
+      $freeticket = true; $hasContent = true;
     }
 
-    if( $show ){
-        echo 'You purchased a ticket!';
+    if ( has_term( 'paid-lfla-event', 'product_cat', $item['product_id'] ) ) {
+      $paidticket = true; $hasContent = true;
     }
+
+    if ( has_term( 'general-donation', 'product_cat', $item['product_id'] ) ) {
+      $donation = true; $hasContent = true;
+    }
+
+    if ( has_term( 'membership', 'product_cat', $item['product_id'] ) ) {
+      $membership = true; $hasContent = true;
+    }
+
+    if ( has_term( 'memorial-gift', 'product_cat', $item['product_id'] ) ) {
+      $memGift = true; $hasContent = true;
+    }
+
+    if ( has_term( 'young-literati-membership', 'product_cat', $item['product_id'] ) ) {
+      $youngLit = true; $hasContent = true;
+    }
+
+    if ( has_term( 'gift-membership', 'product_cat', $item['product_id'] ) ) {
+      $giftMembership = true; $hasContent = true;
+    }
+
+  }
+
+  if ($hasContent === true) {
+    echo '<div id="post_confirmation" class="desktop-4 right" style="opacity:0">';
+  }
+
+  if ($freeticket === true) {
+    include locate_template('templates/thanks/free-event.php' );
+  }
+
+  if ($paidticket === true) {
+    include locate_template('templates/thanks/paid-event.php' );
+  }
+
+  if ($donation === true) {
+    include locate_template('templates/thanks/general-donation.php' );
+  }
+
+  if ($membership === true) {
+    include locate_template('templates/thanks/membership.php' );
+  }
+
+  if ($memGift === true) {
+    include locate_template('templates/thanks/memorial-gift.php' );
+  }
+
+  if ($youngLit === true) {
+    include locate_template('templates/thanks/membership-yl.php' );
+  }
+
+  if ($giftMembership === true) {
+    include locate_template('templates/thanks/membership-gift.php' );
+  }
+
+  if ($hasContent === true) {
+    echo '</div>';
+
+    ?><script>
+      $("#post_confirmation").prependTo('.cart-content .row').css('opacity','1');
+    </script><?php
+
+  }
+   
+
 }
+
 add_action( 'woocommerce_thankyou', 'so_28348735_category_based_thank_you_message' ); 
 
 /**

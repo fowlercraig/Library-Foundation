@@ -5306,6 +5306,30 @@ a.added_to_cart.wc-forward {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.simple-header .simple-header--bg {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  opacity: .85;
+  z-index: 1;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+.simple-header > .row {
+  position: relative;
+  z-index: 2;
+}
+.simple-header > .event-meta {
+  position: relative;
+  z-index: 2px;
 }
 .simple-header:hover:after {
   opacity: 1;
@@ -6473,6 +6497,16 @@ a.added_to_cart.wc-forward {
 #order_comments_field {
   display: none;
 }
+#checkout .col-1 {
+  width: 100%;
+}
+#checkout .col-2 {
+  display: none;
+}
+#checkout .form-row {
+  clear: both;
+  width: 100%;
+}
 #tickets-form .tribe-events-tickets-title {
   margin-top: 0;
 }
@@ -6502,9 +6536,12 @@ a.added_to_cart.wc-forward {
 .page-header.event .event-meta .lower {
   font-family: 'Caslon', serif;
   text-rendering: optimizeLegibility;
-  font-size: 24px;
+  font-size: 22px;
   font-style: italic;
   color: rgba(255, 255, 255, 0.5);
+}
+.page-header.event .event-meta .lower a {
+  color: inherit;
 }
 .page-header.event .event-meta dd {
   margin: 0;
@@ -7145,6 +7182,9 @@ a.added_to_cart.wc-forward {
   max-width: 600px;
   border-radius: 3px;
   margin: auto;
+}
+.mfp-content .related {
+  display: none;
 }
 #archive-bar.toolbar {
   margin-bottom: 0;

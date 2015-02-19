@@ -1,5 +1,7 @@
 <?php $posts = get_field('people'); if( $posts ): ?>
 
+  <hr>
+
   <div id="event-bios">
   <div class="row">
 

@@ -37,8 +37,9 @@ add_theme_support('soil-relative-urls');
 add_theme_support('soil-nice-search');
 add_theme_support('soil-clean-up');
 
-//define('WOOCOMMERCE_USE_CSS', false);
+//add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 add_theme_support( 'woocommerce' );
+
 
 //define( 'ACF_LITE', true );
 

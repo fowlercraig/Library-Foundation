@@ -7,6 +7,11 @@
     $thumb_url = $thumb_url_array[0];
     $event_bg  = $thumb_url;
 
+    $small_id = get_post_thumbnail_id();
+    $small_url_array = wp_get_attachment_image_src($small_id, 'thumbnail', true);
+    $small_url = $small_url_array[0];
+    $small_bg  = $small_url;
+
   }  else {
 
     $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
@@ -76,7 +81,7 @@
 
 <?php } else { ?>
 
-<div class="simple-header">
+<div class="simple-header page-header event">
   <div class="row">
     <div class="desktop-12">
       <h1 class="page-header-title"><?php the_title(); ?></h1>
@@ -94,7 +99,7 @@
       </div>
     </div>
   </div><!-- Event Meta-->
-  <div class="simple-header simple-header--bg" data-speed="2" style="background-image:url(<?php echo $event_bg; ?>);"></div>
+  <div class="simple-header simple-header--bg" data-speed="2" style="background-image:url(<?php echo $small_bg; ?>);"></div>
 </div>
 
 <? } ?>

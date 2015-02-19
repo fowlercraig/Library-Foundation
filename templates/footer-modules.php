@@ -16,7 +16,7 @@
         <div class="desktop-6 padded">
           <h3 class="footer-module-title"><?php the_title(); ?></h3>
           <p><?php the_sub_field('description'); ?></p>
-          <a href="<?php the_permalink(); ?>" class="button">Lean More</a>
+          <a href="<?php the_permalink(); ?>" class="button">Learn More</a>
         </div>
       </div>
     </div>

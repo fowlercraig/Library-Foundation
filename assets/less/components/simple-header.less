@@ -5,6 +5,34 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 200px;
+  position: relative;
+  overflow: hidden;
+
+  .simple-header--bg {
+    @blur : 10px;
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    opacity: .85;
+    z-index: 1;
+    -webkit-filter: blur(@blur);
+    -moz-filter: blur(@blur);
+    -o-filter: blur(@blur);
+    -ms-filter: blur(@blur);
+    filter: blur(@blur);
+  }
+
+  > .row {
+    position: relative;
+    z-index: 2;
+  }
+
+  > .event-meta {
+    position: relative;
+    z-index: 2px;
+  }
   
 
   &:hover {

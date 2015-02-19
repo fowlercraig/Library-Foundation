@@ -290,7 +290,7 @@ $('.grid-filters').on( 'click', 'button', function() {
 
   $window = $(window);
 
-  $('.page-header').each(function(){
+  $('.page-header, .simple-header').each(function(){
     var $bgobj = $(this);
     $(window).scroll(function() {
       var yPos = ($window.scrollTop() / $bgobj.data('speed')); 

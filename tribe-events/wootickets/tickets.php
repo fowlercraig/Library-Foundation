@@ -46,10 +46,19 @@ ob_start();
 				echo "<td class='woocommerce'>";
 
 				if ( $product->is_in_stock() ) {
+
+					$productPrice = $product->get_price();
+
+					if ( $productPrice <= 0 ) {
+						$maxQuantity = 2;
+					} else {
+						$maxQuantity = $product->backorders_allowed() ? '' : $product->get_stock_quantity();
+					}
+
 					woocommerce_quantity_input( array( 'input_name'  => 'quantity_' . $ticket->ID,
-					                                   'input_value' => 1,
+					                                   'input_value' => 0,
 					                                   'min_value'   => 0,
-					                                   'max_value'   => $product->backorders_allowed() ? '' : $product->get_stock_quantity(), ) );
+					                                   'max_value'   => $maxQuantity, ) );
 
 					$is_there_any_product_to_sell = true;
 				} else {
