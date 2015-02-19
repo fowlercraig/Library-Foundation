@@ -18,3 +18,18 @@
   $wp_query = null; 
   $wp_query = $temp;  // Reset
 ?>
+
+
+<script>
+  $(window).load(function(){
+    setTimeout(function(){
+      $.magnificPopup.open({
+        items: {
+          src: 'http://i.imgur.com/QzGKMxq.png'
+        },
+        mainClass: 'mfp-fade',
+        type: 'image'
+      }, 0);
+    }, 2000);
+  });
+</script>

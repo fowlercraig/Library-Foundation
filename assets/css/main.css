@@ -5026,6 +5026,12 @@ html:hover [class^="ss-"] {
   right: 0;
   -webkit-font-smoothing: antialiased;
 }
+#donation-module .woocommerce-error {
+  color: #008bbe;
+}
+#donation-module .woocommerce-error li {
+  color: #008bbe;
+}
 #donation-module .product_meta {
   display: none;
 }

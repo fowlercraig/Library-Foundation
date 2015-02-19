@@ -67,6 +67,13 @@
   ?>
   <div id="<?php echo $blargh;?>" class="mfp-hide white-popup-block modal-window member">
     <?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
+    <hr>
+    <p>
+      Give the gift of Membership to your friends, family, colleagues and we'll send directly 
+      to your recipient, or mail the gift to you to deliver personally. Members enjoy 12 
+      full months of critically acclaimed programs that bring together today’s brightest 
+      thinkers, invitations to special events, discounts, and so much more.
+    </p>
   </div>
   <?php wp_reset_postdata(); endif; ?>
 
