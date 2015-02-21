@@ -5906,6 +5906,13 @@ a.added_to_cart.wc-forward {
 .sidebar .event-gallery figure:first-child {
   display: block;
 }
+#post_confirmation .sidebar {
+  background: #f8f8f8;
+  padding: 25px;
+}
+#post_confirmation .sidebar .title {
+  margin-top: 0;
+}
 .modal-window {
   max-width: 700px;
   background: #ffffff;
@@ -6491,6 +6498,38 @@ a.added_to_cart.wc-forward {
 .page-template-page-cart-php #content {
   padding-top: 175px;
 }
+.page-template-page-cart-php #content .product-thumbnail a {
+  display: block;
+  width: 100%;
+}
+.page-template-page-cart-php #content .product-thumbnail a img {
+  width: 110px!important;
+}
+.page-template-page-cart-php #content .coupon .input-text {
+  width: 200px !important;
+}
+.page-template-page-cart-php #content .variation p {
+  margin: 0;
+  line-height: 1;
+}
+.page-template-page-cart-php #content .variation dt {
+  padding: 0;
+}
+.page-template-page-cart-php #content .variation dd {
+  margin: 0;
+  padding: 0;
+}
+.page-template-page-cart-php #content .variation dt,
+.page-template-page-cart-php #content .variation dd,
+.page-template-page-cart-php #content .variation dd p {
+  font-weight: 400;
+  line-height: 1.4!important;
+  display: inline-block !important;
+  height: auto!important;
+  clear: none;
+  line-height: 24px;
+  height: 24px;
+}
 .page-template-page-cart-php .cart-header .page-header-title {
   font-size: 3em;
 }
@@ -6515,6 +6554,28 @@ a.added_to_cart.wc-forward {
 #checkout .form-row {
   clear: both;
   width: 100%;
+}
+ul.order_details {
+  padding: 20px;
+  background: #008bbe;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+}
+ul.order_details strong {
+  color: #ffffff;
+}
+.page-checkout dl {
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #dddddd;
+}
+.page-checkout dl dt {
+  display: inline-block;
+}
+.page-checkout dl dd {
+  display: inline-block;
+  margin: 0;
+  color: #59595b;
 }
 #tickets-form .tribe-events-tickets-title {
   margin-top: 0;

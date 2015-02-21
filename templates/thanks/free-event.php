@@ -30,6 +30,6 @@
         mainClass: 'mfp-fade',
         type: 'image'
       }, 0);
-    }, 2000);
+    }, 4000);
   });
 </script>

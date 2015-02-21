@@ -37,7 +37,7 @@
 
       'post_type'      => array('people', 'archive'),
       'paged'          => $paged,
-      'posts_per_page' => 5,
+      'posts_per_page' => 15,
       'orderby'        => 'name'
 
     );

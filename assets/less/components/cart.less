@@ -27,6 +27,50 @@
 
     padding-top: 175px;
 
+    .product-thumbnail {
+
+      a {
+
+        display: block;
+        width: 100%;
+
+        img {
+          width: 110px!important;
+        }
+
+      }
+
+    }
+
+    .coupon {
+      .input-text {
+        width: 200px!important
+      }
+    }
+
+    .variation {
+      p {
+        margin: 0;
+        line-height: 1;
+      }
+      dt {
+        padding: 0
+      }
+      dd {
+        margin: 0;
+        padding: 0;
+      }
+      dt,dd, dd p {
+        font-weight: 400;
+        line-height: 1.4!important;
+        display: inline-block!important;
+        height: auto!important;
+        clear: none;
+        line-height: 24px;
+        height: 24px;
+      }
+    }
+
   }
 
   .cart-header {
@@ -70,4 +114,34 @@
     width: 100%;
   }
 
+}
+
+ul.order_details {
+
+  padding: 20px;
+  background: @blue;
+  color: @white50;
+  border-radius: 3px;
+
+  strong {
+    color: @white;
+  }
+
+}
+
+.page-checkout {
+
+  dl {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid @lightestGray;
+    dt {
+      display: inline-block;
+    }
+    dd {
+      display: inline-block;
+      margin: 0;
+      color: @gray;
+    }
+  }
 }

@@ -7,7 +7,7 @@
   while ($wp_query->have_posts()) : $wp_query->the_post(); 
 ?>
 
-<div <?php post_class(); ?>>
+<div <?php post_class('sidebar'); ?>>
 <h3 class="title">Important Donor Information</h3>
 <?php the_content(); ?>
 </div>
@@ -29,6 +29,6 @@
         mainClass: 'mfp-fade',
         type: 'image'
       }, 0);
-    }, 2000);
+    }, 4000);
   });
 </script>
