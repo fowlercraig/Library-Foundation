@@ -16,6 +16,7 @@
 
 <?php wp_footer(); ?>
 <?php include locate_template('/lib/photoswipe.php' );?>
+<?php include locate_template('/templates/search-footer.php' );?>
 <script src="//use.typekit.net/kfw6qzi.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js" type="application/javascript"></script>

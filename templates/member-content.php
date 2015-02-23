@@ -158,6 +158,22 @@ if( have_rows('page_modules' , $taxTerm) ):
 
           $file = get_sub_field('file');
 
+        elseif( get_row_layout() == 'section_title' ):
+
+          include('flex/section-title.php');
+
+        elseif( get_row_layout() == 'member_title' ):
+
+          if (is_page('membership')) {
+
+            include('flex/member-title-alt.php');
+
+          } else {
+
+            include('flex/member-title.php');
+
+          }
+
         endif;
 
     endwhile;

@@ -98,10 +98,10 @@ $( document ).ready(function() {
     fadeinLoadedSlide: false,
     addActiveClass: true,
     loop: true,
-    slidesSpacing: 1,
+    slidesSpacing: 5,
     visibleNearby: {
-      enabled: true,
-      centerArea: 0.96,
+      enabled: false,
+      centerArea: 0.8,
       center: true,
       breakpoint: 650,
       breakpointCenterArea: 0.64,
@@ -413,6 +413,16 @@ $('.grid-filters').on( 'click', 'button', function() {
     removalDelay: 160,
     preloader: false,
     fixedContentPos: false
+  });
+
+  $('#main-nav a.search').click(function(event){
+    event.preventDefault();
+    $('#search-footer').fadeIn(300);
+  });
+
+  $('#search-footer .close').click(function(event){
+    event.preventDefault();
+    $('#search-footer').fadeOut(300);
   });
 
 

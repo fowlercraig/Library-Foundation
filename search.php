@@ -1,29 +1,24 @@
 <?php Themewrangler::setup_page();get_header(); ?>
 
-
 <?php if ( have_posts() ) : ?>
-<header class="header">
-<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?></h1>
-</header>
-<div id="results">
-<?php while ( have_posts() ) : the_post(); ?>
-
-<div class="search-item"><?php the_title(); ?></div>
-
-<?php endwhile; ?>
+<div class="simple-header">
+  <div class="row">
+    <div class="desktop-12">
+      <h1 class="page-header-title"><?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?></h1>
+    </div>
+  </div>
 </div>
-<?php get_template_part( 'nav', 'below' ); ?>
-<?php else : ?>
-<article id="post-0" class="post no-results not-found">
-<header class="header">
-<h2 class="entry-title"><?php _e( 'Nothing Found', 'blankslate' ); ?></h2>
-</header>
-<section class="entry-content">
-<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
-</section>
-</article>
 <?php endif; ?>
 
+<div class="page-content">
+  <div class="row">
+    <div class="desktop-7">
+      <?php while ( have_posts() ) : the_post(); ?>
+      <div class="search-item"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+      <?php endwhile; ?>
+    </div>
+    <?php get_sidebar(); ?>
+  </div>
+</div>
 
 <?php get_footer(); ?>

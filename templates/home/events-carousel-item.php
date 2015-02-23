@@ -23,7 +23,8 @@
             <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           </header>
           <div class="desc">
-            <?php echo excerpt(20); ?>
+            <p><?php echo excerpt(20); ?></p>
+            <a href="<?php the_permalink(); ?>" class="button">Read More</a>
           </div>
         </div>
       </div>
