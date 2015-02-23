@@ -1,12 +1,14 @@
 #archive-bar {
 
-  .button {
+  .button, span {
     border: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     height: 50px;
     font-size: 13px;
     line-height: 50px;
+    display: inline-block;
+    color: @lighterGray;
 
     &.active {
       color: @aloudpink;
@@ -15,8 +17,31 @@
   }
 
   li {
+
     height: auto;
     line-height: auto;
+
+  }
+
+  .nav {
+
+    > li {
+
+      > ul {
+
+        background: @white;
+
+        > li, .button {
+
+          height: 30px;
+          line-height: 30px;
+
+        }
+
+      }
+
+    }
+
   }
 
   &.stuck {
@@ -76,9 +101,32 @@
     }
 
     &.user {
+
       .cat {
         display: none;
       }
+
+      .description {
+        .cover();
+        z-index: 99;
+        padding: 20px;
+        background: @black75;
+        opacity: 0;
+        transition: 300ms ease;
+        p {
+          color: @white;
+        }
+      }
+
+      &:hover {
+        .description {
+          opacity: 1;
+        }
+        .meta {
+          z-index: 99;
+        }
+      }
+
     }
 
     &.audio {

@@ -5,6 +5,7 @@
   $video            = get_field('archive:_video'); //Embed Code
   $video_url        = get_field('archive:_video', FALSE, FALSE); //URL
   $video_thumb_url  = get_video_thumbnail_uri($video_url); //get THumbnail via our functions in functions.php
+  $audio_url        = get_field('archive_podcast');
   $postcreatedate   = get_the_date('Y');
   $category         = strip_tags(get_the_category_list('',', ',''));
   $itemsize         = 'desktop-4';
@@ -47,7 +48,7 @@
 
     $format         = 'audio';
     $thumb_url      = $thumb_url_array[0];
-    $action         = '<a href="'. $video_url .'" class="play popup-video"><i class="ss-icon ss-gizmo">play</i></a>';
+    $action         = '<a href="'. $audio_url .'" class="play" target="blank"><i class="ss-icon ss-gizmo">play</i></a>';
 
   } else {
 
@@ -65,6 +66,13 @@
 ?>
 
 <div class="item <?php echo $input[$rand_keys[1]] . "\n"; echo ' '; echo $itemsize; echo ' '; echo $format; echo ' '; echo $category; ?> contained">
+
+  <?php if( get_post_type() == 'people' ): ?>
+  <div class="description">
+    <?php the_content(); ?>
+  </div>
+  <?php endif; ?>
+
   <span class="icon"><i class="ss-icon ss-glyphish"><?php echo $format; ?></i></span>
 
   <?php if ( has_post_format( 'quote' )): ?>

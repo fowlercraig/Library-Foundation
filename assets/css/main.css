@@ -5098,6 +5098,29 @@ html:hover [class^="ss-"] {
 #donation-module .gfield:after {
   display: none;
 }
+#donation-module.widget {
+  padding: 25px;
+  margin-bottom: 1.04166667%;
+}
+#donation-module.widget .gform_wrapper {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  float: none;
+  display: block;
+}
+#donation-module.widget .clear {
+  clear: both;
+}
+#donation-module.widget .single_add_to_cart_button {
+  clear: both;
+  position: relative;
+  margin-bottom: 10px;
+}
+#donation-module.widget small {
+  line-height: 1.3;
+  color: #999999;
+}
 .file-downloads {
   margin-bottom: 0;
   position: relative;
@@ -7097,7 +7120,10 @@ ul.order_details strong {
   font-weight: 200;
 }
 #calendar-header .header .title .category-aloud {
-  color: #e2438c;
+  font-family: 'Letter Gothic', serif;
+  text-rendering: optimizeLegibility;
+  font-size: 85%;
+  letter-spacing: -2px;
 }
 #calendar-header .meta {
   padding: 0;
@@ -7324,6 +7350,65 @@ ul.order_details strong {
 .mfp-content .related {
   display: none;
 }
+.mc4wp-form #signup-form {
+  background: #f8f8f8;
+  padding: 25px;
+}
+.mc4wp-form #signup-form > label {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+.mc4wp-form #signup-form input#mc4wp_email {
+  height: 34px;
+  line-height: 34px;
+  padding: 0 10px;
+  width: 75%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.mc4wp-form #signup-form .button {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 30%;
+  color: #ffffff;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-weight: 300;
+  height: 34px;
+  line-height: 36px;
+  border: none;
+  float: right;
+  margin-left: -5%;
+  position: relative;
+  z-index: 3;
+  border-radius: 2px;
+  transition: 300ms ease;
+}
+.mc4wp-form .mc4wp-alert {
+  padding: 10px 25px;
+  background: #f8f8f8;
+}
+.events-category-aloud #signup-form {
+  background: #333333;
+}
+.events-category-aloud #signup-form .button {
+  background: #e2438c;
+}
+.events-category-aloud #signup-form .button:hover {
+  background: #d22072;
+}
 #archive-bar.toolbar {
   margin-bottom: 0;
   border-bottom: 0;
@@ -7340,20 +7425,32 @@ ul.order_details strong {
   top: auto;
   bottom: 0;
 }
-#archive-bar .button {
+#archive-bar .button,
+#archive-bar span {
   border: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   height: 50px;
   font-size: 13px;
   line-height: 50px;
+  display: inline-block;
+  color: #cccccc;
 }
-#archive-bar .button.active {
+#archive-bar .button.active,
+#archive-bar span.active {
   color: #e2438c;
 }
 #archive-bar li {
   height: auto;
   line-height: auto;
+}
+#archive-bar .nav > li > ul {
+  background: #ffffff;
+}
+#archive-bar .nav > li > ul > li,
+#archive-bar .nav > li > ul .button {
+  height: 30px;
+  line-height: 30px;
 }
 #archive-bar.stuck {
   position: fixed;
@@ -7418,6 +7515,27 @@ ul.order_details strong {
 }
 #archive-grid .item.user .cat {
   display: none;
+}
+#archive-grid .item.user .description {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  transition: 300ms ease;
+}
+#archive-grid .item.user .description p {
+  color: #ffffff;
+}
+#archive-grid .item.user:hover .description {
+  opacity: 1;
+}
+#archive-grid .item.user:hover .meta {
+  z-index: 99;
 }
 #archive-grid .item.audio .thumbnail {
   display: none;

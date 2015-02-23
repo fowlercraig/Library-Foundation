@@ -8,22 +8,36 @@
   $archiveWidth  = 'desktop-2 contained';
   $videoWidth    = 'desktop-4 contained';
 
+  $terms = get_field('category_menu');
+
 ?>
 
 <div id="archive-bar" class="toolbar grid-filters">
   <div class="row">
     <nav class="desktop-10">
-      <ul class="nav">
+      <ul class="nav sf-menu">
         <li><button class="button active" data-filter="*">View All</button></li>
         <li><button class="button" data-filter=".video">Videos</button></li>
         <li><button class="button" data-filter=".audio">Podcasts</button></li>
         <li><button class="button" data-filter=".photo">Galleries</button></li>
         <li><button class="button" data-filter=".user">Speakers</button></li>
         <li><button class="button" data-filter=".ellipsischat">Quotes</button></li>
+        <?php if( $terms ): ?>
+
+        <li>
+          <span class="button">Categories</span>
+          <ul>
+            <li><button class="button active" data-filter="*">View All</button></li>
+            <?php foreach( $terms as $term ): ?>
+            <li><button class="button" data-filter=".<?php echo strtolower($term->name); echo '-category'; ?>"><?php echo $term->name; ?></button></li>
+            <?php endforeach; ?>
+          </ul>
+        </li>
+        <?php endif; ?>
       </ul>
     </nav>
     <div class="desktop-2">
-      <!--<input type="text" placeholder="Search" />-->
+      <input type="text" placeholder="Search" />
     </div>
   </div>
 </div>

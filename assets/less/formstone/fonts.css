@@ -27,6 +27,18 @@
     font-style: italic;
   }
 
+  /* Letter Gothic */
+  @font-face {
+    font-family: 'Letter Gothic';
+    src: url('/assets/fonts/LetterGothicMTStd.eot');
+    src: url('/assets/fonts/LetterGothicMTStd.eot') format('embedded-opentype'),
+         url('/assets/fonts/LetterGothicMTStd.woff2') format('woff2'),
+         url('/assets/fonts/LetterGothicMTStd.woff') format('woff'),
+         url('/assets/fonts/LetterGothicMTStd.ttf') format('truetype'),
+         url('/assets/fonts/LetterGothicMTStd.svg#LetterGothicMTStd') format('svg');
+  }
+
+
 	/* Sentinel Book */
 	@font-face {
     font-family: 'Sentinel';
