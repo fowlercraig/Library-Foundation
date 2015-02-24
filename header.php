@@ -21,7 +21,7 @@
 
 <div id="wrapper">
 
-<header id="head" class="gridlock">
+<header id="head" class="gridlock gridlock-fluid">
   <div class="row">
     <?php 
       $menuParameters = array(

@@ -14,7 +14,7 @@
     <div class="slide">
       <div class="meta">
         <div class="row">
-          <div class="desktop-12">
+          <div class="desktop-10">
             <h2 class="title"><?php the_sub_field('slide_title'); ?></h2>
               <div class="slide_meta">
                 <div class="row">

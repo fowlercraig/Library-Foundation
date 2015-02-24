@@ -13,6 +13,15 @@
 ?>
 
 <div class="slide">
+  <?php if (get_sub_field('top_link')): ?>
+  <div class="top_link">
+    <div class="row">
+      <div class="desktop-12">
+        <?php the_sub_field('top_link'); ?>
+      </div>
+    </div>
+  </div>
+  <?php endif; ?>
   <div class="meta">
     <div class="row">
       <div class="desktop-12">

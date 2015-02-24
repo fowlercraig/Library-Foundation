@@ -100,11 +100,11 @@ $( document ).ready(function() {
     loop: true,
     slidesSpacing: 5,
     visibleNearby: {
-      enabled: false,
-      centerArea: 0.8,
+      enabled: true,
+      centerArea: 0.85,
       center: true,
-      breakpoint: 650,
-      breakpointCenterArea: 0.64,
+      breakpoint: 1000,
+      breakpointCenterArea: 1,
       navigateByCenterClick: true
     }
   }); 

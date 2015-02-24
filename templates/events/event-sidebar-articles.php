@@ -1,14 +1,29 @@
-<?php
+<?php if( have_rows('additional_content') ): while ( have_rows('additional_content') ) : the_row();
 
-if( have_rows('additional_content') ):
+  $image = get_sub_field('thumbnail');
 
-    while ( have_rows('additional_content') ) : the_row();
+  if( !empty($image) ) {
 
-        the_sub_field('thumbnail');
-        the_sub_field('description');
+    $articleWidth = 'desktop-7 tablet-6 mobile-3';
+    $url = $image['url'];
+    $title = $image['title'];
+    $alt = $image['alt'];
+    $size = 'thumbnail';
+    $thumb = $image['sizes'][ $size ];
 
-    endwhile;
+  } else {
 
-endif;
+    $articleWidth = 'desktop-12 tablet-6 mobile-3';
 
-?>
+  }
+
+  ?>
+
+  <div class="row article-item">
+    <?php if( !empty($image) ) :?><div class="thumb desktop-4 tablet-6 mobile-3">
+      <img src="<?php echo $thumb; ?>" class="img-responsive" alt="" />
+    </div><?php endif; ?>
+    <div class="desc right <?php echo $articleWidth; ?>"><?php the_sub_field('description'); ?></div>
+  </div>
+
+  <?php endwhile; endif;?>
