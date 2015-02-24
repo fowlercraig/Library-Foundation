@@ -1,4 +1,5 @@
-<div class="accordion page-section">
+
+<div id="faq" class="accordion page-section">
   <div class="row">
     <div class="desktop-12">
       <h3 class="event-section-title">Frequently Asked Questions</h3>

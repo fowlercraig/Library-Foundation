@@ -46,7 +46,7 @@
     </nav>
     <nav class="desktop-4 tablet-6 mobile-3 text-right">
       <a href="#faq" class="button">FAQ</a>
-      <a href="#reservation-policy" class="button">Reservation Policy</a>
+      <!--<a href="#reservation-policy" class="button">Reservation Policy</a>-->
     </nav>
   </div>
 </div>

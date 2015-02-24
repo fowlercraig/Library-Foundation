@@ -430,6 +430,29 @@
 		}
 	}
 
+	.big-button {
+		.font_size(20);
+		.lato();
+
+		height: 50px;
+
+		background: @blue;
+		border-radius: 3px;
+		font-weight: bold;
+		
+		cursor: pointer;
+		display: block;
+		line-height: 50px;
+		margin: 0 0 10px 0;
+		text-align: center;
+		border-bottom: 2px solid @black25;
+		user-select: none;
+		color: @white!important;
+		&:hover {
+			background: darken(@blue, 10%)
+		}
+	}
+
 
 	#header {
 		width: 100%;

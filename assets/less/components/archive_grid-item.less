@@ -86,6 +86,7 @@
     .cat {
       line-height: 1.4;
       display: block;
+      color: @white75;
     }
 
     .skeleton {
@@ -108,12 +109,16 @@
 
       .description {
         .cover();
-        z-index: 99;
+        z-index: 11;
         padding: 20px;
         background: @black75;
         opacity: 0;
         transition: 300ms ease;
+        color: @white;
         p {
+          color: @white;
+        }
+        a {
           color: @white;
         }
       }
@@ -123,7 +128,7 @@
           opacity: 1;
         }
         .meta {
-          z-index: 99;
+          z-index: 1;
         }
       }
 

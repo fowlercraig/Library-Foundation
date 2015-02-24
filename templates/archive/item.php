@@ -69,7 +69,7 @@
 
   <?php if( get_post_type() == 'people' ): ?>
   <div class="description">
-    <?php the_content(); ?>
+    <?php echo excerpt(150); ?>
   </div>
   <?php endif; ?>
 

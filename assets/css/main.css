@@ -1625,6 +1625,26 @@ table .default {
 .button:not(.woocommerce .button).brown:hover {
   background: #8a5b22;
 }
+.big-button {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: 'franklin-gothic-urw', sans-serif;
+  height: 50px;
+  background: #008bbe;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  line-height: 50px;
+  margin: 0 0 10px 0;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  user-select: none;
+  color: #ffffff !important;
+}
+.big-button:hover {
+  background: #00668b;
+}
 #header {
   width: 100%;
   height: 60px;
@@ -7127,7 +7147,13 @@ ul.order_details strong {
 }
 .tribe-events-list .type-tribe_events .meta a {
   margin-right: 10px;
+  color: #008bbe;
+}
+.tribe-events-list .type-tribe_events .meta a.cat_aloud {
   color: #e2438c;
+}
+.tribe-events-list .type-tribe_events .meta a.cat_young-literati {
+  color: #51a74e;
 }
 .tribe-events-list .type-tribe_events .title {
   margin: 1.04166667% 0;
@@ -7204,6 +7230,11 @@ ul.order_details strong {
 #calendar-header {
   position: relative;
 }
+#calendar-header .slider .rsOverflow {
+  background-image: url(/assets/img/cal-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
+}
 #calendar-header .header {
   padding-bottom: 0;
   margin-bottom: 70px;
@@ -7273,6 +7304,16 @@ ul.order_details strong {
 #calendar-header .meta .button i {
   height: 20px;
   line-height: 20px;
+}
+.events-category-aloud #calendar-header .slider .rsOverflow {
+  background-image: url(/assets/img/aloud-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
+}
+.events-category-young-literati #calendar-header .slider .rsOverflow {
+  background-image: url(/assets/img/yl-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
 }
 #calendar-module menu {
   position: relative;
@@ -7511,6 +7552,9 @@ ul.order_details strong {
   margin-bottom: 0;
   border-bottom: 0;
 }
+#archive-grid {
+  background: #333333;
+}
 #archive-grid .item {
   position: relative;
 }
@@ -7596,6 +7640,7 @@ ul.order_details strong {
 #archive-grid .item .cat {
   line-height: 1.4;
   display: block;
+  color: rgba(255, 255, 255, 0.75);
 }
 #archive-grid .item .skeleton {
   visibility: hidden;
@@ -7620,20 +7665,24 @@ ul.order_details strong {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 11;
   padding: 20px;
   background: rgba(0, 0, 0, 0.75);
   opacity: 0;
   transition: 300ms ease;
+  color: #ffffff;
 }
 #archive-grid .item.user .description p {
+  color: #ffffff;
+}
+#archive-grid .item.user .description a {
   color: #ffffff;
 }
 #archive-grid .item.user:hover .description {
   opacity: 1;
 }
 #archive-grid .item.user:hover .meta {
-  z-index: 99;
+  z-index: 1;
 }
 #archive-grid .item.audio .thumbnail {
   display: none;
