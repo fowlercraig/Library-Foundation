@@ -1,4 +1,6 @@
-$( document ).ready(function() {
+SmartAjax_load('/assets/javascripts/', function(){
+
+  function thangs(){
 
   // Superfish
 
@@ -425,5 +427,31 @@ $('.grid-filters').on( 'click', 'button', function() {
     $('#search-footer').fadeOut(300);
   });
 
+}
 
+thangs();
+
+SmartAjax.bind('a', {
+  reload: false,
+  cache: true,
+  containers: [{
+  selector: '#content > div'
+  }],
+  before: function()
+  {
+  $('#content').animate({
+  opacity: 0
+  }, 100 , SmartAjax.proceed);
+
+  },
+  done: function()
+  {
+  thangs();  
+  $('#content').animate({
+  opacity: 1
+  },100);
+
+  }
 });
+
+}, true);

@@ -5481,6 +5481,17 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/assets\/img\/aloud-placeholder.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 118187,
+		"inputAbbreviatedPath": "\/assets\/img\/aloud-placeholder.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/aloud-placeholder.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/bottom-bg.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -5488,6 +5499,17 @@
 		"initialSize": 56182,
 		"inputAbbreviatedPath": "\/assets\/img\/bottom-bg.png",
 		"outputAbbreviatedPath": "\/assets\/img\/bottom-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/cal-placeholder.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 131442,
+		"inputAbbreviatedPath": "\/assets\/img\/cal-placeholder.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/cal-placeholder.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -5576,6 +5598,17 @@
 		"initialSize": 5458,
 		"inputAbbreviatedPath": "\/assets\/img\/rs-minimal-white.png",
 		"outputAbbreviatedPath": "\/assets\/img\/rs-minimal-white.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/yl-placeholder.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 109037,
+		"inputAbbreviatedPath": "\/assets\/img\/yl-placeholder.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/yl-placeholder.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -5670,7 +5703,7 @@
 		},
 	"\/assets\/javascripts\/load.smartajax.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/javascripts\/load.smartajax.js",
 		"outputAbbreviatedPath": "\/assets\/javascripts\/min\/load.smartajax-min.js",

@@ -1,3 +1,5 @@
+// @codekit-prepend "load.smartajax.js"; 
+
 // Formstone Components
 
 // @codekit-prepend "../bower_components/Naver/jquery.fs.naver.js"; 
