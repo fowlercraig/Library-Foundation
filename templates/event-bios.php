@@ -37,7 +37,7 @@
 <div class="item bio">
   <div class="row">
     <div class="desktop-3 tablet-2 mobile-3">
-      <?php echo get_the_post_thumbnail( $p->ID, 'event-bio', array( 'class' => 'rounded img-responsive' ) ); ?> 
+      <?php echo get_the_post_thumbnail( $p->ID, 'thumbnail', array( 'class' => 'rounded img-responsive' ) ); ?> 
       
     </div>
     <div class="desktop-9 tablet-4 mobile-3">

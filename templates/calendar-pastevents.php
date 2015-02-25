@@ -1,20 +1,19 @@
-<div id="past-events">
-  <header id="past-events-header">
-    <div class="row">
-      <div class="desktop-12">
-        <h3 class="title">Media from Past Events</h3>
-      </div>
-    </div>
-  </header>
-  <div id="past-events-slider" class="slider rsMinW slider">
-    <div class="slide">
-      <div class="meta overlay bottom">
-        <div class="row">
-          <div class="desktop-6 tablet-3 mobile-3"><h2 class="title">Lost & Found at the Movies</h2></div>
-          <div class="desktop-6 tablet-3 mobile-3 text-right"><a class="button" href="#">View More</a></div>
-        </div>
-      </div>
-      <img class="rsImg" src="http://d12vb6dvkz909q.cloudfront.net/uploads/galleries/32779/the_graduate.jpg" />
-    </div>
+<div id="home-featured">
+  <div class="slider rsMinW">
+    <?php 
+
+      if( have_rows('featured_slider_bottom', 'options') ): 
+      while ( have_rows('featured_slider_bottom', 'options') ) : the_row(); 
+
+      $post_object = get_sub_field('slide_post');
+      $post = $post_object;
+      setup_postdata( $post ); 
+
+      get_template_part('templates/home/slider', 'bottom' );
+
+      wp_reset_postdata();
+      endwhile; endif;
+
+    ?>
   </div>
 </div>

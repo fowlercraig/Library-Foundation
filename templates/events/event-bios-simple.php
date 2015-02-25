@@ -10,7 +10,9 @@
       <?php the_sub_field('other_bio'); ?>
     </div>
   </div>
+  <hr>
 </div>
+
 
 <?php endwhile; ?>
 </div>

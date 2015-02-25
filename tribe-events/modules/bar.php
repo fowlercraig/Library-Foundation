@@ -45,7 +45,7 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 	      </div>
 	    <?php } // if ( count( $views ) > 1 ) ?>
 	    <?php if ( ! empty( $filters ) ) { ?>
-	      <div class="tribe-bar-filters desktop-4 tablet-6 mobile-3 right">
+	      <div class="tribe-bar-filters desktop-4 tablet-6 mobile-3">
 	        <div class="tribe-bar-filters-inner tribe-clearfix row">
 	          <?php foreach ( $filters as $filter ) : ?>
 	            <div class="desktop-4 <?php echo esc_attr( $filter['name'] ) ?>-filter">
@@ -58,6 +58,23 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 	          </div>
 	        </div>
 	      </div>
+
+				<?php if ( is_tax( 'tribe_events_cat', 'aloud' ) ) : ?>
+				<div class="social tribe-bar-filters desktop-4 tablet-6 mobile-3 right text-right">
+					<span class="button no-border">Follow Us</span>
+					<a target="blank" href="https://facebook.com/aloudla"><i class="ss-icon ss-social-circle">Facebook</i></a>
+					<a target="blank" href="https://twitter.com/aloudla"><i class="ss-icon ss-social-circle">Twitter</i></a>
+				</div>
+				<?php endif; ?>
+
+				<?php if ( is_tax( 'tribe_events_cat', 'young-literati' ) ) : ?>
+				<div class="social tribe-bar-filters desktop-4 tablet-6 mobile-3 right text-right">
+					<span class="button no-border">Follow Us</span>
+					<a target="blank" href="https://facebook.com/youngliterati"><i class="ss-icon ss-social-circle">Facebook</i></a>
+					<a target="blank" href="https://twitter.com/youngliterati"><i class="ss-icon ss-social-circle">Twitter</i></a>
+				</div>
+				<?php endif; ?>
+
 	    <?php } // if ( !empty( $filters ) ) ?>
 	  </form>
 	</div>

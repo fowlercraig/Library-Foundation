@@ -88,6 +88,20 @@
 
 }
 
+.single-tribe_events {
+  #member-widget {
+    &.stuck {
+      top: 125px;
+    }
+    &.boom {
+    top: auto;
+    position: absolute;
+    bottom: -50px;
+    z-index: 1;
+  }
+  }
+}
+
 .page.blog {
   > .row {
     position: relative;
@@ -290,6 +304,56 @@
       margin-top: 1px;
 
     }
+  }
+
+}
+
+
+#archive-graphic {
+
+  background-size: cover;
+  background-repeat: none;
+  background-position: top center;
+  padding: 130px 0;
+
+  .title {
+
+    .sentinel();
+    color: @white;
+    font-size: 48px;
+    margin-bottom: 0;
+
+  }
+
+  .desc {
+    max-width: 75%;
+    h1,h2,h3,h4,h5,h6,p {
+      .caslon();
+      color: @white;  
+      font-size: 24px;
+      font-style: italic;
+      margin-top: 0;
+    }
+    @media @desktopC {
+      max-width: 100%;
+    }
+    @media @tabletC {
+      max-width: 100%;
+    }
+    @media @mobileC {
+      max-width: 100%;
+    }
+  }
+
+  .button {
+
+    .cat();
+    background: @white;
+    color: @blue;
+    height: 38px;
+    line-height: 40px;
+    border-radius: 20px;
+    border: none;
   }
 
 }

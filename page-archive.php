@@ -37,7 +37,7 @@
       </ul>
     </nav>
     <div class="desktop-2">
-      <input type="text" placeholder="Search" />
+      <!--<input type="text" placeholder="Search" />-->
     </div>
   </div>
 </div>

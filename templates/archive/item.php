@@ -65,11 +65,37 @@
 
 ?>
 
-<div class="item <?php echo $input[$rand_keys[1]] . "\n"; echo ' '; echo $itemsize; echo ' '; echo $format; echo ' '; echo $category; ?> contained">
+<?php if(  has_post_format( 'gallery' )){ ?>
+
+<div class="item gallery-item desktop-4 contained">
+
+  <div class="meta">
+    <span class="cat"><?php echo $category; echo ' / '; echo $postcreatedate; ?></span>
+    <h2 class="title"><?php echo $guests; ?></h2>
+    <span class="cat"><?php echo $metainfo; ?></span>
+  </div>
+
+  <?php $images = get_field('archive_gallery'); ?>
+  <?php if( $images ): ?>
+  <div class="event-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <?php $counter = 1; foreach( $images as $image ): ?>
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="item_<?php echo $counter; ?>">
+      <a href="<?php echo $image['url']; ?>" itemprop="contentUrl" data-size="<?php echo $image['width']; ?>x<?php echo $image['height']; ?>">
+        <img src="<?php echo $image['sizes']['archive-small']; ?>" class="img-responsive" itemprop="thumbnail" alt="" />
+      </a>
+    </figure>
+    <?php  $counter++; endforeach; ?>
+  </div>
+  <?php endif; ?>
+</div>
+
+<?php } else { ?>
+
+<div class="item non-gallery <?php echo $input[$rand_keys[1]] . "\n"; echo ' '; echo $itemsize; echo ' '; echo $format; echo ' '; echo $category; ?> contained">
 
   <?php if( get_post_type() == 'people' ): ?>
   <div class="description">
-    <?php echo excerpt(150); ?>
+    <?php the_content(); ?>
   </div>
   <?php endif; ?>
 
@@ -98,3 +124,4 @@
   <div class="skeleton"><img src="http://placehold.it/<?php echo $skeletonsize; ?>" class="img-responsive" /></div>
   <?php } ?>
 </div>
+<?php } ?>

@@ -1,4 +1,4 @@
-SmartAjax_load('/assets/javascripts/', function(){
+//SmartAjax_load('/assets/javascripts/', function(){
 
   function thangs(){
 
@@ -351,10 +351,20 @@ $('.grid-filters').on( 'click', 'button', function() {
 
   if ( $('#member-widget').length ) {
 
+    if ($('body.single-tribe_events').length > 0){
+
+      var offset = 125;
+
+    } else {
+
+      var offset = 75;
+
+    }
+
     var memberSticky = new Waypoint.Sticky({
       element: $('#member-widget:not(.page-home #member-widget)')[0],
       wrapper: '<div class="member-wrapper"/>',
-      offset: 75,
+      offset: offset,
     });
 
     var mw = $('.member-wrapper').width();
@@ -362,6 +372,26 @@ $('.grid-filters').on( 'click', 'button', function() {
 
     $('#member-widget').css({
       width: mw
+    });
+
+    // Accounting for Sponsors
+
+    var $sponsors = $('#sponsors');
+
+    $sponsors.waypoint(function(direction) {
+    if (direction === 'down') {
+      $('#member-widget').addClass('boom');
+    }
+    }, {
+    offset: mh+125
+    });
+
+    $sponsors.waypoint(function(direction) {
+    if (direction === 'up') {
+      $('#member-widget').removeClass('boom');
+    }
+    }, {
+    offset: mh+125
     });
 
     // Accounting for Footer Modules
@@ -429,29 +459,31 @@ $('.grid-filters').on( 'click', 'button', function() {
 
 }
 
-thangs();
-
-SmartAjax.bind('a', {
-  reload: false,
-  cache: true,
-  containers: [{
-  selector: '#content > div'
-  }],
-  before: function()
-  {
-  $('#content').animate({
-  opacity: 0
-  }, 100 , SmartAjax.proceed);
-
-  },
-  done: function()
-  {
-  thangs();  
-  $('#content').animate({
-  opacity: 1
-  },100);
-
-  }
+$(document).ready(function(){
+  thangs();
 });
 
-}, true);
+// SmartAjax.bind('a', {
+//   reload: false,
+//   cache: true,
+//   containers: [{
+//   selector: '#content > div'
+//   }],
+//   before: function()
+//   {
+//   $('#content').animate({
+//   opacity: 0
+//   }, 100 , SmartAjax.proceed);
+
+//   },
+//   done: function()
+//   {
+//   thangs();  
+//   $('#content').animate({
+//   opacity: 1
+//   },100);
+
+//   }
+// });
+
+//}, true);

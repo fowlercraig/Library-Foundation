@@ -1,5 +1,6 @@
 <div id="member-tabs" class="tabbed">
 
+  <?php if (is_page('membership')): ?>
   <menu class="row">
     <div class="desktop-12">
       <menu class="tabber-menu">
@@ -14,6 +15,7 @@
       </menu>
     </div>
   </menu>
+<?php endif; ?>
 
   <div class="row">
   <div class="desktop-12 padded">
@@ -46,7 +48,9 @@
         <span class="sub-title"><?php the_sub_field('sub_title'); ?></span>
         <br><br>
         <a href="#<?php echo $thing;?>" class="popup button">Join/Renew Now</a><br><br>
+        <?php if (get_sub_field('gift_membership')): ?>
         <a href="#<?php echo $blargh;?>" class="popup gift">Gift a Membership</a>
+        <?php endif; ?>
       </header>
       <div class="desktop-8"><?php the_sub_field('description'); ?></div>
     </div>

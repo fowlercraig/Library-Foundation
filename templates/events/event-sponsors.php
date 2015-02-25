@@ -15,9 +15,9 @@ if( $sponsors ):
 
   <?php foreach( $sponsors as $sponsor ): $link = get_field('attachement_link', $sponsor['id']); ?>
 
-    <div class="item sizer-item">
+    <div class="item desktop-3 tablet-2 mobile-1 sizer-item contained">
       <a href="<?php echo $link; ?>">
-        <img src="<?php echo $sponsor['sizes']['large']; ?>" alt="<?php echo $sponsor['alt']; ?>" />
+        <img class="img-responsive" src="<?php echo $sponsor['sizes']['large']; ?>" alt="<?php echo $sponsor['alt']; ?>" />
       </a>
     </div>
 
@@ -35,9 +35,9 @@ if( $sponsors ):
 
     foreach( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
 
-      <div class="item sizer-item">
+      <div class="item desktop-3 tablet-2 mobile-1 sizer-item contained">
         <a href="<?php echo $link; ?>">
-          <img src="<?php echo $globalSponsor['sizes']['large']; ?>" alt="<?php echo $globalSponsor['alt']; ?>" />
+          <img class="img-responsive" src="<?php echo $globalSponsor['sizes']['large']; ?>" alt="<?php echo $globalSponsor['alt']; ?>" />
         </a>
       </div>
 
@@ -57,9 +57,9 @@ else : // This is where we show Global Sponsors
   $globalSponsors = get_field('aloud_sponsors', 'options'); 
   foreach ( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
 
-  <div class="item sizer-item">
+  <div class="item desktop-3 tablet-2 mobile-1 sizer-item contained">
     <a href="<?php echo $link; ?>">
-      <img src="<?php echo $globalSponsor['sizes']['large']; ?>" alt="<?php echo $globalSponsor['alt']; ?>" />
+      <img class="img-responsive" src="<?php echo $globalSponsor['sizes']['large']; ?>" alt="<?php echo $globalSponsor['alt']; ?>" />
     </a>
   </div>
 
