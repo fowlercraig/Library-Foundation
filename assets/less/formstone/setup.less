@@ -198,3 +198,26 @@
 		font-family: 'Letter Gothic', serif;
 		text-rendering: optimizeLegibility;
 	}
+
+	.action-btn {
+    position: absolute;
+    font-size: 24px;
+    color: @white;
+    .center();
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 9;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    display: block;
+    border: 2px solid @white;
+    border-radius: 50%;
+    pointer-events: none;
+    i {
+      display: block;
+      height: 50px;
+      line-height: 53px;
+      margin: auto;
+    }
+  }

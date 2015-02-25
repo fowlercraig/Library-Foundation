@@ -5,18 +5,20 @@
 <?php setup_postdata($post); ?>
 
 <?php if ( has_post_format( 'gallery' )): $images = get_field('archive_gallery'); ?>
-<div class="item event-gallery">
-<h3 class="title"><?php the_title(); ?></h3>
-<?php $counter = 1; foreach( $images as $image ): ?>
-<figure itemscope itemtype="http://schema.org/ImageObject" class="figure figure_<?php echo $counter; ?>">
-<a href="<?php echo $image['url']; ?>" itemprop="contentUrl" data-size="<?php echo $image['width']; ?>x<?php echo $image['height']; ?>">
-<img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>" itemprop="thumbnail"/>
-</a>
-<figcaption itemprop="caption description"><?php echo $image['caption']; ?></figcaption>
-</figure>
-
-<?php $counter++; // add one per row ?>  
-<?php endforeach; ?>
+<div class="widget gallery">
+  <h3 class="title"><?php the_title(); ?></h3>
+  <span class="action"><i class="ss-icon ss-gizmo">Plus</i></span>
+  <div class="item event-gallery">
+    <?php $counter = 1; foreach( $images as $image ): ?>
+    <figure itemscope itemtype="http://schema.org/ImageObject" class="figure figure_<?php echo $counter; ?>">
+    <a href="<?php echo $image['url']; ?>" itemprop="contentUrl" data-size="<?php echo $image['width']; ?>x<?php echo $image['height']; ?>">
+    <img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>" itemprop="thumbnail"/>
+    </a>
+    <figcaption itemprop="caption description"><?php echo $image['caption']; ?></figcaption>
+    </figure>
+    <?php $counter++; // add one per row ?>  
+    <?php endforeach; ?>
+  </div>
 </div>
 <?php endif; ?>
 

@@ -77,6 +77,23 @@
     }
   }
 
+  .widget.gallery {
+    position: relative;
+    .action {
+      .action-btn();
+    }
+    .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      z-index: 9;
+      padding: 20px;
+      color: @white;
+      pointer-events: none;
+    }
+  }
+
   .event-gallery.item {
 
     figure {

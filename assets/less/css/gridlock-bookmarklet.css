@@ -49,6 +49,30 @@
 .text-center {
   text-align: center;
 }
+.action-btn {
+  font-size: 24px;
+  color: #ffffff;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -25px;
+  margin-left: -25px;
+  z-index: 9;
+  height: 48px;
+  width: 48px;
+  text-align: center;
+  display: block;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.action-btn i {
+  display: block;
+  height: 50px;
+  line-height: 53px;
+  margin: auto;
+}
 /*-------------------------------------------
   Bookmarklet
 -------------------------------------------*/

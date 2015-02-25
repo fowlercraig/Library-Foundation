@@ -38,6 +38,7 @@
     <nav id="main-nav" class="desktop-12">
       <a href="/" id="logo"><img src="/assets/img/lflalogo.png" /></a>
       <?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?>
+      <a href="#" class="search"><i class="ss-gizmo ss-icon">search</i></a>
       <a href="<?php echo get_the_permalink(289); ?>" class="button right" id="become-member-btn">Become a Member</a>
     </nav>
     <?php // wp_nav_menu( array( 'theme_location'=>'socl-menu','items_wrap'=> '%3$s','container_class'=>'menu mobile-hide tablet-hide text-right desktop-4','walker' => new MV_Cleaner_Walker_Nav_Menu() ) ); ?>
