@@ -30,6 +30,7 @@
 
 ?>
 
+<?php if ( have_posts()): ?>
 <div id="calendar-header">
   <div class="header overlay bottom">
     <div class="row">
@@ -79,3 +80,13 @@
 
   </div>
 </div>
+<?php else: ?>
+<div id="calendar-header" class="simple-header" data-speed="1.25">
+  <div class="row">
+    <div class="desktop-12 tablet-6 mobile-3">
+      <h1 class="page-header-title">Calendar<?php echo $yolo; ?></h1>
+      <br>
+    </div>
+  </div>
+</div>
+<?php endif;?>  

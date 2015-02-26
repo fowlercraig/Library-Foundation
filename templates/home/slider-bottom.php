@@ -17,7 +17,9 @@
   <div class="top_link">
     <div class="row">
       <div class="desktop-12">
-        <?php the_sub_field('top_link'); ?>
+        <div class="wrapper">
+          <?php the_sub_field('top_link'); ?>
+        </div>
       </div>
     </div>
   </div>
@@ -25,10 +27,14 @@
   <div class="meta">
     <div class="row">
       <div class="desktop-12">
-        <h2 class="title"><?php the_title(); ?></h2>
-        <a class="button" href="<?php the_permalink();?>">View More</a>
+        <div class="wrapper">
+          <h2 class="title"><?php the_title(); ?></h2>
+          <a class="button" href="<?php the_permalink();?>">View More</a>
+        </div>
         <div class="slide_meta">
-          <a class="link" href="/calendar/category/special-projects/">More Special Projects</a>
+          <div class="wrapper">
+            <a class="link" href="/calendar/category/special-projects/">More Special Projects</a>
+          </div>
         </div>
       </div>
     </div>

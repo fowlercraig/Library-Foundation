@@ -6545,7 +6545,7 @@ a.added_to_cart.wc-forward {
 #home-slider #home-carousel {
   position: relative;
   background: #ffffff;
-  height: 600px;
+  height: 550px;
   width: 100%;
 }
 #home-slider #home-carousel .rsNav {
@@ -6666,6 +6666,15 @@ a.added_to_cart.wc-forward {
 }
 #home-featured {
   position: relative;
+}
+#home-featured header h3 {
+  margin: 8px 0 2px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #008bbe;
+}
+#home-featured .wrapper {
+  padding: 0 25px;
 }
 #home-featured .slider {
   height: 600px;
@@ -7431,7 +7440,7 @@ ul.order_details strong {
 #calendar-header {
   position: relative;
 }
-#calendar-header .slider .rsOverflow {
+#calendar-header.simple-header {
   background-image: url(/assets/img/cal-placeholder.jpg);
   background-size: cover;
   background-position: top center;
@@ -7506,33 +7515,34 @@ ul.order_details strong {
   height: 20px;
   line-height: 20px;
 }
-.events-category-aloud #calendar-header .slider .rsOverflow {
+.events-category-aloud #calendar-header.simple-header {
   background-image: url(/assets/img/aloud-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-young-literati #calendar-header .slider .rsOverflow {
+.events-category-young-literati #calendar-header.simple-header {
   background-image: url(/assets/img/yl-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-membership #calendar-header .slider .rsOverflow {
+.events-category-membership #calendar-header.simple-header {
   background-image: url(/assets/img/membership-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-library-store #calendar-header .slider .rsOverflow,
-.events-category-library-truck #calendar-header .slider .rsOverflow {
+.events-category-library-store #calendar-header.simple-header,
+.events-category-library-truck #calendar-header.simple-header,
+.events-category-library-store-on-wheels #calendar-header.simple-header {
   background-image: url(/assets/img/library-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-lost-found #calendar-header .slider .rsOverflow {
+.events-category-lost-found #calendar-header.simple-header {
   background-image: url(/assets/img/lostfound-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-writers-cut #calendar-header .slider .rsOverflow {
+.events-category-writers-cut #calendar-header.simple-header {
   background-image: url(/assets/img/writerscut-placeholder.jpg);
   background-size: cover;
   background-position: top center;

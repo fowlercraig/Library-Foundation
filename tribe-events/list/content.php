@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 	<div class="row">
 		<div class="desktop-12">
-			<?php echo tribe_events_the_notices(); ?>
+			<?php // echo tribe_events_the_notices(); ?>
 		</div>
 	</div>
 
@@ -40,9 +40,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<!-- Events Loop -->
 	<?php if ( have_posts() ) : ?>
+	
 		<?php do_action( 'tribe_events_before_loop' ); ?>
 		<?php tribe_get_template_part( 'list/loop' ) ?>
 		<?php do_action( 'tribe_events_after_loop' ); ?>
+
+	<?php else: ?>
+
+	Show some past events here.
+	
 	<?php endif; ?>
 
 	<!-- List Footer -->

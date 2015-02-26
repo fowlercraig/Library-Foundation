@@ -75,6 +75,7 @@
     transitionType: 'fade',
     arrowsNav: false,
     controlNavigation: 'none',
+    imageAlignCenter: false,
   }); 
 
   $("#past-events-slider.slider").royalSlider({
