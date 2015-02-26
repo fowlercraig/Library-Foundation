@@ -99,7 +99,9 @@
       </div>
     </div>
   </div><!-- Event Meta-->
+  <?php if ( has_post_thumbnail() ): ?>
   <div class="simple-header simple-header--bg" data-speed="2" style="background-image:url(<?php echo $small_bg; ?>);"></div>
+  <?php endif; ?>
 </div>
 
 <? } ?>

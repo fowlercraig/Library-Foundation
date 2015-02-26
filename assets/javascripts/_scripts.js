@@ -41,6 +41,7 @@
   $("#donation-module select").selecter({
     //label: "Archive",
     cover: true,
+    label: "Make a Donation",
     customClass: "blog-select"
   });
 

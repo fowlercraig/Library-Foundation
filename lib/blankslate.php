@@ -41,7 +41,7 @@ add_action( 'widgets_init', 'gridded_widgets_init' );
 function gridded_widgets_init()
 {
 register_sidebar( array (
-'name' => __( 'Sidebar Widget Area', 'gridded' ),
+'name' => __( 'Blog Widget Area', 'gridded' ),
 'id' => 'primary-widget-area',
 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 'after_widget' => "</li>",
@@ -52,6 +52,15 @@ register_sidebar( array (
 register_sidebar( array (
 'name' => __( 'Event Widget Area', 'gridded' ),
 'id' => 'event-widget-area',
+'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+'after_widget' => "</li>",
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+
+register_sidebar( array (
+'name' => __( 'General Widget', 'gridded' ),
+'id' => 'general-widget-area',
 'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 'after_widget' => "</li>",
 'before_title' => '<h3 class="widget-title">',

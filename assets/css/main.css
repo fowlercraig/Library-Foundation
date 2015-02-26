@@ -5454,8 +5454,8 @@ a.added_to_cart.wc-forward {
   color: #e2438c;
 }
 .page-header.minimal {
-  padding-top: 175px;
-  background: #008bbe;
+  background-color: #008bbe;
+  background-size: cover;
 }
 .page-header.minimal:after {
   opacity: .125;
@@ -5466,11 +5466,12 @@ a.added_to_cart.wc-forward {
 .simple-header {
   background-color: #008bbe;
   background-position: top center;
-  background-size: cover;
   background-repeat: no-repeat;
   padding-top: 200px;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center center;
 }
 .simple-header .simple-header--bg {
   position: absolute;
@@ -5504,6 +5505,7 @@ a.added_to_cart.wc-forward {
 .simple-header h1 {
   color: #ffffff;
   font-size: 4em;
+  margin-bottom: 0;
 }
 .simple-header h1.has-sub {
   margin-bottom: 0;
@@ -5544,6 +5546,10 @@ a.added_to_cart.wc-forward {
 }
 .simple-header.minimal .page-header-title {
   font-size: 3em;
+}
+.page-header.event.simple-header {
+  background: url(/assets/img/blankevent.jpg);
+  background-size: cover;
 }
 .page-content,
 .event-content {
@@ -6594,10 +6600,6 @@ a.added_to_cart.wc-forward {
 #home-slider #home-carousel .rsActiveSlide .slide {
   opacity: 1;
 }
-#home-slider #home-carousel .aloud-type {
-  font-family: 'Letter Gothic', serif;
-  text-rendering: optimizeLegibility;
-}
 #home-slider #home-carousel .meta {
   position: absolute;
   bottom: 0;
@@ -6661,6 +6663,9 @@ a.added_to_cart.wc-forward {
 }
 #upcoming-events-carousel .slick-list {
   overflow: visible;
+}
+#home-featured {
+  position: relative;
 }
 #home-featured .slider {
   height: 600px;

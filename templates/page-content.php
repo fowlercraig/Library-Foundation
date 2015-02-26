@@ -45,17 +45,6 @@
 
     <?php if ( is_ancestor(250) OR is_front_page() OR $includeSidebar ) { // If What We Fund Ancestor ?>
     <aside class="aside desktop-4 tablet-2 mobile-3 right">
-      <div id="member-widget" <?php echo $homepage; ?>>
-        <div class="wrapper">
-          <h3>Become a Library Associate</h3>
-          <p>
-            Being a Library Associate gives you special access to public programs,
-            opening parties, and puts you in the mix of L.A.'s vibrant literary and
-            cuture scene.
-          </p>
-        </div>
-        <a href="#">Join Now</a>
-      </div>
       <?php if ( $includeSidebar ) { get_sidebar('simple'); } ?>
     </aside>
     <?php } ?>

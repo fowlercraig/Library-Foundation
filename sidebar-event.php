@@ -6,13 +6,11 @@
 
   <aside class="sidebar" id="event-sidebar">
     <hr>
-    <?php if ( is_active_sidebar( 'event-widget-area' ) ) : ?>
     <ul class="xoxo">
 
-      <?php dynamic_sidebar( 'event-widget-area' ); ?>
+      <?php dynamic_sidebar( 'general-widget-area' ); ?>
 
     </ul>
-    <?php endif; ?>
   </aside>
 
 </div>

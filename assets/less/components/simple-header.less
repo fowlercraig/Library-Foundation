@@ -7,6 +7,9 @@
   padding-top: 200px;
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+
 
   .simple-header--bg {
     @blur : 10px;
@@ -49,6 +52,7 @@
   h1 {
     color: @white;
     font-size: 4em;
+    margin-bottom: 0;
 
     &.has-sub {
       margin-bottom: 0;
@@ -115,4 +119,11 @@
 
   }
 
+}
+
+.page-header.event {
+  &.simple-header {
+    background: url(/assets/img/blankevent.jpg);
+    background-size: cover;
+  }
 }
