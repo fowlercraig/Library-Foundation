@@ -7,7 +7,7 @@
   $video_thumb_url  = get_video_thumbnail_uri($video_url); //get THumbnail via our functions in functions.php
   $audio_url        = get_field('archive_podcast');
   $postcreatedate   = get_the_date('Y');
-  $category         = strip_tags(get_the_category_list('',', ',''));
+  //$category         = strip_tags(get_the_category_list('',', ',''));
   $itemsize         = 'desktop-4';
   $skeletonsize     = '700x450';
   $speakers         = get_field('speakers');
@@ -18,6 +18,10 @@
   $input            = array("pink","blue","green","yellow");
   $rand_keys        = array_rand($input, 2);
 
+  $rando            = $input[$rand_keys[1]] . "\n";
+
+
+  //$category = get_post_class($post->ID);
 
   // Conditionals
 
@@ -67,7 +71,7 @@
 
 <?php if(  has_post_format( 'gallery' )){ ?>
 
-<div class="item gallery-item desktop-4 contained">
+<div <?php post_class('item gallery-item desktop-4 tablet-3 contained ' . "$format"); ?>>
 
   <div class="meta">
     <span class="cat"><?php echo $category; echo ' / '; echo $postcreatedate; ?></span>
@@ -91,7 +95,7 @@
 
 <?php } else { ?>
 
-<div class="item non-gallery <?php echo $input[$rand_keys[1]] . "\n"; echo ' '; echo $itemsize; echo ' '; echo $format; echo ' '; echo $category; ?> contained">
+<div <?php post_class('item non-gallery contained ' . " " . "$itemsize" . " " . "$format" . " " . "$format" . " " . "$rando"); ?>>
 
   <?php if( get_post_type() == 'people' ): ?>
   <div class="description">

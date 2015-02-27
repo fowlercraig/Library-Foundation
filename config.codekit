@@ -5600,6 +5600,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/cal-placeholder.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 404099,
+		"inputAbbreviatedPath": "\/assets\/img\/cal-placeholder.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/cal-placeholder.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/cards.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -5637,7 +5648,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 179665,
+		"initialSize": 412354,
 		"inputAbbreviatedPath": "\/assets\/img\/headers\/default-aloud.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/headers\/default-aloud.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -5725,7 +5736,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 514170,
+		"initialSize": 95991,
 		"inputAbbreviatedPath": "\/assets\/img\/writerscut-placeholder.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/writerscut-placeholder.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -5877,7 +5888,7 @@
 		},
 	"\/assets\/javascripts\/modules\/options_photoswipe.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/javascripts\/modules\/options_photoswipe.js",
 		"outputAbbreviatedPath": "\/assets\/javascripts\/modules\/min\/options_photoswipe-min.js",

@@ -1,8 +1,17 @@
+.page-header.calendar {
+  background-image: url(/assets/img/cal-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
+  &:after {
+    display: none!important;
+  }
+}
+
 #calendar-header {
 
   position: relative;
 
-  &.simple-header {
+  &.calendar {
       background-image: url(/assets/img/cal-placeholder.jpg);
       background-size: cover;
       background-position: top center;
@@ -98,16 +107,13 @@
 
 .events-category-aloud {
 
-  #calendar-header {
+  .page-header {
 
-   
-
-      &.simple-header {
+      &.calendar {
         background-image: url(/assets/img/aloud-placeholder.jpg);
         background-size: cover;
         background-position: top center;
       }
-
   
   }
 
@@ -115,11 +121,11 @@
 
 .events-category-young-literati {
 
-  #calendar-header {
+  .page-header {
 
     
 
-      &.simple-header {
+      &.calendar {
         background-image: url(/assets/img/yl-placeholder.jpg);
         background-size: cover;
         background-position: top center;
@@ -132,11 +138,11 @@
 
 .events-category-membership {
 
-  #calendar-header {
+  .page-header {
 
     
 
-      &.simple-header {
+      &.calendar {
         background-image: url(/assets/img/membership-placeholder.jpg);
         background-size: cover;
         background-position: top center;
@@ -151,9 +157,9 @@
 .events-category-library-truck,
 .events-category-library-store-on-wheels {
 
-  #calendar-header {
+  .page-header {
 
-      &.simple-header {
+      &.calendar {
         background-image: url(/assets/img/library-placeholder.jpg);
         background-size: cover;
         background-position: top center;
@@ -166,9 +172,9 @@
 
 .events-category-lost-found {
 
-  #calendar-header {
+ .page-header {
 
-      &.simple-header {
+      &.calendar {
         background-image: url(/assets/img/lostfound-placeholder.jpg);
         background-size: cover;
         background-position: top center;
@@ -180,10 +186,9 @@
 
 .events-category-writers-cut {
 
-  #calendar-header {
+  .page-header {
 
-
-      &.simple-header {
+      &.calendar {
         background-image: url(/assets/img/writerscut-placeholder.jpg);
         background-size: cover;
         background-position: top center;
@@ -191,4 +196,10 @@
 
   }
 
+}
+
+.page-header.calendar {
+  background-image: url(/assets/img/cal-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
 }

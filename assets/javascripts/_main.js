@@ -28,4 +28,3 @@
 // My Shit
 
 // @codekit-prepend "_scripts.js"; 
-// @codekit-append "modules/options_photoswipe.js"; 

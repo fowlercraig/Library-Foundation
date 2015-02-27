@@ -29,7 +29,7 @@
           <ul>
             <li><button class="button active" data-filter="*">View All</button></li>
             <?php foreach( $terms as $term ): ?>
-            <li><button class="button" data-filter=".<?php echo strtolower($term->name); echo '-category'; ?>"><?php echo $term->name; ?></button></li>
+            <li><button class="button" data-filter=".<?php echo 'category-';  echo strtolower($term->name); ?>"><?php echo $term->name; ?></button></li>
             <?php endforeach; ?>
           </ul>
         </li>

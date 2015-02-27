@@ -31,9 +31,11 @@ die( '-1' );
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
     $thumb_url = $thumb_url_array[0];
     $event_bg  = $thumb_url;
+    $noBg = '';
 
   }  else {
 
+    $noBg = ' noimage';
     $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
     $count = count($terms);
 
@@ -63,6 +65,7 @@ die( '-1' );
     $venue_details[] = $venue_name;
   }
 
+
 ?>
 
 <!--<div class="date-header">
@@ -77,7 +80,7 @@ die( '-1' );
 	<div class="row">
 		<?php tribe_get_template_part( 'list/single', 'event' ) ?>
 	</div>
-	<div class="bg" style="background-image:url(<?php echo $event_bg; ?>);"></div>
+	<div class="bg<?php echo $noBg; ?>" style="background-image:url(<?php echo $event_bg; ?>);"></div>
 </div>
 
 <?php do_action( 'tribe_events_inside_after_loop' ); ?>

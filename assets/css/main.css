@@ -5505,7 +5505,6 @@ a.added_to_cart.wc-forward {
 .simple-header h1 {
   color: #ffffff;
   font-size: 4em;
-  margin-bottom: 0;
 }
 .simple-header h1.has-sub {
   margin-bottom: 0;
@@ -7417,14 +7416,14 @@ ul.order_details strong {
   position: absolute;
   left: 0;
   top: 0;
+  width: 120%;
+  height: 120%;
   z-index: 1;
   background-size: cover;
   background-position: center -20px;
   opacity: 0;
   transition: 300ms ease;
   background-attachment: fixed;
-  width: 120%;
-  height: 120%;
   top: -10%;
   left: -10%;
   -webkit-filter: blur(5px);
@@ -7437,10 +7436,26 @@ ul.order_details strong {
 .tribe-events-list .type-tribe_events:first-child .bg {
   opacity: .5;
 }
+.tribe-events-list .type-tribe_events:hover .bg.noimage,
+.tribe-events-list .type-tribe_events:first-child .bg.noimage {
+  opacity: 1;
+}
+.past-events .title {
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+}
+.page-header.calendar {
+  background-image: url(/assets/img/cal-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
+}
+.page-header.calendar:after {
+  display: none!important;
+}
 #calendar-header {
   position: relative;
 }
-#calendar-header.simple-header {
+#calendar-header.calendar {
   background-image: url(/assets/img/cal-placeholder.jpg);
   background-size: cover;
   background-position: top center;
@@ -7515,35 +7530,40 @@ ul.order_details strong {
   height: 20px;
   line-height: 20px;
 }
-.events-category-aloud #calendar-header.simple-header {
+.events-category-aloud .page-header.calendar {
   background-image: url(/assets/img/aloud-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-young-literati #calendar-header.simple-header {
+.events-category-young-literati .page-header.calendar {
   background-image: url(/assets/img/yl-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-membership #calendar-header.simple-header {
+.events-category-membership .page-header.calendar {
   background-image: url(/assets/img/membership-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-library-store #calendar-header.simple-header,
-.events-category-library-truck #calendar-header.simple-header,
-.events-category-library-store-on-wheels #calendar-header.simple-header {
+.events-category-library-store .page-header.calendar,
+.events-category-library-truck .page-header.calendar,
+.events-category-library-store-on-wheels .page-header.calendar {
   background-image: url(/assets/img/library-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-lost-found #calendar-header.simple-header {
+.events-category-lost-found .page-header.calendar {
   background-image: url(/assets/img/lostfound-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
-.events-category-writers-cut #calendar-header.simple-header {
+.events-category-writers-cut .page-header.calendar {
   background-image: url(/assets/img/writerscut-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
+}
+.page-header.calendar {
+  background-image: url(/assets/img/cal-placeholder.jpg);
   background-size: cover;
   background-position: top center;
 }
@@ -7660,6 +7680,7 @@ ul.order_details strong {
   padding: 0 20px;
   border-radius: 3px;
   border-top-left-radius: 0;
+  background: #e37428;
 }
 #member-tabs .tabber-tab .member-level-title {
   color: #ffffff;
@@ -7700,7 +7721,7 @@ ul.order_details strong {
   background: #e37428;
 }
 #member-tabs #leader,
-#member-tabs #tab_4 {
+#member-tabs #tab_2 {
   background: #e6833f;
 }
 .young-literati #member-tabs .tabber-handle {
