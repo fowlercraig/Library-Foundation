@@ -444,9 +444,17 @@ $('.grid-filters').on( 'click', 'button', function() {
       var filterValue = $(this).attr('data-filter');
       $('.grid-filters').find('.active').removeClass('active');
       $(this).addClass('active');
+
+      var string = filterValue.replace('.', '');
+
+      $('#wrapper').removeClass();
+      $('#wrapper').addClass(string);
+
       // use filter function if value matches
       filterValue = filterFns[ filterValue ] || filterValue;
       $('.sortable-grid').isotope({ filter: filterValue });
+
+
       $('html,body').animate({
         scrollTop: $('#archive-grid').offset().top - 49
       });
@@ -571,7 +579,7 @@ $('.grid-filters').on( 'click', 'button', function() {
 
     // Accounting for Sponsors
 
-    var $sponsors = $('#sponsors');
+    var $sponsors = $('#sponsor-hat');
 
     $sponsors.waypoint(function(direction) {
     if (direction === 'down') {

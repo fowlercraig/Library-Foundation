@@ -1,4 +1,5 @@
 <div id="related-media" class="sidebar">
+
 <?php if( have_rows('event_media_objects') ): while ( have_rows('event_media_objects') ) : the_row(); ?>
 <?php $post_objects = get_sub_field('event_media'); if( $post_objects ): ?>
 <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
@@ -45,4 +46,26 @@
 <?php wp_reset_postdata(); ?>
 <?php endif; wp_reset_postdata();?>
 <?php endwhile; endif;?>
+
+<?php // Here's the custom gallery ?>
+
+
+<?php $images = get_field('custom_gallery'); if( $images ): ?>
+<h3 class="title"><?php the_field('gallery_title'); ?></h3>  
+<div class="widget gallery">
+  <span class="action"><i class="ss-icon ss-gizmo">Plus</i></span>
+  <div class="item event-gallery">
+    <?php $counter = 1; foreach( $images as $image ): ?>
+    <figure itemscope itemtype="http://schema.org/ImageObject" class="figure figure_<?php echo $counter; ?>">
+    <a href="<?php echo $image['url']; ?>" itemprop="contentUrl" data-size="<?php echo $image['width']; ?>x<?php echo $image['height']; ?>">
+    <img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>" itemprop="thumbnail"/>
+    </a>
+    <figcaption itemprop="caption description"><?php echo $image['caption']; ?></figcaption>
+    </figure>
+    <?php $counter++; // add one per row ?>  
+    <?php endforeach; ?>
+  </div>
+</div>
+<?php endif; ?>
+
 </div>

@@ -27,14 +27,24 @@
 
     > li {
 
+      position: relative;
+
       > ul {
 
         background: @white;
+        width: 300px;
 
         > li, .button {
 
           height: 30px;
           line-height: 30px;
+          margin: 0;
+
+          &:hover {
+
+            color: @textGray;
+
+          }
 
         }
 
@@ -73,6 +83,25 @@
         display: none;
         &.item_1 {
           display: block;
+        }
+      }
+    }
+
+    img {
+      transition:300ms ease;
+    }
+
+    &:hover {
+      img {
+        opacity: .35;
+      }
+    }
+
+    .meta {
+      pointer-events: none;
+      &:hover {
+        .cat {
+          pointer-events: auto;
         }
       }
     }
@@ -331,4 +360,12 @@
 
   }
 
+}
+
+#wrapper.video {
+  #archive-grid {
+    .item.video {
+      max-width: 50%;
+    }
+  }
 }
