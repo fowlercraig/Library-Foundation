@@ -44,6 +44,21 @@
     margin-right: @gutter;
     transition: 150ms ease;
     padding: 0;
+    position: relative;
+    overflow: visible;
+
+    .logo-wrapper {
+      display: block;
+      position: relative;
+    }
+
+    .face {
+      display: block;
+      position: absolute;
+      .cover();
+      background: url(/assets/img/lflalogo.png);
+      background-size: cover;
+    }
 
     img {
       display: block;
@@ -58,4 +73,11 @@
   position: absolute;
   width: 100%;
   top: 5px;
+}
+
+
+.page-home {
+ #head {
+  border-bottom: 0;
+ } 
 }

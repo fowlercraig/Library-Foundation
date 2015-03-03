@@ -13,29 +13,12 @@
 ?>
 
 <div class="slide">
-  <?php if (get_sub_field('top_link')): ?>
-  <div class="top_link">
-    <div class="row">
-      <div class="desktop-12">
-        <div class="wrapper">
-          <?php the_sub_field('top_link'); ?>
-        </div>
-      </div>
-    </div>
-  </div>
-  <?php endif; ?>
   <div class="meta">
     <div class="row">
-      <div class="desktop-12">
-        <div class="wrapper">
-          <h2 class="title"><?php the_title(); ?></h2>
-          <a class="button" href="<?php the_permalink();?>">View More</a>
-        </div>
-        <div class="slide_meta">
-          <div class="wrapper">
-            <a class="link" href="/calendar/category/special-projects/">More Special Projects</a>
-          </div>
-        </div>
+      <div class="desktop-10 centered">
+          
+          <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+        
       </div>
     </div>
   </div>

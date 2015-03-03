@@ -21,8 +21,10 @@
 
 <div class="complex membership-level<?php echo $mClass; echo $nOverlay;  ?>" style="background-image:url(<?php echo $bg;  ?>);">
   <div class="row">
-    <div class="desktop-6">
+    <div class="desktop-12">
       <h2 class="member-level-title"><?php the_sub_field('title'); ?></h2>
+    </div>
+    <div class="desktop-6">
       <?php the_sub_field('left_content'); ?>
     </div>
     <div class="desktop-6">

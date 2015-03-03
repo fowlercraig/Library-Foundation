@@ -357,3 +357,55 @@
   }
 
 }
+
+.selecter-selected {
+
+  &.ss-calendar {
+
+    position: relative;
+    overflow: visible;
+
+    &:before {
+      font-size: 22px;
+      margin-right: 5px;
+      line-height: 1.3;
+      display: block;
+      left: 0;
+      position: absolute;
+      background: @white;
+      border: 2px solid #eee;
+      height: 43px;
+      margin-top: -2px;
+      line-height: 43px;
+      text-align: center;
+      width: 45px;
+      left: -45px;
+      top: 0;
+    }
+
+  }
+
+}
+
+.share-btn {
+
+  position: relative;
+  display: inline-block!important;
+  width: 200px!important;
+
+  label {
+    
+    line-height: 1!important;
+    width: 100%!important;
+    padding: 0!important;
+    background: none!important;
+    display: block;
+    font-size: 16px!important;
+    .cat()!important;
+
+
+    span {
+      background: none;
+    }
+  }
+}

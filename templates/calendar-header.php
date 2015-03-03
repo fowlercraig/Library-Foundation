@@ -2,7 +2,7 @@
   
   if( is_tax()){
     $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-    $yolo = '/<span class="category category-' . $term->slug . '">' . $term->name . '</span>';
+    $yolo = '<span class="category category-' . $term->slug . '">' . $term->name . '</span>';
     $query = array(
         'taxonomy' => 'tribe_events_cat',
         'field'    => 'slug',
@@ -84,7 +84,16 @@
 <div class="page-header calendar" data-speed="1.25">
   <div class="row">
     <div class="desktop-12 tablet-6 mobile-3">
-      <h1 class="page-header-title">Calendar<?php echo $yolo; ?></h1>
+      <?php if ( is_tax() ) :?>
+    <ul class="parent-links">
+      <li><a href="/calendar">Calendar</li>
+    </ul>
+    <?php endif; ?>
+      <?php if ( is_tax() ) :?>
+      <h1 class="page-header-title"><?php echo $yolo; ?></h1>
+      <?php else: ?>
+      <h1 class="page-header-title">Calendar</h1>
+      <?php endif; ?>
       <br>
     </div>
   </div>

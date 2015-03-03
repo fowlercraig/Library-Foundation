@@ -6,11 +6,11 @@
       <menu class="tabber-menu">
         <a href="#tab_2" class="tabber-handle">
           <h3 class="member-level-title">Library Associates</h3>
-          Become a Library Associate today, lorem ipsum.
+          
         </a>
         <a href="#tab_4" class="tabber-handle">
           <h3 class="member-level-title">Leadership Circle</h3>
-          Become a Library Leader. Lorem Ipsum.
+          
         </a>
       </menu>
     </div>

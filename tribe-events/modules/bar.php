@@ -75,6 +75,14 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 				</div>
 				<?php endif; ?>
 
+				<?php if ( is_tax( 'tribe_events_cat', 'library-store-on-wheels' ) ) : ?>
+				<div class="social tribe-bar-filters desktop-4 tablet-6 mobile-3 right text-right">
+					<span class="button no-border">Follow Us</span>
+					<a target="blank" href="https://facebook.com/Thelibrarystore"><i class="ss-icon ss-social-circle">Facebook</i></a>
+					<a target="blank" href="https://twitter.com/Thelibrarystore"><i class="ss-icon ss-social-circle">Twitter</i></a>
+				</div>
+				<?php endif; ?>
+
 	    <?php } // if ( !empty( $filters ) ) ?>
 	  </form>
 	</div>

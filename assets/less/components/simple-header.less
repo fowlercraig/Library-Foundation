@@ -4,7 +4,7 @@
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 200px;
+  padding-top: 175px;
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -12,19 +12,48 @@
 
 
   .simple-header--bg {
-    @blur : 10px;
+
     position: absolute;
-    width: 120%;
-    height: 120%;
-    top: -10%;
-    left: -10%;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+
+    .inner {
+
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      @blur : 10px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-filter: blur(@blur);
+      -moz-filter: blur(@blur);
+      -o-filter: blur(@blur);
+      -ms-filter: blur(@blur);
+      filter: blur(@blur);
+
+    }
+
+    
+    
+    // width: 120%;
+    // height: 120%;
+
+    // width: 100%;
+    // height: 100%;
+
+    
+
+    // top: -0%;
+    // left: -0%;
+
     opacity: .85;
     z-index: 1;
-    -webkit-filter: blur(@blur);
-    -moz-filter: blur(@blur);
-    -o-filter: blur(@blur);
-    -ms-filter: blur(@blur);
-    filter: blur(@blur);
+    
   }
 
   > .row {

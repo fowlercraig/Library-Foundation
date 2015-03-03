@@ -29,7 +29,7 @@
           <ul>
             <li><button class="button active" data-filter="*">View All</button></li>
             <?php foreach( $terms as $term ): ?>
-            <li><button class="button" data-filter=".<?php echo 'category-';  echo strtolower($term->name); ?>"><?php echo $term->name; ?></button></li>
+            <li><button class="button" data-filter=".<?php echo 'category-';  echo strtolower($term->slug); ?>"><?php echo $term->name; ?></button></li>
             <?php endforeach; ?>
           </ul>
         </li>
@@ -51,7 +51,7 @@
 
       'post_type'      => array('people', 'archive'),
       'paged'          => $paged,
-      'posts_per_page' => 15,
+      'posts_per_page' => 40,
       'orderby'        => 'name'
 
     );

@@ -23,6 +23,7 @@
 // @codekit-prepend "../bower_components/superfish/dist/js/superfish.min.js"; 
 // @codekit-prepend "../bower_components/slick.js/slick/slick.min.js"; 
 // @codekit-prepend "../bower_components/infinite-scroll/jquery.infinitescroll.js"; 
+// @codekit-prepend "../bower_components/sharebutton/build/share.js"; 
 // @codekit-prepend "modules/accordion.js"; 
 
 // My Shit

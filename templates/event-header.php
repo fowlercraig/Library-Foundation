@@ -45,7 +45,7 @@
 
 ?>
 
-<? if (get_field('simple_header')) { ?>
+<?php if (!get_field('simple_header')) { ?>
 
 <div class="page-header event" data-speed="2" style="background-image:url(<?php echo $event_bg; ?>);">
   <div class="row">
@@ -99,8 +99,10 @@
       </div>
     </div>
   </div><!-- Event Meta-->
+  <?php if (get_field('blurry_background')): ?>
   <?php if ( has_post_thumbnail() ): ?>
-  <div class="simple-header simple-header--bg" data-speed="2" style="background-image:url(<?php echo $small_bg; ?>);"></div>
+  <div class="simple-header--bg"><div class="inner" data-speed="2" style="background-image:url(<?php echo $small_bg; ?>);"></div></div>
+  <?php endif; ?>
   <?php endif; ?>
 </div>
 

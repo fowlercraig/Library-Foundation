@@ -1,12 +1,13 @@
 #home-slider {
 
   overflow: hidden;
+  overflow-y: visible;
 
   #home-carousel {
 
     position: relative;
     background: @white;
-    height: 550px;
+    height: 450px;
     width: 100%;
 
     .rsNav {
@@ -50,9 +51,19 @@
     .slide {
 
       .header-overlay();
-      opacity: .3;
+      opacity: .75;
       position: static;
       transition: 300ms ease;
+
+      hr {
+        margin: 0;
+        height: 15px
+      }
+
+      .section-link {
+        color: @white;
+        display: block;
+      }
 
     }
 
@@ -75,7 +86,7 @@
         
         .caslon();
         color: @white;
-        font-size: 4.5em;
+        font-size: 4.1em;
 
       }
 
@@ -83,9 +94,9 @@
 
     .slide_meta {
 
-      border-top: 1px solid @white25;
-      height: 50px;
-      line-height: 50px;
+      // //border-top: 1px solid @white25;
+      // height: 50px;
+      // line-height: 50px;
 
       .post-title {
         font-family: 'Gotham';
@@ -93,6 +104,20 @@
         font-weight: 900;
         color: @white;
         font-size: 13px;
+      }
+
+      .button {
+        border-radius: 0;
+        border: 0;
+        height: 45px;
+        //border-bottom: 10px solid @black;
+        //margin-bottom: -10px;
+        line-height: 52px;
+        background: @black;
+
+        &.sub-title {
+           background: none;
+        }
       }
 
       .text-right {
@@ -108,18 +133,24 @@
 
   }
 
+  .title-box {
+    background: @black;
+    padding: 10px 0;
+  }
+
 }
 
 #home-upcoming {
 
   background: @bgGray;
-  padding: @gutter*3 0;
+  padding: 30px 0 30px;
   overflow: hidden;
   //margin-bottom: @gutter*2;
 
   .selecter {
 
     text-align: left;
+    margin-top: 0;
     .selecter-selected {
       
     }
@@ -134,11 +165,16 @@
       font-size: 18px;
       font-weight: bold;
       color: @blue;
+      .cat();
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 1px
     }
 
     p {
       margin: 0;
-      font-size: 15px;
+      font-size: 18px;
+      .sentinel();
     }
 
   }
@@ -146,6 +182,9 @@
 }
 
 #upcoming-events-carousel {
+
+  
+  //padding: 45px 0 0;
 
   .slide {
 
@@ -158,6 +197,7 @@
       .wrapper {
 
         padding: 15px;
+        background: none!important;
 
       }
 
@@ -180,6 +220,7 @@
 #home-featured {
 
   position: relative;
+  padding-top: 25px;
 
   header {
     h3 {
@@ -187,6 +228,10 @@
       font-size: 18px;
       font-weight: bold;
       color: @blue;
+      .cat();
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 1px
     }
   }
 
@@ -197,11 +242,14 @@
   .slider {
     height: 600px;
     width: 100%;
+     border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
   }
 
   .slide {
-    .header-overlay();
     position: static;
+   
   }
 
   .top_link {
@@ -225,6 +273,7 @@
 
   .rsSlide {
     //position: relative;
+
   }
 
   .slide_meta {
@@ -241,19 +290,29 @@
 
   .meta {
  
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 29;
+    background: @blue;
+    padding: 25px 0;
 
     .title {
         
       .caslon();
       color: @white;
-      font-size: 3em;
-      line-height: 1.2;
-      margin-bottom: 0px;
+      font-size: 2em;
+      line-height: 1;
+      margin: 0;
+
+      br {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+      }
 
     }
 
@@ -265,4 +324,38 @@
 
   }
 
+}
+
+.arrow-wrapper {
+  
+  h3 {
+      margin: 8px 0 2px;
+      font-size: 18px;
+      font-weight: bold;
+      color: @blue;
+      .cat();
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 1px
+    }
+    
+}
+
+.home-arrow {
+  color: @white;
+  background: @blue;
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 58px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-bottom: 25px;
+  display: block;
+  &.left {
+    float: left;
+    margin-right: 15px;
+    margin-top: -16px;
+  }
 }

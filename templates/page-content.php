@@ -15,7 +15,10 @@
   }
 
   if (is_front_page()) {
+
+    $pageWidth = 'sizer-item desktop-10 tablet-4 mobile-3 centered';
     $homepage = 'class="homepage"';
+
   }
 
 ?>

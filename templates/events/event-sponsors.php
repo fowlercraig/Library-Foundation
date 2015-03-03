@@ -1,3 +1,5 @@
+<div id="sponsor-hat"></div>
+
 <?php $sponsors = get_field('sponsor_gallery'); 
 
 if( $sponsors ):

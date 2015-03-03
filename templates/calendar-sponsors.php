@@ -21,7 +21,7 @@
 <?php endif; ?>
 
 
-
+<?php if( is_home() ): ?>
 <?php if( tribe_is_past() || tribe_is_upcoming() && !is_tax() ): ?>
 
 <div id="sponsors" class="page-section">
@@ -42,5 +42,6 @@
   </div>
 </div>
 
+<?php endif; ?>
 <?php endif; ?>
 

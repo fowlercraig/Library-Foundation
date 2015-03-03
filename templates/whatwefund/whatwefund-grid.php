@@ -2,9 +2,9 @@
   <div id="whatwefund-filters" class="button-group desktop-12 text-center">
     <button class="button" data-filter="*">View All</button>
     <button class="button active" data-filter=".featured">Featured</button>
-    <button class="button" data-filter=".helping">Helping</button>
-    <button class="button" data-filter=".engaging">Engaging</button>
-    <button class="button" data-filter=".investing">Investing</button>
+    <button class="button" data-filter=".helping">HELPING STUDENTS SUCCEED</button>
+    <button class="button" data-filter=".engaging">INVESTING IN LIFELONG LEARNING</button>
+    <button class="button" data-filter=".investing">ENGAGING THE IMAGINATION</button>
   </div>
 </div>
 
@@ -55,6 +55,16 @@
   } else {
     $isFeatured = '';
   }
+
+  if( get_sub_field('custom_url_toggle')) {
+
+    $permalink = get_sub_field('custom_url');
+
+  } else {
+
+    $permalink = get_permalink($post->ID);
+
+  }
   
 ?>
 
@@ -65,7 +75,7 @@
 
   <div class="meta overlay">
     <div class="cat"><a href=".<?php echo $value; ?>"><?php echo $label; ?></a></div>
-    <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <h2 class="title"><a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h2>
     <a href="<?php the_permalink(); ?>" class="button">Learn More</a>
   </div>
 
