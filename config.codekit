@@ -4125,7 +4125,7 @@
 		},
 	"\/assets\/bower_components\/photoswipe\/dist\/photoswipe-ui-default.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/photoswipe\/dist\/photoswipe-ui-default.js",
 		"outputAbbreviatedPath": "\/assets\/bower_components\/photoswipe\/dist\/min\/photoswipe-ui-default-min.js",
@@ -4156,7 +4156,7 @@
 		},
 	"\/assets\/bower_components\/photoswipe\/dist\/photoswipe.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/photoswipe\/dist\/photoswipe.js",
 		"outputAbbreviatedPath": "\/assets\/bower_components\/photoswipe\/dist\/min\/photoswipe-min.js",
@@ -4737,7 +4737,7 @@
 		},
 	"\/assets\/bower_components\/Selecter\/jquery.fs.selecter.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Selecter\/jquery.fs.selecter.min.js",
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Selecter\/min\/jquery.fs.selecter.min-min.js",
@@ -6175,17 +6175,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/javascripts\/scripts.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/javascripts\/scripts.min.js",
-		"outputAbbreviatedPath": "\/assets\/javascripts\/min\/scripts.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/javascripts\/smartajax.js": {

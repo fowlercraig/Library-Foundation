@@ -27,10 +27,22 @@ die( '-1' );
 
   if ( has_post_thumbnail()) {
 
-    $thumb_id = get_post_thumbnail_id();
-    $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
-    $thumb_url = $thumb_url_array[0];
-    $event_bg  = $thumb_url;
+    // $thumb_id = get_post_thumbnail_id();
+    // $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', true);
+    // $thumb_url = $thumb_url_array[0];
+    // $event_bg  = $thumb_url;
+    $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
+    $count = count($terms);
+    
+    if ( $count > 0 ){
+      $i = 0;
+      foreach ( $terms as $term ){
+        if(++$i > 1) break;
+        $eventCat = $term->slug;
+      }
+    }
+
+    $event_bg = '/assets/img/headers/default-'.$eventCat.'.jpg';
     $noBg = '';
 
   }  else {

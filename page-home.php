@@ -46,8 +46,8 @@
               <div class="slide_meta">
                 <div class="row">
                   <div class="desktop-12 tablet-5 mobile-3 centered">
-                    <a class='section-link' href="<?php the_permalink();?>">
-                      <span class="button post-title" style="background-color:<?php echo $bgColor; ?>"><?php the_title(); ?></span>
+                    <a class='section-link' href="<?php the_sub_field('slide_post');?>">
+                      <span class="button post-title" style="background-color:<?php echo $bgColor; ?>"><?php the_sub_field('button_text');?></span>
                       <span class="button sub-title"><?php the_sub_field('slide_sub-title'); ?></span>
                     </a>
                   </div>

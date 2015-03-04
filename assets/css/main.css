@@ -4949,15 +4949,6 @@ html:hover [class^="ss-"] {
   font-size: 3em;
   font-weight: 200;
 }
-.event-content .content {
-  font-family: 'Caslon', serif;
-  text-rendering: optimizeLegibility;
-  font-size: 1.35em;
-  line-height: 1.5;
-}
-.event-content .content p {
-  line-height: inherit;
-}
 .membership-level.complex ul {
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
@@ -5703,6 +5694,7 @@ a.added_to_cart.wc-forward {
   color: #333333;
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
+  line-height: 1.5;
 }
 .page-content h1:first-child,
 .event-content h1:first-child,
@@ -7272,6 +7264,7 @@ ul.order_details strong {
   color: #333333;
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
+  line-height: 1.5;
 }
 .page-header.event .sub-title h1:first-child,
 .page-header.event .sub-title h2:first-child,
@@ -7485,6 +7478,10 @@ ul.order_details strong {
 }
 .faq-list .item p:last-child {
   margin-bottom: 0;
+}
+#event-bios {
+  border-top: 2px solid #f8f8f8;
+  padding-top: 25px;
 }
 #event-bios hr {
   height: 1px;

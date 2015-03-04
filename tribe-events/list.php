@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   // }
 
   include locate_template('templates/calendar-mediagraphic.php');
-  include locate_template('templates/calendar-faq.php');
-  include locate_template('templates/calendar-sponsors.php');
+  //include locate_template('templates/calendar-faq.php');
+  //include locate_template('templates/calendar-sponsors.php');
 
 ?>
