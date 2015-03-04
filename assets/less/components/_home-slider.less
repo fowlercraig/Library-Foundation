@@ -50,7 +50,7 @@
 
     .slide {
 
-      .header-overlay();
+      //.header-overlay();
       opacity: .75;
       position: static;
       transition: 300ms ease;
@@ -104,6 +104,8 @@
         font-weight: 900;
         color: @white;
         font-size: 13px;
+        position: relative;
+
       }
 
       .button {
@@ -357,5 +359,42 @@
     float: left;
     margin-right: 15px;
     margin-top: -16px;
+  }
+}
+
+.social-links {
+
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  line-height: 30px;
+
+  li {
+
+    font-size: 28px;
+    display: inline-block;
+
+    a {
+
+      color: @blue;
+
+    }
+
+  }
+
+}
+
+.page-home {
+  .page-content {
+    .desktop-4 {
+      h2 {
+        .cat();
+        margin: 0;
+        font-weight: 500;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
   }
 }
