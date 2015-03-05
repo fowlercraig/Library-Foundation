@@ -30,6 +30,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
+<?php 
+
+  if( tribe_get_end_date( null, false, 'Y-m-d H:i:s' ) < date( 'Y-m-d H:i:s' )) {
+
+    //$ticketStatus = '<a id="event-status-button"  href="#" class="button disabled">This Event Has Passed</a>';
+    $ticketStatus = '<a href="' . get_the_permalink( $id ) . '" class="button">This Event Has Passed</a>';
+
+  } else {
+
+  	//$ticketStatus = 'hello';
+  	if (tribe_events_has_tickets()) {
+
+      $ticketStatus = '<a href="' . get_the_permalink( $id ) . '" class="button">RSVP Now</a>';
+
+    }
+
+    if(tribe_events_has_soldout()){
+
+      //$soldoutimage = 'http://i.imgur.com/znE1JTm.png';
+      //$ticketStatus = '<a id="event-status-button"  href="'.$soldoutimage.'" class="button closed">Full/Standby</a>'; 
+      $ticketStatus = '<a href="' . get_the_permalink( $id ) . '" class="button">Full/Standby</a>';
+
+    }
+
+  }
+
+?>
+
 <div class="desktop-12 tablet-6 mobile-3 meta">
 	<?php 
 		$terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
@@ -49,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 
 <div class="desktop-6 tablet-6 mobile-3 text-right">
-	<a href="<?php echo tribe_get_event_link() ?>" class="button">RSVP Now</a>
+	<?php echo $ticketStatus; ?>
 </div>
 
 <?php do_action( 'tribe_events_after_the_content' ) ?>

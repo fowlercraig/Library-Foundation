@@ -5302,6 +5302,34 @@ html:hover [class^="ss-"] {
 .share-btn label span {
   background: none;
 }
+.social-icons {
+  padding: 8px 0;
+  border-bottom: 1px solid #dddddd;
+}
+.social-icons li {
+  margin: 0;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  font-weight: 500;
+  margin-right: 5px;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+}
+.social-icons li a {
+  display: block;
+}
+.social-icons li i {
+  font-size: 26px;
+  height: 30px;
+  line-height: 55px;
+  display: block;
+}
 .single-tribe_events .tribe-events-event-image {
   text-align: left;
 }
@@ -6409,6 +6437,15 @@ a.added_to_cart.wc-forward {
 .toolbar {
   border-bottom: 3px solid #f8f8f8;
   margin-bottom: 2.08333333%;
+}
+.toolbar.stuck {
+  position: fixed;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  margin-top: 0!important;
+  background: #ffffff;
+  z-index: 9;
 }
 .toolbar#toolbar,
 .toolbar#event-nav-bar {
@@ -8191,6 +8228,17 @@ ul.order_details strong {
 }
 #infscr-loading {
   display: none!important;
+}
+#archive-grid .type-people {
+  height: 500px;
+  overflow: hidden;
+}
+#archive-grid .type-archive {
+  height: 250px;
+  overflow: hidden;
+}
+#archive-grid .type-archive.format-video {
+  height: 500px;
 }
 #archive-grid .gallery-item {
   position: relative;

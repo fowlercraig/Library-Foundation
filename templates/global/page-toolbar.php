@@ -8,11 +8,13 @@
 
     $menuLocation = 41;
     $menuId = 'id="toolbar"';
+    $eventsClass = 'events';
 
   } elseif ( is_tax( 'tribe_events_cat' ) ) { 
 
     $menuLocation = 41;
     $menuId = 'id="toolbar"';
+    $eventsClass = 'events';
 
   } else { 
 
@@ -30,7 +32,7 @@
   );
 ?>
 
-<div <?php echo $menuId; ?> class="toolbar">
+<div <?php echo $menuId; ?> class="toolbar <?php echo $eventsClass; ?>">
   <div class="row">
     <div class="desktop-12">
       <ul class="nav sf-menu">

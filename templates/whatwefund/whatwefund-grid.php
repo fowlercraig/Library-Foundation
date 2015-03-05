@@ -56,13 +56,13 @@
     $isFeatured = '';
   }
 
-  if( get_sub_field('custom_url_toggle')) {
+  if( get_sub_field('custom_url')) {
 
-    $permalink = get_sub_field('custom_url');
+    $pagelink = get_sub_field('custom_url');
 
   } else {
 
-    $permalink = get_permalink($post->ID);
+    $pagelink = get_permalink($post->ID);
 
   }
   
@@ -75,8 +75,8 @@
 
   <div class="meta overlay">
     <div class="cat"><a href=".<?php echo $value; ?>"><?php echo $label; ?></a></div>
-    <h2 class="title"><a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h2>
-    <a href="<?php the_permalink(); ?>" class="button">Learn More</a>
+    <h2 class="title"><a href="<?php echo $pagelink; ?>"><?php the_title(); ?></a></h2>
+    <a href="<?php echo $pagelink; ?>" class="button">Learn More</a>
   </div>
 
 </div>

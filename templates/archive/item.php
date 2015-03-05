@@ -13,7 +13,7 @@
   $speakers         = get_field('speakers');
   $guests           = $speakers;
   $action           = '';
-  $metainfo         = strip_tags(get_the_tag_list('',', ',''));
+  $metainfo         = get_the_tag_list('',', ','');
   // Random Colors
   $input            = array("pink","blue","green","yellow");
   $rand_keys        = array_rand($input, 2);

@@ -47,34 +47,68 @@
   
     <?php 
 
-    $args = array(
+    function order_by_date( $a, $b )
+    {
+      return strcmp( $b->post_date, $a->post_date );
+    }
 
-      'post_type'      => array('people', 'archive'),
+    $q1_args = array(
+
+      // Media
+
+      'post_type'      => array('archive'),
       'paged'          => $paged,
       'posts_per_page' => 40,
       'orderby'        => 'name'
 
     );
 
-    $temp = $wp_query; 
-    $wp_query = null; 
-    $wp_query = new WP_Query(); 
-    $wp_query->query($args); 
+    $q1_posts = get_posts( $q1_args );
 
-    while ($wp_query->have_posts()) : $wp_query->the_post(); 
+    $q2_args = array(
+
+      // People
+
+      'post_type'      => array('people'),
+      'paged'          => $paged,
+      'posts_per_page' => 40,
+      'orderby'        => 'name',
+      'meta_query' => array(
+        array(
+          'key' => 'dont_display',
+          'value' => '0',
+          'compare' => '=='
+        )
+      ),
+
+    );
+
+    $q2_posts= get_posts( $q2_args );
+
+    // $temp = $wp_query; 
+    // $wp_query = null; 
+    // $wp_query = new WP_Query(); 
+    // $wp_query->query($args); 
+
+    $final_posts = array_merge( $q1_posts, $q2_posts );
+    usort( $final_posts, 'order_by_date' );
+    foreach ( $final_posts as $key => $post ) {
+    setup_postdata( $post ); 
+    //while ($wp_query->have_posts()) : $wp_query->the_post(); 
     ?>
 
     <?php include locate_template('templates/archive/item.php' );?>
 
-    <?php endwhile; ?>
+    <?php } //endwhile; ?>
 
     <nav style="height:0px; overflow: hidden"class="archive-nav item desktop-12 contained">
     <?php next_posts_link() ?>
     </nav>
 
     <?php 
-    $wp_query = null; 
-    $wp_query = $temp;  // Reset
+    //}
+    //$wp_query = null; 
+    //$wp_query = $temp;  // Reset
     ?>
   </div>
 </div>
