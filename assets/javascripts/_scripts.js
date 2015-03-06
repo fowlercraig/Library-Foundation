@@ -245,6 +245,7 @@ initPhotoSwipeFromDOM('.event-gallery');
   });
 
   $('#home-upcoming .selecter-selected').addClass('ss-glypish ss-calendar');
+  $('.tribe-bar-filters .tribe-events-button').addClass('ss-glypish ss-calendar');
 
   // Image Slider
 
@@ -330,6 +331,7 @@ initPhotoSwipeFromDOM('.event-gallery');
     autoScaleSliderHeight: 800,
     navigateByClick: false,
     transitionType: 'fade',
+    controlNavigation: 'none'
   }); 
 
 
@@ -713,6 +715,35 @@ $('.grid-filters').on( 'click', 'button', function() {
 $(document).ready(function(){
   thangs();
 });
+
+;(function ($) {
+  'use strict';
+  var $body    = $('html, body'),
+    content  = $('body').smoothState({
+      prefetch: true,
+      pageCacheSize: 4,
+      onStart: {
+        duration: 250,
+        render: function (url, $container) {
+          content.toggleAnimationClass('is-exiting');
+          thangs();
+          
+        }
+      },
+      onEnd : {
+        duration: 0, // Duration of the animations, if any.
+        render: function (url, $container, $content) {
+        $body.css('cursor', 'auto');
+        $body.find('a').css('cursor', 'auto');
+        $container.html($content);
+        thangs();
+        $body.animate({
+            scrollTop: 0
+          });
+      }
+    },
+}).data('smoothState');
+})(jQuery);
 
 // SmartAjax.bind('a', {
 //   reload: false,

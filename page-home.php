@@ -103,6 +103,8 @@
   </div>
 </div>
 
+<div id="books-bg">
+
 <div class="row">
   <div class="desktop-12">
     <div id="mission-statement">
@@ -118,6 +120,8 @@
       <h3 id="upcoming-events">Upcoming Events</h3>
     </a>
   </div>
+</div>
+
 </div>
 
 <div id="home-upcoming">

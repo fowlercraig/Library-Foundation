@@ -17,20 +17,20 @@
 
 #member-widget {
 
-  background: darken(@textGray, 15%);
+  background: @blue;
 
   &.stuck, &.homepage {
 
     position: fixed;
     top: 75px;
     width: inherit;
-    background: @blue;
+    background: @orange;
     z-index: 99;
 
     > a {
-      background: darken(@blue, 5%);
+      background: darken(@orange, 5%);
       &:hover {
-        background: darken(@blue, 10%);
+        background: darken(@orange, 10%);
       }
     }
 
@@ -77,11 +77,11 @@
     .parent-links();
     color: @bgGray;
     border-top: 1px solid @white;
-    background: darken(@textGray, 20%);
+    background: darken(@blue, 10%);
 
     &:hover {
       color: @white;
-      background: darken(@textGray, 25%);
+      background: darken(@blue, 15%);
     }
 
   }
@@ -441,4 +441,10 @@
 
   }
 
+}
+
+
+#books-bg {
+  background: url(/assets/img/booksbg.jpg) center 75px no-repeat;
+  background-size: cover;
 }

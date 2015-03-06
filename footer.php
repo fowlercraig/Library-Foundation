@@ -1,3 +1,5 @@
+<?php include locate_template('/templates/logotogglin.php' );?>
+
 </div>
 </div></section><!--Content-->
 
@@ -21,7 +23,6 @@
 
 <?php wp_footer(); ?>
 <?php include locate_template('/lib/photoswipe.php' );?>
-<?php include locate_template('/templates/logotogglin.php' );?>
 <?php include locate_template('/templates/search-footer.php' );?>
 <script src="//use.typekit.net/kfw6qzi.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>

@@ -1,7 +1,11 @@
 // @codekit-prepend "load.smartajax.js"; 
 
-// Formstone Components
+// Wordpress Stuff
+// @codekit-prepend "/plugins/the-events-calendar/resources/tribe-events.min.js"; 
+// @codekit-prepend "/plugins/the-events-calendar/vendor/jquery-placeholder/jquery.placeholder.min.js"; 
+// @codekit-prepend "/plugins/the-events-calendar/resources/tribe-events-ajax-list.min.js"
 
+// Formstone Components
 // @codekit-prepend "../bower_components/Naver/jquery.fs.naver.js"; 
 // @codekit-prepend "../bower_components/Selecter/jquery.fs.selecter.min.js"; 
 // @codekit-prepend "../bower_components/Tabber/jquery.fs.tabber.js"; 
@@ -24,6 +28,8 @@
 // @codekit-prepend "../bower_components/slick.js/slick/slick.min.js"; 
 // @codekit-prepend "../bower_components/infinite-scroll/jquery.infinitescroll.js"; 
 // @codekit-prepend "../bower_components/sharebutton/build/share.js"; 
+// @codekit-prepend "../bower_components/swiper/dist/js/swiper.jquery.min.js"; 
+// @codekit-prepend "../bower_components/smoothstate/jquery.smoothState.js"; 
 // @codekit-prepend "modules/accordion.js"; 
 
 // My Shit

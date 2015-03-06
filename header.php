@@ -36,12 +36,27 @@
 
     <div id="logo-wrap" class="desktop-1"></div>
     <nav id="main-nav" class="desktop-12">
-      <a href="/" id="logo">
+      <!--<a href="/" id="logo">
         <span class="logo-wrapper">
-          <span class="face"></span>
+          <span class="face">
+            <span class="swiper-container">
+
+            </span>
+          </span>
           <img src="http://placehold.it/500x500" class="invisible img-responsive" />
         </span>
-      </a>
+      </a>-->
+
+    <a href="/" id="logo">
+      <div id="swiper">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image:url(/assets/img/logos/logo-general.png)"></div>
+              <div id="program-logo" class="swiper-slide"></div>
+          </div>
+        </div>
+      </div>
+    </a>
       <?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?>
       <a href="#" class="search"><i class="ss-gizmo ss-icon">search</i></a>
       <a href="<?php echo get_the_permalink(289); ?>" class="button right" id="become-member-btn">Become a Member</a>

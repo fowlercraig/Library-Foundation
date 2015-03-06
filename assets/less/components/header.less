@@ -1,3 +1,7 @@
+@logoWidthMin: 60px;
+@logoWidthMax: 135px;
+
+
 #head {
 
   .overlay();
@@ -13,6 +17,7 @@
   }
 
   &.stuck {
+
     position: fixed;
     top: 0;
     padding: 10px 0;
@@ -26,6 +31,7 @@
       display: block;
       margin-right: @gutter;
       margin-top: -10px;
+      height: 30px;
 
       img {
         display: block;
@@ -34,11 +40,59 @@
 
     }
 
+    #swiper {
+
+      width: @logoWidthMin;
+      height: @logoWidthMin;
+      max-width: @logoWidthMin;
+
+    }
+
+    .swiper-container {
+
+      width: @logoWidthMin;
+      height: @logoWidthMin;
+      max-width: @logoWidthMin;
+
+    }
+
+    .swiper-slide {
+
+      background-position: center;
+      background-size: cover;
+      width: @logoWidthMin;
+      height: @logoWidthMin;
+      max-width: @logoWidthMin;
+
+    }
+
+  }
+
+  #swiper {
+
+    width: @logoWidthMax;
+    height: @logoWidthMax;
+    position: relative;
+    float: left;
+
+  }
+  .swiper-container {
+
+    width: @logoWidthMax;
+    height: @logoWidthMax;
+    position: absolute;
+
+  }
+  .swiper-slide {
+
+    background-position: center;
+    background-size: cover;
+
   }
 
   #logo {
 
-    max-width: 135px;
+    max-width: @logoWidthMax;
     display: block;
     margin-top: -@gutter;
     margin-right: @gutter;

@@ -45,7 +45,7 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 	      </div>
 	    <?php } // if ( count( $views ) > 1 ) ?>
 	    <?php if ( ! empty( $filters ) ) { ?>
-	      <div class="tribe-bar-filters desktop-4 tablet-6 mobile-3">
+	      <div class="tribe-bar-filters max-5 desktop-8 tablet-6 mobile-3">
 	        <div class="tribe-bar-filters-inner tribe-clearfix row">
 	          <?php foreach ( $filters as $filter ) : ?>
 	            <div class="desktop-4 <?php echo esc_attr( $filter['name'] ) ?>-filter">
@@ -54,7 +54,8 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 	            </div>
 	          <?php endforeach; ?>
 	          <div class="desktop-4 tribe-bar-submit text-right">
-	            <input class="tribe-events-button tribe-no-param button" type="submit" name="submit-bar" value="<?php _e( 'Find Events', 'tribe-events-calendar' ) ?>" />
+	          	<i class="ss-glyphish ss-calendar"></i>
+	            <input class="tribe-events-button tribe-no-param button ss-glyphish ss-calendar" type="submit" name="submit-bar" value="<?php _e( 'Find Events', 'tribe-events-calendar' ) ?>" />
 	          </div>
 	        </div>
 	      </div>
