@@ -5077,6 +5077,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/css\/woostuff.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/woostuff.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/fonts\/ss-gizmo.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -5278,6 +5287,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/booksbg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37267,
+		"inputAbbreviatedPath": "\/assets\/img\/booksbg.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/booksbg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/bottom-bg.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -5469,7 +5489,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 422772,
+		"initialSize": 302759,
 		"inputAbbreviatedPath": "\/assets\/img\/headers\/default-writers-cut.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/headers\/default-writers-cut.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -5483,6 +5503,17 @@
 		"initialSize": 364583,
 		"inputAbbreviatedPath": "\/assets\/img\/headers\/default-young-literati.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/headers\/default-young-literati.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/headers\/lostfound-placeholder.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 367196,
+		"inputAbbreviatedPath": "\/assets\/img\/headers\/lostfound-placeholder.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/headers\/lostfound-placeholder.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -5623,7 +5654,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 95991,
+		"initialSize": 302759,
 		"inputAbbreviatedPath": "\/assets\/img\/writerscut-placeholder.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/writerscut-placeholder.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -7041,6 +7072,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/less\/tribe-events.less",
 		"outputAbbreviatedPath": "\/assets\/css\/tribe-events.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/assets\/less\/woostuff.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/less\/woostuff.less",
+		"outputAbbreviatedPath": "\/assets\/css\/woostuff.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

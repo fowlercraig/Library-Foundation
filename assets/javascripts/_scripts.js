@@ -710,6 +710,9 @@ $('.grid-filters').on( 'click', 'button', function() {
     $('#search-footer').fadeOut(300);
   });
 
+  $('.cross-sells h2').text('Related Books');
+  $('.cross-sells').append('<span>All sales from The Library Store support the Los Angeles Public Library.</span>');
+
 }
 
 $(document).ready(function(){

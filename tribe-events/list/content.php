@@ -81,10 +81,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <?php $counter = 1; while ($old_wp_query->have_posts()) : $old_wp_query->the_post();?>
     <?php 
+
+      if ( has_post_thumbnail()) {
+
       $thumb_id = get_post_thumbnail_id();
       $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'header-bg', true);
       $thumb_url = $thumb_url_array[0];
       $event_bg  = $thumb_url;
+
+      
+
+      }  else {
+
+      $noBg = ' noimage';
+      $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
+      $count = count($terms);
+
+      // Here's where we'll get the slug for the current event category. 
+      // It only displays the first category slug -- but there shouldn't be a reason for more than one cat, right?
+
+      if ( $count > 0 ){
+        $i = 0;
+        foreach ( $terms as $term ){
+          if(++$i > 1) break;
+          $eventCat = $term->slug;
+        }
+      }
+
+      // Custom Category Header
+      // Let's make sure to reuse this in other parts of the site, where applicable. 
+      // Probably the actual Event Category page. 
+
+      $event_bg = '/assets/img/headers/default-'.$eventCat.'.jpg';
+
+      }
+
     ?>
 
     <div id="post-<?php the_ID() ?>" class="<?php tribe_events_event_classes() ?>">

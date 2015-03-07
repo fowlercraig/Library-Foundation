@@ -24,11 +24,12 @@ if ( ! defined( 'ABSPATH' ) ) {
   tribe_get_template_part( 'list/content' ); 
   do_action( 'tribe_events_after_template' );
 
-  // if ( is_tax( 'tribe_events_cat', 'aloud' ) ) {
-  //   include locate_template('templates/calendar-mediagraphic.php');
-  // } else {
-  //   include locate_template('templates/calendar-pastevents.php');
-  // }
+  if ( is_tax() ) {
+    //include locate_template('templates/calendar-mediagraphic.php');
+  } else {
+    include locate_template('templates/calendar-pastevents.php');
+    echo '<hr>';
+  }
 
   include locate_template('templates/calendar-mediagraphic.php');
   //include locate_template('templates/calendar-faq.php');

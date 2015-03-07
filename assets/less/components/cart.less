@@ -1,6 +1,38 @@
+.woocommerce {
+
+  .button {
+    background: @blue;
+    color: @white;
+  }
+  
+  a {
+    color: @blue;
+    text-decoration: underline;
+  }
+
+  .payment_methods {
+
+    border: 1px solid @lightestGray;
+    padding: 15px 25px;
+
+    li {
+      display: block;
+    }
+  }
+
+}
+
 // Normalize Page
 
 .page-template-page-cart-php {
+
+  a {
+    color: @textGray;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    .sentinel();
+  }
 
   #head {
     border-color: @lightestGray;
@@ -145,3 +177,25 @@ ul.order_details {
     }
   }
 }
+
+.cross-sells {
+
+  max-width: 24%;
+
+  a {
+    color: @textGray;
+    .amount {
+      color: @textGray;
+    }
+  }
+
+  img {
+    border: none;
+  }
+
+}
+
+.cross-sells h2 {
+  .sentinel();
+}
+

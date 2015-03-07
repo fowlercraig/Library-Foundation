@@ -68,7 +68,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			}
 		}
 	?> 
-	<?php echo tribe_events_event_schedule_details() ?>
+  <?php 
+    $sd = tribe_get_start_date($post->ID, false, 'M j, Y');
+    $st = tribe_get_start_time($post->ID, false, 'g:i a');
+  ?>
+	<?php echo $sd; echo ' | '; echo $st; ?>
 </div>
 
 <div class="desktop-6 tablet-6 mobile-3">

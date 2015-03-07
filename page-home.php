@@ -186,7 +186,7 @@
       <hr>
       <a href="#spotlight-events">
         <i class="ss-icon ss-gizmo home-arrow left ">down</i>
-        <h3 id="spotlight-events">Spotlight Events</h3>
+        <h3 id="spotlight-events"><a href="/calendar">Spotlight Events<span> | View Full Calendar</span></a></h3>
       </a>
     </header>
     <div class="desktop-12">

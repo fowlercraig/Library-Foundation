@@ -157,6 +157,9 @@
       line-height: 1.4;
       display: block;
       color: @white75;
+      a {
+        color: @white75;
+      }
     }
 
     .skeleton {
@@ -213,19 +216,19 @@
       }
 
       &.pink {
-        background: @aloudpink;
+        .pinkGradient();
       }
 
       &.blue {
-        background: @blue;
+        .blueGradient();
       }
 
       &.green {
-        background: @green;
+        .greenGradient();
       }
 
-      &.yellow {
-        background: @yellow;
+      &.orange {
+        .orangeGradient();
       }
 
       &:after {
@@ -248,7 +251,7 @@
         margin-left: -25px;
         margin-top: -25px;
         border: 2px solid @white;
-        z-index: 9;
+        z-index: 29;
         font-size: 28px;
         background: @white;
         color: @black;
@@ -278,7 +281,7 @@
         margin-left: -25px;
         margin-top: -25px;
         border: 2px solid @white;
-        z-index: 9;
+        z-index: 10;
         font-size: 28px;
         background: @white;
         color: @black;
@@ -293,19 +296,19 @@
     &.ellipsischat {
 
       &.pink {
-        background: @aloudpink;
+        .pinkGradient();
       }
 
       &.blue {
-        background: @blue;
+        .blueGradient();
       }
 
       &.green {
-        background: @green;
+        .greenGradient();
       }
 
-      &.yellow {
-        background: @yellow;
+      &.orange {
+        .orangeGradient();
       }
 
       .thumbnail {
@@ -318,6 +321,9 @@
 
       .cat {
         color: @black25;
+        a {
+          color: inherit;
+        }
       }
 
       .meta {

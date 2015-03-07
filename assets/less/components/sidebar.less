@@ -10,6 +10,10 @@
       display: block;
       position: static;
 
+      &:first-child {
+        padding-top: 0!important;
+      }
+
       .widget-title {
         margin-top: 0;
         margin-bottom: 8px;
@@ -188,4 +192,24 @@
     padding: 20px 0;
     .sentinel();
   }
+}
+
+#related-book {
+
+  border: 1px solid @lightestGray;
+  border-bottom: 0;
+
+  .related-book {
+
+    padding: 15px 20px;  
+    border-bottom: 1px solid @lightestGray;
+    
+
+    strong,b {
+      color: @black;
+      line-height: 1.4;
+      display: inline-block;
+    }
+  }
+
 }

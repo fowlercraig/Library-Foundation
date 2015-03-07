@@ -5,9 +5,9 @@
   <?php include locate_template('/templates/events/event-sidebar-gallery.php'); ?>
 
   <aside class="sidebar" id="event-sidebar">
-    <hr>
     <ul class="xoxo">
 
+      <?php include locate_template('/templates/events/event-sidebar-book.php'); ?>
       <?php dynamic_sidebar( 'general-widget-area' ); ?>
 
     </ul>

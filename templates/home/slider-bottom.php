@@ -13,12 +13,21 @@
 ?>
 
 <div class="slide">
-  <div class="meta">
-    <div class="row">
-      <div class="desktop-10 centered">
-          
+  <div class="content">
+    <div class="meta">
+      <div class="row">
+        <div class="desktop-10 centered">
           <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-        
+          <a class="link right" href="<?php the_permalink();?>">View Event</a>
+        </div>
+      </div>
+    </div>
+    <div class="sub-meta">
+      <div class="row">
+        <div class="desktop-10 centered">
+          <span class="sub_title_second"><?php the_field('event_title'); ?></span> | 
+          <span class="sub_title_second"><?php the_field('event_subtitle'); ?></span>
+        </div>
       </div>
     </div>
   </div>

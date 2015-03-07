@@ -1,6 +1,19 @@
 <div class="slide">
   <div class="row">
     <div class="desktop-12 mobile-3 tablet-6">
+
+      <div class="category">
+        <?php 
+    $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
+    $count = count($terms);
+    if ( $count > 0 ){
+      foreach ( $terms as $term ) {
+        echo '<span class="cat_' . $term->slug . '">' . $term->name . '</span>';
+      }
+    }
+  ?> 
+</div>
+
       <div class="thumbnail">
         <a href="<?php the_permalink(); ?>">
         <?php

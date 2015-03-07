@@ -14,8 +14,9 @@
   $guests           = $speakers;
   $action           = '';
   $metainfo         = get_the_tag_list('',', ','');
+  $formatTitle      = 
   // Random Colors
-  $input            = array("pink","blue","green","yellow");
+  $input            = array("pink","blue","green","orange");
   $rand_keys        = array_rand($input, 2);
 
   $rando            = $input[$rand_keys[1]] . "\n";
@@ -29,9 +30,12 @@
 
     $format         = 'video';
     $thumb_url      = $video_thumb_url;
-    $action         = '<a href="'. $video_url .'" class="play popup-video"><i class="ss-icon ss-gizmo">play</i></a>';
+    //$action         = '<a href="'. $video_url .'" class="play popup-video"><i class="ss-icon ss-gizmo">play</i></a>';
+    $action         = '';
     $itemsize       = 'desktop-8';
     $skeletonsize   = '1400x900';
+    $formatTitle    = $format . '/ ';
+    $formatTitle    = 'video';
 
   } elseif ( has_post_format( 'gallery' )) {
 
@@ -39,6 +43,7 @@
     $images         = get_field('archive_gallery'); 
     $image_1        = $images[0]; 
     $thumb_url      = $image_1[url];
+    $formatTitle    = 'gallery';
 
 
   } elseif ( has_post_format( 'quote' )) {
@@ -47,12 +52,15 @@
     $thumb_url      = $thumb_url_array[0];
     $itemsize       = 'desktop-12';
     $skeletonsize   = '1400x500';
+    $formatTitle    = 'quote';
 
   } elseif ( has_post_format( 'audio' )) {
 
     $format         = 'audio';
     $thumb_url      = $thumb_url_array[0];
-    $action         = '<a href="'. $audio_url .'" class="play" target="blank"><i class="ss-icon ss-gizmo">play</i></a>';
+    //$action         = '<a href="'. $audio_url .'" class="play" target="blank"><i class="ss-icon ss-gizmo">play</i></a>';
+    $action         = '';
+    $formatTitle    = 'podcast';
 
   } else {
 
@@ -64,6 +72,7 @@
     $category       = '';
     $itemsize       = 'desktop-4';
     $skeletonsize   = '700x899';
+    $formatTitle    = 'people';
 
   }
 
@@ -73,8 +82,10 @@
 
 <div <?php post_class('item gallery-item desktop-4 tablet-3 contained ' . "$format"); ?>>
 
+  <span class="icon"><i class="ss-icon ss-glyphish"><?php echo $format; ?></i></span>
+
   <div class="meta">
-    <span class="cat"><?php echo $category; echo ' / '; echo $postcreatedate; ?></span>
+    <span class="cat"><?php echo $formatTitle; echo $category; echo ' / '; echo $postcreatedate; ?></span>
     <h2 class="title"><?php echo $guests; ?></h2>
     <span class="cat"><?php echo $metainfo; ?></span>
   </div>
@@ -116,7 +127,7 @@
   <?php endif; ?>
 
   <div class="meta">
-    <span class="cat"><?php echo $category; echo ' / '; echo $postcreatedate; ?></span>
+    <span class="cat"><?php echo $formatTitle; echo $category; echo ' / '; echo $postcreatedate; ?></span>
     <h2 class="title"><?php echo $guests; ?></h2>
     <span class="cat"><?php echo $metainfo; ?></span>
   </div>
