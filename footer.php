@@ -1,3 +1,46 @@
+<?php if (is_tax( 'tribe_events_cat' )): ?>
+<?php if( have_rows('spotlight_carousel', 'option') ): ?>
+
+<div class="row">
+  <div class="desktop-12">
+    <div id="home-featured">
+      <div class="slider rsMinW">
+        <?php 
+
+          while ( have_rows('spotlight_carousel', 'option') ) : the_row(); 
+
+          // $thingie = get_sub_field('slide_post');
+          // $post = $thingie;
+          // setup_postdata( $post ); 
+
+          $post_object = get_sub_field('spotlight_post');
+
+          if( $post_object ): 
+
+            $post = $post_object;
+            setup_postdata($post); 
+
+          get_template_part('templates/home/slider', 'bottom' );
+
+          wp_reset_postdata();
+          endif;
+          endwhile;
+
+        ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<?php endif; ?>
+<?php endif; ?>
+
+<?php if ( (get_post_type() == 'tribe_events' && tribe_is_upcoming()) || tribe_is_month() || tribe_is_by_date() ): ?>
+<?php include locate_template('templates/calendar-mediagraphic.php'); ?>
+<?php endif; ?>
+
 <?php include locate_template('/templates/logotogglin.php' );?>
 
 </div>

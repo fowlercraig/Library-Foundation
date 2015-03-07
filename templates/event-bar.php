@@ -8,7 +8,15 @@
 
     if(tribe_events_has_tickets()){
 
+      if ( ! post_password_required() ) {
+
       $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">RSVP for this Event</a>';
+
+      } else {
+
+      $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">Members Only</a>';
+
+      }
 
     }
 
