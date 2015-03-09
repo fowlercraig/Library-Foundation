@@ -15,7 +15,7 @@
       </menu>
     </div>
   </menu>
-<?php endif; ?>
+  <?php endif; ?>
 
   <div class="row">
   <div class="desktop-12 padded">

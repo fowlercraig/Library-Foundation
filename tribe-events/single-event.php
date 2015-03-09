@@ -22,17 +22,6 @@ $event_id = get_the_ID();
 
   include locate_template('templates/event-header.php');
   include locate_template('templates/event-bar.php');
-
-  if ( post_password_required() ) {
-
-  include locate_template('templates/event-content.php');
-
-  } else {
-
-  include locate_template('templates/event-content.php');
-
-  }
-
   include locate_template('templates/event-content.php');
   include locate_template('templates/flex-content.php');
   include locate_template('templates/events/event-sponsors.php');

@@ -3,7 +3,7 @@
 <?php 
 
   get_template_part('templates/page', 'header');
-  get_template_part('templates/page', 'content');
+  include locate_template('templates/page-content-noside.php');
 
   $archiveWidth  = 'desktop-2 contained';
   $videoWidth    = 'desktop-4 contained';

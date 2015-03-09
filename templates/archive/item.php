@@ -128,7 +128,11 @@
 
   <div class="meta">
     <span class="cat"><?php echo $formatTitle; echo $category; echo ' / '; echo $postcreatedate; ?></span>
+    <?php if ( has_post_format( 'audio' )): ?>
+    <h2 class="title"><a href="<?php $audio_url; ?>" target="blank"><?php echo $guests; ?></a></h2>
+    <?php else: ?>
     <h2 class="title"><?php echo $guests; ?></h2>
+    <?php endif; ?>
     <span class="cat"><?php echo $metainfo; ?></span>
   </div>
   

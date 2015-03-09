@@ -168,3 +168,24 @@ add_action( 'wp_dashboard_setup', function()
     remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
 } );
 
+
+
+add_action( 'pre_get_posts', 'exclude_events_category' );
+ 
+function exclude_events_category( $query ) {
+ 
+if ( $query->query_vars['eventDisplay'] == 'upcoming' && !is_tax(TribeEvents::TAXONOMY) || $query->query_vars['eventDisplay'] == 'month' && $query->query_vars['post_type'] == TribeEvents::POSTTYPE && !is_tax(TribeEvents::TAXONOMY) && empty( $query->query_vars['suppress_filters'] ) ) {
+ 
+    $query->set( 'tax_query', array(
+ 
+        array(
+            'taxonomy' => TribeEvents::TAXONOMY,
+            'field' => 'slug',
+            'terms' => array('hidden'),
+            'operator' => 'NOT IN'
+        )
+        )
+    );
+}
+return $query;
+}

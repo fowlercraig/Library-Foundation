@@ -34,18 +34,9 @@
 
   <?php endforeach; endif; else: ?>
 
-  <?php 
-
-    $globalSponsors = get_field('aloud_sponsors', 'options'); 
-    foreach( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
-
-  <div class="item desktop-3 tablet-2 mobile-1 sizer-item contained">
-    <a href="<?php echo $link; ?>">
-      <img class="img-responsive" src="<?php echo $globalSponsor['sizes']['large']; ?>" alt="<?php echo $globalSponsor['alt']; ?>" />
-    </a>
-  </div>
+  
 
 
-  <?php endforeach; endif; ?>
+  <?php  endif; ?>
 
 </div>

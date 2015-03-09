@@ -586,7 +586,7 @@ $('.grid-filters').on( 'click', 'button', function() {
     });
   
     // Smooth scrolling for internal links
-    $("a[href^='#']").click(function(event) {
+    $("a[href^='#']:not(.tabber-handle)").click(function(event) {
       event.preventDefault();
   
       var $this = $(this),
