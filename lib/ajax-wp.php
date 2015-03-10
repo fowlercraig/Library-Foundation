@@ -1,28 +1,28 @@
 <?php
-// //Register books post type
-// function codex_custom_init() {
-//     $args = array(
-// 		'public' => true,
-// 		'label'  => 'Books'
-//     );
-//     register_post_type( 'book', $args );
-// }
-// add_action( 'init', 'codex_custom_init' );
+//Register books post type
+function codex_custom_init() {
+    $args = array(
+		'public' => true,
+		'label'  => 'Books'
+    );
+    register_post_type( 'book', $args );
+}
+add_action( 'init', 'codex_custom_init' );
 
-// //Register book genre taxonomy
-// add_action( 'init', 'create_book_tax' );
+//Register book genre taxonomy
+add_action( 'init', 'create_book_tax' );
 
-// function create_book_tax() {
-// 	register_taxonomy(
-// 		'genre',
-// 		'book',
-// 		array(
-// 			'label' => __( 'Genre' ),
-// 			'rewrite' => array( 'slug' => 'genre' ),
-// 			'hierarchical' => true
-// 		)
-// 	);
-// }
+function create_book_tax() {
+	register_taxonomy(
+		'genre',
+		'book',
+		array(
+			'label' => __( 'Genre' ),
+			'rewrite' => array( 'slug' => 'genre' ),
+			'hierarchical' => true
+		)
+	);
+}
 
 //Get Genre Filters
 function get_genre_filters()
@@ -80,7 +80,7 @@ function ajax_genre_filter()
 		'post_type' => 'media',
 		's' => $search_value,
 		'posts_per_page' => 2,
-		//'tax_query' => $tax_query,
+		'tax_query' => $tax_query,
 		'paged' => $paged
 	);
 	$book_loop = new WP_Query($book_args);

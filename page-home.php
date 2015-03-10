@@ -128,10 +128,7 @@
   <div class="row">
     <div class="desktop-10 centered">
       <div class="row">
-        
         <header class="desktop-8 tablet-5">
-
-          
           <p>
             From Member events to ALOUD programs, Library Store On Wheels stops and much much more, stay up on the Library Foundation’s activities.
           </p>
@@ -186,7 +183,7 @@
       <hr>
       <a href="#spotlight-events">
         <i class="ss-icon ss-gizmo home-arrow left ">down</i>
-        <h3 id="spotlight-events"><a href="/calendar">Spotlight Events<span> | View Full Calendar</span></a></h3>
+        <h3 id="spotlight-events"><a href="/calendar">Spotlight<span> | View Full Calendar</span></a></h3>
       </a>
     </header>
     <div class="desktop-12">

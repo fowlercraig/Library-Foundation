@@ -16,6 +16,4 @@
 
 ?>
 
-<?php get_sidebar('simple'); ?>
-
 <?php get_footer(); ?>
