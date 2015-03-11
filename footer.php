@@ -1,4 +1,5 @@
-<?php if (is_tax( 'tribe_events_cat' )): ?>
+<?php if ( (get_post_type() == 'tribe_events' && tribe_is_upcoming()) || tribe_is_month() || tribe_is_by_date() ): ?>
+<?php if (!is_tax( 'tribe_events_cat' )): ?>
 <?php if( have_rows('spotlight_carousel', 'option') ): ?>
 
 <div class="row">
@@ -13,7 +14,7 @@
           // $post = $thingie;
           // setup_postdata( $post ); 
 
-          $post_object = get_sub_field('spotlight_post');
+          $post_object = get_sub_field('slide_post');
 
           if( $post_object ): 
 
@@ -34,6 +35,7 @@
 
 <hr>
 
+<?php endif; ?>
 <?php endif; ?>
 <?php endif; ?>
 
@@ -63,6 +65,8 @@
 </footer><!--Footer-->
 
 </div><!-- Wrapper -->
+
+<?php the_widget( 'WP_Widget_Text', 'text', 3 ); ?> 
 
 <?php wp_footer(); ?>
 <?php include locate_template('/lib/photoswipe.php' );?>

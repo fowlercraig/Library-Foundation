@@ -5,6 +5,10 @@
     background: @bgGray;
     padding: 25px;
 
+    .wrapper {
+      position: relative;
+    }
+
     > label {
 
       .cat();
@@ -89,10 +93,17 @@
       color: @textGray;
     }
     .button {
+      
+      width: 70px;
+      padding: 0;
       background: @blue;
+      position: absolute;
+      right: 0;
+
       &:hover {
         background: darken(@blue, 10%);
       }
+
     }
   }
 

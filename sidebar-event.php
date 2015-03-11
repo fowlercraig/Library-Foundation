@@ -12,6 +12,19 @@
       <?php if (!get_field('short_sidebar')): ?>
       <?php dynamic_sidebar( 'general-widget-area' ); ?>
       <?php endif; ?>
+      <?php if (get_field('short_sidebar')): ?>
+      <div id="member-widget">
+  <div class="wrapper">
+    <h3>Become a Member</h3>
+    <p>
+      Library Foundation membership gives you special access to public programs,
+      opening parties, and puts you in the mix of L.A.'s vibrant literary and
+      culture scene.
+    </p>
+  </div>
+  <a href="#">Join Now</a>
+</div>
+      <?php endif; ?>
     </ul>
   </aside>
 

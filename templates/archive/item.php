@@ -30,8 +30,8 @@
 
     $format         = 'video';
     $thumb_url      = $video_thumb_url;
-    //$action         = '<a href="'. $video_url .'" class="play popup-video"><i class="ss-icon ss-gizmo">play</i></a>';
-    $action         = '';
+    $action         = '<a href="'. $video_url .'" class="play popup-video"><i class="ss-icon ss-gizmo">play</i></a>';
+    //$action         = '';
     $itemsize       = 'desktop-8';
     $skeletonsize   = '1400x900';
     $formatTitle    = $format . '/ ';
@@ -129,7 +129,7 @@
   <div class="meta">
     <span class="cat"><?php echo $formatTitle; echo $category; echo ' / '; echo $postcreatedate; ?></span>
     <?php if ( has_post_format( 'audio' )): ?>
-    <h2 class="title"><a href="<?php $audio_url; ?>" target="blank"><?php echo $guests; ?></a></h2>
+    <h2 class="title"><a href="<?php echo $audio_url; ?>" target="blank"><?php echo $guests; ?></a></h2>
     <?php else: ?>
     <h2 class="title"><?php echo $guests; ?></h2>
     <?php endif; ?>

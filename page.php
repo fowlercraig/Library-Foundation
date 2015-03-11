@@ -16,6 +16,10 @@
 
     include locate_template('page-archive.php' );
 
+  } elseif ( is_page( 'about' ) ) { 
+
+    include locate_template('page-about.php' );
+
   } elseif ( is_page( 'membership' ) ) { 
 
     include locate_template('page-membership.php' );

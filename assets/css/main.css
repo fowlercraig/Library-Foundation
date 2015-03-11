@@ -1407,7 +1407,7 @@ strong {
 }
 p {
   color: #858585;
-  margin: 10px 0 15px;
+  margin: 5px 0 10px;
   line-height: 1.7;
 }
 p.emphasized {
@@ -5059,7 +5059,7 @@ html:hover [class^="ss-"] {
 }
 #donation-module {
   background: #f8f8f8;
-  padding: 1px 25px 20px;
+  padding: 15px 25px 20px;
 }
 #donation-module .button.alt {
   background: #008bbe;
@@ -8201,6 +8201,9 @@ p.demo_store {
 .membership-level.no-bg a {
   color: #59595b;
 }
+.membership-level.overlayless:before {
+  display: none;
+}
 .membership-level.overlayless:after {
   display: none;
 }
@@ -8479,9 +8482,6 @@ p.demo_store {
   border-bottom: 2px solid #f8f8f8;
   transition: background-color 300ms ease;
 }
-#page-list .item:hover {
-  background: #f8f8f8;
-}
 #page-list .item .title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -8560,18 +8560,23 @@ p.demo_store {
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
 }
-.sidebar .xoxo li.widget_recent_entries {
+.sidebar .xoxo li.widget_recent_entries,
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails {
   padding-top: 0!important;
 }
-.sidebar .xoxo li.widget_recent_entries ul {
+.sidebar .xoxo li.widget_recent_entries ul,
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul {
   padding-left: 0;
   margin-bottom: 0;
 }
-.sidebar .xoxo li.widget_recent_entries ul li {
+.sidebar .xoxo li.widget_recent_entries ul li,
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul li {
   padding: 10px 0!important;
+  margin: 0;
   border-top: 1px solid #dddddd;
 }
-.sidebar .xoxo li.widget_recent_entries ul a {
+.sidebar .xoxo li.widget_recent_entries ul a,
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul a {
   color: #59595b;
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
@@ -9257,6 +9262,10 @@ p.demo_store {
 #upcoming-events-carousel .slide .category .cat_young-literati {
   background: #86993f;
 }
+#upcoming-events-carousel .slide .category .cat_hidden,
+#upcoming-events-carousel .slide .category .cat_featured {
+  display: none;
+}
 #upcoming-events-carousel .slide .meta {
   background: #ffffff;
 }
@@ -9281,19 +9290,31 @@ p.demo_store {
 #home-featured .rsArrow {
   display: none;
 }
+#home-featured .rsNav {
+  display: none;
+}
 #home-featured .rsArrow {
-  position: absolute;
   top: 50%;
-  display: block!important;
-  opacity: 1!important;
-  visibility: visible!important;
+  margin-top: -30px;
+}
+#home-featured .rsArrow .rsArrowIcn {
+  display: none;
 }
 #home-featured .rsArrow.rsArrowRight {
-  right: 15px;
+  right: 0;
+  left: auto;
+  width: 7.5%;
+  height: 60px;
+  background: url(/assets/img/navRight.png) center center no-repeat;
+  background-size: contain;
 }
 #home-featured .rsArrow.rsArrowLeft {
-  left: 15px;
+  left: 0;
+  width: 7.5%;
   right: auto;
+  height: 60px;
+  background: url(/assets/img/navLeft.png) center center no-repeat;
+  background-size: contain;
 }
 #home-featured header h3 {
   margin: 8px 0 2px;
@@ -10672,6 +10693,9 @@ ul.order_details strong {
   background: #f8f8f8;
   padding: 25px;
 }
+.mc4wp-form #signup-form .wrapper {
+  position: relative;
+}
 .mc4wp-form #signup-form > label {
   font-family: 'Gotham';
   font-weight: 700;
@@ -10743,7 +10767,11 @@ ul.order_details strong {
   color: #858585;
 }
 .page-home #signup-form .button {
+  width: 70px;
+  padding: 0;
   background: #008bbe;
+  position: absolute;
+  right: 0;
 }
 .page-home #signup-form .button:hover {
   background: #00668b;
@@ -10847,6 +10875,32 @@ ul.order_details strong {
 .share-wrapper .share-things li a:hover {
   background: #df2d7e;
 }
+#additional-tickets {
+  margin-bottom: 20px;
+}
+#additional-tickets .tabber-handle {
+  background: #ffffff;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-size: 12px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+#additional-tickets .tabber-handle.active {
+  background: #f8f8f8;
+  color: #858585;
+}
+#additional-tickets .tabber-tab {
+  padding: 20px;
+  background: #f8f8f8;
+}
 #archive-bar.toolbar {
   margin-bottom: 0;
   border-bottom: 0;
@@ -10907,7 +10961,7 @@ ul.order_details strong {
   width: 100%;
   top: 50px;
   left: 0;
-  z-index: 29;
+  z-index: 99;
   background: #ffffff;
 }
 #infscr-loading {

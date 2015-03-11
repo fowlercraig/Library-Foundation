@@ -37,7 +37,7 @@
         <div class="desktop-10 centered">
           <?php if (!get_sub_field('custom_link')): ?>
           <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-          <a class="link right" href="<?php the_permalink();?>">View Event</a>
+          <a class="link right" href="<?php the_permalink();?>"><?php echo tribe_get_start_date($id, false, "l, M j, Y "); ?> | View Event</a>
           <?php else: ?>
           <h2 class="title"><a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('title'); ?></a></h2>
           <a class="link right" href="<?php the_sub_field('url'); ?>"><?php the_sub_field('button_text'); ?></a>

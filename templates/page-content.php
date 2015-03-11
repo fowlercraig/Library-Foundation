@@ -21,6 +21,12 @@
 
   }
 
+  if (is_page('about')) {
+
+    $pageWidth = 'sizer-item desktop-10 tablet-4 mobile-3 centered';
+    
+  }
+
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -30,7 +36,7 @@
 
     <div class="<?php echo $pageWidth; ?>">
       <?php the_content(); ?>
-
+      <br>
       <?php if ( get_field('include_sidebar')) {
 
        get_template_part('templates/flex', 'content');

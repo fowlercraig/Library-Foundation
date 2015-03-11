@@ -225,6 +225,10 @@
         background: @green
       }
 
+      .cat_hidden, .cat_featured {
+        display: none;
+      }
+
     }
 
     .meta {
@@ -269,28 +273,38 @@
     display: none;
   }
 
-  .rsArrow {
-
-    position: absolute;
-    top: 50%;
-    display: block!important;
-    opacity: 1!important;
-    visibility: visible!important;
-
-    &.rsArrowRight {
-
-      right: 15px;
-
+  .rsNav {
+      display: none;
     }
 
-    &.rsArrowLeft {
+    .rsArrow {
 
-      left: 15px;
-      right: auto;
+      top: 50%;
+      margin-top: -30px;
+
+      .rsArrowIcn {
+        display: none;
+      }
+
+      &.rsArrowRight {
+        right: 0;
+        left: auto;
+        width: 7.5%;
+        height: 60px;
+        background: url(/assets/img/navRight.png) center center no-repeat;
+        background-size: contain;
+      }
+
+      &.rsArrowLeft {
+        left: 0;
+        width: 7.5%;
+        right: auto;
+        height: 60px;
+        background: url(/assets/img/navLeft.png) center center no-repeat;
+        background-size: contain;
+      }
 
     }
-
-  }
 
   header {
 
