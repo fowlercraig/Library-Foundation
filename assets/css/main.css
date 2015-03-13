@@ -5335,6 +5335,9 @@ html:hover [class^="ss-"] {
   background: url(/assets/img/booksbg.jpg) center 75px no-repeat;
   background-size: cover;
 }
+.section-header .member-level-title {
+  font-size: 32px;
+}
 .single-tribe_events .tribe-events-event-image {
   text-align: left;
 }
@@ -7802,19 +7805,37 @@ p.demo_store {
 #head #logo.member-logo .face {
   background-image: url(/assets/img/logos/logo-members.png);
 }
-#program-logo.general-logo {
+#swiper.general-logo #program-logo {
   background-image: url(/assets/img/logos/logo-general.png);
 }
-#program-logo.aloud-logo {
+#swiper.aloud-logo #lfla-logo {
+  background-image: url(/assets/img/logos/lfla-logo-aloud-companion.png) !important;
+}
+#swiper.aloud-logo #program-logo {
   background-image: url(/assets/img/logos/logo-aloud.png);
 }
-#program-logo.yl-logo {
+#swiper.yl-logo #lfla-logo {
+  background-image: url(/assets/img/logos/lfla-logo-yl-companion.png) !important;
+}
+#swiper.yl-logo #program-logo {
   background-image: url(/assets/img/logos/logo-yl.png);
 }
-#program-logo.ls-logo {
+#swiper.ls-logo #lfla-logo {
+  background-image: url(/assets/img/logos/lfla-logo-ls-companion.png) !important;
+}
+#swiper.ls-logo #program-logo {
   background-image: url(/assets/img/logos/logo-ls.png);
 }
-#program-logo.member-logo {
+#swiper.member-logo #lfla-logo {
+  background-image: url(/assets/img/logos/lfla-logo-membership-companion.png) !important;
+}
+#swiper.member-logo #program-logo {
+  background-image: url(/assets/img/logos/logo-members.png);
+}
+#swiper.council-logo #lfla-logo {
+  background-image: url(/assets/img/logos/lfla-logo-council-companion.png) !important;
+}
+#swiper.council-logo #program-logo {
   background-image: url(/assets/img/logos/logo-members.png);
 }
 #main-nav {

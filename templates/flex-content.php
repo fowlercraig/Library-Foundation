@@ -75,6 +75,10 @@ if( have_rows('page_modules' , $taxTerm) ):
 
           include locate_template('templates/page-calendar.php');
 
+        elseif( get_row_layout() == 'section_title' ):
+
+          include('flex/section-title.php');
+
         elseif( get_row_layout() == 'headshot_grid' ):
 
           include locate_template('templates/staff/staff-flex.php');

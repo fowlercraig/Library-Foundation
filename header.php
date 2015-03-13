@@ -51,7 +51,7 @@
       <div id="swiper">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-              <div class="swiper-slide" style="background-image:url(/assets/img/logos/logo-general.png)"></div>
+              <div id="lfla-logo" class="swiper-slide" style="background-image:url(/assets/img/logos/logo-general.png)"></div>
               <div id="program-logo" class="swiper-slide"></div>
           </div>
         </div>

@@ -28,16 +28,17 @@
       });
     }
 
-    var homeClasses   = '.page-home';
-    var aloudClasses  = '.events-category-aloud';
-    var ylClasses     = '.page-young-literati';
-    var memberClasses = '.page-membership';
-    var lsClasses     = '';
+    var homeClasses    = '.page-home';
+    var aloudClasses   = '.events-category-aloud';
+    var ylClasses      = '.page-young-literati';
+    var memberClasses  = '.page-membership, .page-become-a-member';
+    var councilClasses = '.page-the-council, .page-council-board';
+    var lsClasses      = '';
 
     if ($('body').is(aloudClasses)) {
 
       //alert('ALOUD');
-      $('#program-logo').addClass('aloud-logo');
+      $('#swiper').addClass('aloud-logo');
 
       setTimeout(function(){
         swiper.slideTo(1);
@@ -50,7 +51,7 @@
     if ($('body').is(ylClasses)) {
 
       //alert('YL');
-      $('#program-logo').addClass('yl-logo');
+      $('#swiper').addClass('yl-logo');
       
       setTimeout(function(){
         swiper.slideTo(1);
@@ -63,7 +64,7 @@
     if ($('body').is(memberClasses)) {
 
       //alert('ALOUD');
-      $('#program-logo').addClass('member-logo');
+      $('#swiper').addClass('member-logo');
       
       setTimeout(function(){
         swiper.slideTo(1);
@@ -76,7 +77,20 @@
     if ($('body').is(lsClasses)) {
 
       //alert('Library Store!');
-      $('#program-logo').addClass('ls-logo');
+      $('#swiper').addClass('ls-logo');
+      
+      setTimeout(function(){
+        swiper.slideTo(1);
+      },500);
+
+      hoverEffect();
+
+    } 
+
+    if ($('body').is(councilClasses)) {
+
+      //alert('Library Store!');
+      $('#swiper').addClass('council-logo');
       
       setTimeout(function(){
         swiper.slideTo(1);
