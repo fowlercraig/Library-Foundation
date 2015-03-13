@@ -2,9 +2,16 @@
 <?php if (!is_tax( 'tribe_events_cat' )): ?>
 <?php if( have_rows('spotlight_carousel', 'option') ): ?>
 
-<div class="row">
-  <div class="desktop-12">
-    <div id="home-featured">
+<div id="home-featured">
+  <div class="row">
+    <header class="desktop-10 centered">
+      <hr>
+      <a href="#spotlight-events">
+        <i class="ss-icon ss-gizmo home-arrow left ">down</i>
+        <h3 id="spotlight-events"><a href="/calendar">Spotlight<span></a></h3>
+      </a>
+    </header>
+    <div class="desktop-12">
       <div class="slider rsMinW">
         <?php 
 

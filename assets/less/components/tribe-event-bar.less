@@ -49,7 +49,6 @@
         line-height: 38px;
         width: 100%;
         min-width: 100%;
-        padding-left: 45px;
 
 
         &:before {
@@ -138,12 +137,30 @@
   }
 
   .tribe-bar-filters {
+    
+    position: relative;
+    padding-left: 30px;
+
     input {
       margin-bottom: 0;
     }
+    
+    .icon-holder {
+      position: absolute;
+      left: 0;
+      
+      height: 63px;
+      line-height: 63px;
+      i {
+        padding: 9px 12px 8px;
+        background: @bgGray;
+      }
+    }
+    
     .no-border {
       border:none;
     }
+    
     &.social {
       a {
         color: @lighterGray;

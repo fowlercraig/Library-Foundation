@@ -77,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="desktop-6 tablet-6 mobile-3">
 	<h3 class="title"><a href="<?php echo tribe_get_event_link() ?>" title="<?php the_title() ?>"><?php the_title() ?></a></h3>
-	<span class="date upper"><?php the_field('event_subtitle'); ?></span>
+	<span class="date upper"><?php the_field('event_title'); ?></span>
 </div>
 
 <div class="desktop-6 tablet-6 mobile-3 text-right">
