@@ -31,9 +31,9 @@
     var homeClasses    = '.page-home';
     var aloudClasses   = '.events-category-aloud';
     var ylClasses      = '.page-young-literati';
-    var memberClasses  = '.page-membership, .page-become-a-member';
+    var memberClasses  = '.page-membership, .page-become-a-member, .page-bibliophiles';
     var councilClasses = '.page-the-council, .page-council-board';
-    var lsClasses      = '';
+    var lsClasses      = '.events-category-library-store, .events-category-library-store-on-wheels';
 
     if ($('body').is(aloudClasses)) {
 

@@ -24,6 +24,10 @@
 
     include locate_template('page-membership.php' );
 
+  } elseif ( is_page( 'bibliophiles' ) ) { 
+
+    include locate_template('page-bibliophiles.php' );
+
   } elseif ( is_page( 'young-literati' ) ) { 
 
     include locate_template('page-membership.php' );

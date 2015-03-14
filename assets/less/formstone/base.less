@@ -366,7 +366,7 @@
 		min-height: 400px;
 	}
 
-	.button:not(.woocommerce .button) {
+	.button:not(.woocommerce .button){
 		.font_size(14);
 		.lato();
 
@@ -526,6 +526,9 @@
 	}
 
 	input[type=text],
+	input[type=password],
+	//input[type=button],
+	//input[type=submit],
 	textarea {
 		.font_size(14);
 
@@ -536,6 +539,10 @@
 		box-shadow: none;
 		margin: 0 0 10px;
 		padding: 10px;
+	}
+
+	input[type=button] {
+		background: @white
 	}
 
 	h5 {

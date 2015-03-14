@@ -24,7 +24,7 @@
     setTimeout(function(){
       $.magnificPopup.open({
         items: {
-          src: 'http://i.imgur.com/QzGKMxq.png'
+          src: 'http://i.imgur.com/94skZEG.png'
         },
         mainClass: 'mfp-fade',
         type: 'image'

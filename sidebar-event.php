@@ -1,4 +1,4 @@
-<div id="sidebar-wrapper" class="desktop-4 right">
+<div id="sidebar-wrapper" class="desktop-4 right sizer-item">
 
   <?php include locate_template('/templates/events/event-sidebar-donate.php'); ?>
   <?php include locate_template('/templates/events/event-sidebar-articles.php'); ?>

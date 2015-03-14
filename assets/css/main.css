@@ -1730,6 +1730,7 @@ input.button {
   width: 100%;
 }
 input[type=text],
+input[type=password],
 textarea {
   font-size: 14px;
   font-size: 0.875rem;
@@ -1740,6 +1741,9 @@ textarea {
   box-shadow: none;
   margin: 0 0 10px;
   padding: 10px;
+}
+input[type=button] {
+  background: #ffffff;
 }
 h5 {
   margin-top: 0;
@@ -4964,6 +4968,10 @@ html:hover [class^="ss-"] {
 .footer-module-title {
   margin-bottom: 5px;
 }
+.no-events {
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+}
 #head .menu a,
 #header .menu a {
   margin-right: 10px;
@@ -5337,6 +5345,15 @@ html:hover [class^="ss-"] {
 }
 .section-header .member-level-title {
   font-size: 32px;
+}
+.password-protected {
+  padding: 50px;
+  background: #f8f8f8;
+  margin: 1.04166667% 0;
+}
+.password-protected input {
+  margin-bottom: 0;
+  background: #ffffff;
 }
 .single-tribe_events .tribe-events-event-image {
   text-align: left;
@@ -7836,7 +7853,7 @@ p.demo_store {
   background-image: url(/assets/img/logos/lfla-logo-council-companion.png) !important;
 }
 #swiper.council-logo #program-logo {
-  background-image: url(/assets/img/logos/logo-members.png);
+  background-image: url(/assets/img/logos/logo-council.png);
 }
 #main-nav {
   font-family: 'Gotham';
@@ -8588,22 +8605,43 @@ p.demo_store {
   text-rendering: optimizeLegibility;
 }
 .sidebar .xoxo li.widget_recent_entries,
-.sidebar .xoxo li.recent-posts-widget-with-thumbnails {
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails,
+.sidebar .xoxo li.popularitypostswidget {
   padding-top: 0!important;
 }
 .sidebar .xoxo li.widget_recent_entries ul,
-.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul {
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul,
+.sidebar .xoxo li.popularitypostswidget ul {
   padding-left: 0;
   margin-bottom: 0;
 }
 .sidebar .xoxo li.widget_recent_entries ul li,
-.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul li {
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul li,
+.sidebar .xoxo li.popularitypostswidget ul li {
   padding: 10px 0!important;
   margin: 0;
   border-top: 1px solid #dddddd;
 }
+.sidebar .xoxo li.widget_recent_entries ul li .post-stats,
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul li .post-stats,
+.sidebar .xoxo li.popularitypostswidget ul li .post-stats {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-weight: 500;
+}
+.sidebar .xoxo li.widget_recent_entries ul li br,
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul li br,
+.sidebar .xoxo li.popularitypostswidget ul li br {
+  display: none;
+}
 .sidebar .xoxo li.widget_recent_entries ul a,
-.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul a {
+.sidebar .xoxo li.recent-posts-widget-with-thumbnails ul a,
+.sidebar .xoxo li.popularitypostswidget ul a {
   color: #59595b;
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
@@ -10638,6 +10676,9 @@ ul.order_details strong {
 .tribe-events-list .type-tribe_events .meta a.cat_membership {
   color: #f89c31;
 }
+.tribe-events-list .type-tribe_events .meta a.cat_the-council {
+  color: #1AA9A5;
+}
 .tribe-events-list .type-tribe_events .meta a.cat_featured,
 .tribe-events-list .type-tribe_events .meta a.cat_hidden {
   display: none;
@@ -11113,6 +11154,27 @@ ul.order_details strong {
 .page-home #signup-form .button:hover {
   background: #00668b;
 }
+#event-spotlight-slider {
+  position: relative;
+}
+#event-spotlight-slider header {
+  background: #008bbe;
+  color: #ffffff;
+  padding: 5px 20px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 29;
+}
+#event-spotlight-slider header span {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+}
 #event-spotlight-slider .top_link h3 {
   margin-bottom: 10px;
 }
@@ -11151,6 +11213,8 @@ ul.order_details strong {
 #event-spotlight-slider .slider .meta .title {
   color: #ffffff;
   line-height: 1.3;
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
 }
 #event-spotlight-slider .slider .meta .title a {
   color: inherit;
@@ -11159,6 +11223,10 @@ ul.order_details strong {
 #event-spotlight-slider .slider .meta .button {
   border-color: #ffffff;
   color: #ffffff;
+}
+#event-spotlight-slider .slider .meta .button:hover {
+  border-color: #008bbe;
+  background: #008bbe;
 }
 .share-wrapper {
   position: relative;

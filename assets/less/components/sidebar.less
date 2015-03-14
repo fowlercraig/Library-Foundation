@@ -28,7 +28,8 @@
         .sentinel();    
       }
 
-      &.widget_recent_entries, &.recent-posts-widget-with-thumbnails {
+      &.widget_recent_entries, &.recent-posts-widget-with-thumbnails,
+      &.popularitypostswidget {
         padding-top: 0!important;
 
         ul {
@@ -40,6 +41,16 @@
             padding: 10px 0!important;
             margin: 0;
             border-top: 1px solid @lightestGray;
+
+            .post-stats {
+              .cat();
+              font-weight: 500;
+            }
+
+            br {
+              display: none;
+            }
+
           }
 
           a {
