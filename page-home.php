@@ -161,6 +161,14 @@
         $wp_query = new WP_Query(); 
         $wp_query->query('showposts=6&post_type=tribe_events'.'&paged='.$paged); 
 
+        // 'meta_query' => array(
+        // array(
+        // 'key' => 'field_name',
+        // 'value' => '1',
+        // 'compare' => '=='
+        // )
+        // )
+
         while ($wp_query->have_posts()) : $wp_query->the_post(); 
       ?>
 

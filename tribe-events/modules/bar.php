@@ -66,7 +66,7 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 					<span class="button no-border">Follow Us</span>
 					<a target="blank" href="https://facebook.com/aloudla"><i class="ss-icon ss-social-circle">Facebook</i></a>
 					<a target="blank" href="https://twitter.com/aloudla"><i class="ss-icon ss-social-circle">Twitter</i></a>
-					<a target="blank" href="https://instagram.com/libraryfoundla"><i class="ss-icon ss-social-circle">Instagram</i></a>
+					<a target="blank" href="https://instagram.com/aloudla"><i class="ss-icon ss-social-circle">Instagram</i></a>
 					<a target="blank" href="https://vimeo.com/aloudla"><i class="ss-icon ss-social-circle">Vimeo</i></a>
 				</div>
 				<?php endif; ?>

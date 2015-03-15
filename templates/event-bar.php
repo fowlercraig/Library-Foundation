@@ -50,7 +50,7 @@
   <div class="row">
     <nav class="desktop-8 tablet-6 mobile-3">
       <?php echo $ticketStatus; ?>
-      <a id="event-calenar-button" href="<?php echo sp_get_ical_link(); ?>" class="button">Add to Calendar</a>
+      <a id="event-calenar-button" href="<?php echo sp_get_single_ical_link(); ?>" class="button">Add to Calendar</a>
     </nav>
     <nav class="desktop-4 tablet-6 mobile-3 text-right">
       <?php include locate_template('templates/share.php' );?>
