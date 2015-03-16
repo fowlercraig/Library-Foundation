@@ -16,6 +16,10 @@
 
     include locate_template('page-archive.php' );
 
+  } elseif ( is_page( 'board' ) ) { 
+
+    include locate_template('page-board.php' );
+
   } elseif ( is_page( 'about' ) ) { 
 
     include locate_template('page-about.php' );

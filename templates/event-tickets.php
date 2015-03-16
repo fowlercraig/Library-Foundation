@@ -1,7 +1,7 @@
-<?php if( have_rows('password_protected', 'options') ): ?>
+<?php if( have_rows('password_protected_2', 'options') ): ?>
 <script>
 <?php 
-  while ( have_rows('password_protected', 'options') ) : the_row(); 
+  while ( have_rows('password_protected_2', 'options') ) : the_row(); 
 
   $ticket_name = get_sub_field('event_name');
   $ticket_name = preg_replace('/\s*/', '', $ticket_name);
@@ -59,8 +59,8 @@ return false;
 </script>
 <?php endif; ?>
 
-<?php if( have_rows('password_protected', 'options') ): ?>
-<?php while ( have_rows('password_protected', 'options') ) : the_row(); ?>
+<?php if( have_rows('password_protected_2', 'options') ): ?>
+<?php while ( have_rows('password_protected_2', 'options') ) : the_row(); ?>
 
 <div id="<?php echo $ticket_name; ?>_box" class="mfp-hide white-popup-block modal-window">
   <h2>Unlock <?php the_sub_field('event_name'); ?></h2>

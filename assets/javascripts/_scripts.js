@@ -346,6 +346,17 @@ initPhotoSwipeFromDOM('.event-gallery');
     return $(this).text().replace("$0.00", "Free"); 
   });​​​​​
 
+  var $boardContainer = $('#board').imagesLoaded( function() {
+
+    $boardContainer.isotope({
+
+      itemSelector:   '.board',
+      layoutMode:     'packery',
+      //filter:         '.featured',
+    });
+
+  });
+
   // What We Fund
 
   $(function(){

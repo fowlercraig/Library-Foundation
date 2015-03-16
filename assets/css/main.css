@@ -10300,6 +10300,28 @@ animated buttons - animate the text inside prev and next buttons
   color: #999999;
   text-decoration: none;
 }
+#board .board {
+  background: #f8f8f8;
+  padding: 15px 25px;
+  margin-top: 1.04166667%;
+  margin-bottom: 1.04166667%;
+}
+#board .board .columns {
+  column-count: 1!important;
+  -webkit-column-count: 1!important;
+}
+#board .board .columns li {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+#board .board .columns li strong,
+#board .board .columns li b {
+  font-weight: normal;
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+  color: #59595b;
+}
 .woocommerce .button {
   background: #008bbe;
   color: #ffffff;

@@ -72,3 +72,37 @@
   }
 
 }
+
+
+#board {
+
+  .board {
+
+    background: @bgGray;
+    padding: 15px 25px;
+    margin-top: @gutter;
+    margin-bottom: @gutter;
+    
+    .columns {
+
+      column-count: 1!important;
+      -webkit-column-count: 1!important;
+
+      li {
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid darken(@bgGray, 5%);
+
+        strong, b {
+          font-weight: normal;
+          .sentinel();
+          color: @gray;
+        }
+
+      }
+
+    }
+
+  }
+
+}
