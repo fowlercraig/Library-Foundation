@@ -1,7 +1,7 @@
 <div class="tabbed">
   <menu class="tabber-menu">
-    <a href="#tab-1" class="tabber-handle">Tab 1</a>
-    <a href="#tab-2" class="tabber-handle">Tab 2</a>
+    <a href="#tab-1" class="tabber-handle">Tier 1</a>
+    <a href="#tab-2" class="tabber-handle">Tier 2</a>
   </menu>
   <div class="tabber-tab" id="tab-1"></div>
   <div class="tabber-tab" id="tab-2"></div>
