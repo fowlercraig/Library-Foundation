@@ -1,0 +1,74 @@
+.staff-member {
+
+  position: relative;
+
+  .thumb {
+    position: relative;
+  }
+
+  .meta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    .cat();
+    z-index: 99;
+    font-weight: 900;
+
+    span {
+      padding: 0 15px;
+      height: 30px;
+      line-height: 32px;
+      display: block;
+      float: left;
+      color: @white;
+      background: @blue;
+    }
+
+    .cat_culturalprograms {
+      background: @aloudpink
+    }
+
+    .cat_development {
+      background: @orange
+    }
+
+    .cat_librarystore {
+      background: #4BACD3;
+    }
+
+    .cat_hidden, .cat_featured {
+      display: none;
+    }
+
+  }
+
+  .info {
+
+    line-height: 1.4;
+
+    br {
+      height: 1px;
+      display: none;
+    }
+
+    strong, b {
+      .sentinel();
+      font-weight: normal;
+      color: @gray;
+      display: block;
+      font-size: 22px;
+    }
+
+    em, a, i {
+      display: block;
+      .cat();
+      font-style: normal;
+      font-weight: 500;
+      border: none;
+      color: @lightGray;
+      text-decoration: none;
+    }
+
+  }
+
+}

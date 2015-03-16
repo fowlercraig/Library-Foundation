@@ -210,7 +210,7 @@ initPhotoSwipeFromDOM('.event-gallery');
 
   // Sizer
 
-  $("#sponsors, #page-list.quadrant").sizer();
+  $("#staff, #sponsors, #page-list.quadrant").sizer();
 
   // Accordion
 
@@ -532,7 +532,7 @@ $('.grid-filters').on( 'click', 'button', function() {
     type: 'inline',
     preloader: false,
     closeBtnInside: false,
-    mainClass: 'mfp-fade',
+    mainClass: 'mfp-fade gridlock gridlock-fluid',
   }); 
 
   $('.member-popup').magnificPopup({
@@ -573,34 +573,34 @@ $('.grid-filters').on( 'click', 'button', function() {
     });
   }
 
-  $(function($) {
-    var scrollElement = 'html, body';
-    $('html, body').each(function () {
-      var initScrollTop = $(this).attr('scrollTop');
-      $(this).attr('scrollTop', initScrollTop + 1);
-      if ($(this).attr('scrollTop') == initScrollTop + 1) {
-        scrollElement = this.nodeName.toLowerCase();
-        $(this).attr('scrollTop', initScrollTop);
-        return false;
-      }    
-    });
+  // $(function($) {
+  //   var scrollElement = 'html, body';
+  //   $('html, body').each(function () {
+  //     var initScrollTop = $(this).attr('scrollTop');
+  //     $(this).attr('scrollTop', initScrollTop + 1);
+  //     if ($(this).attr('scrollTop') == initScrollTop + 1) {
+  //       scrollElement = this.nodeName.toLowerCase();
+  //       $(this).attr('scrollTop', initScrollTop);
+  //       return false;
+  //     }    
+  //   });
   
-    // Smooth scrolling for internal links
-    $("a[href^='#']:not(.tabber-handle)").click(function(event) {
-      event.preventDefault();
+  //   // Smooth scrolling for internal links
+  //   $("a[href^='#']:not(.tabber-handle, .popup)").click(function(event) {
+  //     event.preventDefault();
   
-      var $this = $(this),
-      target = this.hash,
-      $target = $(target);
+  //     var $this = $(this),
+  //     target = this.hash,
+  //     $target = $(target);
   
-      $(scrollElement).stop().animate({
-        'scrollTop': $target.offset().top - 80
-      }, 300, 'swing', function() {
-        window.location.hash = target;
-      });
+  //     $(scrollElement).stop().animate({
+  //       'scrollTop': $target.offset().top - 80
+  //     }, 300, 'swing', function() {
+  //       window.location.hash = target;
+  //     });
   
-    });
-  });
+  //   });
+  // });
 
   if ( $('#member-widget').length ) {
 

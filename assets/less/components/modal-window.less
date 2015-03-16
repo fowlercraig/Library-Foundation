@@ -63,8 +63,11 @@
       width: 100%;
       max-width: 100%;
 
-      > div {
+      > div p {
         display: none;
+      }
+      > div p.price {
+        display: block;
       }
 
     }
@@ -75,5 +78,45 @@
     }
 
   }
+
+ .ticket {
+
+    hr {
+      display: none;
+    }
+    
+    .title {
+      margin: 0;
+      margin-bottom: 0;
+      line-height: 1.3;
+      .sentinel();
+    }
+
+    .alert {
+      .cat();
+      display: block;
+      color: @blue;
+    }
+
+    .tickets_description {
+      padding-top: 10px;
+      font-size: 14px;
+    }
+
+
+
+  } 
+
+  .quantity {
+    width: 100%;
+    background: @bgGray;
+    text-align: center;
+    .text {
+      border: 0!important;
+      background: none;
+      float: none;
+    }
+  }
+
 
 }

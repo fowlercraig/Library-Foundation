@@ -14,7 +14,8 @@
 
     li {
 
-      padding: 25px;
+      margin: 0;
+      margin-bottom: 25px;
       display: block;
       position: static;
 
@@ -29,7 +30,7 @@
       }
 
       &.widget_recent_entries, &.recent-posts-widget-with-thumbnails,
-      &.popularitypostswidget {
+      &.popularitypostswidget, &.popular-posts {
         padding-top: 0!important;
 
         ul {
@@ -42,6 +43,12 @@
             margin: 0;
             border-top: 1px solid @lightestGray;
 
+            &:after {
+              content: '';
+              display: block;
+              clear: both;
+            }
+
             .post-stats {
               .cat();
               font-weight: 500;
@@ -49,6 +56,10 @@
 
             br {
               display: none;
+            }
+
+            img {
+              max-width: 80px
             }
 
           }
@@ -127,9 +138,13 @@
     background: 0;
     .xoxo {
       li {
-        padding: 25px 0;
+        //padding: 25px 0;
       }
     }
+  }
+
+  .widget {
+    margin-bottom: 25px;
   }
 
   .widget.gallery {

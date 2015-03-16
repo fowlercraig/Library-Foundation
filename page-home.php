@@ -156,18 +156,22 @@
     <div id="upcoming-events-carousel" class="desktop-12 contained">
 
       <?php 
+        $args = array(
+          'showposts'   => 9,
+          'post_type'   => 'tribe_events',
+          'meta_query'  => array(
+            array(
+              'key'     => 'no_homepage',
+              'value'   => '0',
+              'compare' => 'NOT EXISTS'
+            )
+          )
+        );
+
         $temp = $wp_query; 
         $wp_query = null; 
         $wp_query = new WP_Query(); 
-        $wp_query->query('showposts=6&post_type=tribe_events'.'&paged='.$paged); 
-
-        // 'meta_query' => array(
-        // array(
-        // 'key' => 'field_name',
-        // 'value' => '1',
-        // 'compare' => '=='
-        // )
-        // )
+        $wp_query->query($args); 
 
         while ($wp_query->have_posts()) : $wp_query->the_post(); 
       ?>

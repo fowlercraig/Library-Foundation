@@ -1,45 +1,53 @@
 <?php 
 
-  if( tribe_get_end_date( null, false, 'Y-m-d H:i:s' ) < date( 'Y-m-d H:i:s' )) {
+  if( have_rows('related_ticket_groups') ) {
 
-    $ticketStatus = '<a id="event-status-button"  href="#" class="button disabled">This Event Has Passed</a>';
+    $ticketStatus = '<a id="event-status-button" href="#things" class="button jumpdown">RSVP for this Event</a>';
 
-  } else {
+   } else {
 
-    if(tribe_events_has_tickets()){
+    if( tribe_get_end_date( null, false, 'Y-m-d H:i:s' ) < date( 'Y-m-d H:i:s' )) {
 
-      if ( ! post_password_required() ) {
+      $ticketStatus = '<a id="event-status-button"  href="#" class="button disabled">This Event Has Passed</a>';
 
-      $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">RSVP for this Event</a>';
+    } else {
 
-      } else {
+      if(tribe_events_has_tickets()){
 
-      $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">Members Only</a>';
+        if ( ! post_password_required() ) {
+
+        $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">RSVP for this Event</a>';
+
+        } else {
+
+        $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">Members Only</a>';
+
+        }
 
       }
 
+      if(tribe_events_has_soldout()){
+
+        $soldoutimage = 'http://i.imgur.com/znE1JTm.png';
+        $ticketStatus = '<a id="event-status-button"  href="'.$soldoutimage.'" class="button closed">Full/Standby</a>'; ?>
+
+        <script>
+          $(window).load(function(){
+            setTimeout(function(){
+              $.magnificPopup.open({
+                items: {
+                  src: '<?php echo $soldoutimage; ?>'
+                },
+                mainClass: 'mfp-fade',
+                type: 'image'
+              });
+            }, 0);
+          });
+        </script>
+
+      <?php }
+
     }
-
-    if(tribe_events_has_soldout()){
-
-      $soldoutimage = 'http://i.imgur.com/znE1JTm.png';
-      $ticketStatus = '<a id="event-status-button"  href="'.$soldoutimage.'" class="button closed">Full/Standby</a>'; ?>
-
-      <script>
-        $(window).load(function(){
-          setTimeout(function(){
-            $.magnificPopup.open({
-              items: {
-                src: '<?php echo $soldoutimage; ?>'
-              },
-              mainClass: 'mfp-fade',
-              type: 'image'
-            });
-          }, 0);
-        });
-      </script>
-
-    <?php }
 
   }
 
@@ -62,5 +70,7 @@
 
 
 <div id="tickets-form" class="mfp-hide white-popup-block modal-window">
+  <?php if( have_rows('related_ticket_groups') ){} else {?>
   <?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
+  <?php }?>
 </div>

@@ -9,7 +9,14 @@ ob_start();
 <form action="<?php echo esc_url( add_query_arg( 'wootickets_process', 1, $woocommerce->cart->get_cart_url() ) ); ?>" class="cart" method="post" enctype='multipart/form-data'>
 	<h2 class="tribe-events-tickets-title"><?php _e( 'Tickets', 'tribe-wootickets' ) ?></h2>
 
-	<table width="100%" class="tribe-events-tickets">
+	
+	
+	<?php if( have_rows('related_ticket_groups') ):?>
+	<div id="things">
+	<?php include locate_template('templates/event-tabs.php'); ?>
+	<?php endif; ?>
+
+	<div width="100%" class="tribe-events-tickets">
 		<?php
 		foreach ( $tickets as $ticket ) {
 
@@ -42,8 +49,21 @@ ob_start();
 
 				echo sprintf( "<input type='hidden' name='product_id[]' value='%d'>", $ticket->ID );
 
-				echo "<tr>";
-				echo "<td class='woocommerce'>";
+				$ticket_id = $ticket->ID;
+
+				// strip out all whitespace
+				$zname_clean = $ticket->name;
+				$zname_clean = preg_replace('/\s*/', '', $zname_clean);
+				// convert the string to all lowercase
+				$zname_clean = strtolower($zname_clean);
+
+				if( have_rows('related_ticket_groups') ) {
+					echo "<div class='row ticket ticket_$zname_clean'>";
+				} else {
+					echo "<div class='row ticket'>";
+				}
+	
+				echo "<div class='desktop-2 woocommerce'>";
 
 				if ( $product->is_in_stock() ) {
 
@@ -64,38 +84,46 @@ ob_start();
 				} else {
 					echo "<span class='tickets_nostock'>" . esc_html__( 'Out of stock!', 'tribe-wootickets' ) . "</span>";
 				}
-				echo "</td>";
+				echo "</div>";
 
-				echo "<td nowrap='nowrap' class='tickets_name'>";
-				echo $ticket->name;
-				echo "</td>";
+				echo "<div nowrap='nowrap' class='desktop-10 tickets_name'>";
 
-				echo "<td class='tickets_price'>";
+				echo '<h3 class="title">';
 				echo $this->get_price_html( $product );
-				echo "</td>";
+				echo '—';
+				echo $ticket->name;
+				echo '</h3>';
+				echo "</div>";
 
-				echo "<td class='tickets_description'>";
+				echo "<div class='desktop-10 right tickets_description'>";
 				echo $ticket->description;
-				echo "</td>";
+				echo "</div>";
+				echo "<hr>";
 
-				echo "</tr>";
+				echo "</div>";
 			}
 
 		}
 
 		if ( $is_there_any_product_to_sell ) : ?>
-			<tr>
-				<td colspan="4" class='woocommerce add-to-cart'>
+			<div>
+				<div colspan="4" class='woocommerce add-to-cart'>
 
 					<button type="submit"
 					        class="button alt"><?php esc_html_e( 'RSVP for this Event', 'tribe-wootickets' );?></button>
 
-				</td>
-			</tr>
+				</div>
+			</div>
 		<?php endif ?>
-	</table>
-</form>
+	</div>
 
+<?php if( have_rows('related_ticket_groups') ):?>
+	</div>
+	<?php endif; ?>
+
+
+</form>
+<?php include locate_template('templates/event-tickets.php'); ?>
 <?php
 $content = ob_get_clean();
 if ( $is_there_any_product ) {
