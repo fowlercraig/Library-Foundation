@@ -2,11 +2,12 @@
 
   max-width: 700px;
   background: @white;
-  padding: @gutter*2;
+  padding: 20px;
   margin: auto;
   box-shadow: 0 0 50px 10px @black25;
   border-radius: 4px;
   position: relative;
+  overflow: hidden;
 
   &.member {
 
@@ -79,6 +80,33 @@
 
   }
 
+  h2 {
+    .sentinel();
+    margin: 0;
+  }
+
+  .message {
+    margin-bottom: 15px;
+  }
+
+  &.pass form {
+    > div {
+      margin: 0 -@gutter*2;
+    }
+    .login-btn {
+      .font_size(14);
+      background: @blue;
+      border-radius: 3px;
+      box-shadow: none;
+      margin: 0 0 10px;
+      padding: 0 10px;
+      height: 38px;
+      line-height: 38px;
+      .cat();
+      color: @white;
+    }
+  }
+
  .ticket {
 
     hr {
@@ -92,10 +120,14 @@
       .sentinel();
     }
 
-    .alert {
+    .alert, .noted {
       .cat();
       display: block;
       color: @blue;
+      &.active {
+        color: @lighterGray;
+        pointer-events: none;
+      }
     }
 
     .tickets_description {
@@ -103,20 +135,54 @@
       font-size: 14px;
     }
 
-
+    .quantity {
+      padding-top: 5px;
+    }
 
   } 
 
-  .quantity {
-    width: 100%;
-    background: @bgGray;
-    text-align: center;
-    .text {
-      border: 0!important;
-      background: none;
-      float: none;
+
+}
+
+#password-entry {
+
+  height: 0px;
+  overflow: hidden;
+  position: relative;
+
+  .cancel {
+    position: absolute;
+    color: @black75;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  form {
+
+    input {
+      margin-bottom: 0;
+      border: none;
+    }
+    .login {
+      .font_size(14);
+      background: @black25;
+      border-radius: 3px;
+      box-shadow: none;
+      margin: 0 0 10px;
+      padding: 0 10px;
+      height: 37px;
+      line-height: 37px;
+      .cat();
+      color: @white;
     }
   }
 
+}
 
+#password-entry.active {
+  background: @blue;
+  margin: -20px;
+  margin-top: 20px;
+  padding: 0 20px;
 }

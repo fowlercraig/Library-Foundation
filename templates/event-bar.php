@@ -73,4 +73,28 @@
   <?php if( have_rows('related_ticket_groups') ){} else {?>
   <?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
   <?php }?>
+  <div id="password-entry">
+    <a href="#" class="cancel"><i class="ss-icon ss-gizmo">close</i></a>
+
+    <?php if( have_rows('password_protected_2', 'options') ): ?>
+    <?php while ( have_rows('password_protected_2', 'options') ) : the_row(); ?>
+
+    <?php
+      $ticket_name = get_sub_field('event_name');
+      $ticket_name = preg_replace('/[^A-Za-z0-9]/', '', $ticket_name);
+      // convert the string to all lowercase
+      $ticket_name = strtolower($ticket_name);
+      ?>
+
+    <div id="<?php echo $ticket_name; ?>_box">
+      <form action="" method="post" class="row">
+        <input type="password" id="alt_loginpassword_<?php echo $ticket_name; ?>" placeholder="Password" class="desktop-9 tablet-5 mobile-3" />
+        <input type="button" id="alt_login_<?php echo $ticket_name; ?>" value="Unlock" class="login desktop-3 tablet-1 mobile-3" />
+      </form>
+    </div>
+
+    <?php endwhile; ?>
+    <?php endif; ?>
+
+  </div>
 </div>

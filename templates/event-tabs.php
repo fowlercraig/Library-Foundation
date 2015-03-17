@@ -1,9 +1,9 @@
 <div class="tabbed">
   <menu class="tabber-menu">
-    <a href="#tab-1" class="tabber-handle">Tier 1</a>
-    <a href="#tab-2" class="tabber-handle">Tier 2</a>
+    <a href="#tab-1" class="active tabber-handle"><?php the_field('tab_1_name'); ?></a>
+    <a href="#tab-2" class="tabber-handle"><?php the_field('tab_2_name'); ?></a>
   </menu>
-  <div class="tabber-tab" id="tab-1"></div>
+  <div class="active tabber-tab" id="tab-1"></div>
   <div class="tabber-tab" id="tab-2"></div>
 </div>
 
@@ -23,7 +23,7 @@
     setup_postdata( $post ); 
 
     $title = get_the_title($post);
-    $title = preg_replace('/\s*/', '', $title);
+    $title = preg_replace('/[^A-Za-z0-9]/', '', $title);
     // convert the string to all lowercase
     $title = strtolower($title);
 
@@ -43,7 +43,7 @@
     setup_postdata( $post ); 
 
     $title = get_the_title($post);
-    $title = preg_replace('/\s*/', '', $title);
+    $title = preg_replace('/[^A-Za-z0-9]/', '', $title);
     // convert the string to all lowercase
     $title = strtolower($title);
 

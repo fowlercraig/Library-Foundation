@@ -216,6 +216,10 @@ initPhotoSwipeFromDOM('.event-gallery');
 
   $('#faq-accordion').accordion();
 
+  // Stepper
+
+  $("input[type='number']").stepper();
+
   // Selecter
 
   $(".sidebar select").selecter({

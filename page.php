@@ -10,7 +10,7 @@
 
   } elseif ( is_page( 'blog' ) ) { 
 
-    include locate_template('page-blog.php' );
+    //include locate_template('page-blog-temp.php' );
 
   } elseif ( is_page( 'archive' ) ) { 
 

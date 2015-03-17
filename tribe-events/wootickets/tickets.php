@@ -53,17 +53,18 @@ ob_start();
 
 				// strip out all whitespace
 				$zname_clean = $ticket->name;
-				$zname_clean = preg_replace('/\s*/', '', $zname_clean);
+				$zname_clean = preg_replace('/[^A-Za-z0-9]/', '', $zname_clean);
 				// convert the string to all lowercase
 				$zname_clean = strtolower($zname_clean);
 
 				if( have_rows('related_ticket_groups') ) {
-					echo "<div class='row ticket ticket_$zname_clean'>";
+					echo "<div id='ticket_$zname_clean' class='row ticket ticket_$zname_clean'>";
+					
 				} else {
-					echo "<div class='row ticket'>";
+					echo "<div id='ticket_$zname_clean' class='row ticket ticket_$zname_clean'>";
 				}
 	
-				echo "<div class='desktop-2 woocommerce'>";
+				echo "<div class='desktop-2 woocommerce padded'>";
 
 				if ( $product->is_in_stock() ) {
 
@@ -86,7 +87,7 @@ ob_start();
 				}
 				echo "</div>";
 
-				echo "<div nowrap='nowrap' class='desktop-10 tickets_name'>";
+				echo "<div nowrap='nowrap' class='desktop-10 tickets_name padded'>";
 
 				echo '<h3 class="title">';
 				echo $this->get_price_html( $product );
@@ -95,7 +96,7 @@ ob_start();
 				echo '</h3>';
 				echo "</div>";
 
-				echo "<div class='desktop-10 right tickets_description'>";
+				echo "<div class='desktop-10 right tickets_description padded'>";
 				echo $ticket->description;
 				echo "</div>";
 				echo "<hr>";
@@ -123,7 +124,11 @@ ob_start();
 
 
 </form>
+<?php if( have_rows('related_ticket_groups') ):?>
+<?php include locate_template('templates/event-tickets-alt.php'); ?>
+<?php else: ?>
 <?php include locate_template('templates/event-tickets.php'); ?>
+<?php endif; ?>
 <?php
 $content = ob_get_clean();
 if ( $is_there_any_product ) {
