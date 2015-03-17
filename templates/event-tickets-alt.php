@@ -61,6 +61,25 @@ $(document).ready(function(){
 
   });
 
+  // $("#ticket_<?php echo $ticket_name; ?>").click(function(){
+  //   $.magnificPopup.open({
+  //     items: {
+  //       src: '#modal_<?php echo $ticket_name; ?>_box',
+  //       type: 'inline',
+  //     },
+  //     preloader: false,
+  //     mainClass: 'mfp-fade gridlock gridlock-fluid',
+  //     callbacks: {
+  //       open: function() {
+  //         $('body').addClass('.members-only-ignited');
+  //       },
+  //       close: function() {
+  //         $('body').removeClass('.members-only-ignited');
+  //       },
+  //     },
+  //   }, 0);
+  // });
+
 <?php endwhile; ?>
 
 });
@@ -80,7 +99,7 @@ $(document).ready(function(){
       },
     }
   });
-});
+
 
 </script>
 
