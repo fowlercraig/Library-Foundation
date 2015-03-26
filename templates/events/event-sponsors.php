@@ -5,12 +5,16 @@
 <div id="sponsors" class="sponsor-list row">
 
   <div class="item desktop-12 tablet-6 mobile-3 section-title header">
+    
     <h3 class="event-section-title">Sponsors</h3>
+
   </div>
 
   <?php if ( get_field('add_sponsor_description')) : ?>
-  <div class="desktop-12">
+  <div id="sponsor-desc" class="desktop-12">
+    <div class="wrapper">
   <?php the_field('sponsor_description'); ?>
+</div>
   </div>
   <?php endif; ?>
 

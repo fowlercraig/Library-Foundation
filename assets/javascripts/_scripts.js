@@ -303,6 +303,13 @@ initPhotoSwipeFromDOM('.event-gallery');
     addActiveClass: true,
     loop: true,
     slidesSpacing: 35,
+    transitionSpeed: 600,
+    autoPlay: {
+      // autoplay options go gere
+      enabled: true,
+      pauseOnHover: true,
+      delay: 5000,
+    },
     visibleNearby: {
       enabled: true,
       centerArea: 0.85,
@@ -344,6 +351,27 @@ initPhotoSwipeFromDOM('.event-gallery');
     slidesToShow: 3,
     slidesToScroll: 2,
     accessibility: false,
+    autoplay: false,
+    speed: 600,
+    autoplaySpeed: 5000,
+  });
+
+  $("#home-upcoming .prevBtn").click(function(){
+    $('#upcoming-events-carousel').slick('slickPrev');  
+  });
+
+  $("#home-upcoming .nextBtn").click(function(){
+    $('#upcoming-events-carousel').slick('slickNext');
+  });
+
+  if($('#upcoming-events-carousel').slick('slickCurrentSlide') == 0){
+    $("#home-upcoming .prevBtn").addClass('disabled');
+  }
+
+  $('#upcoming-events-carousel').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    if($('#upcoming-events-carousel').slick('slickCurrentSlide') > 0){
+      $("#home-upcoming .prevBtn").removeClass('disabled');
+    }
   });
 
   $(".amount").text(function () {

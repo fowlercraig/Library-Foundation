@@ -35,9 +35,14 @@
 
 <?php endwhile; ?>
 
-  <div class="item message">
-    <small><?php the_field('book_message'); ?></small>
-  </div>
-  
 </div>
+<?php if( get_field('book_message')):?>
+
+<div class="item message">
+  <small><?php the_field('book_message'); ?></small>
+</div>
+  
+<?php endif; ?>
+  
+
 <?php endif; ?>

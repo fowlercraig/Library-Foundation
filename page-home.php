@@ -153,19 +153,21 @@
         </div>
       </div>
     </div>
+    <a class="carouselBtn prevBtn"><i class="ss-icon ss-gizmo">navigateleft</i></a>
+    <a class="carouselBtn nextBtn"><i class="ss-icon ss-gizmo">navigateright</i></a>
     <div id="upcoming-events-carousel" class="desktop-12 contained">
 
       <?php 
         $args = array(
           'showposts'   => 9,
           'post_type'   => 'tribe_events',
-          'meta_query'  => array(
-            array(
-              'key'     => 'no_homepage',
-              'value'   => '0',
-              'compare' => 'NOT EXISTS'
-            )
-          )
+          // 'meta_query'  => array(
+          //   array(
+          //     'key'     => 'no_homepage',
+          //     'value'   => '0',
+          //     'compare' => 'NOT EXISTS'
+          //   )
+          // )
         );
 
         $temp = $wp_query; 

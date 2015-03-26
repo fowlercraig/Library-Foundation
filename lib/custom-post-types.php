@@ -88,6 +88,6 @@ function create_archive() {
 // Hook into the 'init' action
 add_action( 'init', 'create_archive', 0 );
 
-add_theme_support( 'post-formats', array( 'gallery', 'image', 'quote', 'video', 'audio' ) );
+add_theme_support( 'post-formats', array( 'gallery', 'quote', 'video', 'audio' ) );
 
 ?>

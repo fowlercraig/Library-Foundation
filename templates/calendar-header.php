@@ -86,7 +86,7 @@
     <div class="desktop-12 tablet-6 mobile-3">
       <?php if ( is_tax() ) :?>
     <ul class="parent-links">
-      <li><a href="/calendar">Calendar</li>
+      <li><a href="/calendar">Calendar</a></li>
     </ul>
     <?php endif; ?>
       <?php if ( is_tax() ) :?>
