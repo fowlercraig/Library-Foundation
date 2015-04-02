@@ -128,34 +128,34 @@ add_action( 'woocommerce_thankyou', 'so_28348735_category_based_thank_you_messag
  * @since   1.0
  */
 
-function patricks_billing_fields( $fields ) {
-  global $woocommerce;
+// function patricks_billing_fields( $fields ) {
+//   global $woocommerce;
 
-  // if the total is more than 0 then we still need the fields
-  if ( 0 != $woocommerce->cart->total ) {
-    return $fields;
-  }
+//   // if the total is more than 0 then we still need the fields
+//   if ( 0 != $woocommerce->cart->total ) {
+//     return $fields;
+//   }
 
-  // return the regular billing fields if we need shipping fields
-  if ( $woocommerce->cart->needs_shipping() ) {
-    return $fields;
-  }
+//   // return the regular billing fields if we need shipping fields
+//   if ( $woocommerce->cart->needs_shipping() ) {
+//     return $fields;
+//   }
 
-  // we don't need the billing fields so empty all of them except the email
-  unset( $fields['billing_country'] );
-  //unset( $fields['billing_first_name'] );
-  //unset( $fields['billing_last_name'] );
-  unset( $fields['billing_company'] );
-  unset( $fields['billing_address_1'] );
-  unset( $fields['billing_address_2'] );
-  unset( $fields['billing_city'] );
-  unset( $fields['billing_state'] );
-  //unset( $fields['billing_postcode'] );
-  unset( $fields['billing_phone'] );
+//   // we don't need the billing fields so empty all of them except the email
+//   unset( $fields['billing_country'] );
+//   //unset( $fields['billing_first_name'] );
+//   //unset( $fields['billing_last_name'] );
+//   unset( $fields['billing_company'] );
+//   unset( $fields['billing_address_1'] );
+//   unset( $fields['billing_address_2'] );
+//   unset( $fields['billing_city'] );
+//   unset( $fields['billing_state'] );
+//   //unset( $fields['billing_postcode'] );
+//   unset( $fields['billing_phone'] );
 
-  return $fields;
-}
-add_filter( 'woocommerce_billing_fields', 'patricks_billing_fields', 20 );
+//   return $fields;
+// }
+// add_filter( 'woocommerce_billing_fields', 'patricks_billing_fields', 20 );
 
 
 // That's all folks!
