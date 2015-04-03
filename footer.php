@@ -1,19 +1,19 @@
 <?php if ( (get_post_type() == 'tribe_events' && tribe_is_upcoming()) || tribe_is_month() || tribe_is_by_date() ): ?>
-<?php if (!is_tax( 'tribe_events_cat' )): ?>
-<?php if( have_rows('spotlight_carousel', 'option') ): ?>
+  <?php if (!is_tax( 'tribe_events_cat' )): ?>
+  <?php if( have_rows('spotlight_carousel', 'option') ): ?>
 
-<div id="home-featured">
-  <div class="row">
-    <header class="desktop-10 centered">
-      <hr>
-      <a href="#spotlight-events">
-        <i class="ss-icon ss-gizmo home-arrow left ">down</i>
-        <h3 id="spotlight-events"><a href="/calendar">Spotlight<span></a></h3>
-      </a>
-    </header>
-    <div class="desktop-12">
-      <div class="slider rsMinW">
-        <?php 
+  <div id="home-featured">
+    <div class="row">
+      <header class="desktop-10 centered">
+        <hr>
+        <a href="#spotlight-events">
+          <i class="ss-icon ss-gizmo home-arrow left ">down</i>
+          <h3 id="spotlight-events"><a href="/calendar">Spotlight<span></a></h3>
+        </a>
+      </header>
+      <div class="desktop-12">
+        <div class="slider rsMinW">
+          <?php 
 
           while ( have_rows('spotlight_carousel', 'option') ) : the_row(); 
 
@@ -26,7 +26,7 @@
           if( $post_object ): 
 
             $post = $post_object;
-            setup_postdata($post); 
+          setup_postdata($post); 
 
           get_template_part('templates/home/slider', 'bottom' );
 
@@ -34,20 +34,20 @@
           endif;
           endwhile;
 
-        ?>
+          ?>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<hr>
+  <hr>
 
 <?php endif; ?>
 <?php endif; ?>
 <?php endif; ?>
 
 <?php if ( (get_post_type() == 'tribe_events' && tribe_is_upcoming()) || tribe_is_month() || tribe_is_by_date() ): ?>
-<?php include locate_template('templates/calendar-mediagraphic.php'); ?>
+  <?php include locate_template('templates/calendar-mediagraphic.php'); ?>
 <?php endif; ?>
 
 <?php include locate_template('/templates/logotogglin.php' );?>
@@ -78,8 +78,7 @@
 <?php wp_footer(); ?>
 <?php include locate_template('/lib/photoswipe.php' );?>
 <?php include locate_template('/templates/search-footer.php' );?>
-<script src="//use.typekit.net/kfw6qzi.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
+
 
 </body>
 </html>

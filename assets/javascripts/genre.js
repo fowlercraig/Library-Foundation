@@ -1,6 +1,7 @@
 //Genre Ajax Filtering
-jQuery(function($)
-{
+//$(function($)
+//	$(function()
+	//{
 	//Load posts on page load
 	genre_get_posts();
 
@@ -34,7 +35,7 @@ jQuery(function($)
 	function getSelectedGenres()
 	{
 		var genres = [];
-	
+
 		$("#genre-filter li input:checked").each(function() {
 			var val = $(this).val();
 			genres.push(val);
@@ -106,4 +107,4 @@ jQuery(function($)
 		});				
 	}
 	
-});
+//});
