@@ -75,12 +75,22 @@
     position: relative;
     float: left;
 
+    @media @mobileC {
+      width: 80px;
+      height: 80px;
+    }
+
   }
   .swiper-container {
 
     width: @logoWidthMax;
     height: @logoWidthMax;
     position: absolute;
+
+    @media @mobileC {
+      width: 80px;
+      height: 80px;
+    }
 
   }
   .swiper-slide {
@@ -93,6 +103,11 @@
   #logo {
 
     max-width: @logoWidthMax;
+    
+    @media @mobileC {
+      max-width: 70px;
+    }
+
     display: block;
     margin-top: -@gutter;
     margin-right: @gutter;

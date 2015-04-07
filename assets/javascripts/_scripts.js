@@ -211,6 +211,9 @@ initPhotoSwipeFromDOM('.event-gallery');
   // Sizer
 
   $("#staff, #sponsors, #page-list.quadrant").sizer();
+  $("#footer-modules").sizer({
+   //minWidth: 768
+  });
 
   // Accordion
 
@@ -327,7 +330,7 @@ initPhotoSwipeFromDOM('.event-gallery');
     fadeinLoadedSlide: false,
     addActiveClass: true,
     loop: true,
-    navigateByClick: false
+    navigateByClick: false,
   }); 
 
   $("#event-spotlight-slider .slider").royalSlider({
@@ -354,6 +357,32 @@ initPhotoSwipeFromDOM('.event-gallery');
     autoplay: false,
     speed: 600,
     autoplaySpeed: 5000,
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 3,        
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
   });
 
   $("#home-upcoming .prevBtn").click(function(){
@@ -557,6 +586,8 @@ $('.grid-filters').on( 'click', 'button', function() {
 
   // Parallax BG
 
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {} else {
+
   $window = $(window);
 
   $('.page-header, .simple-header, .simple-header .inner').each(function(){
@@ -568,6 +599,8 @@ $('.grid-filters').on( 'click', 'button', function() {
     });
 
   }); 
+
+  }
 
   // Cart Modal Window
 
@@ -601,6 +634,8 @@ $('.grid-filters').on( 'click', 'button', function() {
 
   // Sticky Menu
 
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {} else {
+
   if ( $('#head').length ) {
     var sticky = new Waypoint.Sticky({
       element: $('#head')[0],
@@ -614,6 +649,8 @@ $('.grid-filters').on( 'click', 'button', function() {
       wrapper: '<div class="event-bar-wrapper"/>',
       offset: 50,
     });
+  }
+
   }
 
   // $(function($) {
@@ -790,6 +827,34 @@ $(document).ready(function(){
     },
 }).data('smoothState');
 })(jQuery);
+
+$( ".single_add_to_cart_button" ).each(function(){
+
+    var product_id = jQuery(this).attr('rel');
+    var el = jQuery(this);
+
+    el.click(function() {
+
+            var data = {
+                action: 'add_foobar',
+                product_id: product_id
+            };
+
+            jQuery.post('/wp-admin/admin-ajax.php' , data, function(response) {
+                if(response != 0) {
+                    // do something
+                } else {
+                    // do something else
+                }
+
+            });
+
+
+        return false;
+
+    });
+
+});
 
 // SmartAjax.bind('a', {
 //   reload: false,

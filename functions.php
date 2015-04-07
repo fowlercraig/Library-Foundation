@@ -11,7 +11,8 @@ include_once locate_template('/lib/enque-js.php' );
 include_once locate_template('/lib/woo-disablebilling.php' );
 //include_once locate_template('/lib/json-api/json-api.php' );
 include_once locate_template('/lib/videoembed.php' );
-include_once locate_template('/lib/ajax-wp.php' );
+//include_once locate_template('/lib/ajax-wp.php' );
+include_once locate_template('/lib/woo-ajax.php' );
 //include_once locate_template('/lib/htmlcleanup.php' );
 
 // ACF Includes Nonsense

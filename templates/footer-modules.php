@@ -19,13 +19,15 @@
 
     ?>
 
-    <div class="desktop-6 module <?php echo $post->post_name;?>">
+    <div class="desktop-6 mobile-3 tablet-3 module sizer-item <?php echo $post->post_name;?>">
       <div class="row">
         <div class="desktop-6"><img src="<?php echo $thumb; ?>" alt="" class="img-responsive alignleft" /></div>
         <div class="desktop-6 padded">
-          <h3 class="footer-module-title"><?php the_title(); ?></h3>
-          <p><?php the_sub_field('description'); ?></p>
-          <a href="<?php the_permalink(); ?>" class="button">Learn More</a>
+          <div class="inner">
+            <h3 class="footer-module-title"><?php the_title(); ?></h3>
+            <p><?php the_sub_field('description'); ?></p>
+            <a href="<?php the_permalink(); ?>" class="button">Learn More</a>
+          </div>
         </div>
       </div>
     </div>

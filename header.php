@@ -59,7 +59,7 @@
           </div>
         </div>
       </a>
-      <?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?>
+      <div class="main-nav"><?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?></div>
       <a href="#" class="search"><i class="ss-gizmo ss-icon">search</i></a>
       <a href="<?php echo get_the_permalink(289); ?>" class="button right" id="become-member-btn">Become a Member</a>
     </nav>

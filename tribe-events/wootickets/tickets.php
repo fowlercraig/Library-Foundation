@@ -110,8 +110,10 @@ ob_start();
 			<div>
 				<div colspan="4" class='woocommerce add-to-cart'>
 
-					<button type="submit"
-					        class="button alt"><?php esc_html_e( 'RSVP for this Event', 'tribe-wootickets' );?></button>
+					
+
+					<button type="submit" name="wootickets_process" value="1"
+					        class="button alt"><?php esc_html_e( 'Add to cart', 'tribe-wootickets' );?></button>        
 
 				</div>
 			</div>

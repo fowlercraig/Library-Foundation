@@ -33,6 +33,12 @@
   .sentinel();
   font-size: 6em;
   font-weight: 200;
+  @media @tabletC {
+    font-size: 4.5em;
+  }
+  @media @mobileC {
+    font-size: 3em;
+  }
 }
 
 .page-content {
@@ -47,7 +53,11 @@
 
   h1,h2,h3,h4,h5,h6 {
 
-    line-height: 1.45
+    line-height: 1.45;
+
+    @media @mobileC {
+      font-size: 120%;
+    }
 
   }
 

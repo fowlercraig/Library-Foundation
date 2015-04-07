@@ -40,6 +40,10 @@
 
     include locate_template('page-confirmation.php' );
 
+  } elseif ( is_page( 'protected' ) ) { 
+
+    include locate_template('page-protected.php' );  
+
   } else { 
 
     include locate_template('page-default.php' );

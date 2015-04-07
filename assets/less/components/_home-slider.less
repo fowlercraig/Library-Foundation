@@ -88,6 +88,13 @@
         color: @white;
         font-size: 4.1em;
 
+        @media @mobileC {
+          font-size: 40px;
+          br {
+            display: none;
+          }
+        }
+
       }
 
     }
@@ -119,6 +126,12 @@
 
         &.sub-title {
            background: none;
+           @media @mobileC {
+            display: none;
+           }
+           @media @mobile {
+            display: none;
+           }
         }
       }
 
@@ -446,6 +459,14 @@
     color: @white75;
     font-size: 18px;
 
+    @media @tablet {
+      padding: 5px 20px;
+    }
+
+    @media @mobileC {
+      padding: 5px 20px;
+    }
+
   }
 
   .meta {
@@ -457,6 +478,14 @@
     z-index: 29;
     background: @blue;
     padding: 15px 0 10px;
+
+    @media @mobileC {
+      padding: 10px;      
+    }
+
+    @media @tablet {
+      padding: 20px;      
+    }
 
     &:after {
       content: '';
@@ -472,6 +501,17 @@
       line-height: 35px;
       color: @white50;
 
+      @media @mobileC {
+        float: left;
+      }
+
+      @media @tablet {
+        float: left;
+        line-height: 1;
+        height: auto;
+        clear: both;
+      }
+
       &:hover {
         color: @white;
       }
@@ -485,6 +525,16 @@
       line-height: 1;
       margin: 0;
       float: left;
+
+      @media @tablet {
+        font-size: 24px;
+        line-height: 1.4;
+      }
+
+      @media @mobileC {
+        font-size: 20px;
+        line-height: 1.4;
+      }
 
       br {
         display: none;

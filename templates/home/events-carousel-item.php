@@ -1,6 +1,6 @@
 <div class="slide">
   <div class="row">
-    <div class="desktop-12 mobile-3 tablet-6">
+    <div class="">
 
       <div class="category">
         <?php 

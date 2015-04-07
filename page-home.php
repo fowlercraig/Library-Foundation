@@ -114,7 +114,7 @@
 </div>
 
 <div class="row">
-  <div class="desktop-10 centered arrow-wrapper">
+  <div class="desktop-10 tablet-6 mobile-3 centered arrow-wrapper">
     <a href="#upcoming-events">
       <i class="ss-icon ss-gizmo home-arrow left">down</i>
       <h3 id="upcoming-events">Upcoming Events</h3>
@@ -128,12 +128,12 @@
   <div class="row">
     <div class="desktop-10 centered">
       <div class="row">
-        <header class="desktop-8 tablet-5">
+        <header class="desktop-8 tablet-4 mobile-3">
           <p>
             From Member events to ALOUD programs, Library Store On Wheels stops and much much more, stay up on the Library Foundation’s activities.
           </p>
         </header>
-        <div class="desktop-2 tablet-1 text-right right">
+        <div id="carousel-date-select" class="desktop-2 tablet-2 mobile-3 text-right right">
 
           <select name="selecter_basic" id="selecter_basic" class="selecter_basic" data-selecter-options='{"label":"Jump to Month"}'>
             <option value="/calendar/?action=tribe_list&tribe_paged=1&tribe_event_display=list&tribe-bar-date=<?php echo date("Y"); ?>-01-01">January</option>
@@ -193,14 +193,14 @@
 
 <div id="home-featured">
   <div class="row">
-    <header class="desktop-10 centered">
+    <header class="desktop-10 tablet-6 mobile-3 centered">
       <hr>
       <a href="#spotlight-events">
         <i class="ss-icon ss-gizmo home-arrow left ">down</i>
         <h3 id="spotlight-events"><a href="/calendar">Spotlight<span> | View Full Calendar</span></a></h3>
       </a>
     </header>
-    <div class="desktop-12">
+    <div class="desktop-12 tablet-6 mobile-3">
       <div class="slider rsMinW">
         <?php 
 
