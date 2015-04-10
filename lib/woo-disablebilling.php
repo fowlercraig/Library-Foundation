@@ -199,3 +199,25 @@ function virtual_order_payment_complete_order_status( $order_status, $order_id )
   // non-virtual order, return original status
   return $order_status;
 }
+
+
+function conditional_checkout_fields_products( $fields ) {
+
+    $cart = WC()->cart->get_cart();
+
+    foreach ( $cart as $item_key => $values ) {
+
+        $product_cats = wp_get_post_terms( $product->id, 'product_cat' );
+
+        $product = $values['data'];
+
+        if (in_array("free-lfla-event", $product_cats)) {
+            unset( $fields['billing']['billing_galaxy'] );
+        }
+
+        //var_dump($product_cats);
+    }
+
+    return $fields;
+}
+add_filter( 'woocommerce_checkout_fields', 'conditional_checkout_fields_products' );

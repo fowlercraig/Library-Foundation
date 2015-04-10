@@ -9016,8 +9016,6 @@ p.demo_store {
 }
 .modal-window.member .variations_button {
   display: inline-block;
-  height: 30px;
-  line-height: 30px;
   float: right;
 }
 .modal-window.member .single_variation {

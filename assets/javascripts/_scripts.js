@@ -828,33 +828,33 @@ $(document).ready(function(){
 }).data('smoothState');
 })(jQuery);
 
-$( ".single_add_to_cart_button" ).each(function(){
+// $( ".single_add_to_cart_button" ).each(function(){
 
-    var product_id = jQuery(this).attr('rel');
-    var el = jQuery(this);
+//     var product_id = jQuery(this).attr('rel');
+//     var el = jQuery(this);
 
-    el.click(function() {
+//     el.click(function() {
 
-            var data = {
-                action: 'add_foobar',
-                product_id: product_id
-            };
+//             var data = {
+//                 action: 'add_foobar',
+//                 product_id: product_id
+//             };
 
-            jQuery.post('/wp-admin/admin-ajax.php' , data, function(response) {
-                if(response != 0) {
-                    // do something
-                } else {
-                    // do something else
-                }
+//             jQuery.post('/wp-admin/admin-ajax.php' , data, function(response) {
+//                 if(response != 0) {
+//                     // do something
+//                 } else {
+//                     // do something else
+//                 }
 
-            });
+//             });
 
 
-        return false;
+//         return false;
 
-    });
+//     });
 
-});
+// });
 
 // SmartAjax.bind('a', {
 //   reload: false,
