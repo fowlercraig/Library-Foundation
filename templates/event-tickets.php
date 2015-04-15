@@ -65,6 +65,7 @@ $(window).keydown(function(event){
 });
 
 <?php if( !have_rows('related_ticket_groups') ):?>
+
   $(".ticket .noted").click(function(){
 
     $('#password-entry').addClass('active').animate({
@@ -72,6 +73,8 @@ $(window).keydown(function(event){
       paddingTop: 20,
       paddingBottom: 20
     },300);
+
+    $("#<?php echo $ticket_name; ?>_box").show();
 
     // var ticketid = $(this).parent().parent().attr('id').replace('ticket_','');
     // var ticketbox = '#' + ticketid + '_box form';
@@ -127,6 +130,7 @@ $(window).keydown(function(event){
       }
     });
   });
+});
 
 </script>
 <?php endif; ?>

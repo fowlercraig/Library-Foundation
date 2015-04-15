@@ -1,4 +1,4 @@
-<?php Themewrangler::setup_page();get_header(); ?>
+<?php Themewrangler::setup_page();get_header(/***Template Name: Upcoming Events */); ?>
 
 <?php get_template_part('templates/page', 'header-simple'); ?>
 
@@ -10,7 +10,7 @@
   $upcoming->query( array(
     'post_type'      => 'tribe_events',
     'eventDisplay'   => 'upcoming',
-    'posts_per_page' => 10,
+    'posts_per_page' => 9999,
     'tax_query' => array(
       array(
         'taxonomy' => 'tribe_events_cat',

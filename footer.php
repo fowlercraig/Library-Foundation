@@ -13,20 +13,20 @@
       </header>
       <div class="desktop-12">
         <div class="slider rsMinW">
-          <?php 
+          <?php
 
-          while ( have_rows('spotlight_carousel', 'option') ) : the_row(); 
+          while ( have_rows('spotlight_carousel', 'option') ) : the_row();
 
           // $thingie = get_sub_field('slide_post');
           // $post = $thingie;
-          // setup_postdata( $post ); 
+          // setup_postdata( $post );
 
           $post_object = get_sub_field('slide_post');
 
-          if( $post_object ): 
+          if( $post_object ):
 
             $post = $post_object;
-          setup_postdata($post); 
+          setup_postdata($post);
 
           get_template_part('templates/home/slider', 'bottom' );
 
@@ -73,7 +73,11 @@
 
 </div><!-- Wrapper -->
 
-<?php the_widget( 'WP_Widget_Text', 'text', 3 ); ?> 
+<nav class="shifter-navigation">
+  <div class="main-nav"><?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?></div>
+</nav>
+
+<?php the_widget( 'WP_Widget_Text', 'text', 3 ); ?>
 
 <?php wp_footer(); ?>
 <?php include locate_template('/lib/photoswipe.php' );?>

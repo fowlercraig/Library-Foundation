@@ -1,7 +1,7 @@
 <?php
 
-require_once locate_template('/lib/blankslate.php');         
-//require_once locate_template('/lib/activation.php');         
+require_once locate_template('/lib/blankslate.php');
+//require_once locate_template('/lib/activation.php');
 require_once locate_template('/lib/themewrangler.class.php');
 require_once locate_template('/lib/slug.php' );
 require_once locate_template('/lib/cleanassnav.php' );
@@ -102,7 +102,7 @@ function wcs_redirect_product_based ( $order_id ){
     }
   }
 }
-add_action( 'woocommerce_thankyou', 'wcs_redirect_product_based' ); 
+add_action( 'woocommerce_thankyou', 'wcs_redirect_product_based' );
 
 
 /**

@@ -19,7 +19,7 @@
 <script>try{Typekit.load();}catch(e){}</script>
 </head>
 
-<?php 
+<?php
   $menuParameters = array(
     'container'       => false,
     'echo'            => false,
@@ -30,8 +30,8 @@
   );
 ?>
 
-<body <?php body_class(); ?>>
-  <div id="wrapper">
+<body <?php body_class('shifter'); ?>>
+  <div id="wrapper" class="shifter-page">
     <header id="head" class="gridlock gridlock-fluid">
       <div class="row">
         <nav id="main-nav" class="desktop-12 tablet-6 mobile-3">
@@ -47,6 +47,7 @@
           </a>
           <div class="main-nav"><?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?></div>
           <a href="#" class="search"><i class="ss-gizmo ss-icon">search</i></a>
+          <span class="shifter-handle button right">Menu</span>
           <a href="<?php echo get_the_permalink(299); ?>" class="button right" id="become-member-btn">Donate</a>
           <a href="<?php echo get_the_permalink(289); ?>" class="button right" id="become-member-btn">Join</a>
         </nav>

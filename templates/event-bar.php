@@ -86,7 +86,7 @@
       $ticket_name = strtolower($ticket_name);
       ?>
 
-    <div id="<?php echo $ticket_name; ?>_box">
+    <div id="<?php echo $ticket_name; ?>_box" style="display:none">
       <form action="" method="post" class="row">
         <input type="password" id="alt_loginpassword_<?php echo $ticket_name; ?>" placeholder="Password" class="desktop-9 tablet-5 mobile-3" />
         <input type="button" id="alt_login_<?php echo $ticket_name; ?>" value="Unlock" class="login desktop-3 tablet-1 mobile-3" />

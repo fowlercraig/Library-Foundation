@@ -1,151 +1,89 @@
 <?php
-class WP_HTML_Compression
+//Function to seperate multiple tags one line
+function fix_newlines_for_clean_html($fixthistext)
 {
-  // Settings
-  protected $compress_css = true;
-  protected $compress_js = true;
-  protected $info_comment = true;
-  protected $remove_comments = true;
-
-  // Variables
-  protected $html;
-  public function __construct($html)
+  $fixthistext_array = explode("\n", $fixthistext);
+  foreach ($fixthistext_array as $unfixedtextkey => $unfixedtextvalue)
   {
-    if (!empty($html))
+    //Makes sure empty lines are ignores
+    if (!preg_match("/^(\s)*$/", $unfixedtextvalue))
     {
-      $this->parseHTML($html);
+      $fixedtextvalue = preg_replace("/>(\s|\t)*</U", ">\n<", $unfixedtextvalue);
+      $fixedtext_array[$unfixedtextkey] = $fixedtextvalue;
     }
   }
-  public function __toString()
-  {
-    return $this->html;
-  }
-  protected function bottomComment($raw, $compressed)
-  {
-    $raw = strlen($raw);
-    $compressed = strlen($compressed);
-    
-    $savings = ($raw-$compressed) / $raw * 100;
-    
-    $savings = round($savings, 2);
-    
-    return '<!--HTML compressed, size saved '.$savings.'%. From '.$raw.' bytes, now '.$compressed.' bytes-->';
-  }
-  protected function minifyHTML($html)
-  {
-    $pattern = '/<(?<script>script).*?<\/script\s*>|<(?<style>style).*?<\/style\s*>|<!(?<comment>--).*?-->|<(?<tag>[\/\w.:-]*)(?:".*?"|\'.*?\'|[^\'">]+)*>|(?<text>((<[^!\/\w.:-])?[^<]*)+)|/si';
-    preg_match_all($pattern, $html, $matches, PREG_SET_ORDER);
-    $overriding = false;
-    $raw_tag = false;
-    // Variable reused for output
-    $html = '';
-    foreach ($matches as $token)
-    {
-      $tag = (isset($token['tag'])) ? strtolower($token['tag']) : null;
-      
-      $content = $token[0];
-      
-      if (is_null($tag))
-      {
-        if ( !empty($token['script']) )
-        {
-          $strip = $this->compress_js;
-        }
-        else if ( !empty($token['style']) )
-        {
-          $strip = $this->compress_css;
-        }
-        else if ($content == '<!--wp-html-compression no compression-->')
-        {
-          $overriding = !$overriding;
-          
-          // Don't print the comment
-          continue;
-        }
-        else if ($this->remove_comments)
-        {
-          if (!$overriding && $raw_tag != 'textarea')
-          {
-            // Remove any HTML comments, except MSIE conditional comments
-            $content = preg_replace('/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/s', '', $content);
-          }
-        }
-      }
-      else
-      {
-        if ($tag == 'pre' || $tag == 'textarea')
-        {
-          $raw_tag = $tag;
-        }
-        else if ($tag == '/pre' || $tag == '/textarea')
-        {
-          $raw_tag = false;
-        }
-        else
-        {
-          if ($raw_tag || $overriding)
-          {
-            $strip = false;
-          }
-          else
-          {
-            $strip = true;
-            
-            // Remove any empty attributes, except:
-            // action, alt, content, src
-            $content = preg_replace('/(\s+)(\w++(?<!\baction|\balt|\bcontent|\bsrc)="")/', '$1', $content);
-            
-            // Remove any space before the end of self-closing XHTML tags
-            // JavaScript excluded
-            $content = str_replace(' />', '/>', $content);
-          }
-        }
-      }
-      
-      if ($strip)
-      {
-        $content = $this->removeWhiteSpace($content);
-      }
-      
-      $html .= $content;
-    }
-    
-    return $html;
-  }
-    
-  public function parseHTML($html)
-  {
-    $this->html = $this->minifyHTML($html);
-    
-    if ($this->info_comment)
-    {
-      $this->html .= "\n" . $this->bottomComment($html, $this->html);
-    }
-  }
-  
-  protected function removeWhiteSpace($str)
-  {
-    $str = str_replace("\t", ' ', $str);
-    $str = str_replace("\n",  '', $str);
-    $str = str_replace("\r",  '', $str);
-    
-    while (stristr($str, '  '))
-    {
-      $str = str_replace('  ', ' ', $str);
-    }
-    
-    return $str;
-  }
+  return implode("\n", $fixedtext_array);
 }
 
-function wp_html_compression_finish($html)
+function clean_html_code($uncleanhtml)
 {
-  return new WP_HTML_Compression($html);
-}
+  //Set wanted indentation
+  $indent = "    ";
 
-function wp_html_compression_start()
-{
-  ob_start('wp_html_compression_finish');
+
+  //Uses previous function to seperate tags
+  $fixed_uncleanhtml = fix_newlines_for_clean_html($uncleanhtml);
+  $uncleanhtml_array = explode("\n", $fixed_uncleanhtml);
+  //Sets no indentation
+  $indentlevel = 0;
+  foreach ($uncleanhtml_array as $uncleanhtml_key => $currentuncleanhtml)
+  {
+    //Removes all indentation
+    $currentuncleanhtml = preg_replace("/\t+/", "", $currentuncleanhtml);
+    $currentuncleanhtml = preg_replace("/^\s+/", "", $currentuncleanhtml);
+
+    $replaceindent = "";
+
+    //Sets the indentation from current indentlevel
+    for ($o = 0; $o < $indentlevel; $o++)
+    {
+      $replaceindent .= $indent;
+    }
+
+    //If self-closing tag, simply apply indent
+    if (preg_match("/<(.+)\/>/", $currentuncleanhtml))
+    {
+      $cleanhtml_array[$uncleanhtml_key] = $replaceindent.$currentuncleanhtml;
+    }
+    //If doctype declaration, simply apply indent
+    else if (preg_match("/<!(.*)>/", $currentuncleanhtml))
+    {
+      $cleanhtml_array[$uncleanhtml_key] = $replaceindent.$currentuncleanhtml;
+    }
+    //If opening AND closing tag on same line, simply apply indent
+    else if (preg_match("/<[^\/](.*)>/", $currentuncleanhtml) && preg_match("/<\/(.*)>/", $currentuncleanhtml))
+    {
+      $cleanhtml_array[$uncleanhtml_key] = $replaceindent.$currentuncleanhtml;
+    }
+    //If closing HTML tag or closing JavaScript clams, decrease indentation and then apply the new level
+    else if (preg_match("/<\/(.*)>/", $currentuncleanhtml) || preg_match("/^(\s|\t)*\}{1}(\s|\t)*$/", $currentuncleanhtml))
+    {
+      $indentlevel--;
+      $replaceindent = "";
+      for ($o = 0; $o < $indentlevel; $o++)
+      {
+        $replaceindent .= $indent;
+      }
+
+      $cleanhtml_array[$uncleanhtml_key] = $replaceindent.$currentuncleanhtml;
+    }
+    //If opening HTML tag AND not a stand-alone tag, or opening JavaScript clams, increase indentation and then apply new level
+    else if ((preg_match("/<[^\/](.*)>/", $currentuncleanhtml) && !preg_match("/<(link|meta|base|br|img|hr)(.*)>/", $currentuncleanhtml)) || preg_match("/^(\s|\t)*\{{1}(\s|\t)*$/", $currentuncleanhtml))
+    {
+      $cleanhtml_array[$uncleanhtml_key] = $replaceindent.$currentuncleanhtml;
+
+      $indentlevel++;
+      $replaceindent = "";
+      for ($o = 0; $o < $indentlevel; $o++)
+      {
+        $replaceindent .= $indent;
+      }
+    }
+    else
+    //Else, only apply indentation
+    {$cleanhtml_array[$uncleanhtml_key] = $replaceindent.$currentuncleanhtml;}
+  }
+  //Return single string seperated by newline
+  return implode("\n", $cleanhtml_array);
 }
-add_action('get_header', 'wp_html_compression_start');
 ?>
