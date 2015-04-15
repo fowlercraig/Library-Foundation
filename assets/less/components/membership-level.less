@@ -8,8 +8,24 @@
   border-bottom: 1px solid @white;
 
   &.has-bg {
-    padding-top: 125px;
-    padding-bottom: 125px;
+
+    @memberPadding : 125px;
+
+    @media @mobile {
+      padding-top: @memberPadding*.5;
+      padding-bottom: @memberPadding*.5;
+    }
+
+    @media @tablet {
+      padding-top: @memberPadding*.5;
+      padding-bottom: @memberPadding*.5;
+    }
+
+    @media @desktop {
+      padding-top: @memberPadding;
+      padding-bottom: @memberPadding;
+    }
+
     .header-overlay();
 
     a {
@@ -19,8 +35,24 @@
   }
 
   &.no-bg {
-    padding-top: 85px;
-    padding-bottom: 85px;
+
+    @memberPadding : 125px;
+    
+    @media @mobile {
+      padding-top: @memberPadding*.5;
+      padding-bottom: @memberPadding*.5;
+    }
+
+    @media @tablet {
+      padding-top: @memberPadding*.35;
+      padding-bottom: @memberPadding*.35;
+    }
+
+    @media @desktop {
+      padding-top: @memberPadding*.5;
+      padding-bottom: @memberPadding*.5;
+    }
+
     border-bottom: 1px solid @white;
     background: none;
     color: @gray;

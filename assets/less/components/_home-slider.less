@@ -7,8 +7,19 @@
 
     position: relative;
     background: @white;
-    height: 450px;
     width: 100%;
+
+    @media @mobile {
+      height: 400px;
+    }
+
+    @media @tablet {
+      height: 500px
+    }
+
+    @media @desktop {
+      height: 400px;
+    }
 
     .rsNav {
       display: none;
@@ -86,13 +97,28 @@
         
         .caslon();
         color: @white;
-        font-size: 4.1em;
 
-        @media @mobileC {
-          font-size: 40px;
+        a {
+          color: inherit;
+          display: block;
+        }
+
+        @media @mobile {
+          font-size: 2em;
           br {
-            display: none;
+            display: inline;
           }
+        }
+
+        @media @tablet {
+          font-size: 3.5em;
+          br {
+            display: inline-block;
+          }
+        }
+
+        @media @desktop {
+          font-size: 4.1em;
         }
 
       }
@@ -125,13 +151,18 @@
         background: @black;
 
         &.sub-title {
-           background: none;
-           @media @mobileC {
+          font-family: 'Gotham';
+          text-transform: uppercase;
+          font-size: 12px;
+          letter-spacing: 1px;
+          background: none;
+
+          @media @mobile {
             display: none;
-           }
-           @media @mobile {
-            display: none;
-           }
+          }
+          @media @tablet {
+            display: inline-block;
+          }
         }
       }
 
@@ -229,6 +260,17 @@
       margin: 0;
       font-size: 18px;
       .sentinel();
+
+      @media @mobile {
+        line-height: 1.3;
+        margin-bottom: 10px;
+      }
+
+      @media @tablet {
+        line-height: 1.5;
+        margin-bottom: 0;
+      }
+
     }
 
   }
@@ -632,6 +674,14 @@
   background: @white;
   border: 1px solid @lightestGray;
 
+  @media @mobile {
+    margin-top: 20px;
+  }
+
+  @media @tablet {
+    margin-top: 0;
+  }
+
   p {
     display: none;
   }
@@ -651,8 +701,21 @@
       .caslon();
       letter-spacing: 0;
       text-transform: none;
-      font-size: 18px;
+      
       font-style: italic;
+
+      @media @mobile {
+        font-size: 18px;
+      }
+
+      @media @tablet {
+        font-size: 16px;
+      }
+
+      @media @desktop {
+        font-size: 18px;
+      }
+
     }
   }
 

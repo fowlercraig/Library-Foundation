@@ -1,31 +1,33 @@
 #main-nav {
 
-   @media @mobileC {
+  .main-nav {
 
-    width: 100%;
-
-    .main-nav, .search {
+    @media @mobile {
       display: none;
     }
 
-    a#become-member-btn {
-      float: right;
+    @media @max {
+      display: block;
     }
 
-   }
-   @media @tabletC {
+  }
 
-    width: 100%;
+  .button.right {
+    float: right;
+  }
 
-    .main-nav, .search {
+  .search {
+
+    @media @mobile {
       display: none;
     }
 
-    a#become-member-btn {
-      float: right;
+    @media @max {
+      display: block;
     }
 
-   }
+  }
+
 }
 
 

@@ -3,7 +3,18 @@
   #signup-form {
 
     background: @bgGray;
-    padding: 25px;
+
+    @media @mobile {
+      padding: 25px;
+    }
+
+    @media @tablet {
+      padding: 15px;
+    }
+
+    @media @desktop {
+      padding: 25px;
+    }
 
     .wrapper {
       position: relative;
@@ -12,6 +23,19 @@
     > label {
 
       .cat();
+
+      @media @mobile {
+        font-size: 10px;
+      }
+
+      @media @tablet {
+        font-size: 10px;
+      }
+
+      @media @desktop {
+        font-size: 11px;
+      }
+
       color: @white50;
       font-weight: 500;
 
@@ -22,9 +46,21 @@
       height: 34px;
       line-height: 34px;
       padding: 0 10px;
-      width: 75%;
-      display: inline-block;
-      box-sizing: border-box;
+      width: 100%;
+
+      @media @mobile {
+        margin-bottom: 5px;
+      }
+
+      @media @tablet {
+        margin-bottom: 5px;
+      }
+
+      @media @desktop {
+        margin-bottom: 0px;
+      }
+      //display: inline-block;
+      //box-sizing: border-box;
 
     }
 
@@ -94,10 +130,10 @@
     }
     .button {
       
-      width: 70px;
+      width: 100%;
       padding: 0;
       background: @blue;
-      position: absolute;
+      //position: absolute;
       right: 0;
 
       &:hover {

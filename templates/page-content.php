@@ -10,7 +10,7 @@
 
   } else {
 
-    $pageWidth = 'sizer-item desktop-12 tablet-4 mobile-3';
+    $pageWidth = 'sizer-item desktop-12 tablet-6 mobile-3';
 
   }
 
