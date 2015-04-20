@@ -26,11 +26,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 	$has_venue_address = ( $venue_address ) ? ' location' : '';
 
+  $cost = tribe_get_cost();
 	$organizer = tribe_get_organizer();
 
 ?>
 
-<?php 
+<?php
 
   if( tribe_get_end_date( null, false, 'Y-m-d H:i:s' ) < date( 'Y-m-d H:i:s' )) {
 
@@ -42,14 +43,18 @@ if ( ! defined( 'ABSPATH' ) ) {
   	//$ticketStatus = 'hello';
   	if (tribe_events_has_tickets()) {
 
-      $ticketStatus = '<a href="' . get_the_permalink( $id ) . '" class="button">RSVP Now</a>';
+      if (strlen($cost)>0) {
+        $ticketStatus = '<a href="' . get_the_permalink( $id ) . '" class="button">Purchase Tickets</a>';
+      } else {
+        $ticketStatus = '<a href="' . get_the_permalink( $id ) . '" class="button">RSVP</a>';
+      }
 
     }
 
     if(tribe_events_has_soldout()){
 
       //$soldoutimage = 'http://i.imgur.com/znE1JTm.png';
-      //$ticketStatus = '<a id="event-status-button"  href="'.$soldoutimage.'" class="button closed">Full/Standby</a>'; 
+      //$ticketStatus = '<a id="event-status-button"  href="'.$soldoutimage.'" class="button closed">Full/Standby</a>';
       $ticketStatus = '<a href="' . get_the_permalink( $id ) . '" class="button">Full/Standby</a>';
 
     }
@@ -59,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div class="desktop-12 tablet-6 mobile-3 meta">
-	<?php 
+	<?php
 		$terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
 		$count = count($terms);
 		if ( $count > 0 ){
@@ -67,8 +72,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				echo '<a href="'. get_term_link($term->slug, 'tribe_events_cat') .'" class="cat_' . $term->slug . '">' . $term->name . '</a>';
 			}
 		}
-	?> 
-  <?php 
+	?>
+  <?php
     $sd = tribe_get_start_date($post->ID, false, 'M j, Y');
     $st = tribe_get_start_time($post->ID, false, 'g:i a');
   ?>

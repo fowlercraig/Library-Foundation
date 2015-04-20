@@ -1,6 +1,6 @@
 <?php Themewrangler::setup_page();get_header(); ?>
 
-<?php 
+<?php
 
   if ( get_field('simple_page')) {
 
@@ -17,7 +17,7 @@
   // get_template_part('templates/flex', 'content');
 
 ?>
-<hr>
+<hr class="invisible">
 <div class="row">
   <div class="page-content desktop-7 tablet-4 mobile-3 sizer-item">
     <?php while (have_posts()) : the_post(); ?>

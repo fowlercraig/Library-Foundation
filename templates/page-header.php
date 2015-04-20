@@ -1,4 +1,4 @@
-<?php 
+<?php
 
   if (is_category()){
 
@@ -19,9 +19,9 @@
 <div class="page-header" data-speed="1.25" style="background-image:url(<?php echo $thumb_url; ?>);">
   <div class="row">
     <div class="desktop-12">
-      <?php 
+      <?php
 
-      if ( $post->post_parent ) { 
+      if ( $post->post_parent ) {
 
         $anc_reverse = get_post_ancestors( $post->ID );
         $anc = array_reverse($anc_reverse);
@@ -29,16 +29,16 @@
         echo '<ul class="parent-links">';
 
         foreach ( $anc as $ancestor ) {
-          $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li>';
+          $output = '<li><a class="ss-gizmo ss-navigateright" href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li>';
           echo $output;
         }
 
         echo '</ul>';
 
-      } 
+      }
 
       if ( get_field('page_subtitle') ){ $hasSub = 'has-sub'; }
-      
+
       if (is_category()){
         $pageTitle = get_the_title(442);
       } else {
@@ -53,7 +53,7 @@
 
         if ( is_category() ) {
 
-          $category = get_the_category(); 
+          $category = get_the_category();
           $subTitle = single_cat_title("Currently browsing: ", false);
 
         } else {

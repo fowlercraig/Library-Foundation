@@ -4,7 +4,7 @@
     background: @blue;
     color: @white;
   }
-  
+
   a {
     color: @blue;
     text-decoration: underline;
@@ -110,7 +110,7 @@
     .page-header-title {
       font-size: 3em;
     }
-    
+
   }
 
   input[type=number] {
@@ -199,3 +199,69 @@ ul.order_details {
   .sentinel();
 }
 
+
+
+table.cart {
+
+  a.remove {
+
+
+
+  }
+
+  td.product-name {
+    .sentinel();
+    color: @gray;
+    .variation {
+      color: @textGray;
+      font-family: 'Gotham';
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .product-price {
+    text-align: left;
+  }
+
+  .product-quantity {
+    text-align: center;
+  }
+
+  .product-subtotal {
+    text-align: right;
+  }
+
+}
+
+.cart_totals table {
+  .cart-subtotal td, .order-total td {
+    text-align: right;
+  }
+}
+
+.wc-proceed-to-checkout {
+  text-align: right;
+  .button {
+    text-decoration: none;
+    .cat();
+    font-weight: 500;
+    &:after {
+      //display: none;
+    }
+  }
+}
+
+// Woo Checkout
+
+.woocommerce-checkout {
+
+  .col-1 {
+    min-width: 100%;
+    width: auto;
+  }
+
+
+
+}

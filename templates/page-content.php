@@ -23,7 +23,7 @@
 
   if (is_page('about')) {
 
-    $pageWidth = 'sizer-item desktop-10 tablet-4 mobile-3 centered';
+    $pageWidth = 'sizer-item desktop-10 tablet-6 mobile-3 centered';
     
   }
 

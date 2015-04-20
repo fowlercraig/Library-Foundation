@@ -46,7 +46,7 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 	    <?php } // if ( count( $views ) > 1 ) ?>
 	    <?php if ( ! empty( $filters ) ) { ?>
 	      <div class="tribe-bar-filters max-5 desktop-8 tablet-6 mobile-3">
-	        
+
 	        <div class="tribe-bar-filters-inner tribe-clearfix row ss-glyphish ss-calendar">
 	        	<span class="icon-holder"><i class="ss-glyphish ss-calendar"></i></span>
 	          <?php foreach ( $filters as $filter ) : ?>
@@ -67,7 +67,7 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 					<a target="blank" href="https://facebook.com/aloudla"><i class="ss-icon ss-social-circle">Facebook</i></a>
 					<a target="blank" href="https://twitter.com/aloudla"><i class="ss-icon ss-social-circle">Twitter</i></a>
 					<a target="blank" href="https://instagram.com/aloudla"><i class="ss-icon ss-social-circle">Instagram</i></a>
-					<a target="blank" href="https://vimeo.com/aloudla"><i class="ss-icon ss-social-circle">Vimeo</i></a>
+					<a target="blank" href="https://vimeo.com/channels/aloud"><i class="ss-icon ss-social-circle">Vimeo</i></a>
 				</div>
 				<?php endif; ?>
 

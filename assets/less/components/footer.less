@@ -41,6 +41,44 @@
 
   padding: @gutter*2 0 0;
 
+  .footer-module-title {
+    @media @mobile {
+      margin-top: 3px;
+      margin-bottom: 0;
+    }
+    @media @tablet {
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    @media @desktop {
+      margin-top: 5px;
+    }
+    @media @max {
+      margin-top: 25px;
+    }
+    a {
+      color: @black;
+    }
+  }
+
+  .inner {
+    @media @mobile {
+      padding: 15px;
+      .button,p {
+        display: none;
+      }
+    }
+    @media @tablet {
+      padding: 0;
+      .button {
+        display: inline-block;
+      }
+      p {
+        display: block;
+      }
+    }
+  }
+
   .module {
     background: @bgGray;
     margin-bottom: @gutter*2;

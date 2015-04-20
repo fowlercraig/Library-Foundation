@@ -13,7 +13,28 @@
   }
 
   .button.right {
+
     float: right;
+
+    &.shifter-handle {
+      border: none;
+      @media @max {
+        display: none;
+      }
+    }
+
+    &.hide-mobile {
+
+      @media @mobile {
+        display: none;
+      }
+
+      @media @max {
+        display: block;
+      }
+
+    }
+
   }
 
   .search {
@@ -111,24 +132,6 @@
     height: 325px;
     .sub-meta {
       display: none;
-    }
-  }
-}
-
-#footer-modules {
-  .module {
-    @media @tabletC {
-      h3 {
-        margin: 0;
-      }
-      
-    }
-    @media @mobileC {
-      margin-bottom: 10px;
-      h3 {
-        margin: 0;
-      }
-      
     }
   }
 }

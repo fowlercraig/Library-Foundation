@@ -48,8 +48,8 @@
           <div class="main-nav"><?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?></div>
           <a href="#" class="search"><i class="ss-gizmo ss-icon">search</i></a>
           <span class="shifter-handle button right">Menu</span>
-          <a href="<?php echo get_the_permalink(299); ?>" class="button right" id="become-member-btn">Donate</a>
-          <a href="<?php echo get_the_permalink(289); ?>" class="button right" id="become-member-btn">Join</a>
+          <a href="<?php echo get_the_permalink(299); ?>" class="button right hide-mobile" id="become-member-btn">Donate</a>
+          <a href="<?php echo get_the_permalink(289); ?>" class="button right hide-mobile" id="become-member-btn">Join</a>
         </nav>
       </div>
     </header>

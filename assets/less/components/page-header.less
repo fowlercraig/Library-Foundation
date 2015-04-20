@@ -17,7 +17,7 @@
   @media @desktop {
     padding-top: 225px;
   }
-  
+
 
   &:hover {
     &:after {
@@ -68,7 +68,20 @@
       a {
         color: @white;
         display: block;
-        padding-right: 20px;
+        padding-right: 0;
+        &:before {
+          top: .125em;
+          position: relative;
+          margin: 0 7px;
+        }
+      }
+
+      &:first-child {
+        a {
+          &:before {
+            display: none;
+          }
+        }
       }
 
     }
@@ -80,6 +93,10 @@
       li {
         a {
           color: @white;
+          &:before {
+            top: .125em;
+            position: relative;
+          }
         }
         .cat_aloud {
           color: @aloudpink;
@@ -94,13 +111,13 @@
     background-size: cover;
 
     &:after {
-      opacity: .125; 
+      opacity: .125;
     }
 
     .page-header-title {
-    
+
       font-size: 3em;
-    
+
     }
 
   }

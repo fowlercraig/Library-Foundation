@@ -14,14 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 } ?>
 
-<?php 
+<?php
 
   include locate_template('templates/calendar-header.php');
   do_action( 'tribe_events_before_template' );
   get_template_part('templates/calendar', 'content');
   get_template_part('templates/flex', 'content');
-  tribe_get_template_part( 'modules/bar' ); 
-  tribe_get_template_part( 'list/content' ); 
+  tribe_get_template_part( 'modules/bar' );
+  tribe_get_template_part( 'list/content' );
   do_action( 'tribe_events_after_template' );
 
   //include locate_template('templates/calendar-faq.php');

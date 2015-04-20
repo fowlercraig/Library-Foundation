@@ -194,24 +194,16 @@
     disableHI: true
   });
   // Tabber
-  $(".tabbed")
-  .tabber();
+  $(".tabbed").tabber();
   // Sizer
-  $("#staff, #sponsors, #page-list.quadrant")
-  .sizer();
-  $("#footer-modules")
-  .sizer({
-      //minWidth: 768
-    });
+  $("#sized, #staff, #sponsors, #page-list.quadrant").sizer();
+
   // Accordion
-  $('#faq-accordion')
-  .accordion();
+  $('#faq-accordion').accordion();
   // Stepper
-  $("input[type='number']")
-  .stepper();
+  $("input[type='number']").stepper();
   // Selecter
-  $(".sidebar select")
-  .selecter({
+  $(".sidebar select").selecter({
       //label: "All Categories",
       cover: true,
       customClass: "blog-select"
@@ -221,8 +213,7 @@
   //   cover: true,
   //   customClass: "blog-select"
   // });
-$("#donation-module select")
-.selecter({
+$("#donation-module select").selecter({
       //label: "Archive",
       cover: true,
       label: "Make a Donation",
@@ -240,8 +231,7 @@ $('#home-upcoming .selecter-selected')
 $('.tribe-bar-filters .tribe-events-button')
 .addClass('ss-glypish ss-calendar');
   // Image Slider
-  $(".royalslider")
-  .royalSlider({
+  $(".royalslider").royalSlider({
     keyboardNavEnabled: true,
     autoScaleSlider: true,
     autoScaleSliderWidth: 1200,
@@ -540,28 +530,29 @@ var filterFns = {
         return name.match(/ium$/);
       }
     };
-    $('#whatwefund-filters')
-    .on('click', 'button', function() {
-      var filterValue = $(this)
-      .attr('data-filter');
-      $('#whatwefund-filters')
-      .find('.active')
-      .removeClass('active');
-      $(this)
-      .addClass('active');
+
+    $('#whatwefund-filters').on('click', 'button', function() {
+
+      var filterValue = $(this).attr('data-filter');
+
+      $('#whatwefund-filters').find('.active').removeClass('active');
+      $(this).addClass('active');
         // use filter function if value matches
+
         filterValue = filterFns[filterValue] || filterValue;
+
         $container.isotope({
           filter: filterValue
         });
-        $('html,body')
-        .animate({
-          scrollTop: $('#whatwefund-filters')
-          .offset()
-          .top - 49
+
+        $('html,body').animate({
+          scrollTop: $('#whatwefund-filters').offset().top - 49
         });
+
       });
-  }); // End What We Fund
+  });
+  // End What We Fund
+
   // Parallax BG
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {} else {
     $window = $(window);

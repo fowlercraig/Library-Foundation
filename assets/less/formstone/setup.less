@@ -37,6 +37,10 @@
 	@lightestGray: #ddd;
 	@darkGray: #333;
 
+	@success: #74C080;
+	@warning: #FA9F47;
+	@error: #D64242;
+
 	@black0: rgba(0, 0, 0, 0);
 	@black25: rgba(0, 0, 0, 0.25);
 	@black50: rgba(0, 0, 0, 0.5);
@@ -143,7 +147,6 @@
 
 	.overlay {
 		position: absolute;
-		padding: 30px;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -151,6 +154,12 @@
 		&.bottom {
 			top: auto;
 			bottom: 0;
+		}
+		@media @mobile {
+			padding: 20px;
+		}
+		@media @tablet {
+			padding: 30px;
 		}
 	}
 

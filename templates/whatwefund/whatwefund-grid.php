@@ -1,10 +1,10 @@
 <div class="row">
   <div id="whatwefund-filters" class="button-group desktop-12 text-center">
-    <button class="button" data-filter="*">View All</button>
+    <button id="viewall-btn" class="button" data-filter="*">View All</button>
     <button class="button active" data-filter=".featured">Featured</button>
     <button class="button" data-filter=".helping">HELPING STUDENTS SUCCEED</button>
-    <button class="button" data-filter=".engaging">INVESTING IN LIFELONG LEARNING</button>
-    <button class="button" data-filter=".investing">ENGAGING THE IMAGINATION</button>
+    <button class="button" data-filter=".investing">INVESTING IN LIFELONG LEARNING</button>
+    <button class="button" data-filter=".engaging">ENGAGING THE IMAGINATION</button>
   </div>
 </div>
 
@@ -70,14 +70,12 @@
 
 <div class="item <?php echo $divWidth; ?> tablet-3 mobile-3 <?php echo $value; ?><?php echo $isFeatured; ?>">
 
-  <?php // the_post_thumbnail( 'whatwefund', array( 'class' => 'img-responsive' ) ); ?>
-  <img src="<?php echo $img; ?>" class="thumbnail img-responsive">
-
   <div class="meta overlay">
     <div class="cat"><a href=".<?php echo $value; ?>"><?php echo $label; ?></a></div>
     <h2 class="title"><a href="<?php echo $pagelink; ?>"><?php the_title(); ?></a></h2>
     <a href="<?php echo $pagelink; ?>" class="button">Learn More</a>
   </div>
+  <div class="bg" style="background-image: url(<?php echo $img; ?>)"></div>
 
 </div>
 
