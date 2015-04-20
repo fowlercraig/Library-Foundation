@@ -1,6 +1,6 @@
 
 
-<?php 
+<?php
 
 $groupTitle = get_sub_field('group_title');
 $groupTitle_clean = get_sub_field('group_title');
@@ -12,10 +12,10 @@ $groupTitle_clean = strtolower($groupTitle_clean);
 
 <?php if( have_rows('staff_members') ): while ( have_rows('staff_members') ) : the_row(); ?>
 
-<?php 
+<?php
   $image = get_sub_field('staff_photo');
 
-  if( !empty($image) ): 
+  if( !empty($image) ):
   $url = $image['url'];
   $title = $image['title'];
   $alt = $image['alt'];
@@ -28,7 +28,7 @@ $groupTitle_clean = strtolower($groupTitle_clean);
   endif;
 ?>
 
-<div class="staff-member desktop-4 tablet-3 mobile-3 sizer-item <?php echo $groupTitle_clean; ?>">
+<div class="staff-member desktop-3 tablet-3 mobile-3 sizer-item <?php echo $groupTitle_clean; ?>">
   <div class="thumb">
     <div class="meta"><span class="cat_<?php echo $groupTitle_clean; ?>"><?php echo $groupTitle; ?></span></div>
     <img class="img-responsive" src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" />

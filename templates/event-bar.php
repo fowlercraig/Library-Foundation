@@ -1,8 +1,14 @@
-<?php 
+<?php
+
+  $cost = tribe_get_cost();
 
   if( have_rows('related_ticket_groups') ) {
 
-    $ticketStatus = '<a id="event-status-button" href="#things" class="button jumpdown">RSVP for this Event</a>';
+    if (strlen($cost)>0) {
+      $ticketStatus = '<a id="event-status-button" href="#things" class="button jumpdown">Purchase Tickets</a>';
+    } else {
+      $ticketStatus = '<a id="event-status-button" href="#things" class="button jumpdown">RSVP</a>';
+    }
 
    } else {
 
@@ -16,7 +22,13 @@
 
         if ( ! post_password_required() ) {
 
-        $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">RSVP for this Event</a>';
+
+
+        if (strlen($cost)>0) {
+          $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">Purchase Tickets</a>';
+        } else {
+          $ticketStatus = '<a id="event-status-button"  href="#tickets-form" class="button enabled">RSVP</a>';
+        }
 
         } else {
 

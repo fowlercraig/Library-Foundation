@@ -8212,7 +8212,12 @@ p.demo_store {
   position: relative;
 }
 .page-header.event .parent-links li .cat_aloud {
-  color: #e2438c;
+  background-color: #e2438c;
+  color: #ffffff;
+  height: 30px;
+  line-height: 33px;
+  padding: 0 10px;
+  border-radius: 3px;
 }
 .page-header.minimal {
   background-color: #008bbe;
@@ -10906,6 +10911,14 @@ animated buttons - animate the text inside prev and next buttons
 .woocommerce .button {
   background: #008bbe;
   color: #ffffff;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-weight: 500;
 }
 .woocommerce a {
   color: #008bbe;
@@ -11106,7 +11119,7 @@ table.cart .product-subtotal {
 }
 .page-header.event .event-meta {
   padding: 2.08333333% 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   margin-top: 2.08333333%;
   color: #ffffff;
 }
@@ -11120,7 +11133,7 @@ table.cart .product-subtotal {
   text-rendering: optimizeLegibility;
   font-size: 22px;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
 }
 .page-header.event .event-meta .lower a {
   color: inherit;

@@ -1,20 +1,18 @@
-<?php if ( get_field('sponsor_gallery') OR !get_field('sponsors_options') ): ?>
+<?php if ( get_field('sponsor_gallery') OR get_field('sponsors_options') ): ?>
 
 <div id="sponsor-hat"></div>
 
 <div id="sponsors" class="sponsor-list row">
 
   <div class="item desktop-12 tablet-6 mobile-3 section-title header">
-    
     <h3 class="event-section-title">Sponsors</h3>
-
   </div>
 
   <?php if ( get_field('add_sponsor_description')) : ?>
   <div id="sponsor-desc" class="desktop-12">
     <div class="wrapper">
-  <?php the_field('sponsor_description'); ?>
-</div>
+      <?php the_field('sponsor_description'); ?>
+    </div>
   </div>
   <?php endif; ?>
 
@@ -28,7 +26,7 @@
   </div>
   <?php endforeach; endif; ?>
 
-  <?php if( !get_field('sponsors_options') ): 
+  <?php if( !get_field('sponsors_options') ):
     $globalSponsors = get_field('aloud_sponsors', 'options'); if( $globalSponsors ):
     foreach( $globalSponsors as $globalSponsor ): $link = get_field('attachement_link', $globalSponsor['id']); ?>
 
@@ -39,9 +37,6 @@
   </div>
 
   <?php endforeach; endif; else: ?>
-
-  
-
 
   <?php  endif; ?>
 

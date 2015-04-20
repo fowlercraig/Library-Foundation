@@ -1,6 +1,6 @@
 <?php $posts = get_field('people'); if( $posts ): ?>
 
-  <hr>
+  <hr class="invisible">
 
   <div id="event-bios">
   <div class="row">
@@ -37,14 +37,14 @@
 
   }
 
-  
-  
+
+
 ?>
 
 <?php if ( get_field('featured_speakers') ) { ?>
     <div class="item bio <?php echo $bioWidth; ?>">
       <h3 class="title"><?php echo get_the_title( $p->ID ); ?></h3>
-      <?php echo get_the_post_thumbnail( $p->ID, 'event-bio', array( 'class' => 'img-responsive' ) ); ?> 
+      <?php echo get_the_post_thumbnail( $p->ID, 'event-bio', array( 'class' => 'img-responsive' ) ); ?>
       <p><?php echo $content; ?></p>
     </div>
   <?php } else { ?>
@@ -53,15 +53,15 @@
     <div class="<?php echo $photoWidth; ?>">
 
       <?php if ( !get_field('big_photos') ) : ?>
-      <?php echo get_the_post_thumbnail( $p->ID, 'thumbnail', array( 'class' => 'rounded img-responsive' ) ); ?> 
+      <?php echo get_the_post_thumbnail( $p->ID, 'thumbnail', array( 'class' => 'rounded img-responsive' ) ); ?>
       <?php endif; ?>
-      
+
     </div>
     <div class="<?php echo $articleWidth; ?>">
       <h3 class="title"><?php echo get_the_title( $p->ID ); ?></h3>
 
       <?php if ( get_field('big_photos') ) : ?>
-      <?php echo get_the_post_thumbnail( $p->ID, 'event-bio', array( 'class' => 'img-responsive' ) ); ?> 
+      <?php echo get_the_post_thumbnail( $p->ID, 'event-bio', array( 'class' => 'img-responsive' ) ); ?>
       <?php endif; ?>
 
       <p><?php echo $content; ?></p>

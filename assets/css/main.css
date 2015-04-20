@@ -1,4 +1,4 @@
-@import url('main-blessed1.css?z=1429510768135');
+@import url('main-blessed1.css?z=1429544318701');
 
 .tribe-events-list .type-tribe_events:hover .title a,
 .tribe-events-list .type-tribe_events:first-child .title a {
@@ -355,13 +355,16 @@
 #member-tabs .tabber-tab .membership-level:before {
   display: none;
 }
+#member-tabs .tabber-tab .membership-level:last-child {
+  border-bottom: 0;
+}
 #member-tabs #library,
 #member-tabs #tab_2 {
   background: #f89c31;
 }
 #member-tabs #leader,
 #member-tabs #tab_2 {
-  background: #f9a84a;
+  background: #d57607;
 }
 .young-literati #member-tabs .tabber-handle {
   background: #86993f;
