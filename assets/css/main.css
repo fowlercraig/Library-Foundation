@@ -1,5 +1,9 @@
-@import url('main-blessed1.css?z=1429500042423');
+@import url('main-blessed1.css?z=1429510768135');
 
+.tribe-events-list .type-tribe_events:hover .title a,
+.tribe-events-list .type-tribe_events:first-child .title a {
+  color: #ffffff;
+}
 .tribe-events-list .type-tribe_events:hover .button,
 .tribe-events-list .type-tribe_events:first-child .button {
   border-radius: 0;

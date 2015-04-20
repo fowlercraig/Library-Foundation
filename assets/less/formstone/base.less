@@ -677,6 +677,10 @@ p {
   }
 }
 
+.sub-nav-select {
+	max-width: 260px;
+}
+
 ul.sub-nav {
 
 	@subHeight: 40px;
@@ -710,6 +714,15 @@ ul.sub-nav {
 			}
 			@media @tablet {
 				padding: 0 14px;
+			}
+		}
+	}
+
+	&.blue {
+		a {
+			background: @blue;
+			&:hover {
+				background: darken(@blue, 5%);
 			}
 		}
 	}

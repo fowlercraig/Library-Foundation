@@ -1967,6 +1967,9 @@ a.external-link {
 p a.external-link {
   color: #008bbe;
 }
+.sub-nav-select {
+  max-width: 260px;
+}
 ul.sub-nav {
   font-family: 'Gotham', arial;
   padding: 0;
@@ -2001,6 +2004,12 @@ ul.sub-nav li a:hover {
   ul.sub-nav li a {
     padding: 0 14px;
   }
+}
+ul.sub-nav.blue a {
+  background: #008bbe;
+}
+ul.sub-nav.blue a:hover {
+  background: #0078a5;
 }
 /*
 * Symbolset
@@ -5144,7 +5153,8 @@ html:hover [class^="ss-"] {
 .member-level-title {
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
-  font-size: 3em;
+  font-size: 28px;
+  line-height: 1;
   font-weight: 200;
 }
 .membership-level.complex ul {
@@ -8620,7 +8630,7 @@ p.demo_store {
   border-color: #0f75bd;
 }
 .member-header {
-  padding: 4.16666667% 0 2.08333333%;
+  padding: 0 0 5px;
   border-bottom: 1px solid #cccccc;
 }
 .member-header .member-level-title {
@@ -8718,7 +8728,8 @@ p.demo_store {
   margin: 0;
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
-  font-size: 3em;
+  font-size: 28px;
+  line-height: 1;
   font-weight: 200;
   margin-bottom: 20px;
 }
@@ -9535,7 +9546,7 @@ p.demo_store {
 .blog-item .title {
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
-  font-size: 3em;
+  line-height: 1;
   font-weight: 200;
   font-size: 28px;
   margin-bottom: 0px;
@@ -11608,8 +11619,4 @@ table.cart .product-subtotal {
   color: #ffffff;
   padding: 4.16666667% 0;
   border-bottom: 1px solid #ffffff;
-}
-.tribe-events-list .type-tribe_events:hover .title a,
-.tribe-events-list .type-tribe_events:first-child .title a {
-  color: #ffffff;
 }

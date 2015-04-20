@@ -213,6 +213,7 @@
   //   cover: true,
   //   customClass: "blog-select"
   // });
+$(".selected").selecter();
 $("#donation-module select").selecter({
       //label: "Archive",
       cover: true,
