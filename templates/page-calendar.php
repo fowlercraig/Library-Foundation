@@ -22,10 +22,10 @@ $args = array(
   'eventDisplay' => 'upcoming',
   );
 
-$temp = $wp_query; 
-$wp_query = null; 
-$wp_query = new WP_Query(); 
-$wp_query->query($args); 
+$temp = $wp_query;
+$wp_query = null;
+$wp_query = new WP_Query();
+$wp_query->query($args);
 
 $old_args = array(
   'post_type' => 'tribe_events',
@@ -40,10 +40,10 @@ $old_args = array(
   'eventDisplay' => 'past',
   );
 
-$old_temp = $old_wp_query; 
-$old_wp_query = null; 
-$old_wp_query = new WP_Query(); 
-$old_wp_query->query($old_args); 
+$old_temp = $old_wp_query;
+$old_wp_query = null;
+$old_wp_query = new WP_Query();
+$old_wp_query->query($old_args);
 
 $ul_args = array(
   'post_type' => 'tribe_events',
@@ -63,10 +63,10 @@ $ul_args = array(
     ),
   );
 
-$ul_temp = $ul_wp_query; 
-$ul_wp_query = null; 
-$ul_wp_query = new WP_Query(); 
-$ul_wp_query->query($ul_args); 
+$ul_temp = $ul_wp_query;
+$ul_wp_query = null;
+$ul_wp_query = new WP_Query();
+$ul_wp_query->query($ul_args);
 
 ?>
 
@@ -87,7 +87,7 @@ $ul_wp_query->query($ul_args);
       <?php  ?>
       <?php $counter = 1; if ( have_posts() ) :while ($wp_query->have_posts()) : $wp_query->the_post();?>
 
-      <?php 
+      <?php
       $thumb_id = get_post_thumbnail_id();
       $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'header-bg', true);
       $thumb_url = $thumb_url_array[0];
@@ -113,14 +113,18 @@ $ul_wp_query->query($ul_args);
       <?php $counter++; endwhile; ?>
       <?php $wp_query = null; $wp_query = $temp;  ?>
     <?php else: ?>
-    <h2 class="no-events">Sorry, no upcoming events.</h2>
-    <a class="button past-events-btn" href="#tab-2">View past events</a>
+    <div class="row">
+      <div class="desktop-12">
+        <h2 class="no-events">Sorry, no upcoming events.</h2>
+        <a class="button past-events-btn" href="#tab-2">View past events</a>
+      </div>
+    </div>
   <?php endif; wp_reset_query(); ?>
 
 </div>
 <div class="tabber-tab tribe-events-list" id="tab-2">
   <?php $counter = 1; if ( have_posts() ) : while ($old_wp_query->have_posts()) : $old_wp_query->the_post();?>
-  <?php 
+  <?php
   $thumb_id = get_post_thumbnail_id();
   $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'header-bg', true);
   $thumb_url = $thumb_url_array[0];
@@ -158,7 +162,7 @@ $ul_wp_query->query($ul_args);
     <?php if ( have_posts() ) : ?>
     <?php $counter = 1; while ($ul_wp_query->have_posts()) : $ul_wp_query->the_post();?>
 
-    <?php 
+    <?php
     $thumb_id = get_post_thumbnail_id();
     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'header-bg', true);
     $thumb_url = $thumb_url_array[0];

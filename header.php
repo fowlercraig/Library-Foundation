@@ -14,7 +14,11 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+<!--[if IE]>[...]<![endif]-->
+
 <?php wp_head(); ?>
+
+
 <script src="//use.typekit.net/kfw6qzi.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 </head>

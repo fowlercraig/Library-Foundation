@@ -2,9 +2,9 @@
 
 if ( is_tax() ) {
 
-  $queried_object = get_queried_object(); 
+  $queried_object = get_queried_object();
   $taxonomy = $queried_object->taxonomy;
-  $term_id = $queried_object->term_id; 
+  $term_id = $queried_object->term_id;
   $taxTerm = $taxonomy . '_' . $term_id;
 
 } else {
@@ -87,7 +87,11 @@ if( have_rows('page_modules' , $taxTerm) ):
 
           include locate_template('templates/memorial-gift.php');
 
-        elseif( get_row_layout() == 'download' ): 
+        elseif( get_row_layout() == 'slideshow'):
+
+          include locate_template('templates/slideshow.php' );
+
+        elseif( get_row_layout() == 'download' ):
 
         	$file = get_sub_field('file');
 

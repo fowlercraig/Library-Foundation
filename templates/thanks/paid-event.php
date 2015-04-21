@@ -1,10 +1,10 @@
 
-<?php 
-  $temp = $wp_query; 
-  $wp_query = null; 
-  $wp_query = new WP_Query(); 
-  $wp_query->query('p=4457&post_type=page'); 
-  while ($wp_query->have_posts()) : $wp_query->the_post(); 
+<?php
+  $temp = $wp_query;
+  $wp_query = null;
+  $wp_query = new WP_Query();
+  $wp_query->query('p=4457&post_type=page');
+  while ($wp_query->have_posts()) : $wp_query->the_post();
 ?>
 
 <div <?php post_class(); ?>>
@@ -14,18 +14,20 @@
 
 <?php endwhile; ?>
 
-<?php 
-  $wp_query = null; 
+<?php
+  $wp_query = null;
   $wp_query = $temp;  // Reset
 ?>
 
-
+<?php if ($membership === false) { ?>
 <script>
+  // Paid Event
   $(window).load(function(){
     setTimeout(function(){
       $.magnificPopup.open({
         items: {
-          src: 'http://i.imgur.com/94skZEG.png'
+          src: '<a class="membership-cta" href="/membership"><img src="/assets/img/membership-cta.png" /></a>',
+          type: 'inline'
         },
         mainClass: 'mfp-fade',
         type: 'image'
@@ -33,3 +35,4 @@
     }, 4000);
   });
 </script>
+<?php } ?>

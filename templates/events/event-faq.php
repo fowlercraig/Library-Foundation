@@ -20,7 +20,7 @@
 
 
 <?php while ( have_rows('faq', $term ) ) : the_row(); ?>
-  <li class="item">
+  <li class="hello item">
     <a href="#tab" class="title"><?php the_sub_field('question'); ?></a>
     <div><?php the_sub_field('answer'); ?></div>
   </li>

@@ -23,7 +23,7 @@ die( '-1' );
 <?php while ( have_posts() ) : the_post(); ?>
 <?php do_action( 'tribe_events_inside_before_loop' ); ?>
 
-<?php 
+<?php
 
   if ( has_post_thumbnail()) {
 
@@ -33,7 +33,7 @@ die( '-1' );
     // $event_bg  = $thumb_url;
     $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
     $count = count($terms);
-    
+
     if ( $count > 0 ){
       $i = 0;
       foreach ( $terms as $term ){
@@ -51,7 +51,7 @@ die( '-1' );
     $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
     $count = count($terms);
 
-    // Here's where we'll get the slug for the current event category. 
+    // Here's where we'll get the slug for the current event category.
     // It only displays the first category slug -- but there shouldn't be a reason for more than one cat, right?
 
     if ( $count > 0 ){
@@ -63,8 +63,8 @@ die( '-1' );
     }
 
     // Custom Category Header
-    // Let's make sure to reuse this in other parts of the site, where applicable. 
-    // Probably the actual Event Category page. 
+    // Let's make sure to reuse this in other parts of the site, where applicable.
+    // Probably the actual Event Category page.
 
     $event_bg = '/assets/img/headers/default-'.$eventCat.'.jpg';
 

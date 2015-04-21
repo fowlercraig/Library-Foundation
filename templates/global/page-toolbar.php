@@ -1,22 +1,22 @@
-<?php 
+<?php
 
-  if ( is_page( 'blog' ) || is_category() || is_single() ) {    
+  if ( is_page( 'blog' ) || is_category() || is_single() ) {
 
     $menuLocation = 594;
 
-  } elseif ( tribe_is_past() || tribe_is_upcoming() && !is_tax() ) { 
+  } elseif ( tribe_is_past() || tribe_is_upcoming() && !is_tax() ) {
 
     $menuLocation = 41;
     $menuId = 'id="toolbar"';
     $eventsClass = 'events';
 
-  } elseif ( is_tax( 'tribe_events_cat' ) ) { 
+  } elseif ( is_tax( 'tribe_events_cat' ) ) {
 
     $menuLocation = 41;
     $menuId = 'id="toolbar"';
     $eventsClass = 'events';
 
-  } else { 
+  } else {
 
     $menuLocation = 2;
 
@@ -37,6 +37,7 @@
     <div class="desktop-12">
       <ul class="nav sf-menu">
         <?php echo wp_nav_menu( $menuParameters ); ?>
+        <li class="right lapl-link"><a href="" class="external-link">Visit LAPL.org</a></li>
       </ul>
     </div>
   </div>

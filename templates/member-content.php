@@ -6,11 +6,11 @@
       <menu class="tabber-menu">
         <a href="#tab_2" class="tabber-handle">
           <h3 class="member-level-title">Library Associates</h3>
-          
+
         </a>
         <a href="#tab_4" class="tabber-handle">
           <h3 class="member-level-title">Leadership Circle</h3>
-          
+
         </a>
       </menu>
     </div>
@@ -32,12 +32,12 @@
     $post_object = get_sub_field('page');
     if( $post_object ): $post = $post_object; setup_postdata( $post );
     $thing = $post->post_name;
-    wp_reset_postdata(); endif; 
+    wp_reset_postdata(); endif;
 
     $page_object = get_sub_field('gift_membership');
     if( $page_object ): $page = $page_object; setup_postdata( $page );
     $blargh = $page->post_name;
-    wp_reset_postdata(); endif; 
+    wp_reset_postdata(); endif;
 
   ?>
 
@@ -73,15 +73,17 @@
     <?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
     <hr>
     <p>
-      Give the gift of Membership to your friends, family, colleagues and we'll send directly 
-      to your recipient, or mail the gift to you to deliver personally. Members enjoy 12 
-      full months of critically acclaimed programs that bring together today’s brightest 
+      Give the gift of Membership to your friends, family, colleagues and we'll send directly
+      to your recipient, or mail the gift to you to deliver personally. Members enjoy 12
+      full months of critically acclaimed programs that bring together today’s brightest
       thinkers, invitations to special events, discounts, and so much more.
+      <br>
+      If you'd like to purchase multiple memberships, please <a href="mailto:info@lfla.org">contact us directly</a>.
     </p>
   </div>
   <?php wp_reset_postdata(); endif; ?>
 
-  
+
 
   <?php endwhile; ?>
   </div>
@@ -93,13 +95,13 @@
 
 </div>
 
-<?php 
+<?php
 
 if ( is_tax() ) {
 
-  $queried_object = get_queried_object(); 
+  $queried_object = get_queried_object();
   $taxonomy = $queried_object->taxonomy;
-  $term_id = $queried_object->term_id; 
+  $term_id = $queried_object->term_id;
   $taxTerm = $taxonomy . '_' . $term_id;
 
 } else {
@@ -158,13 +160,17 @@ if( have_rows('page_modules' , $taxTerm) ):
 
           include locate_template('templates/staff/staff-flex.php');
 
-        elseif( get_row_layout() == 'download' ): 
+        elseif( get_row_layout() == 'download' ):
 
           $file = get_sub_field('file');
 
         elseif( get_row_layout() == 'section_title' ):
 
           include('flex/section-title.php');
+
+        elseif( get_row_layout() == 'slideshow'):
+
+          include locate_template('templates/slideshow.php' );
 
         elseif( get_row_layout() == 'member_title' ):
 

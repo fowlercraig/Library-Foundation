@@ -1,6 +1,6 @@
-<?php 
+<?php
   $args = array( 'page_id' => 547 );
-  $the_query = new WP_Query( $args ); 
+  $the_query = new WP_Query( $args );
 ?>
 
 <?php  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -21,7 +21,7 @@ Popup content
     setTimeout(function(){
       $.magnificPopup.open({
         items: {
-          src: 'http://i.imgur.com/94skZEG.png'
+          src: '/assets/img/membership-cta.png'
         },
         mainClass: 'mfp-fade',
         type: 'image'
