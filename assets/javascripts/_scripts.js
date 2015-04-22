@@ -651,10 +651,10 @@ var filterFns = {
         wrapper: '<div class="header-wrapper"/>',
       });
   }
-  if ($('#toolbar.events, #archive-bar')
+  if ($('#toolbar.events, #archive-bar, #event-bar.toolbar')
     .length) {
     var eventSticky = new Waypoint.Sticky({
-      element: $('#toolbar.events, #archive-bar')[0],
+      element: $('#toolbar.events, #archive-bar, #event-bar.toolbar')[0],
       wrapper: '<div class="event-bar-wrapper"/>',
       offset: 50,
     });
