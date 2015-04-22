@@ -2,7 +2,7 @@
 
   <?php if (is_page('membership')): ?>
   <menu class="row">
-    <div class="desktop-12">
+    <div class="desktop-12 tablet-6 mobile-3">
       <menu class="tabber-menu">
         <a href="#tab_2" class="tabber-handle">
           <h3 class="member-level-title">Library Associates</h3>
@@ -18,7 +18,7 @@
   <?php endif; ?>
 
   <div class="row">
-  <div class="desktop-12 padded">
+  <div class="desktop-12 tablet-6 mobile-3 padded">
 
   <?php if( have_rows('page_modules') ): $counter = 1; while ( have_rows('page_modules') ) : the_row(); ?>
   <?php if( get_row_layout() == 'page_references_description' ): ?>

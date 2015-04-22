@@ -6,7 +6,7 @@
 
     $image = get_sub_field('book_image');
 
-    if( !empty($image) ): 
+    if( !empty($image) ):
     $url = $image['url'];
     $title = $image['title'];
     $alt = $image['alt'];
@@ -23,10 +23,10 @@
 
   <div class="item related-book">
     <div class="row">
-      <div class="desktop-4 tablet-6 mobile-3">
-        <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
+      <div class="desktop-4 tablet-2 mobile-1">
+        <img class="img-responsive" src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" />
       </div>
-      <div class="desktop-7 tablet-6 mobile-3 right">
+      <div class="desktop-7 tablet-4 mobile-2 right">
         <?php the_sub_field('book_description'); ?>
         <br><small>Add to cart during checkout</small>
       </div>
@@ -41,8 +41,8 @@
 <div class="item message">
   <small><?php the_field('book_message'); ?></small>
 </div>
-  
+
 <?php endif; ?>
-  
+
 
 <?php endif; ?>

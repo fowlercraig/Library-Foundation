@@ -11,7 +11,7 @@
   }
 
   @media @tablet {
-    padding-top: 400px;
+    padding-top: 275px;
   }
 
   @media @desktop {
@@ -60,6 +60,14 @@
     li {
 
       display: inline-block;
+
+      @media @mobile {
+        .font_size(11);
+      }
+
+      @media @tablet {
+        .font_size(14);
+      }
 
       &:before {
         display: none;

@@ -22,11 +22,19 @@
 
   &.stuck, &.homepage {
 
-    position: fixed;
-    top: 75px;
     width: inherit;
     background: @orange;
     z-index: 99;
+
+    @media @mobile {
+      position: static;
+      top: 0;
+    }
+
+    @media @desktop {
+      position: fixed;
+      top: 75px;
+    }
 
     > a {
       background: darken(@orange, 5%);
@@ -482,3 +490,36 @@
     color: @white;
   }
 }
+
+
+.sub-nav-select {
+  .cat();
+  font-weight: normal!important;
+  color: @textGray;
+
+  span, .selecter-options a {
+    .font_size(11);
+    line-height: 20px;
+  }
+
+  .selecter-selected {
+    border-color: @lightestGray;
+    &:hover {
+      border-color: @lighterGray;
+    }
+  }
+}
+
+#search-events-mobile {
+  .cat();
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+  color: @lightGray;
+  i {
+    position: relative;
+    top: .125em;
+  }
+}
+
+

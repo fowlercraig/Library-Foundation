@@ -15,18 +15,18 @@
       maxWidth: Infinity
     });
 
-    $('a')
-    .each(function() {
-      var a = new RegExp('/' + window.location.host + '/');
-      if (!a.test(this.href)) {
-        $(this)
-        .click(function(event) {
-          event.preventDefault();
-          event.stopPropagation();
-          window.open(this.href, '_blank');
-        });
-      }
-    });
+    // $('a').each(function() {
+    //   var a = new RegExp('/' + window.location.host + '/');
+    //   if (!a.test(this.href)) {
+    //     $(this)
+    //     .click(function(event) {
+    //       event.preventDefault();
+    //       event.stopPropagation();
+    //       window.open(this.href, '_blank');
+    //     });
+    //   }
+    // });
+
     var initPhotoSwipeFromDOM = function(gallerySelector) {
     // parse slide data (url, title, size ...) from DOM elements
     // (children of gallerySelector)
@@ -194,7 +194,9 @@
     disableHI: true
   });
   // Tabber
-  $(".tabbed").tabber();
+  $(".tabbed").tabber({
+    maxWidth: '100px'
+  });
   // Sizer
   $("#sized, #staff, #sponsors, #page-list.quadrant").sizer();
 
@@ -208,6 +210,16 @@
       cover: true,
       customClass: "blog-select"
     });
+
+
+  $("#search-events-mobile").click(function(e){
+    e.preventDefault();
+    $('#event-bar').toggle({
+      //height: 'auto',
+      //overflow: 'visible'
+    })
+  });
+
   // $(".widget_categories select").selecter({
   //   label: "All Categories",
   //   cover: true,
@@ -648,30 +660,30 @@ var filterFns = {
     });
 }
 }
-  // $(function($) {
-  //   var scrollElement = 'html, body';
-  //   $('html, body').each(function () {
-  //     var initScrollTop = $(this).attr('scrollTop');
-  //     $(this).attr('scrollTop', initScrollTop + 1);
-  //     if ($(this).attr('scrollTop') == initScrollTop + 1) {
-  //       scrollElement = this.nodeName.toLowerCase();
-  //       $(this).attr('scrollTop', initScrollTop);
-  //       return false;
-  //     }
-  //   });
-  //   // Smooth scrolling for internal links
-  //   $("a[href^='#']:not(.tabber-handle, .popup)").click(function(event) {
-  //     event.preventDefault();
-  //     var $this = $(this),
-  //     target = this.hash,
-  //     $target = $(target);
-  //     $(scrollElement).stop().animate({
-  //       'scrollTop': $target.offset().top - 80
-  //     }, 300, 'swing', function() {
-  //       window.location.hash = target;
-  //     });
-  //   });
-  // });
+  $(function($) {
+    var scrollElement = 'html, body';
+    $('html, body').each(function () {
+      var initScrollTop = $(this).attr('scrollTop');
+      $(this).attr('scrollTop', initScrollTop + 1);
+      if ($(this).attr('scrollTop') == initScrollTop + 1) {
+        scrollElement = this.nodeName.toLowerCase();
+        $(this).attr('scrollTop', initScrollTop);
+        return false;
+      }
+    });
+    // Smooth scrolling for internal links
+    $("a[href^='#']:not(.tabber-handle, .popup)").click(function(event) {
+      event.preventDefault();
+      var $this = $(this),
+      target = this.hash,
+      $target = $(target);
+      $(scrollElement).stop().animate({
+        'scrollTop': $target.offset().top - 100
+      }, 300, 'swing', function() {
+        window.location.hash = target;
+      });
+    });
+  });
 if ($('#member-widget')
   .length) {
   if ($('body.single-tribe_events')

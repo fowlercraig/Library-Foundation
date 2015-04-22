@@ -12,11 +12,11 @@ return get_stylesheet_directory_uri() . "/assets/img/cards.png" ;
 }
 
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
- 
+
 function woo_custom_cart_button_text() {
- 
+
   return __( 'Add to Bag', 'woocommerce' );
- 
+
 }
 
 function so_28348735_category_based_thank_you_message ( $order_id ){
@@ -62,18 +62,22 @@ function so_28348735_category_based_thank_you_message ( $order_id ){
   }
 
   if ($freeticket === true) {
+    // Free LFLA Event
     include locate_template('templates/thanks/free-event.php' );
   }
 
   if ($paidticket === true) {
+    // Paid LFLA Event
     include locate_template('templates/thanks/paid-event.php' );
   }
 
   if ($donation === true) {
+    // General Donation
     include locate_template('templates/thanks/general-donation.php' );
   }
 
   if ($membership === true) {
+    // Membership
     include locate_template('templates/thanks/membership.php' );
   }
 
@@ -97,11 +101,11 @@ function so_28348735_category_based_thank_you_message ( $order_id ){
     </script><?php
 
   }
-   
+
 
 }
 
-add_action( 'woocommerce_thankyou', 'so_28348735_category_based_thank_you_message' ); 
+add_action( 'woocommerce_thankyou', 'so_28348735_category_based_thank_you_message' );
 
 /**
  * Plugin Name: WooCommerce Remove Billing Fields for Free Virtual Products
@@ -162,23 +166,23 @@ add_action( 'woocommerce_thankyou', 'so_28348735_category_based_thank_you_messag
 
 
 add_filter( 'woocommerce_payment_complete_order_status', 'virtual_order_payment_complete_order_status', 10, 2 );
- 
+
 function virtual_order_payment_complete_order_status( $order_status, $order_id ) {
   $order = new WC_Order( $order_id );
- 
+
   if ( 'processing' == $order_status &&
        ( 'on-hold' == $order->status || 'pending' == $order->status || 'failed' == $order->status ) ) {
- 
+
     $virtual_order = null;
- 
+
     if ( count( $order->get_items() ) > 0 ) {
- 
+
       foreach( $order->get_items() as $item ) {
- 
+
         if ( 'line_item' == $item['type'] ) {
- 
+
           $_product = $order->get_product_from_item( $item );
- 
+
           if ( ! $_product->is_virtual() ) {
             // once we've found one non-virtual product we know we're done, break out of the loop
             $virtual_order = false;
@@ -189,13 +193,13 @@ function virtual_order_payment_complete_order_status( $order_status, $order_id )
         }
       }
     }
- 
+
     // virtual order, mark as completed
     if ( $virtual_order ) {
       return 'completed';
     }
   }
- 
+
   // non-virtual order, return original status
   return $order_status;
 }

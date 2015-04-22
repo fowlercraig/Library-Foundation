@@ -5,13 +5,22 @@
 #head {
 
   .overlay();
-  padding: 30px 20px;
+  padding: 30px 0;
   width: 100%;
   z-index: 50;
   width: 100%;
-  padding-top: 5px 0 10px;
   border-bottom: 1px solid @white25;
   transition: 150ms ease;
+
+  @media @mobile {
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  @media @tablet {
+    padding: 30px 0;
+    width: 100%;
+  }
 
   &:hover {
     //border-color: transparent;

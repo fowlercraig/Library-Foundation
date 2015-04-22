@@ -1,4 +1,4 @@
-<div class="share-wrapper">
+<div class="share-wrapper hide-mobile">
   <a class="button" href="#">Share This</a>
   <ul class="share-things">
     <li><a target="blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php bloginfo( 'siteurl' ) ?><?php the_permalink(); ?>" class="ss-icon ss-social-circle ss-facebook"></a></li>

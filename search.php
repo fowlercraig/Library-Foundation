@@ -21,14 +21,14 @@
             if ( has_post_thumbnail() ) {
               $width = 'desktop-6 tablet-4 mobile-3';
             } else {
-              $width = 'desktop-12 tablet-6 mobile-3';
+              $width = 'desktop-9 tablet-6 mobile-3';
             }
           ?>
 
           <?php if ( has_post_thumbnail() ): ?>
-          <div class="desktop-6 tablet-2 mobile-3">
+          <div class="desktop-3 tablet-2 mobile-3">
             <a href="<?php the_permalink(); ?>">
-              <?php the_post_thumbnail( 'large', array( 'class' => 'img-responsive' ) ); ?>
+              <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-responsive' ) ); ?>
             </a>
           </div>
           <?php endif; ?>

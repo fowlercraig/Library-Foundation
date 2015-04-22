@@ -1,4 +1,4 @@
-<?php 
+<?php
 
   if ( has_post_thumbnail()) {
 
@@ -17,7 +17,7 @@
     $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
     $count = count($terms);
 
-    // Here's where we'll get the slug for the current event category. 
+    // Here's where we'll get the slug for the current event category.
     // It only displays the first category slug -- but there shouldn't be a reason for more than one cat, right?
 
     if ( $count > 0 ){
@@ -29,8 +29,8 @@
     }
 
     // Custom Category Header
-    // Let's make sure to reuse this in other parts of the site, where applicable. 
-    // Probably the actual Event Category page. 
+    // Let's make sure to reuse this in other parts of the site, where applicable.
+    // Probably the actual Event Category page.
 
     $event_bg = '/assets/img/headers/default-'.$eventCat.'.jpg';
 
@@ -50,7 +50,7 @@
 <div class="page-header event" data-speed="2" style="background-image:url(<?php echo $event_bg; ?>);">
   <div class="row">
     <div class="desktop-12">
-      <?php 
+      <?php
         $terms = wp_get_post_terms(get_the_ID(), 'tribe_events_cat');
         $count = count($terms);
         if ( $count > 0 ){
@@ -67,11 +67,11 @@
 
   <div class="event-meta">
     <div class="row">
-      <div class="desktop-8">
+      <div class="max-8 desktop-6 tablet-6 mobile-3">
         <span class="date upper"><?php the_field('event_title'); ?></span><br>
         <span class="location lower"><?php the_field('event_subtitle'); ?></span>
       </div>
-      <div class="desktop-4 text-right">
+      <div class="max-4 desktop-5 tablet-6 mobile-3 text-right right">
         <span class="date upper"><?php echo $event_date  ?></span><br>
         <span class="location lower"><a href="<?php echo tribe_the_map_link(); ?>"><?php echo $venue_details[0]; ?></a></span>
       </div>

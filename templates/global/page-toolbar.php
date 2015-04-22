@@ -34,7 +34,7 @@
 
 <div <?php echo $menuId; ?> class="toolbar <?php echo $eventsClass; ?>">
   <div class="row">
-    <div class="desktop-12">
+    <div class="desktop-12 tablet-6 mobile-hide">
       <ul class="nav sf-menu">
         <?php echo wp_nav_menu( $menuParameters ); ?>
         <li class="right lapl-link"><a href="" class="external-link">Visit LAPL.org</a></li>

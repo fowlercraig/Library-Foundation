@@ -4,15 +4,22 @@
 
   if( have_rows('related_ticket_groups') ) {
 
-    if (strlen($cost)>0) {
-      $ticketStatus = '<a id="event-status-button" href="#things" class="button jumpdown">Purchase Tickets</a>';
+    if( tribe_get_end_date( null, true, 'Y-m-d H:i:s' ) < date( 'Y-m-d H:i:s' )) {
+
+      $ticketStatus = '<a id="event-status-button"  href="#" class="button disabled">This Event Has Passed</a>';
+
     } else {
-      $ticketStatus = '<a id="event-status-button" href="#things" class="button jumpdown">RSVP</a>';
+
+      if (strlen($cost)>0) {
+        $ticketStatus = '<a id="event-status-button" href="#things" class="button jumpdown">Purchase Tickets</a>';
+      } else {
+        $ticketStatus = '<a id="event-status-button" href="#things" class="button jumpdown">RSVP</a>';
+      }
     }
 
    } else {
 
-    if( tribe_get_end_date( null, false, 'Y-m-d H:i:s' ) < date( 'Y-m-d H:i:s' )) {
+    if( tribe_get_end_date( null, true, 'Y-m-d H:i:s' ) < date( 'Y-m-d H:i:s' )) {
 
       $ticketStatus = '<a id="event-status-button"  href="#" class="button disabled">This Event Has Passed</a>';
 
@@ -68,11 +75,11 @@
 
 <div id="event-bar" class="toolbar">
   <div class="row">
-    <nav class="desktop-8 tablet-6 mobile-3">
+    <nav class="desktop-8 tablet-4 mobile-2">
       <?php echo $ticketStatus; ?>
-      <a id="event-calenar-button" href="<?php echo sp_get_single_ical_link(); ?>" class="button">Add to Calendar</a>
+      <a id="event-calenar-button" href="<?php echo sp_get_single_ical_link(); ?>" class="button hide-mobile">Add to Calendar</a>
     </nav>
-    <nav class="desktop-4 tablet-6 mobile-3 text-right">
+    <nav class="desktop-4 tablet-2 mobile-1 text-right">
       <?php include locate_template('templates/share.php' );?>
       <a href="#faq" class="button">FAQ</a>
       <!--<a href="#reservation-policy" class="button">Reservation Policy</a>-->

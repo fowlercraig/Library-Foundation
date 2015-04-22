@@ -1,18 +1,18 @@
-<?php 
-  
-  $queried_object = get_queried_object(); 
+<?php
+
+  $queried_object = get_queried_object();
   $taxonomy = $queried_object->taxonomy;
-  $term_id = $queried_object->term_id;  
+  $term_id = $queried_object->term_id;
 
   // Dynamically Grab the page width depending on template.
 
   if ( get_field('include_aside', $taxonomy . '_' . $term_id)) {
-  
+
     $pageWidth = 'sizer-item desktop-8 tablet-4 mobile-3';
 
   } else {
 
-    $pageWidth = 'sizer-item desktop-12 tablet-4 mobile-3';
+    $pageWidth = 'sizer-item desktop-12 tablet-6 mobile-3';
 
   }
 

@@ -8,7 +8,7 @@
 
   } else {
 
-    $pageWidth = 'desktop-12';
+    $pageWidth = 'desktop-12 tablet-6 mobile-3';
   }
 
   ?>

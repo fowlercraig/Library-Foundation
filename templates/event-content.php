@@ -2,8 +2,8 @@
 
 <div class="event-content">
   <div class="row">
-    <div class="desktop-7">
-      
+    <div class="desktop-7 tablet-6 mobile-3">
+
       <?php if( have_rows('related_ticket_groups') ): ?>
       <?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
       <?php endif; ?>

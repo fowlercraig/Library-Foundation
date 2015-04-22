@@ -5552,6 +5552,29 @@ html:hover [class^="ss-"] {
 .membership-cta .mfp-close {
   color: #ffffff;
 }
+.sub-nav-select {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-weight: normal!important;
+  color: #858585;
+}
+.sub-nav-select span,
+.sub-nav-select .selecter-options a {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  line-height: 20px;
+}
+.sub-nav-select .selecter-selected {
+  border-color: #dddddd;
+}
+.sub-nav-select .selecter-selected:hover {
+  border-color: #cccccc;
+}
 .single-tribe_events .tribe-events-event-image {
   text-align: left;
 }
@@ -7931,10 +7954,9 @@ p.demo_store {
   top: 0;
   left: 0;
   z-index: 10;
-  padding: 30px 20px;
+  padding: 30px 0;
   z-index: 50;
   width: 100%;
-  padding-top: 5px 0 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   transition: 150ms ease;
 }
@@ -8177,7 +8199,7 @@ p.demo_store {
 }
 @media screen and (min-width: 740px) {
   .page-header {
-    padding-top: 400px;
+    padding-top: 275px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -8216,6 +8238,18 @@ p.demo_store {
 }
 .page-header ul.parent-links li {
   display: inline-block;
+}
+@media screen and (min-width: 320px) {
+  .page-header ul.parent-links li {
+    font-size: 11px;
+    font-size: 0.6875rem;
+  }
+}
+@media screen and (min-width: 740px) {
+  .page-header ul.parent-links li {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
 }
 .page-header ul.parent-links li:before {
   display: none;
@@ -9698,6 +9732,16 @@ p.demo_store {
 }
 #flickr-gallery .item {
   position: relative;
+}
+@media screen and (min-width: 320px) {
+  #flickr-gallery .item {
+    margin-bottom: 2.08333333%;
+  }
+}
+@media screen and (min-width: 980px) {
+  #flickr-gallery .item {
+    margin-bottom: 0;
+  }
 }
 #flickr-gallery .item .meta {
   z-index: 9;
@@ -11599,52 +11643,4 @@ table.cart .product-subtotal {
 }
 .faq-list {
   padding: 0;
-}
-.faq-list .item {
-  display: block;
-  padding: 2.08333333% 0;
-  border-bottom: 1px solid #dddddd;
-}
-.faq-list .item:last-child,
-.faq-list .item.header {
-  border-bottom: none;
-}
-.faq-list .item .title {
-  margin: 0;
-  font-family: 'Sentinel', serif;
-  text-rendering: optimizeLegibility;
-}
-.faq-list .item p:first-child {
-  margin-top: 0;
-}
-.faq-list .item p:last-child {
-  margin-bottom: 0;
-}
-#event-bios {
-  border-top: 2px solid #f8f8f8;
-  padding-top: 25px;
-}
-#event-bios hr {
-  height: 1px;
-  background: #dddddd;
-  margin: 25px 0 35px;
-}
-#sponsors:hover .item img {
-  opacity: 1;
-}
-#sponsors .item img {
-  display: block;
-  opacity: .97;
-  transition: 300ms ease;
-}
-#sponsors .item img:hover {
-  opacity: 0.97;
-}
-#sponsor-desc {
-  background: #F9F9F9;
-  margin-bottom: 1.04166667%;
-}
-#sponsor-desc a {
-  color: #008bbe;
-  border: none;
 }

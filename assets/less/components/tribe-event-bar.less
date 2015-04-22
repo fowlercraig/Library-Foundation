@@ -2,6 +2,21 @@
 
   background: @bgGray;
   margin-bottom: 0;
+  border-bottom: 0;
+
+  &.event-page {
+    @media @mobile {
+      //height: 0;
+      //overflow: hidden;
+      display: none;
+    }
+
+    @media @tablet {
+      //height: auto;
+      //overflow: visible;
+      display: block;
+    }
+  }
 
   &.event-page {
     background: none;
@@ -137,18 +152,25 @@
   }
 
   .tribe-bar-filters {
-    
+
     position: relative;
-    padding-left: 30px;
+
+    @media @mobile {
+      padding-left: 0;
+    }
+
+    @media @desktop {
+      padding-left: 30px;
+    }
 
     input {
       margin-bottom: 0;
     }
-    
+
     .icon-holder {
       position: absolute;
       left: 0;
-      
+
       height: 63px;
       line-height: 63px;
       i {
@@ -156,11 +178,11 @@
         background: @bgGray;
       }
     }
-    
+
     .no-border {
       border:none;
     }
-    
+
     &.social {
       a {
         color: @lighterGray;

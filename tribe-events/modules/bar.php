@@ -21,6 +21,12 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 
 ?>
 
+<div class="row">
+	<div class="desktop-hide tablet-hide mobile-3">
+		<a id="search-events-mobile"><i class="ss-icon ss-gizmo">search</i> Find Events</a>
+	</div>
+</div>
+
 <?php get_template_part('templates/global/page', 'toolbar' );?>
 
 <?php do_action( 'tribe_events_bar_before_template' ) ?>
@@ -47,10 +53,10 @@ $current_url = esc_url( add_query_arg( $wp->query_string, '', home_url( $wp->req
 	    <?php if ( ! empty( $filters ) ) { ?>
 	      <div class="tribe-bar-filters max-5 desktop-8 tablet-6 mobile-3">
 
-	        <div class="tribe-bar-filters-inner tribe-clearfix row ss-glyphish ss-calendar">
+	        <div class="tribe-bar-filters-inner tribe-clearfix row ss-glyphish ss-calendar row">
 	        	<span class="icon-holder"><i class="ss-glyphish ss-calendar"></i></span>
 	          <?php foreach ( $filters as $filter ) : ?>
-	            <div class="desktop-4 <?php echo esc_attr( $filter['name'] ) ?>-filter">
+	            <div class="desktop-4 tablet-2 mobile-3 <?php echo esc_attr( $filter['name'] ) ?>-filter">
 	              <!--<label class="label-<?php echo esc_attr( $filter['name'] ) ?>" for="<?php echo esc_attr( $filter['name'] ) ?>"><?php echo $filter['caption'] ?></label>-->
 	              <?php echo $filter['html'] ?>
 	            </div>

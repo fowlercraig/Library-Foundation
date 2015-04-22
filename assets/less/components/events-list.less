@@ -2,11 +2,18 @@
 
   .type-tribe_events {
 
-    padding: @gutter*3 0;
     position: relative;
     border-bottom: 2px solid @bgGray;
     transition: 100ms ease;
     overflow: hidden;
+
+    @media @mobile {
+      padding: 30px 0;
+    }
+
+    @media @tablet {
+      padding: 40px 0;
+    }
 
     .button {
 
@@ -18,15 +25,43 @@
 
     }
 
+    .text-right {
+      @media @mobile {
+        text-align: left;
+        padding-top: 20px;
+      }
+      @media @tablet {
+        padding-top: 0;
+        text-align: right;
+      }
+    }
+
     .meta {
 
       .parent-links();
       font-weight: 500;
       font-size: 13px;
 
+      @media @mobile {
+        margin-bottom: 10px;
+      }
+
+      @media @desktop {
+        margin-bottom: 0;
+      }
+
       span {
         transition: 100ms ease!important;
         transition-delay: 2s;
+      }
+      hr {
+        @media @mobile {
+          display: block!important;
+          margin: 0;
+        }
+        @media @tablet {
+          display: none!important;
+        }
       }
 
       a {
@@ -65,7 +100,12 @@
 
       margin: @gutter 0;
       .sentinel();
-      font-size: 28px;
+      @media @mobile {
+        .font_size(20);
+      }
+      @media @tablet {
+        .font_size(28);
+      }
 
       a {
         color: @black;
@@ -81,8 +121,11 @@
 
       background: #000;
       color: @white;
-      padding: @gutter*4 0;
       border-bottom: 1px solid @white;
+
+      @media @desktop {
+        padding: @gutter*4 0;
+      }
 
       .title {
         a {
@@ -111,7 +154,13 @@
 
       padding: @gutter*5 0!important;
       .title {
-        font-size: 42px;
+
+        @media @mobile {
+          .font_size(20);
+        }
+        @media @tablet {
+          .font_size(42);
+        }
       }
 
       &:hover {

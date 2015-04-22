@@ -53,10 +53,26 @@
     color: @black;
     font-size: 28px;
     display: block;
-    height: 75px;
-    line-height: 75px;
     position: relative;
     padding-left: 25px;
+
+    @media @mobile {
+      padding: 8px 0;
+      padding-left: 25px;
+      .font_size(16);
+    }
+
+    @media @tablet {
+      padding: 10px 0;
+      padding-left: 25px;
+      .font_size(23);
+    }
+
+    @media @desktop {
+      padding: 8px 0;
+      padding-left: 25px;
+      .font_size(28);
+    }
 
 
     &:before {
@@ -64,18 +80,26 @@
       content: '▻';
       display: block;
       position: absolute;
-      height: 75px;
       font-size: 20px;
-      line-height: 78px;
+      padding: 8px 0;
       left: 0;
       color: @lighterGray;
-    }
 
-    &:hover {
-      &:before {
-        color: @textGray;
-        transform: rotate(45deg);
+      @media @mobile {
+        font-size: 15px;
+        padding: 3px 0;
       }
+
+      @media @tablet {
+        font-size: 14px;
+        padding: 5px 0;
+      }
+
+      @media @desktop {
+        font-size: 20px;
+        padding: 8px 0;
+      }
+
     }
 
   }

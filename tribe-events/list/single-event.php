@@ -73,6 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			}
 		}
 	?>
+  <hr class="hidden invisible">
   <?php
     $sd = tribe_get_start_date($post->ID, false, 'M j, Y');
     $st = tribe_get_start_time($post->ID, false, 'g:i a');
@@ -80,12 +81,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php echo $sd; echo ' | '; echo $st; ?>
 </div>
 
-<div class="desktop-6 tablet-6 mobile-3">
+<div class="desktop-8 tablet-4 mobile-3">
 	<h3 class="title"><a href="<?php echo tribe_get_event_link() ?>" title="<?php the_title() ?>"><?php the_title() ?></a></h3>
 	<span class="date upper"><?php the_field('event_title'); ?></span>
 </div>
 
-<div class="desktop-6 tablet-6 mobile-3 text-right">
+<div class="ticket-status desktop-4 tablet-2 mobile-3 text-right">
 	<?php echo $ticketStatus; ?>
 </div>
 
