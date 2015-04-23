@@ -4,7 +4,7 @@ $width = get_sub_field('layout');
 
 if( have_rows('pages') ):
 
-    if( $width == "desktop-6" ){ 
+    if( $width == "desktop-6" ){
       echo '<div class="row">';
       $quandrant = 'quadrant';
       $widthModifier = $width . ' padded quadrant sizer-item';
@@ -20,12 +20,18 @@ if( have_rows('pages') ):
 
         <div <?php post_class('item '. $widthModifier); ?>>
           <div class="row">
-            <div class="desktop-12">
-              <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-              <?php if(has_excerpt($post->ID)) { ?>
-              <p><?php echo get_the_excerpt(); ?></p>
-              <?php } ?>
-              <a href="<?php the_permalink(); ?>" class="button">Learn More</a>
+            <div class="desktop-12 tablet-6 mobile-3">
+              <div class="row">
+                <div class="desktop-12 tablet-4 mobile-3">
+                  <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                  <?php if(has_excerpt($post->ID)) { ?>
+                  <p><?php echo get_the_excerpt(); ?></p>
+                  <?php } ?>
+                </div>
+                <div class="desktop-12 tablet-2 mobile-3 text-left">
+                  <a href="<?php the_permalink(); ?>" class="button">Learn More</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -34,7 +40,7 @@ if( have_rows('pages') ):
 
     endwhile;
 
-    if( $width == "desktop-6" ){ 
+    if( $width == "desktop-6" ){
       echo '</div>';
     }
 

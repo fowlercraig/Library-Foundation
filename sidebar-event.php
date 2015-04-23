@@ -1,5 +1,6 @@
 <div id="sidebar-wrapper" class="desktop-4 tablet-6 mobile-3 right sizer-item">
 
+  <?php include locate_template('/templates/events/event-sidebar-general.php'); ?>
   <?php include locate_template('/templates/events/event-sidebar-donate.php'); ?>
   <?php include locate_template('/templates/events/event-sidebar-articles.php'); ?>
   <?php include locate_template('/templates/events/event-sidebar-gallery.php'); ?>

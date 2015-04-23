@@ -120,6 +120,7 @@
     <h4>Navigation</h4>
     <a href="/">Home</a>
     <?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?>
+    <a href="#" class="search"><i class="ss-gizmo ss-icon">search</i></a>
     <h4>Support Us</h4>
     <a href="<?php echo get_the_permalink(299); ?>">Donate</a>
     <a href="<?php echo get_the_permalink(289); ?>">Join the LFLA</a>

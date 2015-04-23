@@ -4,7 +4,7 @@
 
   if ( get_field('simple_page')) {
 
-    get_template_part('templates/page', 'header-simple');
+    include locate_template('/templates/page-header-simple.php');
 
   } else {
 

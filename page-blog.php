@@ -6,18 +6,18 @@
 <div class="row">
   <div class="desktop-7">
 
-    <?php 
+    <?php
       $args = array(
         'posts_per_page' => 10,
         'post_type'     => 'post',
         'paged'          => $paged
       );
-      $temp = $wp_query; 
-      $wp_query = null; 
-      $wp_query = new WP_Query(); 
-      $wp_query->query($args); 
+      $temp = $wp_query;
+      $wp_query = null;
+      $wp_query = new WP_Query();
+      $wp_query->query($args);
 
-      while ($wp_query->have_posts()) : $wp_query->the_post(); 
+      while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
 
     <?php include locate_template('templates/blog/blog-item.php' ); ?>
@@ -46,12 +46,13 @@
       <?php echo paginate_links( $links ); ?>
     </nav>
 
-    <?php 
-      $wp_query = null; 
+    <?php
+      $wp_query = null;
       $wp_query = $temp;  // Reset
     ?>
-    
+
   </div>
+  <hr class="desktop-hide tablet-6 mobile-3 invisible"/>
   <?php get_sidebar(); ?>
 </div>
 

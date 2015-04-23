@@ -1,6 +1,25 @@
+.page-staff {
+  .page-content {
+    .hidden();
+  }
+}
+
+#staff {
+
+  .title {
+    .sentinel();
+  }
+
+  .group {
+    margin-bottom: 20px;
+  }
+
+}
+
 .staff-member {
 
   position: relative;
+  margin-bottom: 10px;
 
   .thumb {
     position: relative;
@@ -45,6 +64,18 @@
   .info {
 
     line-height: 1.4;
+    .cat();
+    font-weight: 500;
+    @media @mobile {
+      .font_size(8);
+    }
+    @media @tablet {
+      .font_size(11);
+    }
+    @media @desktop {
+      .font_size(10);
+    }
+
 
     br {
       height: 1px;
@@ -55,18 +86,19 @@
       .sentinel();
       font-weight: normal;
       color: @gray;
+      letter-spacing: 0;
       display: block;
+      text-transform: capitalize;
       font-size: 22px;
     }
 
     em, a, i {
       display: block;
-      .cat();
       font-style: normal;
-      font-weight: 500;
       border: none;
       color: @lightGray;
       text-decoration: none;
+
     }
 
   }
@@ -82,7 +114,7 @@
     padding: 15px 25px;
     margin-top: @gutter;
     margin-bottom: @gutter;
-    
+
     .columns {
 
       column-count: 1!important;

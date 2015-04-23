@@ -1,7 +1,14 @@
 <?php Themewrangler::setup_page();get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
-<div class="simple-header">
+
+<?php
+  $input     = array("1","2","3","4","5","6","7");
+  $rand_keys = array_rand($input, 2);
+  $bgImg     = $input[$rand_keys[1]];
+?>
+
+<div class="simple-header" data-speed="1.25" style="background-image:url(<?php echo '/assets/img/bg/'; echo $bgImg; echo '.jpg' ?>);">
   <div class="row">
     <div class="desktop-12">
       <h1 class="page-header-title"><?php printf( __( 'Search Results for: %s', 'blankslate' ), get_search_query() ); ?></h1>
@@ -19,14 +26,14 @@
 
           <?php
             if ( has_post_thumbnail() ) {
-              $width = 'desktop-6 tablet-4 mobile-3';
+              $width = 'desktop-9 tablet-5 mobile-3';
             } else {
-              $width = 'desktop-9 tablet-6 mobile-3';
+              $width = 'desktop-12 tablet-6 mobile-3';
             }
           ?>
 
           <?php if ( has_post_thumbnail() ): ?>
-          <div class="desktop-3 tablet-2 mobile-3">
+          <div class="desktop-3 tablet-1 mobile-hide">
             <a href="<?php the_permalink(); ?>">
               <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img-responsive' ) ); ?>
             </a>

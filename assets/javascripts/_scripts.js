@@ -15,6 +15,8 @@
       maxWidth: Infinity
     });
 
+    //$('a[href^="http://"]').not('a[href*=#]').attr('target','_blank');
+
     // $('a').each(function() {
     //   var a = new RegExp('/' + window.location.host + '/');
     //   if (!a.test(this.href)) {
@@ -770,7 +772,7 @@ $('#member-widget')
     preloader: false,
     fixedContentPos: false
   });
-  $('#main-nav a.search')
+  $('.main-nav a.search, #main-nav a.search')
   .click(function(event) {
     event.preventDefault();
     $('#search-footer')

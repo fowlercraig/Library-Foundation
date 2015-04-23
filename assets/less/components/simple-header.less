@@ -8,7 +8,7 @@
   position: relative;
   overflow: hidden;
   background-size: cover;
-  background-position: center center;
+  background-attachment: scroll;
 
 
   .simple-header--bg {
@@ -38,22 +38,22 @@
 
     }
 
-    
-    
+
+
     // width: 120%;
     // height: 120%;
 
     // width: 100%;
     // height: 100%;
 
-    
+
 
     // top: -0%;
     // left: -0%;
 
     opacity: .85;
     z-index: 1;
-    
+
   }
 
   > .row {
@@ -65,7 +65,7 @@
     position: relative;
     z-index: 2px;
   }
-  
+
 
   &:hover {
     &:after {
@@ -114,6 +114,14 @@
         display: none;
       }
 
+      &:first-child {
+        a {
+          &:before {
+            display: none;
+          }
+        }
+      }
+
       a {
         color: @white;
         display: block;
@@ -140,13 +148,13 @@
     background: @blue;
 
     &:after {
-      opacity: .125; 
+      opacity: .125;
     }
 
     .page-header-title {
-    
+
       font-size: 3em;
-    
+
     }
 
   }

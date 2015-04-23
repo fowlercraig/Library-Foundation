@@ -97,7 +97,7 @@ function so_28348735_category_based_thank_you_message ( $order_id ){
     echo '</div>';
 
     ?><script>
-      $("#post_confirmation").prependTo('.cart-content .row').css('opacity','1');
+      //$("#post_confirmation").prependTo('.cart-content .row').css('opacity','1');
     </script><?php
 
   }
@@ -225,3 +225,44 @@ function conditional_checkout_fields_products( $fields ) {
     return $fields;
 }
 add_filter( 'woocommerce_checkout_fields', 'conditional_checkout_fields_products' );
+
+
+/**
+ * Gravity Perks // GP Price Range // Modify Validation Messages
+ */
+add_filter( 'gform_validation', function( $result ) {
+
+  foreach( $result['form']['fields'] as &$field ) {
+
+    if( ! $field['failed_validation'] ) {
+      continue;
+    }
+
+    $min = rgar( $field, 'priceRangeMin' );
+    $max = rgar( $field, 'priceRangeMax' );
+
+    if( ! $min && ! $max ) {
+      continue;
+    }
+
+    switch( $field['validation_message'] ) {
+      case sprintf( __( 'Please enter a price between <strong>%s</strong> and <strong>%s</strong>.' ), GFCommon::to_money( $min ), GFCommon::to_money( $max ) ):
+        $field['validation_message'] = 'My custom validation message if field has a minimum and maximum.';
+        break;
+      case sprintf( __( 'Please enter a price greater than or equal to <strong>%s</strong>.' ), GFCommon::to_money( $min ) ):
+        $field['validation_message'] = 'My custom validation message if field has a minimum.';
+        break;
+      case sprintf( __( 'Please enter a price less than or equal to <strong>%s</strong>.' ), GFCommon::to_money( $max ) ):
+        $field['validation_message'] = 'My custom validation message if field has a maximum.';
+        break;
+    }
+
+  }
+
+  return $result;
+}, 11 );
+
+function wc_remove_related_products( $args ) {
+  return array();
+}
+add_filter('woocommerce_related_products_args','wc_remove_related_products', 10);

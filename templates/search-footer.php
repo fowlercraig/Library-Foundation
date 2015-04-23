@@ -3,7 +3,7 @@
   <div class="table">
     <div class="cell">
       <div class="row">
-        <div class="desktop-12">
+        <div class="desktop-12 tablet-6 mobile-3">
           <form action="/" method="get">
             <fieldset>
               <label for="search">Search:</label>

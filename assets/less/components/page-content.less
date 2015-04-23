@@ -24,6 +24,24 @@
     color: darken(@gray, 10%);
   }
 
+  p,h2 {
+    a {
+      color: @blue;
+      border-bottom: 1px solid @blue;
+    }
+  }
+
+  h2.title {
+    a {
+      color: @gray;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        color: @blue;
+        border-bottom: 1px solid @blue;
+      }
+    }
+  }
+
   hr {
     background: @lightestGray;
   }
@@ -56,7 +74,7 @@
   h1,h2,h3,h4,h5,h6 {
     color: @darkGray;
     .sentinel();
-    line-height: 1.5;
+    //line-height: 1.3;
 
     &:first-child {
       margin-top: 0;
@@ -102,6 +120,15 @@
     .cat();
     font-weight: 300;
     color: @lighterGray;
+
+    @media @mobile {
+      display: block;
+    }
+
+    @media @desktop {
+      display: inline-block;
+    }
+
   }
   .title {
     margin-bottom: 0;

@@ -2,15 +2,7 @@
 
 <?php
 
-  if ( get_field('simple_page')) {
-
-    get_template_part('templates/page', 'header-simple');
-
-  } else {
-
-    get_template_part('templates/page', 'header');
-
-  }
+  get_template_part('templates/page', 'header-simple');
 
 ?>
 
@@ -38,16 +30,16 @@
         while ($wp_query->have_posts()) : $wp_query->the_post();
       ?>
 
-      <div class="child-page row">
+      <div class="child-page item row">
         <div class="desktop-3">
           <a href="<?php the_permalink(); ?>">
             <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft' ) ); ?>
           </a>
         </div>
         <div class="desktop-9">
-          <h2 class="title"><?php the_title(); ?></h2>
-          <?php echo excerpt('30'); ?>
-          <br><a href="<?php the_permalink();?>" class="readmore">Read More</a>
+          <h2 class="title" style="margin-bottom:0"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <p><?php echo excerpt('30'); ?></p>
+          <a href="<?php the_permalink();?>" class="readmore">Read More</a>
         </div>
         <hr class="invisible">
       </div>

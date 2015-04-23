@@ -31,11 +31,30 @@
     height: 80px;
     line-height: 80px;
     .page-header-title();
-    font-size: 48px;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     border-bottom: 4px solid @white;
     transition: 300ms ease;
+    width: 100%;
+    display: block;
+
+    @media @mobile {
+      .font_size(24);
+      height: 45px;
+      line-height: 45px;
+    }
+
+    @media @tablet {
+      .font_size(30);
+      height: 60px;
+      line-height: 60px;
+    }
+
+    @media @desktop {
+      .font_size(48);
+      height: 80px;
+      line-height: 80px;
+    }
 
     &:focus {
       border-bottom: 4px solid @blue;
