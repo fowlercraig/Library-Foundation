@@ -11283,6 +11283,138 @@ animated buttons - animate the text inside prev and next buttons
   text-rendering: optimizeLegibility;
   color: #59595b;
 }
+#archive--wrapper > div {
+  margin: 50px 0;
+}
+#archive--wrapper header {
+  padding-bottom: 20px;
+}
+#archive--wrapper header .title {
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  height: 30px;
+  line-height: 30px;
+}
+#archive--wrapper header .view-all {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  color: #858585;
+  display: inline-block;
+  font-weight: 500;
+  height: 30px;
+  line-height: 30px;
+}
+#archive--wrapper header .view-all:hover {
+  color: #008bbe;
+}
+#archive--wrapper .item .thumb {
+  position: relative;
+  transition: 300ms ease;
+  background: #333333;
+}
+#archive--wrapper .item .thumb img {
+  transition: 300ms ease;
+}
+#archive--wrapper .item .thumb .info {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+}
+#archive--wrapper .item .thumb .info a,
+#archive--wrapper .item .thumb .info span {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-weight: 500;
+  font-size: 10px;
+}
+#archive--wrapper .item .thumb .info a {
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+#archive--wrapper .item .thumb .info a:hover {
+  background: #333333;
+}
+#archive--wrapper .item .thumb .info span {
+  color: rgba(255, 255, 255, 0.75);
+}
+#archive--wrapper .item:hover .thumb img {
+  opacity: .8;
+}
+#archive--wrapper .item.video {
+  margin-bottom: 2.08333333%;
+}
+#archive--wrapper .item.video .thumb {
+  margin-bottom: 2.08333333%;
+}
+#archive--wrapper .item.podcast {
+  background: #f8f8f8;
+  margin-bottom: 2.08333333%;
+}
+#archive--wrapper .item .title {
+  margin: 0;
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+}
+#archive--wrapper .item .title a {
+  color: #333333;
+}
+#archive--wrapper .item .meta.video .title {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+#archive--wrapper .item .meta.podcast {
+  padding-top: 17px;
+}
+#archive--wrapper .item .meta.podcast .title {
+  font-size: 16px;
+  font-size: 1rem;
+}
+#archive--wrapper .item .meta .time {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-weight: 500;
+}
+#archive--wrapper .item .meta .wrapper {
+  padding: 15px;
+  background: #f8f8f8;
+}
+#archive--wrapper .play-icon {
+  background: #e2438c;
+  color: #ffffff;
+  display: inline-block;
+  float: left;
+  font-size: 36px;
+  height: 75px;
+  line-height: 85px;
+  width: 73px;
+  padding-left: 3px;
+  text-align: center;
+  margin-right: 1.04166667%;
+}
+#archive--wrapper .play-icon:hover {
+  background: #d62174;
+}
 .woocommerce .button {
   background: #008bbe;
   color: #ffffff;

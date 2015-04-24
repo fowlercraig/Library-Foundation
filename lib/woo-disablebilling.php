@@ -266,3 +266,57 @@ function wc_remove_related_products( $args ) {
   return array();
 }
 add_filter('woocommerce_related_products_args','wc_remove_related_products', 10);
+
+
+if ( function_exists( 'tribe_is_event') ) {
+  /**
+   * Adds the phone number to the "Purchaser Email" column.
+   * @link http://theeventscalendar.com/support/forums/topic/add-attendee-telephone-number-to-attendee-list/
+   */
+  function tribe_953653_add_phone_to_attendee_list( $value, $item, $column ) {
+
+    // Change this column name to move the phone number to a different column.
+    if ( 'purchaser_name' != $column ) {
+      return $value;
+    }
+
+    $phone_number = get_post_meta( $item['order_id'], 'currently_member', true );
+
+    // Remove the <small></small> tags from this to have the phone number text display at full size.
+    if ( ! empty( $phone_number ) ) {
+      return $value . sprintf( '<br><small><b>Membership Status:</b><br> %s</small>', sanitize_text_field( $phone_number ) );
+    }
+
+    return $value;
+  }
+
+  add_filter( 'tribe_events_tickets_attendees_table_column', 'tribe_953653_add_phone_to_attendee_list', 10, 3 );
+}
+
+// Book Purchase?
+
+add_filter( 'manage_tribe_events_page_tickets-attendees_columns', 'add_my_custom_attendee_column', 20 );
+add_filter( 'tribe_events_tickets_attendees_table_column', 'populate_my_custom_attendee_column', 10, 3 );
+
+function add_my_custom_attendee_column( $columns ) {
+    $columns['custom_id'] = 'Book Purchase';
+    return $columns;
+}
+
+function populate_my_custom_attendee_column( $existing, $item, $column, $order_id ) {
+
+    if ( 'custom_id' !== $column ) return $existing;
+
+    //$member = get_post_meta( $item['order_id'], 'currently_member', true );
+    $phone_number = get_post_meta( $item['order_id'], 'order_warning', true );
+    //$product_cats = wp_get_post_terms( $item['order_id'], 'product_cat' );
+
+    // $item = $values['data'];
+
+    // if (in_array("free-lfla-event", $member)) {
+    //   $member = 'hello';
+    // }
+
+    return var_dump($phone_number);
+
+}

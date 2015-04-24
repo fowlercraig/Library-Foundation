@@ -1,0 +1,196 @@
+// Base
+
+#archive--wrapper {
+
+  > div {
+
+    margin: 50px 0;
+
+  }
+
+  header {
+
+    padding-bottom: 20px;
+
+    @height : 30px;
+
+    .title {
+      .sentinel();
+      margin: 0;
+      height: @height;
+      line-height: @height;
+    }
+
+    .view-all {
+
+      .cat();
+      color: @textGray;
+      display: inline-block;
+      font-weight: 500;
+      height: @height;
+      line-height: @height;
+
+      &:hover {
+        color: @blue;
+      }
+
+    }
+
+  }
+
+  .item {
+
+    .thumb {
+
+      position: relative;
+      transition: 300ms ease;
+      background: @black;
+
+      img {
+        transition: 300ms ease;
+      }
+
+      .info {
+
+        position: absolute;
+        z-index: 9;
+        top: 0;
+
+        a,span {
+          display: inline-block;
+          height: 28px;
+          line-height: 28px;
+          padding: 0 10px;
+          .cat();
+          font-weight: 500;
+          font-size: 10px;
+        }
+
+        a {
+          background: @black50;
+          color: @white;
+          &:hover {
+            background: @black;
+          }
+        }
+
+        span {
+          color: @white75;
+        }
+
+      }
+
+    }// item
+
+    &:hover {
+
+      .thumb {
+
+        //background: @black;
+
+        img {
+
+          opacity: .8;
+
+        }
+
+      }
+
+    }
+
+    &.video {
+
+      margin-bottom: @gutter*2;
+
+      .thumb {
+
+        margin-bottom: @gutter*2;
+
+      }
+
+    }
+
+    &.podcast {
+
+      background: @bgGray;
+      margin-bottom: @gutter*2;
+
+    }
+
+    .title {
+
+      margin: 0;
+      .sentinel();
+
+      a {
+
+        color: @black;
+
+      }
+
+    }
+
+    .meta {
+
+      &.video {
+
+        .title {
+
+          .font_size(16);
+          line-height: 1.4;
+
+        }
+
+      }
+
+      &.podcast {
+
+        padding-top: 17px;
+
+        .title {
+
+          .font_size(16);
+
+        }
+
+      }
+
+      .time {
+
+        .cat();
+        font-weight: 500;
+
+      }
+
+      .wrapper {
+
+        padding: 15px;
+        background: @bgGray;
+
+      }
+
+    }
+
+  }
+
+  .play-icon {
+
+    background: @aloudpink;
+    color: @white;
+    display: inline-block;
+    float: left;
+    font-size: 36px;
+    height: 75px;
+    line-height: 85px;
+    width: 73px;
+    padding-left: 3px;
+    text-align: center;
+    margin-right: @gutter;
+
+    &:hover {
+      background: darken(@aloudpink, 9%)
+    }
+
+  }
+
+}
