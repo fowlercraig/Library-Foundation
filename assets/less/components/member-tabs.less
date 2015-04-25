@@ -10,11 +10,11 @@
 
     .tabber-handle {
 
-      background: @orange;
+      color: @orange;
       padding: @gutter*2;
       border: none;
-      color: @white50;
       margin-right: 5px;
+
 
       &:first-child {
         border-top-left-radius: 3px;
@@ -29,7 +29,7 @@
       }
 
       h3 {
-        color: @white;
+        color: @orange;
         margin: 0;
         @media @mobile {
           .font_size(18)
@@ -39,10 +39,14 @@
         }
       }
 
-      &:nth-child(2){
+      &.active {
 
-        background: lighten(@orange, 5%)
+        background: @orange;
+        color: @white;
 
+        h3 {
+          color: @white;
+        }
       }
 
     }
@@ -125,13 +129,6 @@
 
   }
 
-  #library, #tab_2 {
-    background: @orange;
-  }
-  #leader, #tab_2 {
-    background: lighten(@orange, 5%)
-  }
-
 }
 
 
@@ -143,11 +140,7 @@
 
     background: @green;
 
-    &:nth-child(2) {
 
-      background: lighten(@green, 10%);
-
-    }
 
   }
 

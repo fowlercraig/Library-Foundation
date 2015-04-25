@@ -23,9 +23,9 @@
 <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
 <div <?php post_class('item podcast sizer-item desktop-6 tablet-6 mobile-3'); ?>>
-  <a href="#" class="ss-icon ss-gizmo ss-play play-icon"></a>
+  <a rel="external" href="<?php the_field('archive_podcast'); ?>" class="ss-icon ss-gizmo ss-play play-icon"></a>
   <div class="meta podcast">
-    <h3 class="title"><a href=""><?php the_title(); ?></a></h3>
+    <h3 class="title"><a rel="external" href="<?php the_field('archive_podcast'); ?>"><?php the_title(); ?></a></h3>
     <span class="time"><?php the_time('F jS, Y') ?></span>
   </div>
 </div>

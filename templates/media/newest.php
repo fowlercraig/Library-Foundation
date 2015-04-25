@@ -6,11 +6,11 @@
   $format = ''
 ?>
 
-<div id="upcoming-events-carousel" class="newest">
+<div id="upcoming-events-carousel" class="newest row">
 
 <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-<div <?php post_class('item'); ?>>
+<div <?php post_class('item newest'); ?>>
   <div class="thumb">
     <div class="info">
       <a href="#" class="category">Aloud</a>

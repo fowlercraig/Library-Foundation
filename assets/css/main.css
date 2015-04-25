@@ -1381,6 +1381,9 @@ Mixins
     padding: 30px;
   }
 }
+.clearfix {
+  position: relative;
+}
 .clearfix:after {
   content: '';
   display: block;
@@ -8040,7 +8043,7 @@ p.demo_store {
   padding: 10px 0;
   background: rgba(0, 0, 0, 0.75);
   border-bottom: 0;
-  z-index: 99;
+  z-index: 999;
 }
 #head.stuck #logo {
   max-width: 60px;
@@ -8194,6 +8197,7 @@ p.demo_store {
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 14px;
+  position: relative;
 }
 #main-nav:after {
   content: '';
@@ -8781,10 +8785,6 @@ p.demo_store {
 .membership-level.no-bg ul li:last-child {
   border-bottom: 0;
 }
-.membership-level.membership .button {
-  background: #0f75bd;
-  border-color: #0f75bd;
-}
 .member-header {
   padding: 0 0 5px;
   border-bottom: 1px solid #cccccc;
@@ -9135,10 +9135,6 @@ p.demo_store {
 }
 #page-list .item.quadrant .title {
   font-size: 32px;
-  color: #f89c31;
-}
-#page-list .item.quadrant .title a {
-  color: #f89c31;
 }
 #image-gallery .royalslider {
   position: relative;
@@ -11313,6 +11309,46 @@ animated buttons - animate the text inside prev and next buttons
 #archive--wrapper header .view-all:hover {
   color: #008bbe;
 }
+#archive--wrapper header .search-btn {
+  font-size: 20px;
+  font-size: 1.25rem;
+  height: 30px;
+  line-height: 31px;
+  color: #cccccc;
+  padding: 0 4px;
+  border: 2px solid #eee;
+  border-radius: 2px;
+  display: inline-block;
+}
+#archive--wrapper .archive-select {
+  margin: 0;
+  height: 30px;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 27px;
+}
+#archive--wrapper .archive-select .selecter-selected {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 35px;
+  height: 30px;
+  font-size: 11px;
+  color: #999999;
+}
+#archive--wrapper .archive-select .selecter-item {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-bottom: 0;
+  font-size: 11px;
+  color: #999999;
+}
 #archive--wrapper .item .thumb {
   position: relative;
   transition: 300ms ease;
@@ -11354,6 +11390,31 @@ animated buttons - animate the text inside prev and next buttons
 }
 #archive--wrapper .item:hover .thumb img {
   opacity: .8;
+}
+#archive--wrapper .item.photo {
+  position: relative;
+  margin-bottom: 2.08333333%;
+}
+#archive--wrapper .item.photo .meta {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+}
+#archive--wrapper .item.photo .meta .title {
+  font-size: 16px;
+  font-size: 1rem;
+}
+#archive--wrapper .item.photo .meta .title a {
+  color: #ffffff;
+}
+#archive--wrapper .item.photo .meta .wrapper {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+#archive--wrapper .item.newest {
+  margin: 0 10px;
 }
 #archive--wrapper .item.video {
   margin-bottom: 2.08333333%;
@@ -12674,10 +12735,9 @@ table.cart .product-subtotal {
   clear: both;
 }
 #member-tabs menu .tabber-handle {
-  background: #f89c31;
+  color: #f89c31;
   padding: 2.08333333%;
   border: none;
-  color: rgba(255, 255, 255, 0.5);
   margin-right: 5px;
 }
 #member-tabs menu .tabber-handle:first-child {
@@ -12690,7 +12750,7 @@ table.cart .product-subtotal {
   color: rgba(255, 255, 255, 0.5);
 }
 #member-tabs menu .tabber-handle h3 {
-  color: #ffffff;
+  color: #f89c31;
   margin: 0;
 }
 @media screen and (min-width: 320px) {
@@ -12705,8 +12765,12 @@ table.cart .product-subtotal {
     font-size: 1.75rem;
   }
 }
-#member-tabs menu .tabber-handle:nth-child(2) {
-  background: #f9a84a;
+#member-tabs menu .tabber-handle.active {
+  background: #f89c31;
+  color: #ffffff;
+}
+#member-tabs menu .tabber-handle.active h3 {
+  color: #ffffff;
 }
 #member-tabs .tabber-tab {
   padding: 0;
@@ -12768,19 +12832,8 @@ table.cart .product-subtotal {
 #member-tabs .tabber-tab .membership-level:nth-child(even) {
   background: #ee8408;
 }
-#member-tabs #library,
-#member-tabs #tab_2 {
-  background: #f89c31;
-}
-#member-tabs #leader,
-#member-tabs #tab_2 {
-  background: #f9a84a;
-}
 .young-literati #member-tabs .tabber-handle {
   background: #86993f;
-}
-.young-literati #member-tabs .tabber-handle:nth-child(2) {
-  background: #a3b853;
 }
 .young-literati #member-tabs #tab_1 {
   background: #86993f;

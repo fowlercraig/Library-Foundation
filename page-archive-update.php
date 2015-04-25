@@ -11,7 +11,19 @@
             <h2 class="title">Newest</h2>
           </div>
           <div class="desktop-6 tablet-3 mobile-half text-right">
-            <a href="#" class="search-btn ss-gizmo ss-icon ss-search"></a>
+            <div class="row">
+              <div class="desktop-8">
+                <a href="#" class="search-btn ss-gizmo ss-icon ss-search"></a>
+              </div>
+              <div class="desktop-4">
+                <select name="selecter_basic" id="selecter_basic" class="selected" data-selecter-options='{"external":"true", "customClass":"archive-select","label":"Jump to Section"}'>
+                  <option value="#archive--videos">Videos</option>
+                  <option value="#archive--podcasts">Podcasts</option>
+                  <option value="#archive--photos">Photo Galleries</option>
+                  <option value="#archive--featured">Featured</option>
+                </select>
+              </div>
+            </div>
           </div>
         </div>
       </header>

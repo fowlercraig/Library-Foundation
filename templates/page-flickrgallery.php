@@ -1,3 +1,4 @@
+
 <div id="flickr-gallery" class="page-section">
   <div class="row">
     <?php while ( have_rows('external_gallery') ) : the_row(); ?>

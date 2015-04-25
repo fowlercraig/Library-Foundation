@@ -1,7 +1,6 @@
 <?php
 
 require_once locate_template('/lib/blankslate.php');
-//require_once locate_template('/lib/activation.php');
 require_once locate_template('/lib/themewrangler.class.php');
 require_once locate_template('/lib/slug.php' );
 require_once locate_template('/lib/cleanassnav.php' );
@@ -9,10 +8,9 @@ include_once locate_template('/lib/soil-master/soil.php' );
 include_once locate_template('/lib/custom-post-types.php' );
 include_once locate_template('/lib/enque-js.php' );
 include_once locate_template('/lib/woo-disablebilling.php' );
+include_once locate_template('/lib/miles.php' );
 include_once locate_template('/lib/woo-confirmations.php' );
-//include_once locate_template('/lib/json-api/json-api.php' );
 include_once locate_template('/lib/videoembed.php' );
-//include_once locate_template('/lib/ajax-wp.php' );
 include_once locate_template('/lib/woo-ajax.php' );
 //include_once locate_template('/lib/htmlcleanup.php' );
 

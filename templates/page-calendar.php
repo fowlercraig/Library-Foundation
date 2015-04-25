@@ -116,7 +116,6 @@ $ul_wp_query->query($ul_args);
     <div class="row">
       <div class="desktop-12">
         <h2 class="no-events">Sorry, no upcoming events.</h2>
-        <a class="button past-events-btn" href="#tab-2">View past events</a>
       </div>
     </div>
   <?php endif; wp_reset_query(); ?>
@@ -184,7 +183,6 @@ $ul_wp_query->query($ul_args);
     <?php $ul_wp_query = null; $ul_wp_query = $ul_temp; wp_reset_postdata(); ?>
   <?php else: ?>
   <h2 class="no-events">Sorry, no member events.</h2>
-  <a class="button past-events-btn" href="#tab-2">View past events</a>
 <?php endif; ?>
 </div>
 

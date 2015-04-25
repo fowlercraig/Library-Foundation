@@ -1,7 +1,7 @@
 <?php
 
   $args = array(
-    'showposts'   => 8,
+    'showposts'   => -1,
     'post_type'   => 'archive',
     'tax_query'  => array(
       array(
@@ -28,16 +28,12 @@
   $video_url        = get_field('archive:_video', FALSE, FALSE); //URL
   $video_thumb_url  = get_video_thumbnail_uri($video_url); //get THumbnail via our functions in functions.php
 
-  if (has_category( 'aloud' )){
-    $category = 'aloud';
-  }
-
 ?>
 
 <div <?php post_class('item video sizer-item desktop-3 tablet-3 mobile-3'); ?>>
   <div class="thumb">
     <div class="info">
-      <a href="#" class="category"><?php echo $category; ?></a>
+      <a href="#" class="category">Aloud</a>
     </div>
     <a href="<?php echo $video_url; ?>" class="play popup-video">
     <?php
