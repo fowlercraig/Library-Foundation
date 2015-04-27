@@ -1,0 +1,53 @@
+<?php
+
+  $args = array(
+    'showposts'   => 4,
+    'post_type'   => 'archive',
+    'tax_query'  => array(
+      array(
+        'taxonomy' => 'post_format',
+        'field'    => 'slug',
+        'terms'    => array( 'post-format-gallery' ),
+      )
+    )
+  );
+
+  $temp = $wp_query;
+  $wp_query = null;
+  $wp_query = new WP_Query();
+  $wp_query->query($args);
+?>
+
+<div id="sized" class="content row">
+
+<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+
+<div <?php post_class('item photo desktop-6 tablet-3 mobile-3'); ?>>
+  <div class="thumb">
+    <div class="info">
+      <a href="#" class="category">Aloud</a>
+      <span class="time"><?php the_time('F jS, Y') ?></span>
+    </div>
+    <?php
+      if ( has_post_thumbnail() ) {
+        the_post_thumbnail( 'footer-module-image', array( 'class' => 'img-responsive' ) );
+      } else {
+        echo '<img class="img-responsive" src="http://placehold.it/600x335">';
+      }
+    ?>
+  </div>
+  <div class="meta photo">
+    <div class="wrapper">
+      <h3 class="title"><a href=""><?php the_title(); ?></a></h3>
+    </div>
+  </div>
+</div>
+
+<?php endwhile; ?>
+
+</div>
+
+<?php
+  $wp_query = null;
+  $wp_query = $temp;  // Reset
+?>
