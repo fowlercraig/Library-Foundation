@@ -22,6 +22,7 @@
 
 <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
+<<<<<<< HEAD
 <?php
 
   $video            = get_field('archive:_video'); //Embed Code
@@ -58,10 +59,9 @@
     <?php endif; ?>
 
   </div>
-  <div class="meta gallery">
+  <div class="meta photo">
     <div class="wrapper">
-      <h3 class="title"><a href="<?php echo $video_url; ?>" class="play popup-video"><?php the_title(); ?></a></h3>
-      <span class="time"><?php the_time('F jS, Y') ?></span>
+      <h3 class="title"><a href=""><?php the_title(); ?></a></h3>
     </div>
   </div>
 </div>
