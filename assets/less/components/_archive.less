@@ -137,7 +137,21 @@
 
     }
 
-    &.photo {
+    &.gallery {
+
+      figure {
+
+        display: none;
+
+        &.item_1 {
+          display: block;
+        }
+
+      }
+
+    }
+
+    &.gallery {
 
       position: relative;
       margin-bottom: @gutter*2;
@@ -212,6 +226,12 @@
           line-height: 1.4;
 
         }
+
+      }
+
+      &.gallery {
+
+        background: @black;
 
       }
 

@@ -11257,27 +11257,75 @@ animated buttons - animate the text inside prev and next buttons
   color: #999999;
   text-decoration: none;
 }
-#board .board {
-  background: #f8f8f8;
-  padding: 15px 25px;
-  margin-top: 1.04166667%;
-  margin-bottom: 1.04166667%;
+#board-members header {
+  width: 100%;
+  float: none;
 }
-#board .board .columns {
-  column-count: 1!important;
-  -webkit-column-count: 1!important;
+#board-members header h2 {
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
 }
-#board .board .columns li {
+#board-members .board {
+  width: 100%;
+  float: none;
+  position: relative;
+}
+#board-members .board ul {
+  padding: 0;
+  position: relative;
+}
+#board-members .board ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#board-members .board ul li {
+  border: 1px solid #dddddd;
   margin: 0;
-  padding: 10px 0;
-  border-bottom: 1px solid #ebebeb;
+  line-height: 1.5;
+  font-size: 14px;
+  font-size: 0.875rem;
+  display: block;
+  float: left;
+  margin-bottom: -1px;
+  margin-right: -1px;
 }
-#board .board .columns li strong,
-#board .board .columns li b {
+#board-members .board ul li strong {
   font-weight: normal;
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
-  color: #59595b;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  display: inline-block;
+  color: #333333;
+}
+#board-members .board ul li em {
+  font-style: normal;
+}
+@media screen and (min-width: 320px) {
+  #board-members .board ul li {
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    border-right: none;
+    border-left: none;
+  }
+}
+@media screen and (min-width: 740px) {
+  #board-members .board ul li {
+    width: 33%;
+    height: 150px;
+    padding: 15px;
+    border: 1px solid #dddddd;
+  }
+}
+@media screen and (min-width: 980px) {
+  #board-members .board ul li {
+    width: 25%;
+    height: 140px;
+    padding: 15px;
+  }
 }
 #archive--wrapper > div {
   margin: 50px 0;
@@ -11391,24 +11439,30 @@ animated buttons - animate the text inside prev and next buttons
 #archive--wrapper .item:hover .thumb img {
   opacity: .8;
 }
-#archive--wrapper .item.photo {
+#archive--wrapper .item.gallery figure {
+  display: none;
+}
+#archive--wrapper .item.gallery figure.item_1 {
+  display: block;
+}
+#archive--wrapper .item.gallery {
   position: relative;
   margin-bottom: 2.08333333%;
 }
-#archive--wrapper .item.photo .meta {
+#archive--wrapper .item.gallery .meta {
   position: absolute;
   bottom: 0;
   width: 100%;
   z-index: 9;
 }
-#archive--wrapper .item.photo .meta .title {
+#archive--wrapper .item.gallery .meta .title {
   font-size: 16px;
   font-size: 1rem;
 }
-#archive--wrapper .item.photo .meta .title a {
+#archive--wrapper .item.gallery .meta .title a {
   color: #ffffff;
 }
-#archive--wrapper .item.photo .meta .wrapper {
+#archive--wrapper .item.gallery .meta .wrapper {
   padding-top: 10px;
   padding-bottom: 10px;
   background: rgba(0, 0, 0, 0.5);
@@ -11438,6 +11492,9 @@ animated buttons - animate the text inside prev and next buttons
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.4;
+}
+#archive--wrapper .item .meta.gallery {
+  background: #333333;
 }
 #archive--wrapper .item .meta.podcast {
   padding-top: 17px;
