@@ -1,5 +1,4 @@
 
-
 <?php
 
 $groupTitle = get_sub_field('group_title');
@@ -10,18 +9,19 @@ $groupTitle_clean = strtolower($groupTitle_clean);
 
 ?>
 
-<?php if( have_rows('staff_members') ): ?>
 
-<div class="max-6 desktop-6 tablet-3 mobile-3 group">
+<?php if( have_rows('principal_members') ): ?>
+
+<div id="things" class="max-12 desktop-12 tablet-6 mobile-3 group">
 <div class="row">
 
 <h3 class="title"><span class="cat_<?php echo $groupTitle_clean; ?>"><?php echo $groupTitle; ?></span></h3>
 
 
-<?php while ( have_rows('staff_members') ) : the_row(); ?>
+<?php while ( have_rows('principal_members') ) : the_row(); ?>
 
 <?php
-  $image = get_sub_field('staff_photo');
+  $image = get_sub_field('principal_photo');
 
   if( !empty($image) ):
     $url = $image['url'];
@@ -36,12 +36,12 @@ $groupTitle_clean = strtolower($groupTitle_clean);
   endif;
 ?>
 
-<div class="staff-member desktop-12 tablet-6 mobile-half <?php echo $groupTitle_clean; ?>">
+<div class="staff-member desktop-4 tablet-2 mobile-3 <?php echo $princeTitle_clean; ?>">
   <div class="row">
-    <div class="thumb desktop-4 tablet-2">
+    <div class="thumb desktop-12 tablet-6">
       <img class="img-responsive" src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" />
     </div>
-    <div class="info desktop-8 tablet-4 mobile-3"><?php the_sub_field('staff_info'); ?></div>
+    <div class="info desktop-12 tablet-6 mobile-3"><?php the_sub_field('principal_info'); ?></div>
   </div>
 </div>
 
@@ -50,4 +50,4 @@ $groupTitle_clean = strtolower($groupTitle_clean);
 </div>
 </div>
 
-<?php else : endif;?>
+<?php else : echo 'noada'; endif;?>
