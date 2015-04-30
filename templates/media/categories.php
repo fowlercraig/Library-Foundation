@@ -1,20 +1,55 @@
+<?php $var1   = $_GET['category']; ?>
+<?php $search = $_GET['search']; ?>
+
+<?php
+
+  if (isset($_GET['category'])) {
+
+    $param = 'category_name='.$var1;
+
+  } elseif (isset($_GET['search'])) {
+
+    $param = 's='.$search;
+
+  }
+
+?>
+
 <?php
   $temp = $wp_query;
   $wp_query = null;
   $wp_query = new WP_Query();
-  $wp_query->query('showposts=10&post_type=archive'.'&paged='.$paged);
+  $wp_query->query('showposts=-1&post_type=archive&' . $param . '&paged='.$paged);
   $format = '';
 ?>
 
-<div id="upcoming-events-carousel" class="newest row">
+<div id="sized" class="newest row">
 
-<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+<?php if ( have_posts() ) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
   <?php
 
-    $category = get_the_category();
-    $cat_name = $category[0]->cat_name;
-    $catlink  = '/media-archive/category?category='.$cat_name;
+    //$var2 = $_GET['var2'];
+
+
+
+    if ( in_category( 'aloud' )) {
+
+      $category = 'aloud';
+      $catlink  = 'category?=aloud';
+
+    } elseif ( in_category( 'young-literati' )) {
+
+      $category = 'young literari';
+      $catlink  = 'category?=young-literai';
+
+    } else {
+
+      $category = '';
+
+    }
+
+
 
     if (has_post_format('video')){
 
@@ -46,10 +81,10 @@
 
 ?>
 
-<div <?php post_class('item newest'); ?>>
+<div <?php post_class('item desktop-4 tablet-3 mobile-3 newest sizer-item'); ?>>
   <div class="thumb">
     <div class="info">
-      <a href="<?php echo $catlink; ?>" class="category"><?php echo $cat_name; ?></a>
+      <a href="<?php echo $catlink; ?>" class="category"><?php echo $category; ?></a>
       <span class="format"><?php echo $format; ?></span>
     </div>
     <?php
@@ -100,7 +135,26 @@
   </div>
 </div>
 
-<?php endwhile; ?>
+<?php endwhile; else : ?>
+  <div class="desktop-12">
+    <p>
+      <?php
+
+      if (isset($_GET['category'])) {
+
+      _e( 'Sorry, no posts in that category.' );
+
+      } elseif (isset($_GET['search'])) {
+
+      _e( 'Sorry, no posts matched your search criteria.' );
+
+      }
+      ?>
+    </p>
+    <a href="/media-archive" class="button">Go Back to the Media Archive</a>
+  </div>
+<?php endif; ?>
+
 
 </div>
 

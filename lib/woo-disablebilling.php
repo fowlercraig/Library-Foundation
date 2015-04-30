@@ -320,3 +320,14 @@ function populate_my_custom_attendee_column( $existing, $item, $column, $order_i
     return var_dump($phone_number);
 
 }
+
+
+add_filter( 'woocommerce_variable_free_price_html',  'hide_free_price_notice' );
+add_filter( 'woocommerce_free_price_html',           'hide_free_price_notice' );
+add_filter( 'woocommerce_variation_free_price_html', 'hide_free_price_notice' );
+/**
+ * Hides the 'Free!' price notice
+ */
+function hide_free_price_notice( $price ) {
+  return 'Free';
+}

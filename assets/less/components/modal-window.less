@@ -11,7 +11,7 @@
 
   &.member {
 
-    .images, .woocommerce-tabs, .sku_wrapper {
+    .images, .woocommerce-tabs, .sku_wrapper, .posted_in {
 
       display: none;
 
@@ -49,6 +49,14 @@
       //height: 30px;
       //line-height: 30px;
       float: right;
+
+      button {
+        background: @blue;
+        border: none;
+        .cat();
+        font-weight: 500;
+        color: @white;
+      }
 
     }
 
@@ -112,7 +120,7 @@
     hr {
       display: none;
     }
-    
+
     .title {
       margin: 0;
       margin-bottom: 0;
@@ -139,7 +147,7 @@
       padding-top: 5px;
     }
 
-  } 
+  }
 
 
 }

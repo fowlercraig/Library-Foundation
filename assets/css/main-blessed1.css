@@ -9408,7 +9408,8 @@ p.demo_store {
 }
 .modal-window.member .images,
 .modal-window.member .woocommerce-tabs,
-.modal-window.member .sku_wrapper {
+.modal-window.member .sku_wrapper,
+.modal-window.member .posted_in {
   display: none;
 }
 .modal-window.member h1 {
@@ -9431,6 +9432,19 @@ p.demo_store {
 .modal-window.member .variations_button {
   display: inline-block;
   float: right;
+}
+.modal-window.member .variations_button button {
+  background: #008bbe;
+  border: none;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  font-weight: 500;
+  color: #ffffff;
 }
 .modal-window.member .single_variation {
   display: inline-block;
@@ -11422,6 +11436,15 @@ animated buttons - animate the text inside prev and next buttons
   -webkit-transition: 300ms ease;
           transition: 300ms ease;
 }
+#archive--wrapper .item .thumb .event-gallery {
+  margin-top: 0;
+}
+#archive--wrapper .item .thumb .event-gallery figure {
+  display: none;
+}
+#archive--wrapper .item .thumb .event-gallery figure.item_1 {
+  display: block;
+}
 #archive--wrapper .item .thumb .info {
   position: absolute;
   z-index: 9;
@@ -11550,9 +11573,53 @@ animated buttons - animate the text inside prev and next buttons
 #archive--wrapper .play-icon:hover {
   background: #d62174;
 }
-.woocommerce .button {
-  background: #008bbe;
-  color: #ffffff;
+#search-box {
+  display: none;
+  position: relative;
+}
+#search-box form {
+  padding: 25px;
+  margin-bottom: 20px;
+  background: #f8f8f8;
+}
+#search-box:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f8f8f8;
+}
+@media screen and (min-width: 740px) {
+  #search-box:before {
+    right: 45.5%;
+  }
+}
+@media screen and (min-width: 980px) {
+  #search-box:before {
+    right: 26%;
+  }
+}
+#search-box input {
+  margin-bottom: 0;
+}
+#search-box input.search-input {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 0;
+  font-size: 24px;
+  font-size: 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+}
+#search-box input.btn {
+  width: 100%;
+  border: none;
   font-family: 'Gotham';
   font-weight: 700;
   font-size: 14px;
@@ -11560,37 +11627,11 @@ animated buttons - animate the text inside prev and next buttons
   letter-spacing: 1px;
   text-rendering: optimizeLegibility;
   font-size: 11px;
+  border-radius: 2px;
+  height: 40px;
   font-weight: 500;
-}
-.woocommerce a {
-  color: #008bbe;
-  text-decoration: underline;
-}
-.woocommerce .payment_methods {
-  border: 1px solid #dddddd;
-  padding: 15px 25px;
-}
-.woocommerce .payment_methods li {
-  display: block;
-}
-@media screen and (min-width: 320px) {
-  .woocommerce .cart-collaterals .cart_totals,
-  .woocommerce .cart-collaterals .cross-sells {
-    width: 100%;
-    min-width: 100%;
-  }
-}
-@media screen and (min-width: 740px) {
-  .woocommerce .cart-collaterals .cart_totals,
-  .woocommerce .cart-collaterals .cross-sells {
-    width: 33%;
-    min-width: 33%;
-  }
-}
-@media screen and (min-width: 980px) {
-  .woocommerce .cart-collaterals .cart_totals,
-  .woocommerce .cart-collaterals .cross-sells {
-    width: 40%;
-    min-width: 40%;
-  }
+  background: #008bbe;
+  color: #ffffff;
+  -webkit-transition: 300ms ease;
+          transition: 300ms ease;
 }

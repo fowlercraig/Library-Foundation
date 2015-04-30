@@ -15,6 +15,10 @@
       maxWidth: '960px'
     });
 
+    $('#archive--wrapper .search-btn').click(function(){
+      $('#search-box').toggle();
+    });
+
     //$('a[href^="http://"]').not('a[href*=#]').attr('target','_blank');
 
     // $('a').each(function() {
@@ -28,6 +32,14 @@
     //     });
     //   }
     // });
+
+    $('a').not('[href*="mailto:"],[href*="#"]').each(function () {
+      var a = new RegExp('/' + window.location.host + '/');
+      var href = this.href;
+      if ( ! a.test(href) ) {
+        $(this).attr('target', '_blank');
+      }
+    });
 
 
     var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -684,7 +696,7 @@ var filterFns = {
       }
     });
     // Smooth scrolling for internal links
-    $("a[href^='#']:not(.tabber-handle, .popup)").click(function(event) {
+    $("a[href^='#']:not(.tabber-handle, .popup, [href*='#'], #event-status-button)").click(function(event) {
       event.preventDefault();
       var $this = $(this),
       target = this.hash,
