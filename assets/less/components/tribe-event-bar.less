@@ -2,6 +2,21 @@
 
   background: @bgGray;
   margin-bottom: 0;
+  border-bottom: 0;
+
+  &.event-page {
+    @media @mobile {
+      //height: 0;
+      //overflow: hidden;
+      display: none;
+    }
+
+    @media @tablet {
+      //height: auto;
+      //overflow: visible;
+      display: block;
+    }
+  }
 
   &.event-page {
     background: none;
@@ -13,10 +28,62 @@
       input {
         border: none;
       }
-      .button {
+
+      .tribe-bar-submit {
+        position: relative;
+        i {
+          font-size: 22px;
+          margin-right: 5px;
+          line-height: 1.3;
+          display: block;
+          left: 0;
+          position: absolute;
+          background: @white;
+          border: 2px solid #eee;
+          height: 38px;
+          z-index: 1;
+          margin-top: -2px;
+          line-height: 43px;
+          text-align: center;
+          width: 40px;
+          left: 0;
+          top: 13px;
+          border-right: 0;
+        }
+      }
+
+      .button.tribe-events-button {
+
         .cat();
         background: none;
         color: @black;
+        border: 2px solid #eee;
+        border-radius: 0;
+        position: relative;
+        height: 38px;
+        line-height: 38px;
+        width: 100%;
+        min-width: 100%;
+
+
+        &:before {
+          font-size: 22px;
+          margin-right: 5px;
+          line-height: 1.3;
+          display: block;
+          left: 0;
+          position: absolute;
+          background: @white;
+          border: 2px solid #eee;
+          height: 43px;
+          margin-top: -2px;
+          line-height: 43px;
+          text-align: center;
+          width: 45px;
+          left: 0;
+          top: 0;
+        }
+
       }
     }
 
@@ -49,7 +116,7 @@
 
         color: @white;
 
-        &.enabled {
+        &.enabled, &.jumpdown {
           background: @aloudpink;
           &:hover {
             background: darken(@aloudpink, 10%)
@@ -85,9 +152,52 @@
   }
 
   .tribe-bar-filters {
+
+    position: relative;
+
+    @media @mobile {
+      padding-left: 0;
+    }
+
+    @media @desktop {
+      padding-left: 30px;
+    }
+
     input {
       margin-bottom: 0;
     }
+
+    .icon-holder {
+      position: absolute;
+      left: 0;
+
+      height: 63px;
+      line-height: 63px;
+      i {
+        padding: 9px 12px 8px;
+        background: @bgGray;
+      }
+    }
+
+    .no-border {
+      border:none;
+    }
+
+    &.social {
+      a {
+        color: @lighterGray;
+        display: inline-block;
+        font-size: 24px;
+        line-height: 20px
+      }
+      i {
+        font-size: 24px;
+        line-height: 20px;
+        height: 12px;
+        display: block;
+      }
+    }
+
   }
 
 }

@@ -1,22 +1,24 @@
 <div id="member-tabs" class="tabbed">
 
+  <?php if (is_page('membership')): ?>
   <menu class="row">
-    <div class="desktop-12">
+    <div class="desktop-12 tablet-6 mobile-3">
       <menu class="tabber-menu">
         <a href="#tab_2" class="tabber-handle">
           <h3 class="member-level-title">Library Associates</h3>
-          Become a Library Associate today, lorem ipsum.
+
         </a>
         <a href="#tab_4" class="tabber-handle">
           <h3 class="member-level-title">Leadership Circle</h3>
-          Become a Library Leader. Lorem Ipsum.
+
         </a>
       </menu>
     </div>
   </menu>
+  <?php endif; ?>
 
   <div class="row">
-  <div class="desktop-12 padded">
+  <div class="desktop-12 tablet-6 mobile-3 padded">
 
   <?php if( have_rows('page_modules') ): $counter = 1; while ( have_rows('page_modules') ) : the_row(); ?>
   <?php if( get_row_layout() == 'page_references_description' ): ?>
@@ -26,8 +28,16 @@
   <?php
 
     if ( get_sub_field ('remove_overlay') ) { $nOverlay = ' overlayless'; }
+
     $post_object = get_sub_field('page');
     if( $post_object ): $post = $post_object; setup_postdata( $post );
+    $thing = $post->post_name;
+    wp_reset_postdata(); endif;
+
+    $page_object = get_sub_field('gift_membership');
+    if( $page_object ): $page = $page_object; setup_postdata( $page );
+    $blargh = $page->post_name;
+    wp_reset_postdata(); endif;
 
   ?>
 
@@ -37,17 +47,43 @@
         <h2 class="member-level-title"><?php the_sub_field('title'); ?></h2>
         <span class="sub-title"><?php the_sub_field('sub_title'); ?></span>
         <br><br>
-        <a href="#<?php echo $post->post_name;?>" class="popup button">Join/Renew Now</a>
+        <a href="#<?php echo $thing;?>" class="popup button">Join/Renew Now</a><br><br>
+        <?php if (get_sub_field('gift_membership')): ?>
+        <a href="#<?php echo $blargh;?>" class="popup gift">Gift a Membership</a>
+        <?php endif; ?>
       </header>
       <div class="desktop-8"><?php the_sub_field('description'); ?></div>
     </div>
   </div>
 
-  <div id="<?php echo $post->post_name;?>" class="mfp-hide white-popup-block modal-window member">
+  <?php
+    $post_object = get_sub_field('page');
+    if( $post_object ): $post = $post_object; setup_postdata( $post );
+  ?>
+  <div id="<?php echo $thing;?>" class="mfp-hide white-popup-block modal-window member">
     <?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
   </div>
-
   <?php wp_reset_postdata(); endif; ?>
+
+  <?php
+    $page_object = get_sub_field('gift_membership');
+    if( $page_object ): $post = $page_object; setup_postdata( $post );
+  ?>
+  <div id="<?php echo $blargh;?>" class="mfp-hide white-popup-block modal-window member">
+    <?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
+    <hr>
+    <p>
+      Give the gift of Membership to your friends, family, colleagues and we'll send directly
+      to your recipient, or mail the gift to you to deliver personally. Members enjoy 12
+      full months of critically acclaimed programs that bring together today’s brightest
+      thinkers, invitations to special events, discounts, and so much more.
+      <br>
+      If you'd like to purchase multiple memberships, please <a href="mailto:info@lfla.org">contact us directly</a>.
+    </p>
+  </div>
+  <?php wp_reset_postdata(); endif; ?>
+
+
 
   <?php endwhile; ?>
   </div>
@@ -59,13 +95,13 @@
 
 </div>
 
-<?php 
+<?php
 
 if ( is_tax() ) {
 
-  $queried_object = get_queried_object(); 
+  $queried_object = get_queried_object();
   $taxonomy = $queried_object->taxonomy;
-  $term_id = $queried_object->term_id; 
+  $term_id = $queried_object->term_id;
   $taxTerm = $taxonomy . '_' . $term_id;
 
 } else {
@@ -124,9 +160,29 @@ if( have_rows('page_modules' , $taxTerm) ):
 
           include locate_template('templates/staff/staff-flex.php');
 
-        elseif( get_row_layout() == 'download' ): 
+        elseif( get_row_layout() == 'download' ):
 
           $file = get_sub_field('file');
+
+        elseif( get_row_layout() == 'section_title' ):
+
+          include('flex/section-title.php');
+
+        elseif( get_row_layout() == 'slideshow'):
+
+          include locate_template('templates/slideshow.php' );
+
+        elseif( get_row_layout() == 'member_title' ):
+
+          if (is_page('membership')) {
+
+            include('flex/member-title-alt.php');
+
+          } else {
+
+            include('flex/member-title.php');
+
+          }
 
         endif;
 

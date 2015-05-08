@@ -8,19 +8,51 @@
   border-bottom: 1px solid @white;
 
   &.has-bg {
-    padding-top: 125px;
-    padding-bottom: 125px;
+
+    @memberPadding : 125px;
+
+    @media @mobile {
+      padding-top: @memberPadding*.5;
+      padding-bottom: @memberPadding*.5;
+    }
+
+    @media @tablet {
+      padding-top: @memberPadding*.5;
+      padding-bottom: @memberPadding*.5;
+    }
+
+    @media @desktop {
+      padding-top: @memberPadding;
+      padding-bottom: @memberPadding;
+    }
+
     .header-overlay();
 
     a {
       color: @white;
     }
-    
+
   }
 
   &.no-bg {
-    padding-top: 85px;
-    padding-bottom: 85px;
+
+    @memberPadding : 125px;
+
+    @media @mobile {
+      padding-top: @memberPadding*.5;
+      padding-bottom: @memberPadding*.5;
+    }
+
+    @media @tablet {
+      padding-top: @memberPadding*.35;
+      padding-bottom: @memberPadding*.35;
+    }
+
+    @media @desktop {
+      padding-top: @memberPadding*.5;
+      padding-bottom: @memberPadding*.5;
+    }
+
     border-bottom: 1px solid @white;
     background: none;
     color: @gray;
@@ -33,6 +65,9 @@
   }
 
   &.overlayless {
+    &:before {
+      display: none;
+    }
     &:after {
       display: none;
     }
@@ -128,7 +163,7 @@
     margin-bottom: 0;
 
     li {
-      
+
       color: @white;
       border-bottom: 1px solid @white25;
       padding: 7px 0;
@@ -184,8 +219,8 @@
 
   &.membership {
     .button {
-      background: @membership;
-      border-color: @membership;
+      //background: @membership;
+      //border-color: @membership;
     }
   }
 
@@ -193,7 +228,7 @@
 
 .member-header {
 
-  padding: @gutter*4 0 @gutter*2;
+  padding: 0 0 5px;
   border-bottom: 1px solid @lighterGray;
 
   .member-level-title {

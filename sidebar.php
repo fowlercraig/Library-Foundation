@@ -5,6 +5,7 @@
     <ul class="xoxo">
 
       <?php dynamic_sidebar( 'primary-widget-area' ); ?>
+      <?php dynamic_sidebar( 'general-widget-area' ); ?>
 
     </ul>
     <?php endif; ?>

@@ -88,6 +88,26 @@ function create_archive() {
 // Hook into the 'init' action
 add_action( 'init', 'create_archive', 0 );
 
-add_theme_support( 'post-formats', array( 'gallery', 'image', 'quote', 'video', 'audio' ) );
+add_theme_support( 'post-formats', array( 'gallery', 'quote', 'video', 'audio' ) );
+
+// functions.php
+
+add_action( 'init', 'update_my_custom_type', 99 );
+
+/**
+ * update_my_custom_type
+ *
+ * @author  Joe Sexton <joe@webtipblog.com>
+ */
+function update_my_custom_type() {
+    global $wp_post_types;
+
+    if ( post_type_exists( 'product' ) ) {
+
+        // exclude from search results
+        $wp_post_types['product']->exclude_from_search = true;
+    }
+}
+
 
 ?>

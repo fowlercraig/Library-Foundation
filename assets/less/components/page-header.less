@@ -4,9 +4,20 @@
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 400px;
   .header-overlay();
-  
+
+  @media @mobile {
+    padding-top: 100px;
+  }
+
+  @media @tablet {
+    padding-top: 275px;
+  }
+
+  @media @desktop {
+    padding-top: 225px;
+  }
+
 
   &:hover {
     &:after {
@@ -21,6 +32,10 @@
 
   h1 {
     color: @white;
+
+    a {
+      color: inherit;
+    }
 
     &.has-sub {
       margin-bottom: 0;
@@ -46,6 +61,14 @@
 
       display: inline-block;
 
+      @media @mobile {
+        .font_size(11);
+      }
+
+      @media @tablet {
+        .font_size(14);
+      }
+
       &:before {
         display: none;
       }
@@ -53,7 +76,20 @@
       a {
         color: @white;
         display: block;
-        padding-right: 20px;
+        padding-right: 0;
+        &:before {
+          top: .125em;
+          position: relative;
+          margin: 0 7px;
+        }
+      }
+
+      &:first-child {
+        a {
+          &:before {
+            display: none;
+          }
+        }
       }
 
     }
@@ -64,7 +100,19 @@
     .parent-links {
       li {
         a {
-          color: @aloudpink;
+          color: @white;
+          &:before {
+            top: .125em;
+            position: relative;
+          }
+        }
+        .cat_aloud {
+          background-color: @aloudpink;
+          color: @white;
+          height: 30px;
+          line-height: 33px;
+          padding: 0 10px;
+          border-radius: 3px;
         }
       }
     }
@@ -72,19 +120,38 @@
 
   &.minimal {
 
-    padding-top: 175px;
-    background: @blue;
+    background-color: @blue;
+    background-size: cover;
 
     &:after {
-      opacity: .125; 
+      opacity: .125;
     }
 
     .page-header-title {
-    
+
       font-size: 3em;
-    
+
     }
 
   }
 
+}
+
+.cart-header {
+  .buttons {
+
+    display: block;
+    float: right;
+    height: 60px;
+
+    .button {
+      border: none;
+      height: 20px;
+      line-height: 20px;
+      padding: 0;
+      padding-left: 10px;
+      .cat();
+    }
+
+  }
 }

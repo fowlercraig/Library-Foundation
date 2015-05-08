@@ -14,36 +14,50 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+<!--[if IE]>[...]<![endif]-->
+
 <?php wp_head(); ?>
+
+
+<script src="//use.typekit.net/kfw6qzi.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+  $menuParameters = array(
+    'container'       => false,
+    'echo'            => false,
+    'items_wrap'      => '%3$s',
+    'theme_location'  =>'main-menu',
+    'walker'          => new MV_Cleaner_Walker_Nav_Menu(),
+    'depth'           => 0,
+  );
+?>
 
-<div id="wrapper">
-
-<header id="head" class="gridlock">
-  <div class="row">
-    <?php 
-      $menuParameters = array(
-        'container'       => false,
-        'echo'            => false,
-        'items_wrap'      => '%3$s',
-        'theme_location'  =>'main-menu',
-        'depth'           => 0,
-      );
-    ?>
-
-    <div id="logo-wrap" class="desktop-1"></div>
-    <nav id="main-nav" class="desktop-12">
-      <a href="/" id="logo"><img src="/assets/img/lflalogo.png" /></a>
-      <?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?>
-      <a href="<?php echo get_the_permalink(289); ?>" class="button right" id="become-member-btn">Become a Member</a>
-    </nav>
-    <?php // wp_nav_menu( array( 'theme_location'=>'socl-menu','items_wrap'=> '%3$s','container_class'=>'menu mobile-hide tablet-hide text-right desktop-4','walker' => new MV_Cleaner_Walker_Nav_Menu() ) ); ?>
-
-  </div>
-</header>
-
-<section id="content" class="gridlock"><div>
-<div <?php body_class(); ?>>
+<body <?php body_class('shifter'); ?>>
+  <div id="wrapper" class="shifter-page"><div>
+    <header id="head" class="gridlock gridlock-fluid">
+      <div class="row">
+        <nav id="main-nav" class="desktop-12 tablet-6 mobile-3">
+          <a href="/" id="logo">
+            <div id="swiper">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div id="lfla-logo" class="swiper-slide" style="background-image:url(/assets/img/logos/logo-general.png)"></div>
+                  <div id="program-logo" class="swiper-slide"></div>
+                </div><!--Swiper-Wrapper-->
+              </div><!--Swiper-Container-->
+            </div><!--Swiper-->
+          </a>
+          <div class="main-nav"><?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?></div>
+          <a href="#" class="search"><i class="ss-gizmo ss-icon">search</i></a>
+          <span class="shifter-handle button right">Menu</span>
+          <a href="<?php echo get_the_permalink(299); ?>" class="button right hide-mobile" id="become-member-btn">Donate</a>
+          <a href="<?php echo get_the_permalink(289); ?>" class="button right hide-mobile" id="become-member-btn">Join</a>
+        </nav>
+      </div>
+    </header>
+    <section id="content" class="gridlock">
+      <div>
+        <div <?php body_class(); ?>>
 

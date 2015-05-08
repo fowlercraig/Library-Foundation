@@ -1,6 +1,21 @@
+.page-header.calendar {
+  background-image: url(/assets/img/cal-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
+  &:after {
+    display: none!important;
+  }
+}
+
 #calendar-header {
 
   position: relative;
+
+  &.calendar {
+      background-image: url(/assets/img/cal-placeholder.jpg);
+      background-size: cover;
+      background-position: top center;
+  }
 
   .header {
 
@@ -16,7 +31,10 @@
 
       .category-aloud {
 
-        color: @aloudpink;
+        //color: @aloudpink;
+        .lettergothic();
+        font-size: 85%;
+        letter-spacing: -2px;
 
       }
 
@@ -85,4 +103,103 @@
 
   }
 
+}
+
+.events-category-aloud {
+
+  .page-header {
+
+      &.calendar {
+        background-image: url(/assets/img/aloud-placeholder.jpg);
+        background-size: cover;
+        background-position: top center;
+      }
+  
+  }
+
+}
+
+.events-category-young-literati {
+
+  .page-header {
+
+    
+
+      &.calendar {
+        background-image: url(/assets/img/yl-placeholder.jpg);
+        background-size: cover;
+        background-position: top center;
+      }
+
+    
+  }
+
+}
+
+.events-category-membership {
+
+  .page-header {
+
+    
+
+      &.calendar {
+        background-image: url(/assets/img/membership-placeholder.jpg);
+        background-size: cover;
+        background-position: top center;
+      }
+
+    
+  }
+
+}
+
+.events-category-library-store,
+.events-category-library-truck,
+.events-category-library-store-on-wheels {
+
+  .page-header {
+
+      &.calendar {
+        background-image: url(/assets/img/library-placeholder.jpg);
+        background-size: cover;
+        background-position: top center;
+      }
+
+  }
+
+}
+
+
+.events-category-lost-found {
+
+ .page-header {
+
+      &.calendar {
+        background-image: url(/assets/img/lostfound-placeholder.jpg);
+        background-size: cover;
+        background-position: top center;
+      }
+
+  }
+
+}
+
+.events-category-writers-cut {
+
+  .page-header {
+
+      &.calendar {
+        background-image: url(/assets/img/writerscut-placeholder.jpg);
+        background-size: cover;
+        background-position: top center;
+      }
+
+  }
+
+}
+
+.page-header.calendar {
+  background-image: url(/assets/img/cal-placeholder.jpg);
+  background-size: cover;
+  background-position: top center;
 }

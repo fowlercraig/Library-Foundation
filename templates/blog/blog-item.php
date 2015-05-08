@@ -6,5 +6,5 @@
     <?php // echo get_the_category_list(); ?>
   </header>
   <?php the_excerpt(); ?>
-  <a href="<?php the_permalink(); ?>" class="button">Learn More</a>
+  <a href="<?php the_permalink(); ?>" class="button">Read More</a>
 </article>

@@ -3,10 +3,14 @@
   $thumb_id = get_post_thumbnail_id();
   $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'header-bg', true);
 
+  $input     = array("1","2","3","4","5","6","7");
+  $rand_keys = array_rand($input, 2);
+  $bgImg     = $input[$rand_keys[1]] . "\n";
+
   if($featured){
     $thumb_url = $thumb_url_array[0];
   } else {
-    $thumb_url = '';
+    $thumb_url = '/assets/img/bg/' . $bgImg . '.jpg';
   }
 
 ?>

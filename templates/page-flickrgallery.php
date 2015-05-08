@@ -1,9 +1,10 @@
+
 <div id="flickr-gallery" class="page-section">
   <div class="row">
     <?php while ( have_rows('external_gallery') ) : the_row(); ?>
     <?php $image = get_sub_field('thumbnail'); ?>
-      
-    <div class="item desktop-4">
+
+    <div class="item desktop-4 tablet-3 mobile-3">
       <div class="meta overlay bottom">
         <p class="posted"><?php the_sub_field('date'); ?></p>
         <h3 class="title"><a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('title'); ?></a></h3>

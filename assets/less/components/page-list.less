@@ -9,17 +9,19 @@
     border-bottom: 2px solid @bgGray;
     transition: background-color 300ms ease;
 
-    &:hover {
-
-      background: @bgGray;
-
-    }
 
     .title {
 
       margin-top: 0;
-      margin-bottom: 10px;
+
       .sentinel();
+
+      @media @mobile {
+        margin-bottom: 0;
+      }
+      @media @desktop {
+        margin-bottom: 10px;
+      }
 
       a {
         color: @black;
@@ -28,13 +30,38 @@
     }
 
     p {
+
+      @media @mobile {
+        display: none;
+      }
+      @media @desktop {
+        display: inline-block;
+      }
+
       margin-top: 0;
       margin-bottom: 10px;
+    }
+
+    .text-left {
+
+      @media @mobile {
+        text-align: right;
+      }
+      @media @desktop {
+        text-align: left;
+      }
+
     }
 
     .button {
       .cat();
       font-weight: 500;
+      @media @mobile {
+        margin-bottom: 0;
+      }
+      @media @desktop {
+        margin-bottom: 10px;
+      }
     }
 
     &.quadrant {
@@ -57,11 +84,11 @@
       .title {
 
         font-size: 32px;
-        color: @orange;
+        //color: @blue;
 
         a {
 
-          color: @orange;
+          //color: @blue;
 
         }
 

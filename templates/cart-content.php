@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
 
-<?php
+  <?php
 
   if ( is_page('checkout')) {
 
@@ -8,28 +8,23 @@
 
   } else {
 
-    $pageWidth = 'desktop-12';
+    $pageWidth = 'desktop-12 tablet-6 mobile-3';
   }
 
-?>
+  ?>
 
-<div class="cart-content">
-  <div class="row">
+  <div class="cart-content">
+    <div class="row">
+      <div class="<?php echo $pageWidth; ?>"><?php the_content(); ?></div>
+      <?php
 
-    <div class="<?php echo $pageWidth; ?>"><?php the_content(); ?></div>
+      if ($freeticket === true) {
+        include locate_template('templates/thanks/free-event.php' );
+      }
 
-    <?php 
+      ?>
 
-      if(is_order_received_page()) {
-
-        //include locate_template( 'templates/membership/member-pitch.php' ); 
-        get_template_part('templates/membership/member', 'pitch' );
-
-      } 
-
-    ?>
-
+    </div>
   </div>
-</div>
 
 <?php endwhile; ?>
