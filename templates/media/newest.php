@@ -6,7 +6,10 @@
   $format = '';
 ?>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 <div id="upcoming-events-carousel" class="newest row">
 
 <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
@@ -57,28 +60,39 @@
 
       if(has_post_format('video')){
 
+<<<<<<< HEAD
         echo '<a class="play popup-video" href="'.$link.'">';
 
+=======
+>>>>>>> origin/master
         if ( has_post_thumbnail() ) {
           the_post_thumbnail( 'footer-module-image', array( 'class' => 'img-responsive' ) );
         } else {
           echo '<img class="img-responsive" src=' . $video_thumb_url . '>';
         }
 
+<<<<<<< HEAD
         echo '</a>';
 
       } elseif (has_post_format('audio')){
 
         echo '<a href="'.$link.'">';
 
+=======
+      } elseif (has_post_format('audio')){
+
+>>>>>>> origin/master
         if ( has_post_thumbnail() ) {
           the_post_thumbnail( 'footer-module-image', array( 'class' => 'img-responsive' ) );
         } else {
           echo '<img class="img-responsive" src="/assets/img/play.jpg">';
         }
 
+<<<<<<< HEAD
         echo '</a>';
 
+=======
+>>>>>>> origin/master
       } elseif (has_post_format('gallery')){
 
         ?>
@@ -113,7 +127,10 @@
 
 </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 <?php
   $wp_query = null;
   $wp_query = $temp;  // Reset

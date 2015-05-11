@@ -4,8 +4,11 @@
 
 <div id="archive--wrapper">
   <div id="archive--newest">
+<<<<<<< HEAD
     <a class="carouselBtn prevBtn"><i class="ss-icon ss-gizmo">navigateleft</i></a>
     <a class="carouselBtn nextBtn"><i class="ss-icon ss-gizmo">navigateright</i></a>
+=======
+>>>>>>> origin/master
     <div class="row">
       <header class="desktop-12 tablet-6 mobile-3">
         <div class="row">

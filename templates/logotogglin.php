@@ -29,7 +29,11 @@
     }
 
     var homeClasses    = '.page-home';
+<<<<<<< HEAD
     var aloudClasses   = '.events-category-aloud, .page-template-page-protected';
+=======
+    var aloudClasses   = '.events-category-aloud';
+>>>>>>> origin/master
     var ylClasses      = '.page-young-literati';
     var memberClasses  = '.page-membership, .page-become-a-member, .page-bibliophiles';
     var councilClasses = '.page-the-council, .page-council-board';
@@ -52,7 +56,11 @@
 
       //alert('YL');
       $('#swiper').addClass('yl-logo');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/master
       setTimeout(function(){
         swiper.slideTo(1);
       },500);
@@ -65,7 +73,11 @@
 
       //alert('ALOUD');
       $('#swiper').addClass('member-logo');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/master
       setTimeout(function(){
         swiper.slideTo(1);
       },500);
@@ -78,27 +90,43 @@
 
       //alert('Library Store!');
       $('#swiper').addClass('ls-logo');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/master
       setTimeout(function(){
         swiper.slideTo(1);
       },500);
 
       hoverEffect();
 
+<<<<<<< HEAD
     }
+=======
+    } 
+>>>>>>> origin/master
 
     if ($('body').is(councilClasses)) {
 
       //alert('Library Store!');
       $('#swiper').addClass('council-logo');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/master
       setTimeout(function(){
         swiper.slideTo(1);
       },500);
 
       hoverEffect();
 
+<<<<<<< HEAD
     }
+=======
+    }    
+>>>>>>> origin/master
 
   });
 

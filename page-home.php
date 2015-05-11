@@ -6,7 +6,11 @@
     <?php if( have_rows('featured_slider', 'options') ): while ( have_rows('featured_slider', 'options') ) : the_row(); ?>
 
     <?php
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/master
       if (get_sub_field('slide_color') == "pink") {
 
         $bgColor = 'RGBA(226, 67, 140, 1)';
@@ -72,7 +76,11 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/master
         </div>
         <hr style="background-color:<?php echo $bgColor; ?>">
       </div>
@@ -83,6 +91,27 @@
 
         <img class="rsImg" src="<?php echo $thumb; ?>" alt="<?php echo $image['alt']; ?>" />
 
+<<<<<<< HEAD
+=======
+        if (get_sub_field('slide_image')){ 
+
+          $image = get_sub_field('slide_image'); 
+          $url = $image['url'];
+          $title = $image['title'];
+          $alt = $image['alt'];
+          $caption = $image['caption'];
+
+          $size = 'header-bg';
+          $thumb = $image['sizes'][ $size ];
+          $width = $image['sizes'][ $size . '-width' ];
+          $height = $image['sizes'][ $size . '-height' ];
+
+
+        ?>
+
+        <img class="rsImg" src="<?php echo $thumb; ?>" alt="<?php echo $image['alt']; ?>" />
+
+>>>>>>> origin/master
         <?php } else {
 
           if ( has_post_thumbnail() ) {
@@ -159,7 +188,11 @@
             <option value="/calendar/?action=tribe_list&tribe_paged=1&tribe_event_display=list&tribe-bar-date=<?php echo date("Y"); ?>-11-01">Nov</option>
             <option value="/calendar/?action=tribe_list&tribe_paged=1&tribe_event_display=list&tribe-bar-date=<?php echo date("Y"); ?>-12-01">Dec</option>
           </select>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/master
         </div>
       </div>
     </div>
@@ -167,7 +200,11 @@
     <a class="carouselBtn nextBtn"><i class="ss-icon ss-gizmo">navigateright</i></a>
     <div id="upcoming-events-carousel" class="desktop-12 contained">
 
+<<<<<<< HEAD
       <?php
+=======
+      <?php 
+>>>>>>> origin/master
         $args = array(
           'showposts'   => 9,
           'post_type'   => 'tribe_events',
@@ -180,12 +217,21 @@
           // )
         );
 
+<<<<<<< HEAD
         $temp = $wp_query;
         $wp_query = null;
         $wp_query = new WP_Query();
         $wp_query->query($args);
 
         while ($wp_query->have_posts()) : $wp_query->the_post();
+=======
+        $temp = $wp_query; 
+        $wp_query = null; 
+        $wp_query = new WP_Query(); 
+        $wp_query->query($args); 
+
+        while ($wp_query->have_posts()) : $wp_query->the_post(); 
+>>>>>>> origin/master
       ?>
 
       <?php get_template_part('templates/home/events-carousel', 'item' ); ?>
@@ -212,6 +258,7 @@
     </header>
     <div class="desktop-12 tablet-6 mobile-3">
       <div class="slider rsMinW">
+<<<<<<< HEAD
         <?php
 
           if( have_rows('featured_slider_bottom', 'options') ):
@@ -220,6 +267,16 @@
           $post_object = get_sub_field('slide_post');
           $post = $post_object;
           setup_postdata( $post );
+=======
+        <?php 
+
+          if( have_rows('featured_slider_bottom', 'options') ): 
+          while ( have_rows('featured_slider_bottom', 'options') ) : the_row(); 
+
+          $post_object = get_sub_field('slide_post');
+          $post = $post_object;
+          setup_postdata( $post ); 
+>>>>>>> origin/master
 
           get_template_part('templates/home/slider', 'bottom' );
 

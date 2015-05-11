@@ -47,7 +47,11 @@
 
       if(tribe_events_has_soldout()){
 
+<<<<<<< HEAD
         $soldoutimage = '/assets/img/aloud-cta.png';
+=======
+        $soldoutimage = 'http://i.imgur.com/znE1JTm.png';
+>>>>>>> origin/master
         $ticketStatus = '<a id="event-status-button"  href="'.$soldoutimage.'" class="button closed">Full/Standby</a>'; ?>
 
         <script>

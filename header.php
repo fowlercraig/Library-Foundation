@@ -35,7 +35,11 @@
 ?>
 
 <body <?php body_class('shifter'); ?>>
+<<<<<<< HEAD
   <div id="wrapper" class="shifter-page"><div>
+=======
+  <div id="wrapper" class="shifter-page">
+>>>>>>> origin/master
     <header id="head" class="gridlock gridlock-fluid">
       <div class="row">
         <nav id="main-nav" class="desktop-12 tablet-6 mobile-3">

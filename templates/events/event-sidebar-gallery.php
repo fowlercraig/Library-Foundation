@@ -1,9 +1,12 @@
 <div id="related-media" class="sidebar">
 
+<<<<<<< HEAD
 <?php if(get_field('media_title')):?>
 <h3><?php the_field('media_title');?></h3>
 <?php endif; ?>
 
+=======
+>>>>>>> origin/master
 <?php if( have_rows('event_media_objects') ): while ( have_rows('event_media_objects') ) : the_row(); ?>
 <?php $post_objects = get_sub_field('event_media'); if( $post_objects ): ?>
 <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
@@ -21,12 +24,17 @@
     </a>
     <figcaption itemprop="caption description"><?php echo $image['caption']; ?></figcaption>
     </figure>
+<<<<<<< HEAD
     <?php $counter++; // add one per row ?>
+=======
+    <?php $counter++; // add one per row ?>  
+>>>>>>> origin/master
     <?php endforeach; ?>
   </div>
 </div>
 <?php endif; ?>
 
+<<<<<<< HEAD
 <?php if ( has_post_format( 'audio' )): ?>
 
 <div <?php post_class('item podcast'); ?>>
@@ -38,6 +46,8 @@
 </div>
 
 <?php endif; ?>
+=======
+>>>>>>> origin/master
 
 <?php if ( has_post_format( 'video' )):  ?>
 <?php
@@ -66,7 +76,11 @@
 
 
 <?php $images = get_field('custom_gallery'); if( $images ): ?>
+<<<<<<< HEAD
 <h3 class="title"><?php the_field('gallery_title'); ?></h3>
+=======
+<h3 class="title"><?php the_field('gallery_title'); ?></h3>  
+>>>>>>> origin/master
 <div class="widget gallery">
   <span class="action"><i class="ss-icon ss-gizmo">Plus</i></span>
   <div class="item event-gallery">
@@ -77,7 +91,11 @@
     </a>
     <figcaption itemprop="caption description"><?php echo $image['caption']; ?></figcaption>
     </figure>
+<<<<<<< HEAD
     <?php $counter++; // add one per row ?>
+=======
+    <?php $counter++; // add one per row ?>  
+>>>>>>> origin/master
     <?php endforeach; ?>
   </div>
 </div>

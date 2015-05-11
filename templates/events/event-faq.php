@@ -4,7 +4,11 @@
 
 <div id="faq" class="accordion page-section">
 <div class="row">
+<<<<<<< HEAD
 <div class="desktop-8 tablet-6 mobile-3">
+=======
+<div class="desktop-12">
+>>>>>>> origin/master
 <h3 class="event-section-title">Frequently Asked Questions</h3>
 <ul id="faq-accordion">
 

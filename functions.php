@@ -11,7 +11,11 @@ include_once locate_template('/lib/woo-disablebilling.php' );
 include_once locate_template('/lib/miles.php' );
 include_once locate_template('/lib/woo-confirmations.php' );
 include_once locate_template('/lib/videoembed.php' );
+<<<<<<< HEAD
 //include_once locate_template('/lib/woo-ajax.php' );
+=======
+include_once locate_template('/lib/woo-ajax.php' );
+>>>>>>> origin/master
 //include_once locate_template('/lib/htmlcleanup.php' );
 
 // ACF Includes Nonsense

@@ -7987,6 +7987,167 @@ p.demo_store {
 .woocommerce-page table.shop_table td {
   min-width: 0;
 }
+<<<<<<< HEAD
+=======
+#head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 30px 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-transition: 150ms ease;
+          transition: 150ms ease;
+}
+#head.bottom {
+  top: auto;
+  bottom: 0;
+}
+@media screen and (min-width: 320px) {
+  #head {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 740px) {
+  #head {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 320px) {
+  #head {
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 740px) {
+  #head {
+    padding: 30px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+}
+#head.stuck {
+  position: fixed;
+  top: 0;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom: 0;
+  z-index: 999;
+}
+@media screen and (min-width: 320px) {
+  #head.stuck {
+    position: relative;
+    background: transparent;
+  }
+}
+@media screen and (min-width: 740px) {
+  #head.stuck {
+    position: relative;
+    background: transparent;
+  }
+}
+#head.stuck #logo {
+  max-width: 60px;
+  display: block;
+  margin-right: 1.04166667%;
+  margin-top: -10px;
+  height: 30px;
+}
+#head.stuck #logo img {
+  display: block;
+  max-width: 100%;
+}
+#head.stuck #swiper {
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+}
+#head.stuck .swiper-container {
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+}
+#head.stuck .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+}
+#head #swiper {
+  width: 135px;
+  height: 135px;
+  position: relative;
+  float: left;
+}
+@media screen and (min-width: 0px) and (max-width: 499px) {
+  #head #swiper {
+    width: 80px;
+    height: 80px;
+  }
+}
+#head .swiper-container {
+  width: 135px;
+  height: 135px;
+  position: absolute;
+}
+@media screen and (min-width: 0px) and (max-width: 499px) {
+  #head .swiper-container {
+    width: 80px;
+    height: 80px;
+  }
+}
+#head .swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+#head #logo {
+  max-width: 135px;
+  display: block;
+  margin-top: -1.04166667%;
+  margin-right: 1.04166667%;
+  -webkit-transition: 150ms ease;
+          transition: 150ms ease;
+  padding: 0;
+  position: relative;
+  overflow: visible;
+}
+@media screen and (min-width: 0px) and (max-width: 499px) {
+  #head #logo {
+    max-width: 70px;
+  }
+}
+#head #logo .logo-wrapper {
+  display: block;
+  position: relative;
+}
+#head #logo .face {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: url(/assets/img/lflalogo.png);
+  background-size: cover;
+}
+#head #logo img {
+  display: block;
+  max-width: 100%;
+}
+.header-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 5px;
+}
+@media screen and (min-width: 980px) {
+  .page-home #head {
+    border-bottom: 0;
+  }
+}
+>>>>>>> origin/master
 #head #logo.general-logo .face {
   background-image: url(/assets/img/logos/logo-general.png);
 }
@@ -8203,6 +8364,7 @@ p.demo_store {
 .page-header.minimal .page-header-title {
   font-size: 3em;
 }
+<<<<<<< HEAD
 .cart-header .buttons {
   display: block;
   float: right;
@@ -8222,6 +8384,8 @@ p.demo_store {
   text-rendering: optimizeLegibility;
   font-size: 11px;
 }
+=======
+>>>>>>> origin/master
 .simple-header {
   background-color: #008bbe;
   background-position: top center;
@@ -9897,8 +10061,11 @@ p.demo_store {
     position: relative;
     height: 300px;
     overflow: hidden;
+<<<<<<< HEAD
     background-position: top center;
     background-size: cover;
+=======
+>>>>>>> origin/master
   }
   #home-slider #home-carousel .slide:first-child {
     height: 400px;
@@ -9925,12 +10092,18 @@ p.demo_store {
     position: relative;
     left: -50%;
     position: absolute;
+<<<<<<< HEAD
     visibility: hidden;
+=======
+>>>>>>> origin/master
   }
 }
 @media screen and (min-width: 740px) {
   #home-slider #home-carousel .slide img {
+<<<<<<< HEAD
     visibility: visible;
+=======
+>>>>>>> origin/master
     position: absolute;
     left: auto;
   }
@@ -11221,6 +11394,7 @@ animated buttons - animate the text inside prev and next buttons
     padding: 15px;
   }
 }
+<<<<<<< HEAD
 #archive--wrapper > div,
 #related-media > div {
   margin: 50px 0;
@@ -11231,14 +11405,27 @@ animated buttons - animate the text inside prev and next buttons
 }
 #archive--wrapper header .title,
 #related-media header .title {
+=======
+#archive--wrapper > div {
+  margin: 50px 0;
+}
+#archive--wrapper header {
+  padding-bottom: 20px;
+}
+#archive--wrapper header .title {
+>>>>>>> origin/master
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
   margin: 0;
   height: 30px;
   line-height: 30px;
 }
+<<<<<<< HEAD
 #archive--wrapper header .view-all,
 #related-media header .view-all {
+=======
+#archive--wrapper header .view-all {
+>>>>>>> origin/master
   font-family: 'Gotham';
   font-weight: 700;
   font-size: 14px;
@@ -11252,12 +11439,19 @@ animated buttons - animate the text inside prev and next buttons
   height: 30px;
   line-height: 30px;
 }
+<<<<<<< HEAD
 #archive--wrapper header .view-all:hover,
 #related-media header .view-all:hover {
   color: #008bbe;
 }
 #archive--wrapper header .search-btn,
 #related-media header .search-btn {
+=======
+#archive--wrapper header .view-all:hover {
+  color: #008bbe;
+}
+#archive--wrapper header .search-btn {
+>>>>>>> origin/master
   font-size: 20px;
   font-size: 1.25rem;
   height: 30px;
@@ -11268,8 +11462,12 @@ animated buttons - animate the text inside prev and next buttons
   border-radius: 2px;
   display: inline-block;
 }
+<<<<<<< HEAD
 #archive--wrapper .archive-select,
 #related-media .archive-select {
+=======
+#archive--wrapper .archive-select {
+>>>>>>> origin/master
   margin: 0;
   height: 30px;
   font-family: 'Gotham';
@@ -11283,8 +11481,12 @@ animated buttons - animate the text inside prev and next buttons
   font-size: 10px;
   line-height: 27px;
 }
+<<<<<<< HEAD
 #archive--wrapper .archive-select .selecter-selected,
 #related-media .archive-select .selecter-selected {
+=======
+#archive--wrapper .archive-select .selecter-selected {
+>>>>>>> origin/master
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 35px;
@@ -11292,21 +11494,30 @@ animated buttons - animate the text inside prev and next buttons
   font-size: 11px;
   color: #999999;
 }
+<<<<<<< HEAD
 #archive--wrapper .archive-select .selecter-item,
 #related-media .archive-select .selecter-item {
+=======
+#archive--wrapper .archive-select .selecter-item {
+>>>>>>> origin/master
   padding-top: 0px;
   padding-bottom: 0px;
   border-bottom: 0;
   font-size: 11px;
   color: #999999;
 }
+<<<<<<< HEAD
 #archive--wrapper .item .thumb,
 #related-media .item .thumb {
+=======
+#archive--wrapper .item .thumb {
+>>>>>>> origin/master
   position: relative;
   -webkit-transition: 300ms ease;
           transition: 300ms ease;
   background: #333333;
 }
+<<<<<<< HEAD
 #archive--wrapper .item .thumb img,
 #related-media .item .thumb img {
   -webkit-transition: 300ms ease;
@@ -11326,14 +11537,34 @@ animated buttons - animate the text inside prev and next buttons
 }
 #archive--wrapper .item .thumb .info,
 #related-media .item .thumb .info {
+=======
+#archive--wrapper .item .thumb img {
+  -webkit-transition: 300ms ease;
+          transition: 300ms ease;
+}
+#archive--wrapper .item .thumb .event-gallery {
+  margin-top: 0;
+}
+#archive--wrapper .item .thumb .event-gallery figure {
+  display: none;
+}
+#archive--wrapper .item .thumb .event-gallery figure.item_1 {
+  display: block;
+}
+#archive--wrapper .item .thumb .info {
+>>>>>>> origin/master
   position: absolute;
   z-index: 9;
   top: 0;
 }
 #archive--wrapper .item .thumb .info a,
+<<<<<<< HEAD
 #related-media .item .thumb .info a,
 #archive--wrapper .item .thumb .info span,
 #related-media .item .thumb .info span {
+=======
+#archive--wrapper .item .thumb .info span {
+>>>>>>> origin/master
   display: inline-block;
   height: 28px;
   line-height: 28px;
@@ -11348,6 +11579,7 @@ animated buttons - animate the text inside prev and next buttons
   font-weight: 500;
   font-size: 10px;
 }
+<<<<<<< HEAD
 #archive--wrapper .item .thumb .info a,
 #related-media .item .thumb .info a {
   background: rgba(0, 0, 0, 0.5);
@@ -11380,11 +11612,38 @@ animated buttons - animate the text inside prev and next buttons
 }
 #archive--wrapper .item.gallery .meta,
 #related-media .item.gallery .meta {
+=======
+#archive--wrapper .item .thumb .info a {
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+#archive--wrapper .item .thumb .info a:hover {
+  background: #333333;
+}
+#archive--wrapper .item .thumb .info span {
+  color: rgba(255, 255, 255, 0.75);
+}
+#archive--wrapper .item:hover .thumb img {
+  opacity: .8;
+}
+#archive--wrapper .item.gallery figure {
+  display: none;
+}
+#archive--wrapper .item.gallery figure.item_1 {
+  display: block;
+}
+#archive--wrapper .item.gallery {
+  position: relative;
+  margin-bottom: 2.08333333%;
+}
+#archive--wrapper .item.gallery .meta {
+>>>>>>> origin/master
   position: absolute;
   bottom: 0;
   width: 100%;
   z-index: 9;
 }
+<<<<<<< HEAD
 #archive--wrapper .item.gallery .meta .title,
 #related-media .item.gallery .meta .title {
   font-size: 16px;
@@ -11396,10 +11655,21 @@ animated buttons - animate the text inside prev and next buttons
 }
 #archive--wrapper .item.gallery .meta .wrapper,
 #related-media .item.gallery .meta .wrapper {
+=======
+#archive--wrapper .item.gallery .meta .title {
+  font-size: 16px;
+  font-size: 1rem;
+}
+#archive--wrapper .item.gallery .meta .title a {
+  color: #ffffff;
+}
+#archive--wrapper .item.gallery .meta .wrapper {
+>>>>>>> origin/master
   padding-top: 10px;
   padding-bottom: 10px;
   background: rgba(0, 0, 0, 0.5);
 }
+<<<<<<< HEAD
 #archive--wrapper .item.newest,
 #related-media .item.newest {
   margin: 0 10px;
@@ -11430,20 +11700,44 @@ animated buttons - animate the text inside prev and next buttons
 }
 #archive--wrapper .item .title,
 #related-media .item .title {
+=======
+#archive--wrapper .item.newest {
+  margin: 0 10px;
+}
+#archive--wrapper .item.video {
+  margin-bottom: 2.08333333%;
+}
+#archive--wrapper .item.video .thumb {
+  margin-bottom: 2.08333333%;
+}
+#archive--wrapper .item.podcast {
+  background: #f8f8f8;
+  margin-bottom: 2.08333333%;
+}
+#archive--wrapper .item .title {
+>>>>>>> origin/master
   margin: 0;
   font-family: 'Sentinel', serif;
   text-rendering: optimizeLegibility;
 }
+<<<<<<< HEAD
 #archive--wrapper .item .title a,
 #related-media .item .title a {
   color: #333333;
 }
 #archive--wrapper .item .meta.video .title,
 #related-media .item .meta.video .title {
+=======
+#archive--wrapper .item .title a {
+  color: #333333;
+}
+#archive--wrapper .item .meta.video .title {
+>>>>>>> origin/master
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.4;
 }
+<<<<<<< HEAD
 #archive--wrapper .item .meta.gallery,
 #related-media .item .meta.gallery {
   background: #333333;
@@ -11459,6 +11753,19 @@ animated buttons - animate the text inside prev and next buttons
 }
 #archive--wrapper .item .meta .time,
 #related-media .item .meta .time {
+=======
+#archive--wrapper .item .meta.gallery {
+  background: #333333;
+}
+#archive--wrapper .item .meta.podcast {
+  padding-top: 17px;
+}
+#archive--wrapper .item .meta.podcast .title {
+  font-size: 16px;
+  font-size: 1rem;
+}
+#archive--wrapper .item .meta .time {
+>>>>>>> origin/master
   font-family: 'Gotham';
   font-weight: 700;
   font-size: 14px;
@@ -11468,6 +11775,7 @@ animated buttons - animate the text inside prev and next buttons
   font-size: 11px;
   font-weight: 500;
 }
+<<<<<<< HEAD
 #archive--wrapper .item .meta .wrapper,
 #related-media .item .meta .wrapper {
   padding: 15px;
@@ -11475,6 +11783,13 @@ animated buttons - animate the text inside prev and next buttons
 }
 #archive--wrapper .play-icon,
 #related-media .play-icon {
+=======
+#archive--wrapper .item .meta .wrapper {
+  padding: 15px;
+  background: #f8f8f8;
+}
+#archive--wrapper .play-icon {
+>>>>>>> origin/master
   background: #e2438c;
   color: #ffffff;
   display: inline-block;
@@ -11486,4 +11801,72 @@ animated buttons - animate the text inside prev and next buttons
   padding-left: 3px;
   text-align: center;
   margin-right: 1.04166667%;
+<<<<<<< HEAD
+=======
+}
+#archive--wrapper .play-icon:hover {
+  background: #d62174;
+}
+#search-box {
+  display: none;
+  position: relative;
+}
+#search-box form {
+  padding: 25px;
+  margin-bottom: 20px;
+  background: #f8f8f8;
+}
+#search-box:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f8f8f8;
+}
+@media screen and (min-width: 740px) {
+  #search-box:before {
+    right: 45.5%;
+  }
+}
+@media screen and (min-width: 980px) {
+  #search-box:before {
+    right: 26%;
+  }
+}
+#search-box input {
+  margin-bottom: 0;
+}
+#search-box input.search-input {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  border-bottom: 1px solid #dddddd;
+  padding: 5px 0;
+  font-size: 24px;
+  font-size: 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Sentinel', serif;
+  text-rendering: optimizeLegibility;
+}
+#search-box input.btn {
+  width: 100%;
+  border: none;
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  font-size: 11px;
+  border-radius: 2px;
+  height: 40px;
+  font-weight: 500;
+  background: #008bbe;
+  color: #ffffff;
+  -webkit-transition: 300ms ease;
+          transition: 300ms ease;
+>>>>>>> origin/master
 }

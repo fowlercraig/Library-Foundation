@@ -41,6 +41,7 @@ function so_28348735_category_based_thank_you_message ( $order_id ){
 
     if ( has_term( 'membership', 'product_cat', $item['product_id'] ) ) {
       $membership = true; $hasContent = true;
+<<<<<<< HEAD
     }
 
     if ( has_term( 'memorial-gift', 'product_cat', $item['product_id'] ) ) {
@@ -55,6 +56,22 @@ function so_28348735_category_based_thank_you_message ( $order_id ){
       $giftMembership = true; $hasContent = true;
     }
 
+=======
+    }
+
+    if ( has_term( 'memorial-gift', 'product_cat', $item['product_id'] ) ) {
+      $memGift = true; $hasContent = true;
+    }
+
+    if ( has_term( 'young-literati-membership', 'product_cat', $item['product_id'] ) ) {
+      $youngLit = true; $hasContent = true;
+    }
+
+    if ( has_term( 'gift-membership', 'product_cat', $item['product_id'] ) ) {
+      $giftMembership = true; $hasContent = true;
+    }
+
+>>>>>>> origin/master
   }
 
   if ($hasContent === true) {
@@ -326,9 +343,15 @@ function populate_my_custom_attendee_column( $existing, $item, $column, $order_i
 		WHERE		meta_key = '_tribe_wooticket_for_event'
 		AND 		post_id = %d
 	";
+<<<<<<< HEAD
 
 	$event_id = $wpdb->get_var( $wpdb->prepare($event_query, $item['product_id']) );
 
+=======
+	
+	$event_id = $wpdb->get_var( $wpdb->prepare($event_query, $item['product_id']) );
+	
+>>>>>>> origin/master
 	return book_ordered($item['order_id'], $event_id, true);
 /****************************** End Miles Modification   **************************/
 
@@ -343,6 +366,7 @@ add_filter( 'woocommerce_variation_free_price_html', 'hide_free_price_notice' );
  */
 function hide_free_price_notice( $price ) {
   return 'Free';
+<<<<<<< HEAD
 }
 
 
@@ -366,4 +390,6 @@ if ( $query->query_vars['eventDisplay'] == 'list' || $query->query_vars['eventDi
   );
 }
 return $query;
+=======
+>>>>>>> origin/master
 }

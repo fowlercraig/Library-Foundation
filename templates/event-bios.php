@@ -1,5 +1,11 @@
 <?php $posts = get_field('people'); if( $posts ): ?>
+<<<<<<< HEAD
 <hr class="invisible">
+=======
+
+  <hr class="invisible">
+
+>>>>>>> origin/master
   <div id="event-bios">
   <div class="row">
 
