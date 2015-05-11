@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18493",
+"creatorBuild": "18911",
 "files": {
 	"\/404.php": {
 		"fileType": 8192,
@@ -41,16 +41,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/classie\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/classie\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/classie\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/doc-ready\/doc-ready.js": {
 		"fileType": 64,
@@ -64,16 +73,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/doc-ready\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/doc-ready\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/doc-ready\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/eventEmitter\/EventEmitter.js": {
 		"fileType": 64,
@@ -98,16 +116,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/eventEmitter\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/eventEmitter\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/eventEmitter\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/eventie\/eventie.js": {
 		"fileType": 64,
@@ -121,16 +148,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/eventie\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/eventie\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/eventie\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/get-size\/get-size.js": {
 		"fileType": 64,
@@ -153,16 +189,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/bower_components\/get-size\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/get-size\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/get-size\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/get-style-property\/get-style-property.js": {
 		"fileType": 64,
@@ -176,16 +221,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/get-style-property\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/get-style-property\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/get-style-property\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/Gridlock\/css\/fs.gridlock.ie.css": {
 		"fileType": 16,
@@ -280,16 +334,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/Gridlock\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Gridlock\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Gridlock\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/Gridlock\/src\/fs.gridlock-config.less": {
 		"allowInsecureImports": 0,
@@ -412,16 +475,25 @@
 		"strictUnits": 0
 		},
 	"\/assets\/bower_components\/Gridlock\/src\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Gridlock\/src\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Gridlock\/src\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/Gridlock\/templates\/Fireworks\/Gridlock.png": {
 		"fileType": 32768,
@@ -462,6 +534,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/bower_components\/hideshare\/hideshare.jquery.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/hideshare\/hideshare.jquery.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/hideshare\/hideshare.jquery-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/assets\/bower_components\/hideshare\/hideshare.js": {
 		"fileType": 64,
@@ -505,17 +588,37 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/bower_components\/hideshare\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/hideshare\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/hideshare\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/bower_components\/hideshare\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/hideshare\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/hideshare\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/imagesloaded\/Gruntfile.js": {
 		"fileType": 64,
@@ -562,16 +665,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/imagesloaded\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/imagesloaded\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/imagesloaded\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/infinite-scroll\/behaviors\/cufon.js": {
 		"fileType": 64,
@@ -628,17 +740,37 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/bower_components\/infinite-scroll\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/bower_components\/infinite-scroll\/CONTRIBUTING.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/CONTRIBUTING.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/CONTRIBUTING.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/infinite-scroll\/jquery.infinitescroll.js": {
 		"fileType": 64,
@@ -662,17 +794,37 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/bower_components\/infinite-scroll\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/bower_components\/infinite-scroll\/Readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/Readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/Readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/infinite-scroll\/site\/buttons.png": {
 		"fileType": 32768,
@@ -872,16 +1024,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/bower_components\/infinite-scroll\/wordpress-plugin\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/wordpress-plugin\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/infinite-scroll\/wordpress-plugin\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/infinite-scroll\/wordpress-plugin\/screenshot-1.png": {
 		"fileType": 32768,
@@ -1070,28 +1231,46 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/jquery-waypoints\/CHANGELOG.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/jquery-waypoints\/CHANGELOG.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/jquery-waypoints\/CHANGELOG.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/jquery-waypoints\/CONTRIBUTING.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/jquery-waypoints\/CONTRIBUTING.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/jquery-waypoints\/CONTRIBUTING.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/jquery-waypoints\/lib\/jquery.waypoints.js": {
 		"fileType": 64,
@@ -1237,16 +1416,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/jquery-waypoints\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/jquery-waypoints\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/jquery-waypoints\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/jquery-waypoints\/shortcuts\/infinite-scroll\/waypoints-infinite.js": {
 		"fileType": 64,
@@ -1313,6 +1501,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/bower_components\/jquery\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/jquery\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/jquery\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/assets\/bower_components\/jquery\/dist\/jquery.js": {
 		"fileType": 64,
@@ -2312,16 +2511,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/magnific-popup\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/magnific-popup\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/magnific-popup\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/magnific-popup\/src\/css\/_settings.scss": {
 		"createSourceMap": 0,
@@ -2455,16 +2663,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/masonry\/changelog.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/masonry\/changelog.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/masonry\/changelog.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/masonry\/dist\/masonry.pkgd.js": {
 		"fileType": 64,
@@ -2511,16 +2728,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/matches-selector\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/matches-selector\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/matches-selector\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/matches-selector\/tests.html": {
 		"fileType": 8192,
@@ -2603,16 +2829,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/Naver\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Naver\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Naver\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/Naver\/src\/jquery.fs.naver-config.less": {
 		"allowInsecureImports": 0,
@@ -2686,16 +2921,25 @@
 		"strictUnits": 0
 		},
 	"\/assets\/bower_components\/normalize-css\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/normalize-css\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/normalize-css\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/normalize-css\/normalize.css": {
 		"fileType": 16,
@@ -2707,16 +2951,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/bower_components\/normalize-css\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/normalize-css\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/normalize-css\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/outlayer\/item.js": {
 		"fileType": 64,
@@ -2741,28 +2994,46 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/outlayer\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/outlayer\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/outlayer\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/packery\/changelog.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/packery\/changelog.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/packery\/changelog.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/packery\/dist\/packery.pkgd.js": {
 		"fileType": 64,
@@ -2831,16 +3102,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/packery\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/packery\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/packery\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/packery\/sandbox\/add-remove.html": {
 		"fileType": 8192,
@@ -3117,16 +3397,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/bower_components\/pegasus\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/pegasus\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/pegasus\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/photoswipe\/dist\/default-skin\/default-skin.css": {
 		"fileType": 16,
@@ -3253,16 +3542,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/photoswipe\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/photoswipe\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/photoswipe\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/photoswipe\/src\/css\/_main-settings.scss": {
 		"createSourceMap": 0,
@@ -3792,16 +4090,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/Selecter\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Selecter\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Selecter\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/Selecter\/src\/jquery.fs.selecter-config.less": {
 		"allowInsecureImports": 0,
@@ -3863,6 +4170,17 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/assets\/bower_components\/sharebutton\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/bower_components\/sharebutton\/build\/share.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -3886,16 +4204,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/sharebutton\/contributing.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/contributing.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/contributing.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/sharebutton\/examples.html": {
 		"fileType": 8192,
@@ -3916,28 +4243,57 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/bower_components\/sharebutton\/license.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/license.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/license.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/assets\/bower_components\/sharebutton\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/assets\/bower_components\/sharebutton\/readme.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/readme.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/sharebutton\/readme.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/sharebutton\/src\/share.coffee": {
 		"createSourceMap": 0,
@@ -4055,28 +4411,46 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/Shifter\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Shifter\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Shifter\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/Shifter\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Shifter\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Shifter\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/Shifter\/src\/jquery.fs.shifter-config.less": {
 		"allowInsecureImports": 0,
@@ -4181,16 +4555,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/Sizer\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Sizer\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Sizer\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/slick.js\/slick\/slick-theme.css": {
 		"fileType": 16,
@@ -4268,6 +4651,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/bower_components\/smoothstate\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/smoothstate\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/smoothstate\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/bower_components\/smoothstate\/jquery.smoothState.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -4280,28 +4674,68 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/smoothstate\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/smoothstate\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/smoothstate\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/smoothstate\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/smoothstate\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/smoothstate\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/assets\/bower_components\/smoothstate\/smoothState.jquery.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/smoothstate\/smoothState.jquery.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/smoothstate\/smoothState.jquery-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/assets\/bower_components\/Stepper\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/Stepper\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/Stepper\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/assets\/bower_components\/Stepper\/demo\/index.html": {
 		"fileType": 8192,
@@ -4385,17 +4819,37 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/assets\/bower_components\/Stepper\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/Stepper\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/Stepper\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/bower_components\/Stepper\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Stepper\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Stepper\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/Stepper\/src\/jquery.fs.stepper.css": {
 		"fileType": 16,
@@ -4416,6 +4870,17 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/bower_components\/Stepper\/stepper.jquery.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/Stepper\/stepper.jquery.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/Stepper\/stepper.jquery-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/assets\/bower_components\/superfish\/dist\/css\/_superfish.less": {
 		"allowInsecureImports": 0,
@@ -4555,17 +5020,48 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/bower_components\/swiper\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/swiper\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/swiper\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/assets\/bower_components\/swiper\/CHANGELOG.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/swiper\/CHANGELOG.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/swiper\/CHANGELOG.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/assets\/bower_components\/swiper\/component.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/bower_components\/swiper\/component.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/assets\/bower_components\/swiper\/component-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/assets\/bower_components\/swiper\/dist\/css\/swiper.css": {
 		"fileType": 16,
@@ -4661,16 +5157,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/swiper\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/swiper\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/swiper\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/swiper\/src\/js\/amd.js": {
 		"fileType": 64,
@@ -5044,16 +5549,25 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/Tabber\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Tabber\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Tabber\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/assets\/bower_components\/velocity\/jquery.velocity.js": {
 		"fileType": 64,
@@ -5162,14 +5676,41 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/bower_components\/Wallpaper\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/bower_components\/Wallpaper\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/assets\/bower_components\/Wallpaper\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/assets\/css\/jquery.fs.naver.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/jquery.fs.naver.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/css\/jquery.fs.shifter.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/jquery.fs.shifter.css",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -5196,6 +5737,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/css\/main.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/assets\/css\/normalize.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/normalize.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -5819,7 +6369,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 339603,
+		"initialSize": 285764,
 		"inputAbbreviatedPath": "\/assets\/img\/membership-cta.png",
 		"outputAbbreviatedPath": "\/assets\/img\/membership-cta.png",
 		"outputPathIsOutsideProject": 0,
@@ -5855,6 +6405,28 @@
 		"initialSize": 1467,
 		"inputAbbreviatedPath": "\/assets\/img\/navRight.png",
 		"outputAbbreviatedPath": "\/assets\/img\/navRight.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/play.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 19409,
+		"inputAbbreviatedPath": "\/assets\/img\/play.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/play.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/play.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6482,
+		"inputAbbreviatedPath": "\/assets\/img\/play.png",
+		"outputAbbreviatedPath": "\/assets\/img\/play.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -7465,8 +8037,8 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"relativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
@@ -8967,17 +9539,70 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/component.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/component.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/component-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/composer.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/composer.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/composer-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/select2-bootstrap.css": {
 		"fileType": 16,
@@ -8996,6 +9621,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/select2.jquery.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/select2.jquery.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/select2.jquery-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/select2.js": {
 		"fileType": 64,
@@ -10374,28 +11010,46 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/lib\/roots-rewrites-master\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/roots-rewrites-master\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/lib\/roots-rewrites-master\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/lib\/roots-rewrites-master\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/roots-rewrites-master\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/lib\/roots-rewrites-master\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/lib\/roots-rewrites-master\/roots-rewrites.php": {
 		"fileType": 8192,
@@ -10434,28 +11088,46 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/lib\/soil-master\/CHANGELOG.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/soil-master\/CHANGELOG.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/lib\/soil-master\/CHANGELOG.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/lib\/soil-master\/LICENSE.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/soil-master\/LICENSE.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/lib\/soil-master\/LICENSE.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/lib\/soil-master\/modules\/clean-up.php": {
 		"fileType": 8192,
@@ -10494,16 +11166,25 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/lib\/soil-master\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/lib\/soil-master\/README.md",
+		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/lib\/soil-master\/README.html",
+		"outputFormat": 0,
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
 		},
 	"\/lib\/soil-master\/soil.php": {
 		"fileType": 8192,
@@ -10564,6 +11245,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/page-about.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/page-archive-categories.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-archive-categories.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -11346,6 +12036,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/templates\/media\/categories.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/media\/categories.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/templates\/media\/galleries.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -11594,6 +12293,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/templates\/staff\/staff-group.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/staff\/staff-principals.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/staff\/staff-principals.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -13273,6 +13981,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"futurehostile": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"globalstrict": {
 			"active": 0,
 			"flagValue": -1
@@ -13359,6 +14071,10 @@
 			},
 		"noarg": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"nocomma": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"node": {
@@ -13459,6 +14175,10 @@
 			},
 		"unused": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"varstmt": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"withstmt": {
@@ -13584,6 +14304,14 @@
 			"flagValue": -1
 			}
 		},
+	"jsonAutoOutputPathEnabled": 0,
+	"jsonAutoOutputPathFilenamePattern": "*-min.json",
+	"jsonAutoOutputPathRelativePath": "",
+	"jsonAutoOutputPathReplace1": "",
+	"jsonAutoOutputPathReplace2": "",
+	"jsonAutoOutputPathStyle": 0,
+	"jsonOrderOutput": 0,
+	"jsonOutputStyle": 1,
 	"kitAutoOutputPathEnabled": 1,
 	"kitAutoOutputPathFilenamePattern": "*.html",
 	"kitAutoOutputPathRelativePath": "",
@@ -13611,9 +14339,18 @@
 	"markdownAutoOutputPathReplace1": "",
 	"markdownAutoOutputPathReplace2": "",
 	"markdownAutoOutputPathStyle": 0,
+	"markdownCriticStyle": 0,
 	"markdownEnableFootnotes": 0,
-	"markdownEnableSmartyPants": 1,
-	"markdownExpandTabs": 1,
+	"markdownEnableLabels": 1,
+	"markdownEnableSmartQuotes": 1,
+	"markdownEscapeLineBreaks": 0,
+	"markdownMaskEmailAddresses": 1,
+	"markdownOutputFormat": 0,
+	"markdownOutputStyle": 0,
+	"markdownParseMetadata": 1,
+	"markdownProcessHTML": 0,
+	"markdownRandomFootnoteNumbers": 0,
+	"markdownUseCompatibilityMode": 0,
 	"reloadFileURLs": 1,
 	"sassAutoOutputPathEnabled": 1,
 	"sassAutoOutputPathFilenamePattern": "*.css",
@@ -13669,6 +14406,10 @@
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bare-returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -13749,6 +14490,10 @@
 			"flagValue": -1
 			},
 		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
 			"active": 0,
 			"flagValue": -1
 			},

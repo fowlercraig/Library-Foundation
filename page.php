@@ -20,6 +20,10 @@
 
     include locate_template('page-board.php' );
 
+  } elseif ( is_page( 'council-board' ) ) {
+
+    include locate_template('page-board.php' );
+
   } elseif ( is_page( 'about' ) ) {
 
     include locate_template('page-about.php' );

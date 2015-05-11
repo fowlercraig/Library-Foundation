@@ -20,6 +20,7 @@
   @media @tablet {
     padding: 30px 0;
     width: 100%;
+    border-bottom: 1px solid @white25;
   }
 
   &:hover {
@@ -34,6 +35,16 @@
     background: @black75;
     border-bottom: 0;
     z-index: 999;
+
+    @media @mobile {
+      position: relative;
+      background: transparent;
+    }
+
+    @media @tablet {
+      position: relative;
+      background: transparent;
+    }
 
     #logo {
 
@@ -157,6 +168,8 @@
 
 .page-home {
  #head {
-  border-bottom: 0;
+  @media @desktop {
+    border-bottom: 0;
+  }
  }
 }

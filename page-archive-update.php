@@ -12,10 +12,10 @@
           </div>
           <div class="desktop-6 tablet-3 mobile-half text-right">
             <div class="row">
-              <div class="desktop-8">
+              <div class="desktop-8 mobile-1">
                 <a href="#" class="search-btn ss-gizmo ss-icon ss-search"></a>
               </div>
-              <div class="desktop-4">
+              <div class="desktop-4 mobile-2">
                 <select name="selecter_basic" id="selecter_basic" class="selected" data-selecter-options='{"external":"true", "customClass":"archive-select","label":"Jump to Section"}'>
                   <option value="#archive--videos">Videos</option>
                   <option value="#archive--podcasts">Podcasts</option>
@@ -27,6 +27,16 @@
           </div>
         </div>
       </header>
+
+      <div id="search-box" class="desktop-8 tablet-6 mobile-3 right">
+        <form id="search-archive" method="get" action="/media-archive/category">
+          <div class="row">
+            <div class="desktop-10 tablet-5 mobile-2"><input type="text" placeholder="Jeff Koons, Un-Private Collection, etc" class="search-input" name="search" size="21" maxlength="120"></div>
+            <div class="desktop-2 tablet-1 mobile-1"><input type="submit" value="search" class="btn"></div>
+          </div>
+        </form>
+      </div>
+
       <div class="desktop-12 tablet-6 mobile-3">
         <?php include locate_template('/templates/media/newest.php' ); ?>
       </div>

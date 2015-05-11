@@ -73,7 +73,7 @@ function gridded_custom_pings( $comment )
     $GLOBALS['comment'] = $comment;
     ?>
     <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
-    <?php 
+    <?php
 }
 add_filter( 'get_comments_number', 'gridded_comments_number' );
 function gridded_comments_number( $count )
@@ -89,10 +89,10 @@ function gridded_comments_number( $count )
 
 
 
-function removeRecentComments() {  
-    global $wp_widget_factory;  
-    remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
-}  
+function removeRecentComments() {
+    global $wp_widget_factory;
+    remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
+}
 add_action( 'widgets_init', 'removeRecentComments' );
 
 // Image Sizes
@@ -127,12 +127,12 @@ function page_support() {
 
 
 // Check if page is direct child
-function is_child($page_id) { 
-    global $post; 
+function is_child($page_id) {
+    global $post;
     if( is_page() && ($post->post_parent == $page_id) ) {
      return true;
- } else { 
-     return false; 
+ } else {
+     return false;
  }
 }
 
@@ -173,11 +173,11 @@ add_action( 'wp_dashboard_setup', function()
 add_action( 'pre_get_posts', 'exclude_events_category' );
 
 function exclude_events_category( $query ) {
-   
+
     if ( $query->query_vars['eventDisplay'] == 'upcoming' && !is_tax(TribeEvents::TAXONOMY) || $query->query_vars['eventDisplay'] == 'month' && $query->query_vars['post_type'] == TribeEvents::POSTTYPE && !is_tax(TribeEvents::TAXONOMY) && empty( $query->query_vars['suppress_filters'] ) ) {
-       
+
         $query->set( 'tax_query', array(
-           
+
             array(
                 'taxonomy' => TribeEvents::TAXONOMY,
                 'field' => 'slug',

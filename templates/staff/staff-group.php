@@ -12,7 +12,7 @@ $groupTitle_clean = strtolower($groupTitle_clean);
 
 <?php if( have_rows('staff_members') ): ?>
 
-<div class="max-4 desktop-6 tablet-3 mobile-3 group">
+<div class="max-6 desktop-6 tablet-3 mobile-3 group">
 <div class="row">
 
 <h3 class="title"><span class="cat_<?php echo $groupTitle_clean; ?>"><?php echo $groupTitle; ?></span></h3>
@@ -38,10 +38,10 @@ $groupTitle_clean = strtolower($groupTitle_clean);
 
 <div class="staff-member desktop-12 tablet-6 mobile-half <?php echo $groupTitle_clean; ?>">
   <div class="row">
-    <div class="thumb desktop-6 tablet-3">
+    <div class="thumb desktop-4 tablet-2">
       <img class="img-responsive" src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" />
     </div>
-    <div class="info desktop-6 tablet-3 mobile-3"><?php the_sub_field('staff_info'); ?></div>
+    <div class="info desktop-8 tablet-4 mobile-3"><?php the_sub_field('staff_info'); ?></div>
   </div>
 </div>
 

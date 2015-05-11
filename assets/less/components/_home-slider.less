@@ -1,7 +1,9 @@
 #home-slider {
 
-  overflow: hidden;
-  overflow-y: visible;
+  @media @tablet {
+    overflow: hidden;
+    overflow-y: visible;
+  }
 
   #home-carousel {
 
@@ -10,7 +12,7 @@
     width: 100%;
 
     @media @mobile {
-      height: 400px;
+      height: auto;
     }
 
     @media @tablet {
@@ -72,9 +74,25 @@
     .slide {
 
       //.header-overlay();
-      opacity: .75;
-      position: static;
+
       transition: 300ms ease;
+
+      @media @mobile {
+        opacity: 1;
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        &:first-child {
+          height: 400px;
+        }
+      }
+
+      @media @tablet {
+        opacity: .75;
+        height: auto;
+        position: static;
+        height: 500px;
+      }
 
       hr {
         margin: 0;
@@ -84,6 +102,21 @@
       .section-link {
         color: @white;
         display: block;
+      }
+
+      @media @mobile {
+        img {
+          position: relative;
+          left: -50%;
+          position: absolute;
+        }
+      }
+
+      @media @tablet {
+        img {
+          position: absolute;
+          left: auto;
+        }
       }
 
     }

@@ -10,6 +10,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+global $wpdb;
 ?>
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
@@ -26,13 +28,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 				$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+					
+					// Is this a ticket
+					$event_query = "
+						SELECT 		meta_value  
+						FROM 		{$wpdb->prefix}postmeta  
+						WHERE		meta_key = '_tribe_wooticket_for_event'
+						AND			post_id = %d
+					"; 
+					
+				  	$event_id = $wpdb->get_var( $wpdb->prepare($event_query, $_product->id) );
+					//var_dump($event_id);
+					$aloud_class= "";
+					if(NULL !== $event_id) {
+						$terms = get_the_terms( $event_id, 'tribe_events_cat' );
+						foreach($terms as $term) {
+							if($term->slug = "aloud") {
+								$aloud_class = " aloud-event";
+								break;
+							}
+						}
+						//$terms = wp_get_object_terms( 5804, 'tribe_events_cat');
+					 	//echo '<br><pre>'.print_r($terms,true).'</pre>'; 
+					 }
+					
+					
 					?>
-					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); echo $aloud_class; ?>">
 						<td class="product-name">
 							<?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
 							<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times; %s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); ?>
 							<?php echo WC()->cart->get_item_data( $cart_item ); ?>
-						</td>
+
+							
 						<td class="product-total">
 							<?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
 						</td>

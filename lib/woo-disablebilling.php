@@ -308,7 +308,7 @@ function populate_my_custom_attendee_column( $existing, $item, $column, $order_i
     if ( 'custom_id' !== $column ) return $existing;
 
     //$member = get_post_meta( $item['order_id'], 'currently_member', true );
-    $phone_number = get_post_meta( $item['order_id'], 'order_warning', true );
+    //$phone_number = get_post_meta( $item['order_id'], 'order_warning', true );
     //$product_cats = wp_get_post_terms( $item['order_id'], 'product_cat' );
 
     // $item = $values['data'];
@@ -317,6 +317,30 @@ function populate_my_custom_attendee_column( $existing, $item, $column, $order_i
     //   $member = 'hello';
     // }
 
-    return var_dump($phone_number);
+    //return var_dump($phone_number);
+/****************************** Start Miles Modification **************************/
+	global $wpdb;
+	$event_query = "
+		SELECT		meta_value
+		FROM		{$wpdb->prefix}postmeta
+		WHERE		meta_key = '_tribe_wooticket_for_event'
+		AND 		post_id = %d
+	";
+	
+	$event_id = $wpdb->get_var( $wpdb->prepare($event_query, $item['product_id']) );
+	
+	return book_ordered($item['order_id'], $event_id, true);
+/****************************** End Miles Modification   **************************/
 
+}
+
+
+add_filter( 'woocommerce_variable_free_price_html',  'hide_free_price_notice' );
+add_filter( 'woocommerce_free_price_html',           'hide_free_price_notice' );
+add_filter( 'woocommerce_variation_free_price_html', 'hide_free_price_notice' );
+/**
+ * Hides the 'Free!' price notice
+ */
+function hide_free_price_notice( $price ) {
+  return 'Free';
 }

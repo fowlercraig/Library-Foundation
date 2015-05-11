@@ -12,7 +12,11 @@
   function thangs() {
 
     $.shifter({
-      maxWidth: Infinity
+      maxWidth: '960px'
+    });
+
+    $('#archive--wrapper .search-btn').click(function(){
+      $('#search-box').toggle();
     });
 
     //$('a[href^="http://"]').not('a[href*=#]').attr('target','_blank');
@@ -28,6 +32,14 @@
     //     });
     //   }
     // });
+
+    $('a').not('[href*="mailto:"],[href*="#"]').each(function () {
+      var a = new RegExp('/' + window.location.host + '/');
+      var href = this.href;
+      if ( ! a.test(href) ) {
+        $(this).attr('target', '_blank');
+      }
+    });
 
 
     var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -284,6 +296,9 @@ $('.tribe-bar-filters .tribe-events-button')
     arrowsNav: false,
     controlNavigation: 'none',
   });
+
+  if ($(window).width() > 500) {
+
   $("#home-carousel")
   .royalSlider({
     keyboardNavEnabled: true,
@@ -313,6 +328,7 @@ $('.tribe-bar-filters .tribe-events-button')
         navigateByCenterClick: true
       }
     });
+  }
 
   $(document).ready(function($) {
     var si = $('.module-slider').royalSlider({
@@ -343,16 +359,21 @@ $('.tribe-bar-filters .tribe-events-button')
   });
 
 
-  $("#home-featured .slider")
-  .royalSlider({
-    keyboardNavEnabled: true,
-    imageScaleMode: 'fill',
-    slidesSpacing: 0,
-    fadeinLoadedSlide: false,
-    addActiveClass: true,
-    loop: true,
-    navigateByClick: false,
-  });
+
+
+    $("#home-featured .slider")
+    .royalSlider({
+      keyboardNavEnabled: true,
+      imageScaleMode: 'fill',
+      slidesSpacing: 0,
+      fadeinLoadedSlide: false,
+      addActiveClass: true,
+      loop: true,
+      navigateByClick: false,
+    });
+
+
+
   $("#event-spotlight-slider .slider")
   .royalSlider({
     keyboardNavEnabled: true,
@@ -675,7 +696,7 @@ var filterFns = {
       }
     });
     // Smooth scrolling for internal links
-    $("a[href^='#']:not(.tabber-handle, .popup)").click(function(event) {
+    $("a[href^='#']:not(.tabber-handle, .popup, [href*='#'], #event-status-button)").click(function(event) {
       event.preventDefault();
       var $this = $(this),
       target = this.hash,

@@ -22,7 +22,6 @@
 
 <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
-<<<<<<< HEAD
 <?php
 
   $video            = get_field('archive:_video'); //Embed Code

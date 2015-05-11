@@ -6,8 +6,17 @@
       display: none;
     }
 
-    @media @max {
+    @media @desktop {
       display: block;
+      .button {
+        display: none;
+      }
+    }
+
+    @media @max {
+      .button {
+        display: inline-block;
+      }
     }
 
   }
