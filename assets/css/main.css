@@ -1,58 +1,5 @@
-@import url('main-blessed1.css?z=1431122109150');
+@import url('main-blessed1.css?z=1431370078540');
 
-#archive--wrapper .item .title a,
-#related-media .item .title a {
-  color: #333333;
-}
-#archive--wrapper .item .meta.video .title,
-#related-media .item .meta.video .title {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-#archive--wrapper .item .meta.gallery,
-#related-media .item .meta.gallery {
-  background: #333333;
-}
-#archive--wrapper .item .meta.podcast,
-#related-media .item .meta.podcast {
-  padding-top: 17px;
-}
-#archive--wrapper .item .meta.podcast .title,
-#related-media .item .meta.podcast .title {
-  font-size: 16px;
-  font-size: 1rem;
-}
-#archive--wrapper .item .meta .time,
-#related-media .item .meta .time {
-  font-family: 'Gotham';
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-rendering: optimizeLegibility;
-  font-size: 11px;
-  font-weight: 500;
-}
-#archive--wrapper .item .meta .wrapper,
-#related-media .item .meta .wrapper {
-  padding: 15px;
-  background: #f8f8f8;
-}
-#archive--wrapper .play-icon,
-#related-media .play-icon {
-  background: #e2438c;
-  color: #ffffff;
-  display: inline-block;
-  float: left;
-  font-size: 36px;
-  height: 75px;
-  line-height: 85px;
-  width: 73px;
-  padding-left: 3px;
-  text-align: center;
-  margin-right: 1.04166667%;
-}
 #archive--wrapper .play-icon:hover,
 #related-media .play-icon:hover {
   background: #d62174;

@@ -36,9 +36,27 @@
       $post_object = get_sub_field('slide_post');
       $post = $post_object;
       setup_postdata( $post );
+
+      if (get_sub_field('slide_image')){
+
+      $image = get_sub_field('slide_image');
+      $url = $image['url'];
+      $title = $image['title'];
+      $alt = $image['alt'];
+      $caption = $image['caption'];
+
+      $size = 'header-bg';
+      $altsize = 'large';
+      $large = $image['sizes'][ $altsize ];
+      $thumb = $image['sizes'][ $size ];
+      $width = $image['sizes'][ $size . '-width' ];
+      $height = $image['sizes'][ $size . '-height' ];
+
+      }
+
     ?>
 
-    <div class="slide">
+    <div class="slide" style="background-image:url(<?php echo $large; ?>);">
       <div class="meta">
         <div class="row">
           <div class="desktop-10 tablet-6 mobile-3 centered">
@@ -61,21 +79,7 @@
 
       <?php
 
-        if (get_sub_field('slide_image')){
-
-          $image = get_sub_field('slide_image');
-          $url = $image['url'];
-          $title = $image['title'];
-          $alt = $image['alt'];
-          $caption = $image['caption'];
-
-          $size = 'header-bg';
-          $thumb = $image['sizes'][ $size ];
-          $width = $image['sizes'][ $size . '-width' ];
-          $height = $image['sizes'][ $size . '-height' ];
-
-
-        ?>
+        if (get_sub_field('slide_image')){ ?>
 
         <img class="rsImg" src="<?php echo $thumb; ?>" alt="<?php echo $image['alt']; ?>" />
 
@@ -165,16 +169,15 @@
 
       <?php
         $args = array(
-          'showposts'          => 9,
-          'post_type'          => 'tribe_events',
-          'tax_query' => array(
-            array(
-              'taxonomy' => 'tribe_events_cat',
-              'field'    => 'slug',
-              'terms'    => 'hidden',
-              'operator' => 'NOT IN',
-            ),
-          ),
+          'showposts'   => 9,
+          'post_type'   => 'tribe_events',
+          // 'meta_query'  => array(
+          //   array(
+          //     'key'     => 'no_homepage',
+          //     'value'   => '0',
+          //     'compare' => 'NOT EXISTS'
+          //   )
+          // )
         );
 
         $temp = $wp_query;
