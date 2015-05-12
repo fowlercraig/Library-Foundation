@@ -171,13 +171,14 @@
         $args = array(
           'showposts'   => 9,
           'post_type'   => 'tribe_events',
-          // 'meta_query'  => array(
-          //   array(
-          //     'key'     => 'no_homepage',
-          //     'value'   => '0',
-          //     'compare' => 'NOT EXISTS'
-          //   )
-          // )
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'tribe_events_cat',
+              'field'    => 'slug',
+              'terms'    => array('hidden'),
+              'operator'  => 'NOT IN'
+            ),
+          ),
         );
 
         $temp = $wp_query;
