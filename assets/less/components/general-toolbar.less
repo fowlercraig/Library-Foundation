@@ -1,5 +1,15 @@
 .toolbar {
 
+  &.stuck {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    margin-top: 0!important;
+    background: @white;
+    z-index: 9;
+  }
+
   border-bottom: 3px solid @bgGray;
   margin-bottom: @gutter*2;
 
@@ -23,6 +33,19 @@
       height: 55px;
       line-height: 60px;
 
+      &.right {
+        float: right;
+      }
+
+      &.current-menu-item {
+        //background: @bgGray;
+
+        a {
+          color: @textGray;
+          height: 57px;
+          border-bottom: 2px solid @lighterGray;
+        }
+      }
 
 
       &.title {
@@ -61,8 +84,19 @@
       > a, button {
 
         display: block;
-        padding: 0 10px;
         margin: 0 -2px;
+
+        @media @mobile {
+          padding: 0 10px;
+        }
+
+        @media @desktop {
+          padding: 0 8px;
+        }
+
+        @media @max {
+          padding: 0 10px;
+        }
 
       }
 
@@ -90,7 +124,7 @@
           color: @aloudpink;
           letter-spacing: 0;
           position: relative;
-          
+
         }
 
         &.icon {
@@ -128,4 +162,21 @@
 
   }
 
+}
+
+
+.lapl-link {
+  a.external-link {
+    display: inline-block!important;
+  }
+}
+@media @desktop {
+  li.lapl-link {
+    display: none!important;
+  }
+}
+@media @max {
+  li.lapl-link {
+    display: block!important;
+  }
 }

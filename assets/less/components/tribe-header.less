@@ -3,20 +3,56 @@
   .event-meta {
 
     padding: @gutter*2 0;
-    background: @black50;
+    background: rgba(0,0,0,.6);
     margin-top: @gutter*2;
     color: @white;
 
+    .text-right {
+
+      @media @mobile {
+        text-align: left;
+      }
+
+      @media @desktop {
+        text-align: right;
+      }
+
+    }
+
     .upper {
       .caslon();
-      font-size: 25px
+
+      @media @mobile {
+        .font_size(20);
+      }
+      @media @tablet {
+        .font_size(25);
+      }
+      @media @desktop {
+        .font_size(25);
+      }
+
     }
 
     .lower {
       .caslon();
-      font-size: 24px;
+
+      @media @mobile {
+        .font_size(20);
+      }
+      @media @tablet {
+        .font_size(22);
+      }
+      @media @desktop {
+        .font_size(22);
+      }
+
       font-style: italic;
-      color: @white50;
+      color: @white;
+      a {
+        color: inherit;
+      }
+
     }
 
     dd {
@@ -27,7 +63,17 @@
 
   .event-header-title {
     .page-header-title();
-    font-size: 4em;
+
+    @media @mobile {
+      .font_size(33);
+    }
+    @media @tablet {
+      .font_size(50);
+    }
+    @media @desktop {
+      .font_size(64);
+    }
+
     margin-bottom: 0;
   }
 

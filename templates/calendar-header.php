@@ -2,7 +2,7 @@
   
   if( is_tax()){
     $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-    $yolo = '/<span class="category category-' . $term->slug . '">' . $term->name . '</span>';
+    $yolo = '<span class="category category-' . $term->slug . '">' . $term->name . '</span>';
     $query = array(
         'taxonomy' => 'tribe_events_cat',
         'field'    => 'slug',
@@ -30,6 +30,7 @@
 
 ?>
 
+<?php if ( $wp_query->have_posts()): ?>
 <div id="calendar-header">
   <div class="header overlay bottom">
     <div class="row">
@@ -53,7 +54,7 @@
         }
       }
       $thumb_id = get_post_thumbnail_id();
-      $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', true);
+      $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'header-bg', true);
       $thumb_url = $thumb_url_array[0];
     ?>
 
@@ -79,3 +80,22 @@
 
   </div>
 </div>
+<?php else: ?>
+<div class="page-header calendar" data-speed="1.25">
+  <div class="row">
+    <div class="desktop-12 tablet-6 mobile-3">
+      <?php if ( is_tax() ) :?>
+    <ul class="parent-links">
+      <li><a href="/calendar">Calendar</a></li>
+    </ul>
+    <?php endif; ?>
+      <?php if ( is_tax() ) :?>
+      <h1 class="page-header-title"><?php echo $yolo; ?></h1>
+      <?php else: ?>
+      <h1 class="page-header-title">Calendar</h1>
+      <?php endif; ?>
+      <br>
+    </div>
+  </div>
+</div>
+<?php endif;?>  

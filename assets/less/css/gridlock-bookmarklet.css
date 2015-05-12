@@ -2,14 +2,14 @@
   Imports
 -------------------------------------------*/
 /*-------------------------------------------
-  Variables
+Variables
 -------------------------------------------*/
 .img-responsive {
   max-width: 100%;
   height: auto;
 }
 .bg-green {
-  background: #51a74e;
+  background: #86993f;
 }
 .bg-blue {
   background: #008bbe;
@@ -21,11 +21,10 @@
   background: #9e6927;
 }
 /*-------------------------------------------
-  Mixins
+Mixins
 -------------------------------------------*/
 .overlay {
   position: absolute;
-  padding: 30px;
   top: 0;
   left: 0;
   width: 100%;
@@ -34,6 +33,19 @@
 .overlay.bottom {
   top: auto;
   bottom: 0;
+}
+@media screen and (min-width: 320px) {
+  .overlay {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .overlay {
+    padding: 30px;
+  }
+}
+.clearfix {
+  position: relative;
 }
 .clearfix:after {
   content: '';
@@ -48,6 +60,33 @@
 }
 .text-center {
   text-align: center;
+}
+.action-btn {
+  font-size: 24px;
+  color: #ffffff;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -25px;
+  margin-left: -25px;
+  z-index: 9;
+  height: 48px;
+  width: 48px;
+  text-align: center;
+  display: block;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.action-btn i {
+  display: block;
+  height: 50px;
+  line-height: 53px;
+  margin: auto;
+}
+.invisible {
+  visibility: hidden;
 }
 /*-------------------------------------------
   Bookmarklet
